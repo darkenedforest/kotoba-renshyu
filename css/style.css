@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,16 +7,18 @@
 }
 
 body {
-  font-family: "Hiragino Kaku Gothic Pro", "Noto Sans JP", "Segoe UI", sans-serif;
-  background: #f5f3ef;
-  color: #2c2c2c;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  background: #0f0f0f;
+  color: #e8e4de;
   line-height: 1.6;
   min-height: 100vh;
 }
 
+/* ── Header ── */
+
 header {
-  background: #fff;
-  border-bottom: 1px solid #e0dcd4;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
@@ -22,9 +26,10 @@ header {
 }
 
 header h1 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  color: #e8e4de;
+  letter-spacing: 0.03em;
 }
 
 header .header-right {
@@ -34,82 +39,90 @@ header .header-right {
 }
 
 header .progress {
-  font-size: 0.85rem;
-  color: #888;
+  font-size: 0.8rem;
+  color: #666;
 }
 
 header .list-btn {
-  background: none;
-  border: 1px solid #d0ccc4;
-  border-radius: 4px;
-  padding: 0.3rem 0.7rem;
+  background: transparent;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 0.4rem 0.85rem;
   font-size: 0.8rem;
-  color: #666;
+  font-weight: 500;
+  color: #aaa;
   cursor: pointer;
-  transition: color 0.15s, border-color 0.15s;
+  transition: all 0.2s;
 }
 
 header .list-btn:hover {
-  color: #2c2c2c;
-  border-color: #8a7f6e;
+  color: #fff;
+  border-color: #555;
+  background: #252525;
 }
+
+/* ── Batch Controls ── */
 
 .batch-controls {
   padding: 0.75rem 1.5rem;
-  background: #fff;
-  border-bottom: 1px solid #e0dcd4;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #666;
 }
 
 .batch-controls label {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
 .batch-controls input[type="number"] {
-  width: 3.5rem;
-  padding: 0.25rem 0.4rem;
-  border: 1px solid #d0ccc4;
-  border-radius: 4px;
-  font-size: 0.85rem;
+  width: 3.2rem;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 0.8rem;
   text-align: center;
-  background: #faf9f7;
+  background: #222;
+  color: #ccc;
 }
 
 .batch-controls input[type="number"]:focus {
   outline: none;
-  border-color: #8a7f6e;
+  border-color: #555;
 }
+
+/* ── Word Cards (Batch View) ── */
 
 .word-list {
   padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  max-width: 600px;
+  gap: 0.6rem;
+  max-width: 620px;
   margin: 0 auto;
 }
 
 .word-card {
-  background: #fff;
-  border: 1px solid #e0dcd4;
-  border-radius: 8px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
   padding: 1rem 1.25rem;
   cursor: pointer;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition: all 0.2s;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .word-card:hover {
-  border-color: #b8b0a2;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-color: #3a3a3a;
+  background: #1f1f1f;
+  transform: translateY(-1px);
 }
 
 .word-card .word-info {
@@ -119,13 +132,16 @@ header .list-btn:hover {
 }
 
 .word-card .kanji {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 .word-card .kana {
-  font-size: 0.9rem;
-  color: #888;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.85rem;
+  color: #666;
 }
 
 .word-card .word-right {
@@ -136,7 +152,7 @@ header .list-btn:hover {
 
 .word-card .meaning {
   font-size: 0.85rem;
-  color: #666;
+  color: #888;
   text-align: right;
   cursor: pointer;
 }
@@ -144,21 +160,22 @@ header .list-btn:hover {
 .word-card .card-skip-btn {
   background: none;
   border: none;
-  color: #ccc;
-  font-size: 0.9rem;
+  color: #444;
+  font-size: 0.85rem;
   cursor: pointer;
-  padding: 0.2rem 0.3rem;
+  padding: 0.3rem;
   line-height: 1;
-  border-radius: 3px;
-  transition: color 0.15s, background 0.15s;
+  border-radius: 4px;
+  transition: all 0.2s;
 }
 
 .word-card .card-skip-btn:hover {
-  color: #888;
-  background: #f0ece6;
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
 }
 
-/* Lesson detail view */
+/* ── Lesson View ── */
+
 .lesson-view {
   display: none;
   max-width: 640px;
@@ -170,51 +187,56 @@ header .list-btn:hover {
   display: block;
 }
 
-.lesson-view .back-btn {
+.back-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
   background: none;
   border: none;
-  color: #8a7f6e;
-  font-size: 0.9rem;
+  color: #666;
+  font-size: 0.85rem;
   cursor: pointer;
-  padding: 0.25rem 0;
+  padding: 0.3rem 0;
   margin-bottom: 1.25rem;
+  transition: color 0.2s;
 }
 
-.lesson-view .back-btn:hover {
-  color: #5a5245;
+.back-btn:hover {
+  color: #ccc;
 }
 
 .lesson-header {
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e0dcd4;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .lesson-header .kanji {
-  font-size: 3rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.2;
+  color: #fff;
 }
 
 .lesson-header .kana {
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.1rem;
-  color: #888;
-  margin-top: 0.25rem;
+  color: #666;
+  margin-top: 0.3rem;
 }
 
 .lesson-header .meaning {
   font-size: 1rem;
-  color: #555;
+  color: #888;
   margin-top: 0.5rem;
 }
 
 .lesson-content {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #c8c4be;
 }
 
 .lesson-content p {
@@ -223,11 +245,12 @@ header .list-btn:hover {
 
 .lesson-content em {
   font-style: italic;
-  color: #5a5245;
+  color: #d4a574;
 }
 
 .lesson-content strong {
   font-weight: 600;
+  color: #e8e4de;
 }
 
 .lesson-actions {
@@ -235,69 +258,77 @@ header .list-btn:hover {
   gap: 0.75rem;
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #e0dcd4;
+  border-top: 1px solid #2a2a2a;
 }
 
 .lesson-actions button {
   flex: 1;
-  padding: 0.75rem 1rem;
-  border: 1px solid #d0ccc4;
-  border-radius: 6px;
-  background: #fff;
+  padding: 0.8rem 1rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #1a1a1a;
   font-size: 0.9rem;
+  font-weight: 500;
+  color: #aaa;
   cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
+  transition: all 0.2s;
 }
 
 .lesson-actions button:hover {
-  background: #f5f3ef;
-  border-color: #b8b0a2;
+  background: #252525;
+  border-color: #444;
 }
 
 .lesson-actions .learned-btn {
-  background: #4a7c59;
-  color: #fff;
-  border-color: #4a7c59;
+  background: #1a3d2a;
+  color: #4ade80;
+  border-color: #2d5a3d;
 }
 
 .lesson-actions .learned-btn:hover {
-  background: #3d6a4b;
+  background: #224a33;
+  border-color: #3d7a52;
 }
 
 .lesson-actions .skip-btn {
-  color: #888;
+  color: #666;
 }
 
-/* Skipped pool toggle */
+.lesson-actions .skip-btn:hover {
+  color: #aaa;
+}
+
+/* ── Skipped Pool ── */
+
 .skipped-section {
-  max-width: 600px;
-  margin: 1.5rem auto 0;
+  max-width: 620px;
+  margin: 1rem auto 0;
   padding: 0 1.5rem 2rem;
 }
 
 .skipped-toggle {
   background: none;
-  border: 1px solid #d0ccc4;
-  border-radius: 6px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
   padding: 0.6rem 1rem;
-  font-size: 0.85rem;
-  color: #888;
+  font-size: 0.8rem;
+  color: #555;
   cursor: pointer;
   width: 100%;
   text-align: left;
-  transition: color 0.15s;
+  transition: all 0.2s;
 }
 
 .skipped-toggle:hover {
-  color: #5a5245;
-  border-color: #b8b0a2;
+  color: #888;
+  border-color: #3a3a3a;
 }
 
 .skipped-list {
   display: none;
   margin-top: 0.5rem;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .skipped-list.open {
@@ -305,14 +336,14 @@ header .list-btn:hover {
 }
 
 .skipped-card {
-  background: #fff;
-  border: 1px solid #e0dcd4;
+  background: #151515;
+  border: 1px solid #252525;
   border-radius: 8px;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .skipped-card .word-info {
@@ -322,83 +353,70 @@ header .list-btn:hover {
 }
 
 .skipped-card .kanji {
-  font-size: 1.25rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.15rem;
   font-weight: 600;
 }
 
 .skipped-card .kana {
-  font-size: 0.85rem;
-  color: #999;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.8rem;
+  color: #555;
 }
 
 .skipped-card .restore-btn {
   background: none;
-  border: 1px solid #d0ccc4;
-  border-radius: 4px;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.8rem;
-  color: #888;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  color: #555;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .skipped-card .restore-btn:hover {
-  color: #5a5245;
-  border-color: #b8b0a2;
+  color: #aaa;
+  border-color: #555;
 }
 
-/* Empty state */
+/* ── Empty State ── */
+
 .empty-state {
   text-align: center;
   padding: 3rem 1.5rem;
-  color: #999;
-  font-size: 0.95rem;
+  color: #444;
+  font-size: 0.9rem;
 }
 
-/* Full list view */
+/* ── Full List View ── */
+
 .full-list-view {
-  display: none;
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto;
   padding: 1.5rem;
 }
 
-.full-list-view .back-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  background: none;
-  border: none;
-  color: #8a7f6e;
-  font-size: 0.9rem;
-  cursor: pointer;
-  padding: 0.25rem 0;
-  margin-bottom: 1rem;
-}
-
-.full-list-view .back-btn:hover {
-  color: #5a5245;
-}
-
 .list-heading {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #2c2c2c;
+  color: #888;
 }
 
 .full-list {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
 }
 
 .list-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.6rem 0.8rem;
-  background: #fff;
-  border: 1px solid #e0dcd4;
+  padding: 0.55rem 0.75rem;
+  background: #1a1a1a;
+  border: 1px solid #252525;
   border-radius: 6px;
   transition: opacity 0.15s;
 }
@@ -412,67 +430,69 @@ header .list-btn:hover {
 }
 
 .list-row .kanji {
-  font-size: 1.15rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.1rem;
   font-weight: 600;
   flex-shrink: 0;
 }
 
 .list-row .kana {
-  font-size: 0.8rem;
-  color: #888;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.75rem;
+  color: #555;
   flex-shrink: 0;
 }
 
 .list-row .meaning {
-  font-size: 0.8rem;
-  color: #999;
+  font-size: 0.75rem;
+  color: #444;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .list-row--learned {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .list-row--skipped {
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .list-actions {
   display: flex;
-  gap: 0.3rem;
+  gap: 0.25rem;
   flex-shrink: 0;
 }
 
 .list-action-btn {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.7rem;
+  height: 1.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: none;
-  border: 1px solid #e0dcd4;
-  border-radius: 4px;
-  color: #ccc;
-  font-size: 0.85rem;
+  border: 1px solid #2a2a2a;
+  border-radius: 5px;
+  color: #444;
+  font-size: 0.8rem;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.2s;
 }
 
 .list-action-btn:hover {
-  border-color: #b8b0a2;
-  color: #666;
+  border-color: #444;
+  color: #888;
 }
 
 .list-action-btn.active[data-action="learned"] {
-  background: #4a7c59;
-  border-color: #4a7c59;
-  color: #fff;
+  background: #1a3d2a;
+  border-color: #2d5a3d;
+  color: #4ade80;
 }
 
 .list-action-btn.active[data-action="skipped"] {
-  background: #b0a090;
-  border-color: #b0a090;
-  color: #fff;
+  background: #3d2a1a;
+  border-color: #5a3d2d;
+  color: #e8a060;
 }

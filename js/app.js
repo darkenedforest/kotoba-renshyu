@@ -2,9 +2,7 @@ const App = {
   async init() {
     UI.init();
 
-    const lessons = await this.loadLessons();
-    Queue.init(lessons);
-
+    // Wire up controls FIRST, before any async work
     UI.els.backBtn.addEventListener('click', () => this.showBatch());
     UI.els.listBackBtn.addEventListener('click', () => this.showBatch());
     UI.els.listBtn.addEventListener('click', () => this.showFullList());
@@ -18,6 +16,9 @@ const App = {
       UI.els.skippedList.classList.toggle('open');
     });
 
+    // Then load data
+    const lessons = await this.loadLessons();
+    Queue.init(lessons);
     this.renderBatch();
   },
 
@@ -72,7 +73,6 @@ const App = {
     this.renderBatch();
   },
 
-  // Actions from full list view (stay in list view)
   unmarkLearned(id) {
     Storage.unmarkLearned(id);
     this.showFullList();
