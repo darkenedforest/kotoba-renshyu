@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "kanji": "行く",
+    "kana": "いく",
+    "meaning": "to go",
+    "lesson": "<p>行く conjugates like any other godan verb — until you hit the て-form. Every く-verb follows the pattern: 書く→書いて, 聞く→聞いて. So you'd expect いく→いいて. Instead it's いって. This is the <em>only</em> く-verb that does this. The た-form is the same deal: いった instead of いいた. Everything else (いかない, いきます, いける) is perfectly regular. Just that one weird て/た.</p><p>The kanji 行 shows up everywhere. 銀行 (ぎんこう, bank), 旅行 (りょこう, travel), 行事 (ぎょうじ, event) — it carries this sense of <em>going, moving, carrying out</em>. When you see 行 in a compound, something is in motion.</p><p>One thing that trips people up: 行く can be read いく or ゆく. They mean the same thing. ゆく sounds more literary — you'll hear it in songs and formal writing. In conversation, people say いく.</p><p>Watch the particle: 学校<strong>に</strong>行く (go <em>to</em> school) marks the destination. 学校<strong>へ</strong>行く (head <em>toward</em> school) emphasizes direction. In speech に is far more common, but both work.</p>"
+  },
+  {
+    "id": 2,
+    "kanji": "見る",
+    "kana": "みる",
+    "meaning": "to see, look (at), watch",
+    "lesson": "<p>見る covers territory that English splits across three words: <em>see</em>, <em>look at</em>, and <em>watch</em>. テレビを見る (watch TV). 景色を見る (look at the scenery). 医者に見てもらう (have a doctor look at you). One verb, context does all the work.</p><p>The kanji 見 is worth a close look: it's 目 (eye) sitting on top of 儿 (legs). An eyeball walking around, looking at things. Once you see that image it's hard to unsee. The kanji shows up constantly: 見える (to be visible), 見せる (to show), 見つける (to find), 意見 (opinion — literally \"idea\" + \"seeing\").</p><p>Conjugation is ichidan, so it's completely predictable: chop る, add whatever you need. 見ない, 見て, 見た, 見られる. No tricks.</p><p>The most useful pattern built on this word: <strong>〜てみる</strong>. Attach みる to another verb's て-form and it means \"try doing\" something to see what happens. 食べてみる (try eating it), 聞いてみる (try asking). It comes directly from the meaning of 見る — you do the action to <em>see</em> the result. You'll reach for this one daily.</p>"
+  },
+  {
+    "id": 3,
+    "kanji": "多い",
+    "kana": "おおい",
+    "meaning": "many, a lot of",
+    "lesson": "<p>多い is an い-adjective with a quirk that will trip you up if you don't know about it. You can say 人が多い (there are many people) — no problem. But you <em>can't</em> say 多い人 the way you'd say 大きい犬 (big dog). It sounds wrong. If you want to put it before a noun, it becomes 多くの人. This isn't optional — 多い strongly resists sitting directly in front of a noun.</p><p>Its opposite 少ない (すくない, few) has the exact same restriction. They're a matched pair of grammatical oddballs.</p><p>The kanji 多 is two 夕 (evening) stacked on top of each other. The old logic: many evenings have passed → many. Two of the same thing piled up means \"a lot\" — easy to remember.</p><p>In real use, 多い almost always appears at the end of a phrase with が marking what there's a lot of: 最近、雨が多い (there's been a lot of rain lately). 日本は祝日が多い (Japan has a lot of holidays). That's its natural position — after the thing it describes, not before it.</p>"
+  }
+]

@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kotoba Renshyu</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Kotoba Renshyu</h1>
-    <p>Japanese vocabulary practice app — coming soon.</p>
+    <header>
+        <h1>Kotoba Renshyu</h1>
+        <span class="progress" id="progress-text">0 / 0 learned</span>
+    </header>
+
+    <div id="batch-view">
+        <div class="batch-controls">
+            <label>
+                Batch size:
+                <input type="number" id="batch-size" min="1" max="50" value="3">
+            </label>
+        </div>
+
+        <div class="word-list" id="word-list"></div>
+
+        <div class="skipped-section" id="skipped-section" style="display: none;">
+            <button class="skipped-toggle" id="skipped-toggle">Skipped words (0)</button>
+            <div class="skipped-list" id="skipped-list"></div>
+        </div>
+    </div>
+
+    <div class="lesson-view" id="lesson-view">
+        <button class="back-btn" id="back-btn">&larr; Back</button>
+        <div class="lesson-header">
+            <div class="kanji" id="lesson-kanji"></div>
+            <div class="kana" id="lesson-kana"></div>
+            <div class="meaning" id="lesson-meaning"></div>
+        </div>
+        <div class="lesson-content" id="lesson-content"></div>
+        <div class="lesson-actions">
+            <button class="skip-btn" id="skip-btn">Skip</button>
+            <button class="learned-btn" id="learned-btn">Learned</button>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/queue.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
