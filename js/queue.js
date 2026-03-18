@@ -5,16 +5,30 @@ const Queue = {
     this.allLessons = lessons;
   },
 
-  getBatch(progress) {
-    const { learnedIds, skippedIds, batchSize } = progress;
-    const excluded = new Set([...learnedIds, ...skippedIds]);
-    const available = this.allLessons.filter(l => !excluded.has(l.id));
-    return available.slice(0, batchSize);
+  // Group words into batches of given size
+  getBatches(batchSize) {
+    const batches = [];
+    for (let i = 0; i < this.allLessons.length; i += batchSize) {
+      batches.push({
+        index: batches.length,
+        words: this.allLessons.slice(i, i + batchSize)
+      });
+    }
+    return batches;
   },
 
-  getSkipped(progress) {
+  // Get batch status: 'complete', 'active', 'locked'
+  getBatchStatus(batch, progress) {
+    const learnedSet = new Set(progress.learnedIds);
     const skippedSet = new Set(progress.skippedIds);
-    return this.allLessons.filter(l => skippedSet.has(l.id));
+    const allDone = batch.words.every(w => learnedSet.has(w.id) || skippedSet.has(w.id));
+    const allLearned = batch.words.every(w => learnedSet.has(w.id));
+
+    if (allLearned) return 'complete';
+    if (allDone) return 'complete'; // all handled (learned or skipped)
+
+    // Active if it's the first non-complete batch
+    return null; // caller decides
   },
 
   getLessonById(id) {

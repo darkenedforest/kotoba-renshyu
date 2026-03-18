@@ -4,15 +4,16 @@ const UI = {
 
   init() {
     this.els = {
-      batchView: document.getElementById('page-path'),
-      listView: document.getElementById('page-list'),
-      lessonOverlay: document.getElementById('lesson-overlay'),
-      settingsOverlay: document.getElementById('settings-overlay'),
-      pathContainer: document.getElementById('path-container'),
+      pathNodes: document.getElementById('path-nodes'),
+      pathSvg: document.getElementById('path-svg'),
       wordTable: document.getElementById('word-table'),
-      batchSizeInput: document.getElementById('batch-size'),
-      statLearned: document.getElementById('stat-learned'),
-      statRemaining: document.getElementById('stat-remaining'),
+      batchSheet: document.getElementById('batch-sheet'),
+      batchClose: document.getElementById('batch-close'),
+      batchTitle: document.getElementById('batch-sheet-title'),
+      batchSub: document.getElementById('batch-sheet-sub'),
+      batchWordList: document.getElementById('batch-word-list'),
+      lessonSheet: document.getElementById('lesson-sheet'),
+      lessonClose: document.getElementById('lesson-close'),
       lessonKanji: document.getElementById('lesson-kanji'),
       lessonKana: document.getElementById('lesson-kana'),
       lessonMeaning: document.getElementById('lesson-meaning'),
@@ -20,102 +21,212 @@ const UI = {
       lessonContent: document.getElementById('lesson-content'),
       learnedBtn: document.getElementById('learned-btn'),
       skipBtn: document.getElementById('skip-btn'),
-      lessonClose: document.getElementById('lesson-close'),
+      settingsSheet: document.getElementById('settings-sheet'),
       settingsClose: document.getElementById('settings-close'),
-      navSettings: document.getElementById('nav-settings'),
+      batchSizeInput: document.getElementById('batch-size'),
       resetBtn: document.getElementById('reset-btn'),
-      progressFill: document.getElementById('progress-fill'),
-      skippedSection: document.getElementById('skipped-section'),
-      skippedToggle: document.getElementById('skipped-toggle'),
-      skippedList: document.getElementById('skipped-list')
+      statLearned: document.getElementById('stat-learned'),
+      statRemaining: document.getElementById('stat-remaining')
     };
   },
 
-  // ── Page switching ──
-
   showPage(name) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.bnav-btn[data-page]').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab[data-page]').forEach(b => b.classList.remove('active'));
     const page = document.getElementById('page-' + name);
-    const btn = document.querySelector(`.bnav-btn[data-page="${name}"]`);
+    const btn = document.querySelector(`.tab[data-page="${name}"]`);
     if (page) page.classList.add('active');
     if (btn) btn.classList.add('active');
   },
 
-  // ── Path rendering ──
+  /* ═══════════════════════════════════
+     PATH — batches as nodes
+     ═══════════════════════════════════ */
 
   renderPath(progress) {
-    const container = this.els.pathContainer;
-    container.innerHTML = '';
+    const nodes = this.els.pathNodes;
+    const svg = this.els.pathSvg;
+    nodes.innerHTML = '';
 
+    const batches = Queue.getBatches(progress.batchSize);
     const learnedSet = new Set(progress.learnedIds);
     const skippedSet = new Set(progress.skippedIds);
-    const excluded = new Set([...progress.learnedIds, ...progress.skippedIds]);
-    const available = Queue.allLessons.filter(l => !excluded.has(l.id));
-    const batchIds = new Set(available.slice(0, progress.batchSize).map(l => l.id));
 
-    const offsets = ['offset-center', 'offset-right', 'offset-center', 'offset-left'];
+    // Determine status of each batch
+    let foundActive = false;
+    const batchData = batches.map(batch => {
+      const allLearned = batch.words.every(w => learnedSet.has(w.id));
+      const allHandled = batch.words.every(w => learnedSet.has(w.id) || skippedSet.has(w.id));
+      const learnedCount = batch.words.filter(w => learnedSet.has(w.id)).length;
 
-    Queue.allLessons.forEach((word, i) => {
-      const isLearned = learnedSet.has(word.id);
-      const isSkipped = skippedSet.has(word.id);
-      const isActive = batchIds.has(word.id);
-      const isUpcoming = !isLearned && !isSkipped && !isActive;
+      let status;
+      if (allLearned || allHandled) {
+        status = allLearned ? 'complete' : 'done-mixed';
+      } else if (!foundActive) {
+        status = 'active';
+        foundActive = true;
+      } else {
+        status = 'locked';
+      }
+      return { ...batch, status, learnedCount };
+    });
 
-      let state = 'upcoming';
-      if (isLearned) state = 'learned';
-      else if (isSkipped) state = 'skipped';
-      else if (isActive) state = 'active';
+    // Layout: S-curve positions
+    const containerWidth = Math.min(window.innerWidth, 400);
+    const centerX = containerWidth / 2;
+    const amplitude = containerWidth * 0.22;
+    const nodeSpacing = 130;
+    const totalHeight = batchData.length * nodeSpacing + 80;
 
-      // Connector (except before first)
-      if (i > 0) {
-        const prevLearned = learnedSet.has(Queue.allLessons[i-1].id);
-        const conn = document.createElement('div');
-        let connClass = 'upcoming';
-        if (prevLearned && isLearned) connClass = 'done';
-        else if (prevLearned && isActive) connClass = 'active';
-        else if (prevLearned && isSkipped) connClass = 'skipped';
-        conn.className = `path-connector ${connClass}`;
-        container.appendChild(conn);
+    // Set SVG size
+    svg.setAttribute('width', containerWidth);
+    svg.setAttribute('height', totalHeight);
+    svg.style.height = totalHeight + 'px';
+    nodes.style.height = totalHeight + 'px';
+
+    // Compute positions
+    const positions = batchData.map((b, i) => {
+      const y = 50 + i * nodeSpacing;
+      const x = centerX + Math.sin(i * 0.8) * amplitude;
+      return { x, y };
+    });
+
+    // Draw curved path
+    if (positions.length > 1) {
+      let pathD = `M ${positions[0].x} ${positions[0].y}`;
+      for (let i = 1; i < positions.length; i++) {
+        const prev = positions[i - 1];
+        const curr = positions[i];
+        const cpY = (prev.y + curr.y) / 2;
+        pathD += ` C ${prev.x} ${cpY}, ${curr.x} ${cpY}, ${curr.x} ${curr.y}`;
       }
 
-      // Step wrapper (for zigzag)
-      const step = document.createElement('div');
-      step.className = `path-step ${offsets[i % offsets.length]}`;
+      // Background path (grey)
+      const bgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      bgPath.setAttribute('d', pathD);
+      bgPath.setAttribute('stroke', '#e0e0e0');
+      bgPath.setAttribute('stroke-width', '6');
+      bgPath.setAttribute('fill', 'none');
+      bgPath.setAttribute('stroke-linecap', 'round');
+      svg.appendChild(bgPath);
 
-      // Node
+      // Progress path (colored) — up to active batch
+      const activeIdx = batchData.findIndex(b => b.status === 'active');
+      const progressEnd = activeIdx >= 0 ? activeIdx : batchData.length;
+      if (progressEnd > 0) {
+        let progD = `M ${positions[0].x} ${positions[0].y}`;
+        for (let i = 1; i <= Math.min(progressEnd, positions.length - 1); i++) {
+          const prev = positions[i - 1];
+          const curr = positions[i];
+          const cpY = (prev.y + curr.y) / 2;
+          progD += ` C ${prev.x} ${cpY}, ${curr.x} ${cpY}, ${curr.x} ${curr.y}`;
+        }
+        const progPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        progPath.setAttribute('d', progD);
+        progPath.setAttribute('stroke', '#34d399');
+        progPath.setAttribute('stroke-width', '6');
+        progPath.setAttribute('fill', 'none');
+        progPath.setAttribute('stroke-linecap', 'round');
+        svg.appendChild(progPath);
+      }
+    }
+
+    // Render nodes
+    batchData.forEach((batch, i) => {
+      const pos = positions[i];
       const node = document.createElement('div');
-      node.className = `path-node state-${state}`;
-      node.textContent = word.kanji;
+      node.className = `pnode pnode-${batch.status}`;
+      node.style.left = (pos.x - 32) + 'px';
+      node.style.top = (pos.y - 32) + 'px';
 
-      if (isLearned) {
-        const check = document.createElement('div');
-        check.className = 'node-check';
-        check.innerHTML = '<svg viewBox="0 0 14 14"><path d="M2.5 7.5l3 3 6-7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-        node.appendChild(check);
+      const num = batch.index + 1;
+      const wordCount = batch.words.length;
+      const preview = batch.words.map(w => w.kanji).join('');
+
+      if (batch.status === 'complete' || batch.status === 'done-mixed') {
+        node.innerHTML = `<span class="pnode-check">✓</span>`;
+      } else if (batch.status === 'active') {
+        node.innerHTML = `<span class="pnode-num">${num}</span>`;
+      } else {
+        node.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3-9H9V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2z"/></svg>`;
       }
 
-      if (isActive || isLearned || isSkipped) {
-        node.addEventListener('click', () => App.showLesson(word.id));
-      }
-
-      // Label
+      // Label underneath
       const label = document.createElement('div');
-      label.className = 'path-label';
-      label.innerHTML = `
-        <div class="path-label-kana">${word.kana}</div>
-        <div class="path-label-meaning">${word.meaning}</div>
-      `;
+      label.className = 'pnode-label';
+      if (batch.status === 'locked') {
+        label.innerHTML = `<span class="pnode-title">Batch ${num}</span>`;
+      } else {
+        label.innerHTML = `<span class="pnode-title">Batch ${num}</span><span class="pnode-preview">${preview}</span>`;
+      }
 
-      step.appendChild(node);
-      step.appendChild(label);
-      container.appendChild(step);
+      if (batch.status !== 'locked') {
+        node.addEventListener('click', () => App.openBatch(batch.index));
+      }
+
+      const wrap = document.createElement('div');
+      wrap.className = 'pnode-wrap';
+      wrap.style.left = (pos.x - 45) + 'px';
+      wrap.style.top = (pos.y - 32) + 'px';
+      wrap.appendChild(node);
+      wrap.appendChild(label);
+      nodes.appendChild(wrap);
     });
 
     this.updateStats(progress);
   },
 
-  // ── Lesson overlay ──
+  /* ═══════════════════════════════════
+     BATCH SHEET — words in a batch
+     ═══════════════════════════════════ */
+
+  showBatchSheet(batch, progress) {
+    const learnedSet = new Set(progress.learnedIds);
+    const skippedSet = new Set(progress.skippedIds);
+
+    this.els.batchTitle.textContent = `Batch ${batch.index + 1}`;
+    const done = batch.words.filter(w => learnedSet.has(w.id)).length;
+    this.els.batchSub.textContent = `${done} of ${batch.words.length} learned`;
+
+    const list = this.els.batchWordList;
+    list.innerHTML = '';
+
+    batch.words.forEach(word => {
+      const isLearned = learnedSet.has(word.id);
+      const isSkipped = skippedSet.has(word.id);
+
+      const row = document.createElement('div');
+      row.className = `bw-row ${isLearned ? 'bw-learned' : ''} ${isSkipped ? 'bw-skipped' : ''}`;
+      row.innerHTML = `
+        <div class="bw-left">
+          <span class="bw-kanji">${word.kanji}</span>
+          <span class="bw-kana">${word.kana}</span>
+        </div>
+        <div class="bw-right">
+          <span class="bw-meaning">${word.meaning}</span>
+          ${isLearned ? '<span class="bw-badge bw-badge-green">✓</span>' :
+            isSkipped ? '<span class="bw-badge bw-badge-orange">skipped</span>' :
+            '<span class="bw-arrow">→</span>'}
+        </div>
+      `;
+
+      if (!isLearned) {
+        row.addEventListener('click', () => App.showLesson(word.id));
+      }
+
+      list.appendChild(row);
+    });
+
+    this.els.batchSheet.style.display = 'flex';
+  },
+
+  hideBatchSheet() {
+    this.els.batchSheet.style.display = 'none';
+  },
+
+  /* ═══════════════════════════════════
+     LESSON SHEET
+     ═══════════════════════════════════ */
 
   showLesson(word) {
     this.els.lessonKanji.textContent = word.kanji;
@@ -135,25 +246,29 @@ const UI = {
 
     this.els.learnedBtn.onclick = () => App.markLearned(word.id);
     this.els.skipBtn.onclick = () => App.markSkipped(word.id);
-    this.els.lessonOverlay.style.display = 'flex';
+    this.els.lessonSheet.style.display = 'flex';
   },
 
   hideLesson() {
-    this.els.lessonOverlay.style.display = 'none';
+    this.els.lessonSheet.style.display = 'none';
   },
 
-  // ── Settings overlay ──
+  /* ═══════════════════════════════════
+     SETTINGS
+     ═══════════════════════════════════ */
 
   showSettings(progress) {
     this.els.batchSizeInput.value = progress.batchSize;
-    this.els.settingsOverlay.style.display = 'flex';
+    this.els.settingsSheet.style.display = 'flex';
   },
 
   hideSettings() {
-    this.els.settingsOverlay.style.display = 'none';
+    this.els.settingsSheet.style.display = 'none';
   },
 
-  // ── List page ──
+  /* ═══════════════════════════════════
+     LIST
+     ═══════════════════════════════════ */
 
   renderList(progress, filter) {
     this.currentFilter = filter || 'all';
@@ -162,48 +277,32 @@ const UI = {
     const learnedSet = new Set(progress.learnedIds);
     const skippedSet = new Set(progress.skippedIds);
 
-    // Update filter buttons
-    document.querySelectorAll('.filter-btn').forEach(b => {
-      b.classList.toggle('active', b.dataset.filter === this.currentFilter);
-    });
+    document.querySelectorAll('.fpill').forEach(b =>
+      b.classList.toggle('active', b.dataset.filter === this.currentFilter)
+    );
 
     Queue.allLessons.forEach(word => {
       const isLearned = learnedSet.has(word.id);
       const isSkipped = skippedSet.has(word.id);
       const state = isLearned ? 'learned' : isSkipped ? 'skipped' : 'active';
-
       if (this.currentFilter !== 'all' && this.currentFilter !== state) return;
 
       const row = document.createElement('div');
-      row.className = 'table-row';
+      row.className = 'trow';
       row.innerHTML = `
-        <span class="table-num">${word.id}</span>
-        <span class="table-kanji">${word.kanji}</span>
-        <span class="table-kana">${word.kana}</span>
-        <span class="table-meaning">${word.meaning}</span>
-        <span class="table-status">
-          ${isLearned ? '<span class="status-badge badge-learned">Learned</span>' :
-            isSkipped ? '<span class="status-badge badge-skipped">Skipped</span>' :
-            '<span class="status-badge badge-active">In Queue</span>'}
-        </span>
-        <div class="table-actions">
-          <button class="tbl-btn ${isLearned ? 'on-learned' : ''}" data-action="learned" title="Toggle learned">&#x2713;</button>
-          <button class="tbl-btn ${isSkipped ? 'on-skipped' : ''}" data-action="skipped" title="Toggle skipped">&#x2715;</button>
-        </div>
+        <span class="trow-num">${word.id}</span>
+        <span class="trow-kanji">${word.kanji}</span>
+        <span class="trow-kana">${word.kana}</span>
+        <span class="trow-meaning">${word.meaning}</span>
+        <span class="trow-badge badge-${state}">${state === 'learned' ? '✓' : state === 'skipped' ? '—' : '•'}</span>
       `;
-
-      row.querySelector('[data-action="learned"]').addEventListener('click', () => {
-        isLearned ? App.unmarkLearnedFromList(word.id) : App.markLearnedFromList(word.id);
-      });
-      row.querySelector('[data-action="skipped"]').addEventListener('click', () => {
-        isSkipped ? App.restoreWordFromList(word.id) : App.markSkippedFromList(word.id);
-      });
-
       table.appendChild(row);
     });
   },
 
-  // ── Stats ──
+  /* ═══════════════════════════════════
+     STATS
+     ═══════════════════════════════════ */
 
   updateStats(progress) {
     const learned = Queue.getLearnedCount(progress);

@@ -2,102 +2,106 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Kotoba Renshyu</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" href="data:,">
 </head>
 <body>
-    <!-- ── Lesson overlay ── -->
-    <div id="lesson-overlay" class="overlay" style="display:none;">
-        <div class="overlay-content">
-            <button class="overlay-close" id="lesson-close">&times;</button>
+    <!-- ── Lesson sheet ── -->
+    <div id="lesson-sheet" class="sheet" style="display:none;">
+        <div class="sheet-inner">
+            <button class="sheet-close" id="lesson-close">&times;</button>
             <div class="lesson-hero" id="lesson-hero">
-                <div class="lesson-hero-kanji" id="lesson-kanji"></div>
-                <div class="lesson-hero-kana" id="lesson-kana"></div>
-                <div class="lesson-hero-meaning" id="lesson-meaning"></div>
-                <div class="lesson-hero-tags" id="lesson-tags"></div>
+                <div id="lesson-kanji" class="hero-kanji"></div>
+                <div id="lesson-kana" class="hero-kana"></div>
+                <div id="lesson-meaning" class="hero-meaning"></div>
+                <div id="lesson-tags" class="hero-tags"></div>
             </div>
-            <div class="lesson-body" id="lesson-content"></div>
-            <div class="lesson-footer">
-                <button class="btn btn-skip" id="skip-btn">Skip</button>
-                <button class="btn btn-learned" id="learned-btn">Got it!</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ── Settings overlay ── -->
-    <div id="settings-overlay" class="overlay" style="display:none;">
-        <div class="overlay-content overlay-narrow">
-            <button class="overlay-close" id="settings-close">&times;</button>
-            <h2 class="settings-title">Settings</h2>
-            <div class="setting-row">
-                <div>
-                    <div class="setting-label">Batch size</div>
-                    <div class="setting-desc">Words shown at a time on the path</div>
-                </div>
-                <input type="number" id="batch-size" class="setting-input" min="1" max="50" value="3">
-            </div>
-            <div class="setting-row">
-                <div>
-                    <div class="setting-label">Reset progress</div>
-                    <div class="setting-desc">Start over from scratch</div>
-                </div>
-                <button class="btn btn-danger" id="reset-btn">Reset</button>
+            <div id="lesson-content" class="lesson-body"></div>
+            <div class="lesson-btns">
+                <button class="btn btn-ghost" id="skip-btn">Skip</button>
+                <button class="btn btn-green" id="learned-btn">Got it!</button>
             </div>
         </div>
     </div>
 
-    <!-- ── Main app ── -->
+    <!-- ── Batch sheet (list of words in a batch) ── -->
+    <div id="batch-sheet" class="sheet" style="display:none;">
+        <div class="sheet-inner">
+            <button class="sheet-close" id="batch-close">&times;</button>
+            <div class="batch-sheet-header">
+                <h2 id="batch-sheet-title">Batch 1</h2>
+                <p id="batch-sheet-sub" class="batch-sub"></p>
+            </div>
+            <div id="batch-word-list" class="batch-words"></div>
+        </div>
+    </div>
+
+    <!-- ── Settings sheet ── -->
+    <div id="settings-sheet" class="sheet" style="display:none;">
+        <div class="sheet-inner sheet-narrow">
+            <button class="sheet-close" id="settings-close">&times;</button>
+            <h2 class="sheet-title">Settings</h2>
+            <div class="setting-row">
+                <div>
+                    <div class="setting-name">Batch size</div>
+                    <div class="setting-hint">Words per batch on the path</div>
+                </div>
+                <input type="number" id="batch-size" class="setting-num" min="1" max="50" value="3">
+            </div>
+            <div class="setting-row">
+                <div>
+                    <div class="setting-name">Reset progress</div>
+                    <div class="setting-hint">Start over from the beginning</div>
+                </div>
+                <button class="btn btn-red-sm" id="reset-btn">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── App shell ── -->
     <div id="app">
-        <!-- Top bar -->
         <div class="topbar">
-            <div class="topbar-left">
-                <span class="app-logo">ことば<span class="logo-accent">練習</span></span>
-            </div>
-            <div class="topbar-stats">
-                <div class="stat">
-                    <span class="stat-num" id="stat-learned">0</span>
-                    <span class="stat-label">Learned</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num" id="stat-remaining">0</span>
-                    <span class="stat-label">Remaining</span>
-                </div>
+            <span class="logo">ことば<span class="logo-hl">練習</span></span>
+            <div class="topbar-right">
+                <div class="pill pill-green"><span id="stat-learned">0</span> learned</div>
+                <div class="pill pill-blue"><span id="stat-remaining">0</span> to go</div>
             </div>
         </div>
 
-        <!-- Page: Path -->
         <div id="page-path" class="page active">
-            <div class="path-container" id="path-container"></div>
+            <div class="path-scroll">
+                <svg id="path-svg" class="path-svg"></svg>
+                <div id="path-nodes" class="path-nodes"></div>
+            </div>
         </div>
 
-        <!-- Page: List -->
         <div id="page-list" class="page">
-            <div class="list-container">
-                <div class="list-toolbar">
+            <div class="list-wrap">
+                <div class="list-bar">
                     <h2>All Words</h2>
-                    <div class="list-filters">
-                        <button class="filter-btn active" data-filter="all">All</button>
-                        <button class="filter-btn" data-filter="learned">Learned</button>
-                        <button class="filter-btn" data-filter="skipped">Skipped</button>
+                    <div class="filter-pills">
+                        <button class="fpill active" data-filter="all">All</button>
+                        <button class="fpill" data-filter="learned">Learned</button>
+                        <button class="fpill" data-filter="skipped">Skipped</button>
                     </div>
                 </div>
-                <div class="word-table" id="word-table"></div>
+                <div id="word-table" class="word-table"></div>
             </div>
         </div>
 
-        <!-- Bottom nav -->
-        <nav class="bottom-nav">
-            <button class="bnav-btn active" data-page="path">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="14"/><circle cx="12" cy="19" r="3"/><path d="M12 14c-4 0-4 5-8 5"/><path d="M12 14c4 0 4 5 8 5"/></svg>
+        <nav class="tab-bar">
+            <button class="tab active" data-page="path">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/></svg>
                 <span>Path</span>
             </button>
-            <button class="bnav-btn" data-page="list">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/></svg>
+            <button class="tab" data-page="list">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="5" cy="6" r="1.5" fill="currentColor" stroke="none"/><circle cx="5" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="5" cy="18" r="1.5" fill="currentColor" stroke="none"/></svg>
                 <span>List</span>
             </button>
-            <button class="bnav-btn" id="nav-settings">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+            <button class="tab" id="tab-settings">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
                 <span>Settings</span>
             </button>
         </nav>

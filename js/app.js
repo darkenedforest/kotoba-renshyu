@@ -1,50 +1,57 @@
 const App = {
+  currentBatchIndex: null,
+
   async init() {
     UI.init();
 
-    // Nav
-    document.querySelectorAll('.bnav-btn[data-page]').forEach(btn => {
+    // Tab nav
+    document.querySelectorAll('.tab[data-page]').forEach(btn => {
       btn.addEventListener('click', () => {
-        const page = btn.dataset.page;
-        UI.showPage(page);
-        if (page === 'path') this.renderPath();
-        if (page === 'list') this.renderList();
+        UI.showPage(btn.dataset.page);
+        if (btn.dataset.page === 'path') this.renderPath();
+        if (btn.dataset.page === 'list') this.renderList();
       });
     });
 
     // Settings
-    UI.els.navSettings.addEventListener('click', () => {
-      UI.showSettings(Storage.getProgress());
-    });
+    document.getElementById('tab-settings').addEventListener('click', () =>
+      UI.showSettings(Storage.getProgress())
+    );
     UI.els.settingsClose.addEventListener('click', () => UI.hideSettings());
+    UI.els.settingsSheet.addEventListener('click', (e) => {
+      if (e.target === UI.els.settingsSheet) UI.hideSettings();
+    });
     UI.els.batchSizeInput.addEventListener('change', (e) => {
       const size = Math.max(1, Math.min(50, parseInt(e.target.value) || 3));
       e.target.value = size;
       Storage.setBatchSize(size);
-      this.renderPath();
     });
     UI.els.resetBtn.addEventListener('click', () => {
-      if (confirm('Reset all progress? This cannot be undone.')) {
+      if (confirm('Reset all progress?')) {
         localStorage.removeItem('kotoba-renshyu');
         UI.hideSettings();
         this.renderPath();
       }
     });
 
-    // Lesson overlay
+    // Batch sheet
+    UI.els.batchClose.addEventListener('click', () => UI.hideBatchSheet());
+    UI.els.batchSheet.addEventListener('click', (e) => {
+      if (e.target === UI.els.batchSheet) UI.hideBatchSheet();
+    });
+
+    // Lesson sheet
     UI.els.lessonClose.addEventListener('click', () => UI.hideLesson());
-    UI.els.lessonOverlay.addEventListener('click', (e) => {
-      if (e.target === UI.els.lessonOverlay) UI.hideLesson();
+    UI.els.lessonSheet.addEventListener('click', (e) => {
+      if (e.target === UI.els.lessonSheet) UI.hideLesson();
     });
 
     // List filters
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        this.renderList(btn.dataset.filter);
-      });
+    document.querySelectorAll('.fpill').forEach(btn => {
+      btn.addEventListener('click', () => this.renderList(btn.dataset.filter));
     });
 
-    // Load data
+    // Load
     const lessons = await this.loadLessons();
     Queue.init(lessons);
     this.renderPath();
@@ -68,6 +75,15 @@ const App = {
     UI.renderList(Storage.getProgress(), filter || UI.currentFilter);
   },
 
+  openBatch(index) {
+    this.currentBatchIndex = index;
+    const progress = Storage.getProgress();
+    const batches = Queue.getBatches(progress.batchSize);
+    if (batches[index]) {
+      UI.showBatchSheet(batches[index], progress);
+    }
+  },
+
   showLesson(id) {
     const word = Queue.getLessonById(id);
     if (word) UI.showLesson(word);
@@ -76,33 +92,28 @@ const App = {
   markLearned(id) {
     Storage.markLearned(id);
     UI.hideLesson();
+    // Refresh batch sheet if open
+    if (this.currentBatchIndex !== null) {
+      const progress = Storage.getProgress();
+      const batches = Queue.getBatches(progress.batchSize);
+      if (batches[this.currentBatchIndex]) {
+        UI.showBatchSheet(batches[this.currentBatchIndex], progress);
+      }
+    }
     this.renderPath();
   },
 
   markSkipped(id) {
     Storage.markSkipped(id);
     UI.hideLesson();
+    if (this.currentBatchIndex !== null) {
+      const progress = Storage.getProgress();
+      const batches = Queue.getBatches(progress.batchSize);
+      if (batches[this.currentBatchIndex]) {
+        UI.showBatchSheet(batches[this.currentBatchIndex], progress);
+      }
+    }
     this.renderPath();
-  },
-
-  unmarkLearnedFromList(id) {
-    Storage.unmarkLearned(id);
-    this.renderList();
-  },
-
-  markLearnedFromList(id) {
-    Storage.markLearned(id);
-    this.renderList();
-  },
-
-  markSkippedFromList(id) {
-    Storage.markSkipped(id);
-    this.renderList();
-  },
-
-  restoreWordFromList(id) {
-    Storage.restoreWord(id);
-    this.renderList();
   }
 };
 
