@@ -38,9 +38,9 @@ Low intermediate: knows hiragana and katakana, basic grammar, roughly 200–400 
 
 ### Generation Process
 
-Each lesson gets two passes:
+Each lesson is written then iteratively revised until it's as good as it can be:
 1. **Writing pass** — generate the lesson content
-2. **Revision pass** — review for slop, padding, accuracy, and tone; tighten and improve
+2. **Revision loop** — review for slop, padding, accuracy, and tone; tighten and improve; repeat until the lesson can't be meaningfully improved
 
 ## 3. App Behavior
 
@@ -154,7 +154,7 @@ Generate real lessons for all 1000 words. Done in batches across multiple sessio
 
 - Read vocab data from the CSV
 - Write pass: generate lesson content for each word
-- Revise pass: review and tighten each lesson
+- Revision loop: iteratively review and tighten each lesson until it can't be meaningfully improved
 - Output chunked JSON data files
 - Incremental: can generate a range at a time (e.g., words 1–50)
 
