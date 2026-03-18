@@ -2,24 +2,52 @@ const App = {
   async init() {
     UI.init();
 
-    // Wire up nav and controls FIRST
-    UI.els.backBtn.addEventListener('click', () => this.showBatch());
-    UI.els.navBatch.addEventListener('click', () => this.showBatch());
-    UI.els.navList.addEventListener('click', () => this.showFullList());
+    // Nav
+    document.querySelectorAll('.bnav-btn[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const page = btn.dataset.page;
+        UI.showPage(page);
+        if (page === 'path') this.renderPath();
+        if (page === 'list') this.renderList();
+      });
+    });
+
+    // Settings
+    UI.els.navSettings.addEventListener('click', () => {
+      UI.showSettings(Storage.getProgress());
+    });
+    UI.els.settingsClose.addEventListener('click', () => UI.hideSettings());
     UI.els.batchSizeInput.addEventListener('change', (e) => {
       const size = Math.max(1, Math.min(50, parseInt(e.target.value) || 3));
       e.target.value = size;
       Storage.setBatchSize(size);
-      this.renderBatch();
+      this.renderPath();
     });
-    UI.els.skippedToggle.addEventListener('click', () => {
-      UI.els.skippedList.classList.toggle('open');
+    UI.els.resetBtn.addEventListener('click', () => {
+      if (confirm('Reset all progress? This cannot be undone.')) {
+        localStorage.removeItem('kotoba-renshyu');
+        UI.hideSettings();
+        this.renderPath();
+      }
     });
 
-    // Then load data
+    // Lesson overlay
+    UI.els.lessonClose.addEventListener('click', () => UI.hideLesson());
+    UI.els.lessonOverlay.addEventListener('click', (e) => {
+      if (e.target === UI.els.lessonOverlay) UI.hideLesson();
+    });
+
+    // List filters
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.renderList(btn.dataset.filter);
+      });
+    });
+
+    // Load data
     const lessons = await this.loadLessons();
     Queue.init(lessons);
-    this.renderBatch();
+    this.renderPath();
   },
 
   async loadLessons() {
@@ -32,12 +60,12 @@ const App = {
     }
   },
 
-  renderBatch() {
-    const progress = Storage.getProgress();
-    const batch = Queue.getBatch(progress);
-    const skipped = Queue.getSkipped(progress);
-    UI.renderBatch(batch, progress);
-    UI.renderSkipped(skipped);
+  renderPath() {
+    UI.renderPath(Storage.getProgress());
+  },
+
+  renderList(filter) {
+    UI.renderList(Storage.getProgress(), filter || UI.currentFilter);
   },
 
   showLesson(id) {
@@ -45,52 +73,36 @@ const App = {
     if (word) UI.showLesson(word);
   },
 
-  showBatch() {
-    UI.showBatch();
-    this.renderBatch();
-  },
-
-  showFullList() {
-    const progress = Storage.getProgress();
-    UI.showFullList();
-    UI.renderFullList(progress);
-    UI.updateProgress(progress);
-  },
-
   markLearned(id) {
     Storage.markLearned(id);
-    UI.showBatch();
-    this.renderBatch();
+    UI.hideLesson();
+    this.renderPath();
   },
 
   markSkipped(id) {
     Storage.markSkipped(id);
-    this.renderBatch();
+    UI.hideLesson();
+    this.renderPath();
   },
 
-  restoreWord(id) {
-    Storage.restoreWord(id);
-    this.renderBatch();
-  },
-
-  unmarkLearned(id) {
+  unmarkLearnedFromList(id) {
     Storage.unmarkLearned(id);
-    this.showFullList();
+    this.renderList();
   },
 
   markLearnedFromList(id) {
     Storage.markLearned(id);
-    this.showFullList();
+    this.renderList();
   },
 
   markSkippedFromList(id) {
     Storage.markSkipped(id);
-    this.showFullList();
+    this.renderList();
   },
 
   restoreWordFromList(id) {
     Storage.restoreWord(id);
-    this.showFullList();
+    this.renderList();
   }
 };
 
