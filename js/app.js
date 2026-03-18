@@ -2,10 +2,10 @@ const App = {
   async init() {
     UI.init();
 
-    // Wire up controls FIRST, before any async work
+    // Wire up nav and controls FIRST
     UI.els.backBtn.addEventListener('click', () => this.showBatch());
-    UI.els.listBackBtn.addEventListener('click', () => this.showBatch());
-    UI.els.listBtn.addEventListener('click', () => this.showFullList());
+    UI.els.navBatch.addEventListener('click', () => this.showBatch());
+    UI.els.navList.addEventListener('click', () => this.showFullList());
     UI.els.batchSizeInput.addEventListener('change', (e) => {
       const size = Math.max(1, Math.min(50, parseInt(e.target.value) || 3));
       e.target.value = size;

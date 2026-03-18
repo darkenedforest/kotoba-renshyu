@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,235 +8,295 @@
 
 body {
   font-family: 'Inter', 'Noto Sans JP', sans-serif;
-  background: #0c0c0e;
-  color: #e8e4de;
+  background: #08080a;
+  color: #d4d0c8;
   line-height: 1.6;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ── Header ── */
+/* ════════════════════════════════════
+   HEADER
+   ════════════════════════════════════ */
 
 header {
-  background: linear-gradient(135deg, #14141a 0%, #18161e 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 1.1rem 1.5rem;
+  background: #101014;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 3.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
 }
 
 header h1 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, #c8a0ff 0%, #7eb8ff 100%);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.header-accent {
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: 0.04em;
 }
 
-header .header-right {
+.header-nav {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-header .progress {
-  font-size: 0.78rem;
-  color: #555;
-  letter-spacing: 0.03em;
-}
-
-header .list-btn {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 0.25rem;
+  background: rgba(255,255,255,0.04);
   border-radius: 8px;
-  padding: 0.4rem 0.9rem;
+  padding: 3px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #555;
   font-size: 0.78rem;
   font-weight: 500;
-  color: #999;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
   letter-spacing: 0.02em;
 }
 
-header .list-btn:hover {
-  color: #c8a0ff;
-  border-color: rgba(200, 160, 255, 0.25);
-  background: rgba(200, 160, 255, 0.06);
+.nav-btn:hover {
+  color: #aaa;
 }
 
-/* ── Batch Controls ── */
+.nav-btn.active {
+  background: rgba(167, 139, 250, 0.15);
+  color: #a78bfa;
+}
 
-.batch-controls {
-  padding: 0.7rem 1.5rem;
-  background: rgba(255, 255, 255, 0.02);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+/* ════════════════════════════════════
+   BATCH BAR
+   ════════════════════════════════════ */
+
+.batch-bar {
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.batch-progress {
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.78rem;
-  color: #555;
 }
 
-.batch-controls label {
+.batch-progress span {
+  font-size: 0.75rem;
+  color: #555;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 3px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+.batch-size-label {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #444;
 }
 
-.batch-controls input[type="number"] {
-  width: 3.2rem;
-  padding: 0.3rem 0.4rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  font-size: 0.78rem;
+.batch-size-label input {
+  width: 2.8rem;
+  padding: 0.25rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 5px;
+  font-size: 0.75rem;
   text-align: center;
-  background: rgba(255, 255, 255, 0.03);
-  color: #bbb;
+  background: rgba(255,255,255,0.03);
+  color: #aaa;
   font-family: 'Inter', sans-serif;
 }
 
-.batch-controls input[type="number"]:focus {
+.batch-size-label input:focus {
   outline: none;
-  border-color: rgba(200, 160, 255, 0.3);
+  border-color: rgba(167, 139, 250, 0.4);
 }
 
-/* ── Word Cards (Batch View) ── */
+/* ════════════════════════════════════
+   WORD CARDS
+   ════════════════════════════════════ */
 
 .word-list {
-  padding: 1.25rem 1.5rem;
+  padding: 0 1.5rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
-  max-width: 620px;
+  gap: 0.5rem;
+  max-width: 640px;
   margin: 0 auto;
 }
 
 .word-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.02) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
-  padding: 1.1rem 1.3rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
-.word-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(200, 160, 255, 0.15), transparent);
-  opacity: 0;
-  transition: opacity 0.3s;
+.word-card:active {
+  transform: scale(0.985);
 }
 
 .word-card:hover {
-  border-color: rgba(200, 160, 255, 0.15);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(200, 160, 255, 0.03) 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(200, 160, 255, 0.04);
+  background: rgba(167, 139, 250, 0.04);
+  border-color: rgba(167, 139, 250, 0.12);
 }
 
-.word-card:hover::before {
-  opacity: 1;
-}
-
-.word-card .word-info {
+.card-main {
   display: flex;
   align-items: baseline;
-  gap: 0.8rem;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 0;
 }
 
-.word-card .kanji {
+.card-kanji {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
-  text-shadow: 0 0 30px rgba(200, 160, 255, 0.1);
+  flex-shrink: 0;
 }
 
-.word-card .kana {
+.card-kana {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #666;
+  flex-shrink: 0;
 }
 
-.word-card .word-right {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.word-card .meaning {
-  font-size: 0.82rem;
-  color: #777;
+.card-meaning {
+  font-size: 0.78rem;
+  color: #4a4a4a;
+  margin-left: auto;
   text-align: right;
-  cursor: pointer;
+  padding-left: 0.5rem;
 }
 
-.word-card .card-skip-btn {
+.card-skip {
   background: none;
   border: none;
-  color: #3a3a3a;
-  font-size: 0.85rem;
+  color: #2a2a2a;
   cursor: pointer;
-  padding: 0.35rem;
-  line-height: 1;
-  border-radius: 6px;
-  transition: all 0.25s;
+  padding: 0.5rem;
+  margin: -0.5rem -0.3rem -0.5rem 0.25rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.word-card .card-skip-btn:hover {
-  color: #ff6b6b;
-  background: rgba(255, 107, 107, 0.1);
+.card-skip:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
 }
 
-/* ── Lesson View ── */
+/* ════════════════════════════════════
+   BATCH COMPLETE
+   ════════════════════════════════════ */
 
-.lesson-view {
-  display: none;
+.batch-complete {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+}
+
+.batch-complete .complete-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.batch-complete h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 0.4rem;
+}
+
+.batch-complete p {
+  font-size: 0.85rem;
+  color: #555;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ════════════════════════════════════
+   LESSON VIEW
+   ════════════════════════════════════ */
+
+.lesson-container {
   max-width: 640px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-.lesson-view.active {
-  display: block;
+  padding: 1.25rem 1.5rem 2rem;
 }
 
 .back-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.25rem;
   background: none;
   border: none;
   color: #555;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  padding: 0.3rem 0;
+  padding: 0.35rem 0;
   margin-bottom: 1.5rem;
   transition: color 0.2s;
-  letter-spacing: 0.02em;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.01em;
 }
 
 .back-btn:hover {
-  color: #c8a0ff;
+  color: #a78bfa;
 }
 
 .lesson-header {
   text-align: center;
   margin-bottom: 2.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   position: relative;
 }
 
@@ -244,44 +304,71 @@ header .list-btn:hover {
   content: '';
   position: absolute;
   bottom: -1px;
-  left: 25%;
-  right: 25%;
+  left: 20%;
+  right: 20%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(200, 160, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.25), transparent);
 }
 
-.lesson-header .kanji {
+.lesson-kanji {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
   color: #fff;
-  text-shadow: 0 0 40px rgba(200, 160, 255, 0.12);
 }
 
-.lesson-header .kana {
+.lesson-reading {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #666;
-  margin-top: 0.4rem;
-  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+  letter-spacing: 0.1em;
 }
 
-.lesson-header .meaning {
-  font-size: 0.95rem;
+.lesson-meaning {
+  font-size: 1rem;
   color: #888;
-  margin-top: 0.6rem;
-  font-style: italic;
+  margin-top: 0.5rem;
 }
+
+.lesson-tags {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-top: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.tag:nth-child(odd) {
+  background: rgba(167, 139, 250, 0.12);
+  color: #a78bfa;
+}
+
+.tag:nth-child(even) {
+  background: rgba(96, 165, 250, 0.12);
+  color: #60a5fa;
+}
+
+/* ── Lesson content typography ── */
 
 .lesson-content {
-  font-size: 0.95rem;
-  line-height: 1.9;
-  color: #b5b0a8;
+  font-size: 0.92rem;
+  line-height: 1.95;
+  color: #a8a4a0;
 }
 
 .lesson-content p {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.3rem;
 }
 
 .lesson-content em {
@@ -291,85 +378,142 @@ header .list-btn:hover {
 
 .lesson-content strong {
   font-weight: 600;
-  color: #ddd;
+  color: #d4d0c8;
 }
+
+/* Japanese text inline */
+.lesson-content .jp {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #e0dcd6;
+  font-weight: 500;
+}
+
+/* Japanese example phrases */
+.lesson-content .jp-example {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #a78bfa;
+  font-weight: 500;
+}
+
+/* Glosses / translations in parentheses */
+.lesson-content .gloss {
+  color: #5a5856;
+  font-size: 0.88em;
+}
+
+/* Reading / pronunciation callouts */
+.lesson-content .reading {
+  color: #60a5fa;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Highlighted important forms */
+.lesson-content .highlight {
+  background: rgba(167, 139, 250, 0.1);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  color: #c4b5fd;
+}
+
+/* Wrong / incorrect examples */
+.lesson-content .wrong {
+  text-decoration: line-through;
+  text-decoration-color: rgba(239, 68, 68, 0.5);
+  color: #888;
+}
+
+/* Note labels */
+.lesson-content .note-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #e8a86d;
+  margin-right: 0.25rem;
+}
+
+/* ── Lesson actions ── */
 
 .lesson-actions {
   display: flex;
   gap: 0.75rem;
   margin-top: 2.5rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-.lesson-actions button {
+.action-btn {
   flex: 1;
   padding: 0.85rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.03);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: #888;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: all 0.2s;
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.02em;
+  border: 1px solid transparent;
 }
 
-.lesson-actions button:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
+.action-skip {
+  background: rgba(255,255,255,0.04);
+  color: #666;
+  border-color: rgba(255,255,255,0.06);
 }
 
-.lesson-actions .learned-btn {
-  background: linear-gradient(135deg, rgba(74, 222, 128, 0.12) 0%, rgba(74, 222, 128, 0.06) 100%);
+.action-skip:hover {
+  background: rgba(255,255,255,0.06);
+  color: #999;
+}
+
+.action-learned {
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.15), rgba(52, 211, 153, 0.1));
   color: #4ade80;
   border-color: rgba(74, 222, 128, 0.2);
 }
 
-.lesson-actions .learned-btn:hover {
-  background: linear-gradient(135deg, rgba(74, 222, 128, 0.18) 0%, rgba(74, 222, 128, 0.1) 100%);
+.action-learned:hover {
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.22), rgba(52, 211, 153, 0.15));
   border-color: rgba(74, 222, 128, 0.35);
-  box-shadow: 0 0 20px rgba(74, 222, 128, 0.08);
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.06);
 }
 
-.lesson-actions .skip-btn:hover {
-  color: #bbb;
-}
-
-/* ── Skipped Pool ── */
+/* ════════════════════════════════════
+   SKIPPED POOL
+   ════════════════════════════════════ */
 
 .skipped-section {
-  max-width: 620px;
-  margin: 0.75rem auto 0;
+  max-width: 640px;
+  margin: 0 auto;
   padding: 0 1.5rem 2rem;
 }
 
 .skipped-toggle {
   background: none;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  padding: 0.65rem 1rem;
-  font-size: 0.78rem;
-  color: #444;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.75rem;
+  color: #3a3a3a;
   cursor: pointer;
   width: 100%;
   text-align: left;
-  transition: all 0.25s;
-  letter-spacing: 0.02em;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.03em;
 }
 
 .skipped-toggle:hover {
-  color: #777;
-  border-color: rgba(255, 255, 255, 0.1);
+  color: #666;
+  border-color: rgba(255,255,255,0.08);
 }
 
 .skipped-list {
   display: none;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .skipped-list.open {
@@ -377,107 +521,89 @@ header .list-btn:hover {
 }
 
 .skipped-card {
-  background: rgba(255, 255, 255, 0.015);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 10px;
-  padding: 0.65rem 1rem;
+  background: rgba(255,255,255,0.015);
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   opacity: 0.5;
-  transition: opacity 0.2s;
 }
 
-.skipped-card:hover {
-  opacity: 0.7;
-}
-
-.skipped-card .word-info {
+.skipped-info {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
-.skipped-card .kanji {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 600;
-}
-
-.skipped-card .kana {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 0.78rem;
+.restore-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 5px;
+  padding: 0.22rem 0.55rem;
+  font-size: 0.7rem;
   color: #444;
-}
-
-.skipped-card .restore-btn {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  padding: 0.28rem 0.65rem;
-  font-size: 0.72rem;
-  color: #555;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: all 0.2s;
   font-family: 'Inter', sans-serif;
-  letter-spacing: 0.02em;
 }
 
-.skipped-card .restore-btn:hover {
-  color: #c8a0ff;
-  border-color: rgba(200, 160, 255, 0.25);
-  background: rgba(200, 160, 255, 0.06);
+.restore-btn:hover {
+  color: #a78bfa;
+  border-color: rgba(167, 139, 250, 0.25);
 }
 
-/* ── Empty State ── */
+/* ════════════════════════════════════
+   FULL LIST VIEW
+   ════════════════════════════════════ */
 
-.empty-state {
-  text-align: center;
-  padding: 4rem 1.5rem;
-  color: #333;
-  font-size: 0.88rem;
-  letter-spacing: 0.02em;
-}
-
-/* ── Full List View ── */
-
-.full-list-view {
-  max-width: 620px;
+.list-container {
+  max-width: 640px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem 2rem;
 }
 
-.list-heading {
-  font-size: 0.88rem;
-  font-weight: 500;
+.list-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   margin-bottom: 1rem;
-  color: #555;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+}
+
+.list-header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.list-count {
+  font-size: 0.75rem;
+  color: #444;
+  letter-spacing: 0.03em;
 }
 
 .full-list {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 2px;
 }
 
 .list-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.6rem 0.8rem;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 8px;
-  transition: all 0.2s;
+  padding: 0.5rem 0.7rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 6px;
+  transition: all 0.15s;
 }
 
 .list-row:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255,255,255,0.04);
 }
 
-.list-row .word-info {
+.row-info {
   display: flex;
   align-items: baseline;
   gap: 0.5rem;
@@ -485,78 +611,74 @@ header .list-btn:hover {
   overflow: hidden;
 }
 
-.list-row .kanji {
+.row-num {
+  font-size: 0.65rem;
+  color: #2a2a2a;
+  width: 1.5rem;
+  text-align: right;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.row-kanji {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
+  color: #ddd;
   flex-shrink: 0;
 }
 
-.list-row .kana {
+.row-kana {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.72rem;
   color: #444;
   flex-shrink: 0;
 }
 
-.list-row .meaning {
+.row-meaning {
   font-size: 0.72rem;
-  color: #3a3a3a;
+  color: #333;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.list-row--learned {
-  opacity: 0.35;
-}
+.state-learned { opacity: 0.35; }
+.state-skipped { opacity: 0.25; }
 
-.list-row--skipped {
-  opacity: 0.25;
-}
-
-.list-actions {
+.row-actions {
   display: flex;
-  gap: 0.3rem;
+  gap: 0.2rem;
   flex-shrink: 0;
 }
 
-.list-action-btn {
-  width: 1.75rem;
-  height: 1.75rem;
+.row-btn {
+  width: 1.6rem;
+  height: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: none;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 6px;
-  color: #333;
-  font-size: 0.78rem;
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 5px;
+  color: #2a2a2a;
   cursor: pointer;
-  transition: all 0.25s;
+  transition: all 0.2s;
 }
 
-.list-action-btn:hover {
-  border-color: rgba(255, 255, 255, 0.12);
-  color: #777;
+.row-btn:hover {
+  color: #666;
+  border-color: rgba(255,255,255,0.1);
 }
 
-.list-action-btn.active[data-action="learned"] {
-  background: rgba(74, 222, 128, 0.1);
-  border-color: rgba(74, 222, 128, 0.25);
+.row-btn.btn-learned.on {
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.2);
   color: #4ade80;
 }
 
-.list-action-btn.active[data-action="learned"]:hover {
-  background: rgba(74, 222, 128, 0.15);
-}
-
-.list-action-btn.active[data-action="skipped"] {
-  background: rgba(255, 160, 96, 0.1);
-  border-color: rgba(255, 160, 96, 0.25);
-  color: #ffa060;
-}
-
-.list-action-btn.active[data-action="skipped"]:hover {
-  background: rgba(255, 160, 96, 0.15);
+.row-btn.btn-skip.on {
+  background: rgba(251, 146, 60, 0.12);
+  border-color: rgba(251, 146, 60, 0.2);
+  color: #fb923c;
 }
