@@ -9,7 +9,10 @@
 <body>
     <header>
         <h1>Kotoba Renshyu</h1>
-        <span class="progress" id="progress-text">0 / 0 learned</span>
+        <div class="header-right">
+            <span class="progress" id="progress-text">0 / 0 learned</span>
+            <button class="list-btn" id="list-btn">All Words</button>
+        </div>
     </header>
 
     <div id="batch-view">
@@ -40,6 +43,12 @@
             <button class="skip-btn" id="skip-btn">Skip</button>
             <button class="learned-btn" id="learned-btn">Learned</button>
         </div>
+    </div>
+
+    <div class="full-list-view" id="full-list-view">
+        <button class="back-btn" id="list-back-btn">&larr; Back</button>
+        <h2 class="list-heading">All Words</h2>
+        <div class="full-list" id="full-list"></div>
     </div>
 
     <script src="js/storage.js"></script>

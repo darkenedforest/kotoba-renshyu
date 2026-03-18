@@ -27,9 +27,31 @@ header h1 {
   letter-spacing: 0.02em;
 }
 
+header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 header .progress {
   font-size: 0.85rem;
   color: #888;
+}
+
+header .list-btn {
+  background: none;
+  border: 1px solid #d0ccc4;
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+header .list-btn:hover {
+  color: #2c2c2c;
+  border-color: #8a7f6e;
 }
 
 .batch-controls {
@@ -106,15 +128,34 @@ header .progress {
   color: #888;
 }
 
+.word-card .word-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .word-card .meaning {
   font-size: 0.85rem;
   color: #666;
   text-align: right;
-  max-width: 40%;
+  cursor: pointer;
 }
 
-.word-card .actions {
-  display: none;
+.word-card .card-skip-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.2rem 0.3rem;
+  line-height: 1;
+  border-radius: 3px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.word-card .card-skip-btn:hover {
+  color: #888;
+  background: #f0ece6;
 }
 
 /* Lesson detail view */
@@ -311,4 +352,127 @@ header .progress {
   padding: 3rem 1.5rem;
   color: #999;
   font-size: 0.95rem;
+}
+
+/* Full list view */
+.full-list-view {
+  display: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.full-list-view .back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  color: #8a7f6e;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  margin-bottom: 1rem;
+}
+
+.full-list-view .back-btn:hover {
+  color: #5a5245;
+}
+
+.list-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+
+.full-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.8rem;
+  background: #fff;
+  border: 1px solid #e0dcd4;
+  border-radius: 6px;
+  transition: opacity 0.15s;
+}
+
+.list-row .word-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.list-row .kanji {
+  font-size: 1.15rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.list-row .kana {
+  font-size: 0.8rem;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.list-row .meaning {
+  font-size: 0.8rem;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-row--learned {
+  opacity: 0.5;
+}
+
+.list-row--skipped {
+  opacity: 0.4;
+}
+
+.list-actions {
+  display: flex;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+.list-action-btn {
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid #e0dcd4;
+  border-radius: 4px;
+  color: #ccc;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.list-action-btn:hover {
+  border-color: #b8b0a2;
+  color: #666;
+}
+
+.list-action-btn.active[data-action="learned"] {
+  background: #4a7c59;
+  border-color: #4a7c59;
+  color: #fff;
+}
+
+.list-action-btn.active[data-action="skipped"] {
+  background: #b0a090;
+  border-color: #b0a090;
+  color: #fff;
 }

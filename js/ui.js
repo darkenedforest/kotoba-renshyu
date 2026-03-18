@@ -5,6 +5,7 @@ const UI = {
     this.els = {
       batchView: document.getElementById('batch-view'),
       lessonView: document.getElementById('lesson-view'),
+      fullListView: document.getElementById('full-list-view'),
       wordList: document.getElementById('word-list'),
       batchSizeInput: document.getElementById('batch-size'),
       progressText: document.getElementById('progress-text'),
@@ -15,6 +16,9 @@ const UI = {
       learnedBtn: document.getElementById('learned-btn'),
       skipBtn: document.getElementById('skip-btn'),
       backBtn: document.getElementById('back-btn'),
+      listBtn: document.getElementById('list-btn'),
+      listBackBtn: document.getElementById('list-back-btn'),
+      fullList: document.getElementById('full-list'),
       skippedToggle: document.getElementById('skipped-toggle'),
       skippedList: document.getElementById('skipped-list'),
       skippedSection: document.getElementById('skipped-section')
@@ -34,13 +38,21 @@ const UI = {
       const card = document.createElement('div');
       card.className = 'word-card';
       card.innerHTML = `
-        <div class="word-info">
+        <div class="word-info" data-click="lesson">
           <span class="kanji">${word.kanji}</span>
           <span class="kana">${word.kana}</span>
         </div>
-        <span class="meaning">${word.meaning}</span>
+        <div class="word-right">
+          <span class="meaning">${word.meaning}</span>
+          <button class="card-skip-btn" title="Skip">&#x2715;</button>
+        </div>
       `;
-      card.addEventListener('click', () => App.showLesson(word.id));
+      card.querySelector('.word-info').addEventListener('click', () => App.showLesson(word.id));
+      card.querySelector('.meaning').addEventListener('click', () => App.showLesson(word.id));
+      card.querySelector('.card-skip-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        App.markSkipped(word.id);
+      });
       list.appendChild(card);
     });
 
@@ -78,8 +90,56 @@ const UI = {
     });
   },
 
+  renderFullList(progress) {
+    const list = this.els.fullList;
+    list.innerHTML = '';
+    const learnedSet = new Set(progress.learnedIds);
+    const skippedSet = new Set(progress.skippedIds);
+
+    Queue.allLessons.forEach(word => {
+      const isLearned = learnedSet.has(word.id);
+      const isSkipped = skippedSet.has(word.id);
+      const state = isLearned ? 'learned' : isSkipped ? 'skipped' : 'active';
+
+      const row = document.createElement('div');
+      row.className = `list-row list-row--${state}`;
+      row.innerHTML = `
+        <div class="word-info">
+          <span class="kanji">${word.kanji}</span>
+          <span class="kana">${word.kana}</span>
+          <span class="meaning">${word.meaning}</span>
+        </div>
+        <div class="list-actions">
+          <button class="list-action-btn ${isLearned ? 'active' : ''}" data-action="learned" title="Learned">&#x2713;</button>
+          <button class="list-action-btn ${isSkipped ? 'active' : ''}" data-action="skipped" title="Skip">&#x2715;</button>
+        </div>
+      `;
+
+      row.querySelector('[data-action="learned"]').addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isLearned) {
+          App.unmarkLearned(word.id);
+        } else {
+          App.markLearnedFromList(word.id);
+        }
+      });
+
+      row.querySelector('[data-action="skipped"]').addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (isSkipped) {
+          App.restoreWordFromList(word.id);
+        } else {
+          App.markSkippedFromList(word.id);
+        }
+      });
+
+      list.appendChild(row);
+    });
+  },
+
   showLesson(word) {
     this.els.batchView.style.display = 'none';
+    this.els.fullListView.style.display = 'none';
     this.els.lessonView.classList.add('active');
     this.els.lessonKanji.textContent = word.kanji;
     this.els.lessonKana.textContent = word.kana;
@@ -92,7 +152,14 @@ const UI = {
 
   showBatch() {
     this.els.lessonView.classList.remove('active');
+    this.els.fullListView.style.display = 'none';
     this.els.batchView.style.display = 'block';
+  },
+
+  showFullList() {
+    this.els.batchView.style.display = 'none';
+    this.els.lessonView.classList.remove('active');
+    this.els.fullListView.style.display = 'block';
   },
 
   updateProgress(progress) {

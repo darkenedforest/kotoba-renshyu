@@ -32,8 +32,14 @@ const Storage = {
     if (!p.learnedIds.includes(id)) {
       p.learnedIds.push(id);
     }
-    // remove from skipped if it was there
     p.skippedIds = p.skippedIds.filter(sid => sid !== id);
+    this.saveProgress(p);
+    return p;
+  },
+
+  unmarkLearned(id) {
+    const p = this.getProgress();
+    p.learnedIds = p.learnedIds.filter(lid => lid !== id);
     this.saveProgress(p);
     return p;
   },
@@ -49,6 +55,15 @@ const Storage = {
 
   restoreSkipped(id) {
     const p = this.getProgress();
+    p.skippedIds = p.skippedIds.filter(sid => sid !== id);
+    this.saveProgress(p);
+    return p;
+  },
+
+  // Restore any word (learned or skipped) back to queue
+  restoreWord(id) {
+    const p = this.getProgress();
+    p.learnedIds = p.learnedIds.filter(lid => lid !== id);
     p.skippedIds = p.skippedIds.filter(sid => sid !== id);
     this.saveProgress(p);
     return p;

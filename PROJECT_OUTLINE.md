@@ -12,18 +12,17 @@ Built for one person (Tyler), deployed on GitHub Pages, no backend.
 
 A good lesson creates a **brain-anchor** — something that makes the word click so it sticks on the next Anki review. The goal is insight, not information. A dictionary already has the information; the lesson's job is to connect the word to something memorable.
 
-### What a Lesson Might Include
+### What a Lesson Might Draw On
 
-Not every word needs every element. The lesson picks what's genuinely useful for *that specific word*:
+These are ingredients, not a checklist. A lesson uses whichever of these genuinely illuminate *this specific word* — and ignores the rest. The structure, order, and emphasis should be completely different from word to word.
 
-- **Kanji breakdown** — when the components tell a story or reveal meaning (not just listing radicals)
+- **Kanji origins** — where did this character come from? Oracle bone script, pictographic roots, how the visual evolved. Not "here are the radicals" but the actual story of the symbol.
+- **Sound-meaning bridges** — how can the learner connect what the word *sounds like* to what it *means*? False cognates, mouth-feel, phonetic coincidences with English or other known Japanese words. The goal is a mnemonic anchor between sound and concept.
 - **Etymology / word formation** — how the pieces combine, especially when it's surprising or clarifying
-- **Mnemonics** — vivid, specific memory hooks (not forced acronyms)
 - **Cultural context** — when knowing how/where the word is actually used changes understanding
-- **Sound connections** — when the reading connects to other known words or has a memorable quality
+- **Surprising usage** — things that defy expectations (e.g., 夢を見る — you "see" dreams in Japanese, you don't "have" them)
 - **Common confusion** — distinguishing from similar words the learner likely already knows
 - **Register and nuance** — formal vs casual, written vs spoken, connotation
-- **Example in context** — a natural sentence that reveals how the word actually behaves
 
 ### Target Level
 
@@ -32,9 +31,10 @@ Low intermediate: knows hiragana and katakana, basic grammar, roughly 200–400 
 ### Anti-Patterns
 
 - **No AI slop.** No bullet-point lists of disconnected facts. No "Let's explore this fascinating word!" No template fill-ins where you could swap any word in and get the same structure.
+- **No templates.** If you can describe a formula that all the lessons follow (e.g., "paragraph 1 is always etymology, paragraph 2 is always sound, paragraph 3 is always usage"), you've failed. Each lesson should feel like it was written specifically for that word, with its own shape and emphasis. Some words need three paragraphs. Some need five. Some should lead with the sound, some with the kanji, some with a cultural detail. Let the word dictate the structure.
 - **No padding.** If the word is straightforward, the lesson is short. Not every word needs a cultural deep-dive.
 - **No dictionary regurgitation.** The learner can look up the definition themselves. The lesson adds what a dictionary can't.
-- **No forced structure.** Each lesson follows the shape the word demands, not a fixed template.
+- **No dry grammar notes.** Conjugation tables, grammar labels (ichidan, godan), and textbook explanations are not interesting. If grammar is relevant, weave it into a story or a practical insight, don't present it as a fact sheet.
 
 ### Generation Process
 
@@ -55,21 +55,25 @@ Each lesson is written then iteratively revised until it's as good as it can be:
 - **Current** — in the active batch, not yet acted on
 - **Learned** — user marked as learned, removed from batch
 - **Skipped** — user skipped for now, removed from batch
+- All states are reversible — learned and skipped words can be restored to the queue
 
-### Lesson Detail View
+### Batch View
 
-- Tapping/clicking a word in the batch opens its full lesson
+- Words can be skipped directly from the batch list (no need to open the lesson first)
+- Tapping/clicking a word opens its full lesson
 - The lesson view shows: word (kanji), reading (kana), meaning, and the lesson content
+
+### Full Word List
+
+- Accessible from the header as a separate view
+- Shows every word with its current state (learned, skipped, or in queue)
+- Allows toggling any word's state: mark as learned, skip, or restore to queue
+- Acts as the master control panel for managing progress
 
 ### Progress Persistence
 
 - All progress (current position in queue, learned/skipped states, batch size preference) stored in **localStorage**
 - No accounts, no server, no sync
-
-### Skipped Words
-
-- Skipped words go into a separate pool that can be revisited later
-- The user can pull skipped words back into their active queue
 
 ## 4. Tech Stack
 
