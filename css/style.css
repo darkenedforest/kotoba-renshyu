@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Nunito:wght@400;600;700;800&display=swap');
 
 *, *::before, *::after {
   margin: 0;
@@ -7,9 +7,9 @@
 }
 
 body {
-  font-family: 'Inter', 'Noto Sans JP', sans-serif;
-  background: #08080a;
-  color: #d4d0c8;
+  font-family: 'Nunito', 'Noto Sans JP', sans-serif;
+  background: #f0f0f0;
+  color: #3c3c3c;
   line-height: 1.6;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -20,9 +20,9 @@ body {
    ════════════════════════════════════ */
 
 header {
-  background: #101014;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-  padding: 0 1.5rem;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 0 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,52 +30,48 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(12px);
 }
 
 header h1 {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #333;
 }
 
 .header-accent {
-  background: linear-gradient(135deg, #a78bfa, #60a5fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #8b5cf6;
 }
 
 .header-nav {
   display: flex;
-  gap: 0.25rem;
-  background: rgba(255,255,255,0.04);
-  border-radius: 8px;
+  gap: 0.3rem;
+  background: #f4f4f5;
+  border-radius: 10px;
   padding: 3px;
 }
 
 .nav-btn {
   background: none;
   border: none;
-  color: #555;
-  font-size: 0.78rem;
-  font-weight: 500;
-  padding: 0.35rem 0.85rem;
-  border-radius: 6px;
+  color: #999;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.02em;
+  font-family: 'Nunito', sans-serif;
 }
 
 .nav-btn:hover {
-  color: #aaa;
+  color: #666;
 }
 
 .nav-btn.active {
-  background: rgba(167, 139, 250, 0.15);
-  color: #a78bfa;
+  background: #fff;
+  color: #8b5cf6;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
 /* ════════════════════════════════════
@@ -83,12 +79,12 @@ header h1 {
    ════════════════════════════════════ */
 
 .batch-bar {
-  padding: 0.85rem 1.5rem;
+  padding: 1rem 1.25rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  max-width: 640px;
+  max-width: 520px;
   margin: 0 auto;
 }
 
@@ -96,28 +92,28 @@ header h1 {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .batch-progress span {
   font-size: 0.75rem;
-  color: #555;
+  font-weight: 700;
+  color: #aaa;
   white-space: nowrap;
-  letter-spacing: 0.03em;
 }
 
 .progress-bar {
   flex: 1;
-  height: 3px;
-  background: rgba(255,255,255,0.06);
-  border-radius: 2px;
+  height: 8px;
+  background: #e5e5e5;
+  border-radius: 100px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #a78bfa, #60a5fa);
-  border-radius: 2px;
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+  border-radius: 100px;
   transition: width 0.4s ease;
   width: 0%;
 }
@@ -125,26 +121,28 @@ header h1 {
 .batch-size-label {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   font-size: 0.75rem;
-  color: #444;
+  font-weight: 700;
+  color: #bbb;
 }
 
 .batch-size-label input {
-  width: 2.8rem;
+  width: 2.6rem;
   padding: 0.25rem;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 5px;
-  font-size: 0.75rem;
+  border: 2px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 0.78rem;
   text-align: center;
-  background: rgba(255,255,255,0.03);
-  color: #aaa;
-  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #555;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
 }
 
 .batch-size-label input:focus {
   outline: none;
-  border-color: rgba(167, 139, 250, 0.4);
+  border-color: #8b5cf6;
 }
 
 /* ════════════════════════════════════
@@ -152,21 +150,22 @@ header h1 {
    ════════════════════════════════════ */
 
 .word-list {
-  padding: 0 1.5rem 1rem;
+  padding: 0.5rem 1.25rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  max-width: 640px;
+  gap: 0.6rem;
+  max-width: 520px;
   margin: 0 auto;
 }
 
 .word-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
-  padding: 0.9rem 1.1rem;
+  background: #fff;
+  border: 2px solid #e8e8e8;
+  border-bottom: 4px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 0.9rem 1rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -174,41 +173,45 @@ header h1 {
   touch-action: manipulation;
 }
 
-.word-card:active {
-  transform: scale(0.985);
+.word-card:hover {
+  border-color: #c4b5fd;
+  border-bottom-color: #a78bfa;
+  background: #faf8ff;
 }
 
-.word-card:hover {
-  background: rgba(167, 139, 250, 0.04);
-  border-color: rgba(167, 139, 250, 0.12);
+.word-card:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
 }
 
 .card-main {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
+  gap: 0.65rem;
   flex: 1;
   min-width: 0;
 }
 
 .card-kanji {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #333;
   flex-shrink: 0;
 }
 
 .card-kana {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 0.8rem;
-  color: #666;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #aaa;
   flex-shrink: 0;
 }
 
 .card-meaning {
   font-size: 0.78rem;
-  color: #4a4a4a;
+  font-weight: 600;
+  color: #bbb;
   margin-left: auto;
   text-align: right;
   padding-left: 0.5rem;
@@ -217,12 +220,12 @@ header h1 {
 .card-skip {
   background: none;
   border: none;
-  color: #2a2a2a;
+  color: #ddd;
   cursor: pointer;
   padding: 0.5rem;
-  margin: -0.5rem -0.3rem -0.5rem 0.25rem;
-  border-radius: 8px;
-  transition: all 0.2s;
+  margin: -0.5rem -0.3rem -0.5rem 0.15rem;
+  border-radius: 10px;
+  transition: all 0.15s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,8 +233,8 @@ header h1 {
 }
 
 .card-skip:hover {
-  color: #ef4444;
-  background: rgba(239, 68, 68, 0.08);
+  color: #f87171;
+  background: #fef2f2;
 }
 
 /* ════════════════════════════════════
@@ -244,21 +247,22 @@ header h1 {
 }
 
 .batch-complete .complete-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .batch-complete h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ddd;
-  margin-bottom: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 0.3rem;
 }
 
 .batch-complete p {
-  font-size: 0.85rem;
-  color: #555;
-  max-width: 280px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #aaa;
+  max-width: 260px;
   margin: 0 auto;
 }
 
@@ -267,9 +271,9 @@ header h1 {
    ════════════════════════════════════ */
 
 .lesson-container {
-  max-width: 640px;
+  max-width: 560px;
   margin: 0 auto;
-  padding: 1.25rem 1.5rem 2rem;
+  padding: 1rem 1.25rem 2rem;
 }
 
 .back-btn {
@@ -278,205 +282,236 @@ header h1 {
   gap: 0.25rem;
   background: none;
   border: none;
-  color: #555;
-  font-size: 0.8rem;
+  color: #8b5cf6;
+  font-size: 0.82rem;
+  font-weight: 700;
   cursor: pointer;
   padding: 0.35rem 0;
-  margin-bottom: 1.5rem;
-  transition: color 0.2s;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.01em;
+  margin-bottom: 1rem;
+  transition: color 0.15s;
+  font-family: 'Nunito', sans-serif;
 }
 
 .back-btn:hover {
-  color: #a78bfa;
+  color: #7c3aed;
 }
 
 .lesson-header {
   text-align: center;
-  margin-bottom: 2.5rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 2rem;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  border-radius: 20px;
+  color: #fff;
   position: relative;
+  overflow: hidden;
+}
+
+.lesson-header::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
 }
 
 .lesson-header::after {
   content: '';
   position: absolute;
-  bottom: -1px;
-  left: 20%;
-  right: 20%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.25), transparent);
+  bottom: -30%;
+  left: -10%;
+  width: 150px;
+  height: 150px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
 }
 
 .lesson-kanji {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 4.5rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 900;
   line-height: 1.15;
-  color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .lesson-reading {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.15rem;
-  color: #666;
-  margin-top: 0.3rem;
-  letter-spacing: 0.1em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+  letter-spacing: 0.08em;
+  position: relative;
+  z-index: 1;
 }
 
 .lesson-meaning {
-  font-size: 1rem;
-  color: #888;
-  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  opacity: 0.9;
+  margin-top: 0.4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .lesson-tags {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.35rem;
   justify-content: center;
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .tag {
-  font-size: 0.68rem;
-  font-weight: 500;
-  padding: 0.2rem 0.55rem;
-  border-radius: 20px;
-  letter-spacing: 0.03em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-.tag:nth-child(odd) {
-  background: rgba(167, 139, 250, 0.12);
-  color: #a78bfa;
-}
-
-.tag:nth-child(even) {
-  background: rgba(96, 165, 250, 0.12);
-  color: #60a5fa;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
 }
 
 /* ── Lesson content typography ── */
 
 .lesson-content {
-  font-size: 0.92rem;
-  line-height: 1.95;
-  color: #a8a4a0;
+  font-size: 0.93rem;
+  line-height: 1.9;
+  color: #555;
+  font-weight: 600;
 }
 
 .lesson-content p {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.2rem;
+  background: #fff;
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  border: 2px solid #f0f0f0;
+  border-bottom: 3px solid #e8e8e8;
 }
 
 .lesson-content em {
-  font-style: italic;
-  color: #e8a86d;
+  font-style: normal;
+  color: #ea580c;
+  font-weight: 700;
 }
 
 .lesson-content strong {
-  font-weight: 600;
-  color: #d4d0c8;
+  font-weight: 800;
+  color: #333;
 }
 
-/* Japanese text inline */
 .lesson-content .jp {
   font-family: 'Noto Sans JP', sans-serif;
-  color: #e0dcd6;
-  font-weight: 500;
+  color: #333;
+  font-weight: 700;
 }
 
-/* Japanese example phrases */
 .lesson-content .jp-example {
   font-family: 'Noto Sans JP', sans-serif;
-  color: #a78bfa;
-  font-weight: 500;
+  color: #8b5cf6;
+  font-weight: 700;
 }
 
-/* Glosses / translations in parentheses */
 .lesson-content .gloss {
-  color: #5a5856;
+  color: #aaa;
   font-size: 0.88em;
+  font-weight: 600;
 }
 
-/* Reading / pronunciation callouts */
 .lesson-content .reading {
-  color: #60a5fa;
-  font-weight: 500;
+  color: #2563eb;
+  font-weight: 700;
   font-style: italic;
 }
 
-/* Highlighted important forms */
 .lesson-content .highlight {
-  background: rgba(167, 139, 250, 0.1);
-  padding: 0.1rem 0.35rem;
-  border-radius: 4px;
-  color: #c4b5fd;
+  background: #ede9fe;
+  padding: 0.12rem 0.4rem;
+  border-radius: 6px;
+  color: #7c3aed;
+  font-weight: 700;
 }
 
-/* Wrong / incorrect examples */
 .lesson-content .wrong {
   text-decoration: line-through;
-  text-decoration-color: rgba(239, 68, 68, 0.5);
-  color: #888;
+  text-decoration-color: #ef4444;
+  text-decoration-thickness: 2px;
+  color: #999;
 }
 
-/* Note labels */
 .lesson-content .note-label {
-  font-size: 0.72rem;
-  font-weight: 600;
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #e8a86d;
-  margin-right: 0.25rem;
+  letter-spacing: 0.06em;
+  background: #fff7ed;
+  color: #ea580c;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  margin-right: 0.3rem;
+  border: 1px solid #fed7aa;
 }
 
 /* ── Lesson actions ── */
 
 .lesson-actions {
   display: flex;
-  gap: 0.75rem;
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  gap: 0.6rem;
+  margin-top: 1.5rem;
 }
 
 .action-btn {
   flex: 1;
-  padding: 0.85rem 1rem;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  font-weight: 800;
   cursor: pointer;
-  transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.02em;
-  border: 1px solid transparent;
+  transition: all 0.15s;
+  font-family: 'Nunito', sans-serif;
+  border: 2px solid transparent;
 }
 
 .action-skip {
-  background: rgba(255,255,255,0.04);
-  color: #666;
-  border-color: rgba(255,255,255,0.06);
+  background: #f4f4f5;
+  color: #999;
+  border-color: #e8e8e8;
+  border-bottom: 4px solid #ddd;
 }
 
 .action-skip:hover {
-  background: rgba(255,255,255,0.06);
-  color: #999;
+  background: #ebebeb;
+  color: #777;
+}
+
+.action-skip:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
 }
 
 .action-learned {
-  background: linear-gradient(135deg, rgba(74, 222, 128, 0.15), rgba(52, 211, 153, 0.1));
-  color: #4ade80;
-  border-color: rgba(74, 222, 128, 0.2);
+  background: #4ade80;
+  color: #fff;
+  border-color: #22c55e;
+  border-bottom: 4px solid #16a34a;
 }
 
 .action-learned:hover {
-  background: linear-gradient(135deg, rgba(74, 222, 128, 0.22), rgba(52, 211, 153, 0.15));
-  border-color: rgba(74, 222, 128, 0.35);
-  box-shadow: 0 0 20px rgba(74, 222, 128, 0.06);
+  background: #22c55e;
+}
+
+.action-learned:active {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
 }
 
 /* ════════════════════════════════════
@@ -484,36 +519,37 @@ header h1 {
    ════════════════════════════════════ */
 
 .skipped-section {
-  max-width: 640px;
+  max-width: 520px;
   margin: 0 auto;
-  padding: 0 1.5rem 2rem;
+  padding: 0 1.25rem 2rem;
 }
 
 .skipped-toggle {
-  background: none;
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 8px;
-  padding: 0.55rem 0.85rem;
-  font-size: 0.75rem;
-  color: #3a3a3a;
+  background: #fff;
+  border: 2px solid #e8e8e8;
+  border-bottom: 3px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #bbb;
   cursor: pointer;
   width: 100%;
   text-align: left;
-  transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.03em;
+  transition: all 0.15s;
+  font-family: 'Nunito', sans-serif;
 }
 
 .skipped-toggle:hover {
-  color: #666;
-  border-color: rgba(255,255,255,0.08);
+  color: #888;
+  border-color: #ddd;
 }
 
 .skipped-list {
   display: none;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.4rem;
 }
 
 .skipped-list.open {
@@ -521,14 +557,14 @@ header h1 {
 }
 
 .skipped-card {
-  background: rgba(255,255,255,0.015);
-  border: 1px solid rgba(255,255,255,0.03);
-  border-radius: 8px;
+  background: #fff;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
   padding: 0.55rem 0.85rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .skipped-info {
@@ -538,20 +574,21 @@ header h1 {
 }
 
 .restore-btn {
-  background: none;
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 5px;
-  padding: 0.22rem 0.55rem;
-  font-size: 0.7rem;
-  color: #444;
+  background: #f4f4f5;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #8b5cf6;
   cursor: pointer;
-  transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
+  transition: all 0.15s;
+  font-family: 'Nunito', sans-serif;
 }
 
 .restore-btn:hover {
-  color: #a78bfa;
-  border-color: rgba(167, 139, 250, 0.25);
+  background: #ede9fe;
+  border-color: #c4b5fd;
 }
 
 /* ════════════════════════════════════
@@ -559,126 +596,128 @@ header h1 {
    ════════════════════════════════════ */
 
 .list-container {
-  max-width: 640px;
+  max-width: 520px;
   margin: 0 auto;
-  padding: 1.25rem 1.5rem 2rem;
+  padding: 1rem 1.25rem 2rem;
 }
 
 .list-header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .list-header h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ddd;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #333;
 }
 
 .list-count {
   font-size: 0.75rem;
-  color: #444;
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  color: #bbb;
 }
 
 .full-list {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .list-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0.7rem;
-  background: rgba(255,255,255,0.02);
-  border-radius: 6px;
+  padding: 0.55rem 0.7rem;
+  background: #fff;
+  border-radius: 10px;
   transition: all 0.15s;
 }
 
 .list-row:hover {
-  background: rgba(255,255,255,0.04);
+  background: #faf8ff;
 }
 
 .row-info {
   display: flex;
   align-items: baseline;
-  gap: 0.5rem;
+  gap: 0.45rem;
   min-width: 0;
   overflow: hidden;
 }
 
 .row-num {
   font-size: 0.65rem;
-  color: #2a2a2a;
-  width: 1.5rem;
+  font-weight: 800;
+  color: #ddd;
+  width: 1.4rem;
   text-align: right;
   flex-shrink: 0;
-  font-variant-numeric: tabular-nums;
 }
 
 .row-kanji {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.05rem;
-  font-weight: 600;
-  color: #ddd;
+  font-weight: 700;
+  color: #333;
   flex-shrink: 0;
 }
 
 .row-kana {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.72rem;
-  color: #444;
+  font-weight: 600;
+  color: #bbb;
   flex-shrink: 0;
 }
 
 .row-meaning {
   font-size: 0.72rem;
-  color: #333;
+  font-weight: 600;
+  color: #ccc;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.state-learned { opacity: 0.35; }
-.state-skipped { opacity: 0.25; }
+.state-learned { opacity: 0.4; }
+.state-skipped { opacity: 0.3; }
 
 .row-actions {
   display: flex;
-  gap: 0.2rem;
+  gap: 0.25rem;
   flex-shrink: 0;
 }
 
 .row-btn {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.7rem;
+  height: 1.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: none;
-  border: 1px solid rgba(255,255,255,0.04);
-  border-radius: 5px;
-  color: #2a2a2a;
+  background: #f4f4f5;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  color: #ddd;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
 
 .row-btn:hover {
-  color: #666;
-  border-color: rgba(255,255,255,0.1);
+  color: #999;
+  border-color: #ddd;
 }
 
 .row-btn.btn-learned.on {
-  background: rgba(74, 222, 128, 0.12);
-  border-color: rgba(74, 222, 128, 0.2);
-  color: #4ade80;
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #16a34a;
 }
 
 .row-btn.btn-skip.on {
-  background: rgba(251, 146, 60, 0.12);
-  border-color: rgba(251, 146, 60, 0.2);
-  color: #fb923c;
+  background: #ffedd5;
+  border-color: #fdba74;
+  color: #ea580c;
 }
