@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Inter', 'Noto Sans JP', sans-serif;
-  background: #0f0f0f;
+  background: #0c0c0e;
   color: #e8e4de;
   line-height: 1.6;
   min-height: 100vh;
@@ -17,9 +17,9 @@ body {
 /* ── Header ── */
 
 header {
-  background: #1a1a1a;
-  border-bottom: 1px solid #2a2a2a;
-  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #14141a 0%, #18161e 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,8 +28,11 @@ header {
 header h1 {
   font-size: 1.15rem;
   font-weight: 600;
-  color: #e8e4de;
-  letter-spacing: 0.03em;
+  background: linear-gradient(135deg, #c8a0ff 0%, #7eb8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.04em;
 }
 
 header .header-right {
@@ -39,39 +42,41 @@ header .header-right {
 }
 
 header .progress {
-  font-size: 0.8rem;
-  color: #666;
+  font-size: 0.78rem;
+  color: #555;
+  letter-spacing: 0.03em;
 }
 
 header .list-btn {
-  background: transparent;
-  border: 1px solid #3a3a3a;
-  border-radius: 6px;
-  padding: 0.4rem 0.85rem;
-  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.78rem;
   font-weight: 500;
-  color: #aaa;
+  color: #999;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s;
+  letter-spacing: 0.02em;
 }
 
 header .list-btn:hover {
-  color: #fff;
-  border-color: #555;
-  background: #252525;
+  color: #c8a0ff;
+  border-color: rgba(200, 160, 255, 0.25);
+  background: rgba(200, 160, 255, 0.06);
 }
 
 /* ── Batch Controls ── */
 
 .batch-controls {
-  padding: 0.75rem 1.5rem;
-  background: #1a1a1a;
-  border-bottom: 1px solid #2a2a2a;
+  padding: 0.7rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.8rem;
-  color: #666;
+  font-size: 0.78rem;
+  color: #555;
 }
 
 .batch-controls label {
@@ -83,59 +88,80 @@ header .list-btn:hover {
 .batch-controls input[type="number"] {
   width: 3.2rem;
   padding: 0.3rem 0.4rem;
-  border: 1px solid #333;
-  border-radius: 5px;
-  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-size: 0.78rem;
   text-align: center;
-  background: #222;
-  color: #ccc;
+  background: rgba(255, 255, 255, 0.03);
+  color: #bbb;
+  font-family: 'Inter', sans-serif;
 }
 
 .batch-controls input[type="number"]:focus {
   outline: none;
-  border-color: #555;
+  border-color: rgba(200, 160, 255, 0.3);
 }
 
 /* ── Word Cards (Batch View) ── */
 
 .word-list {
-  padding: 1rem 1.5rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.65rem;
   max-width: 620px;
   margin: 0 auto;
 }
 
 .word-card {
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.word-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 160, 255, 0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .word-card:hover {
-  border-color: #3a3a3a;
-  background: #1f1f1f;
-  transform: translateY(-1px);
+  border-color: rgba(200, 160, 255, 0.15);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(200, 160, 255, 0.03) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(200, 160, 255, 0.04);
+}
+
+.word-card:hover::before {
+  opacity: 1;
 }
 
 .word-card .word-info {
   display: flex;
   align-items: baseline;
-  gap: 0.75rem;
+  gap: 0.8rem;
 }
 
 .word-card .kanji {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #fff;
+  text-shadow: 0 0 30px rgba(200, 160, 255, 0.1);
 }
 
 .word-card .kana {
@@ -147,12 +173,12 @@ header .list-btn:hover {
 .word-card .word-right {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.8rem;
 }
 
 .word-card .meaning {
-  font-size: 0.85rem;
-  color: #888;
+  font-size: 0.82rem;
+  color: #777;
   text-align: right;
   cursor: pointer;
 }
@@ -160,18 +186,18 @@ header .list-btn:hover {
 .word-card .card-skip-btn {
   background: none;
   border: none;
-  color: #444;
+  color: #3a3a3a;
   font-size: 0.85rem;
   cursor: pointer;
-  padding: 0.3rem;
+  padding: 0.35rem;
   line-height: 1;
-  border-radius: 4px;
-  transition: all 0.2s;
+  border-radius: 6px;
+  transition: all 0.25s;
 }
 
 .word-card .card-skip-btn:hover {
-  color: #e74c3c;
-  background: rgba(231, 76, 60, 0.1);
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.1);
 }
 
 /* ── Lesson View ── */
@@ -180,7 +206,7 @@ header .list-btn:hover {
   display: none;
   max-width: 640px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .lesson-view.active {
@@ -193,135 +219,150 @@ header .list-btn:hover {
   gap: 0.3rem;
   background: none;
   border: none;
-  color: #666;
-  font-size: 0.85rem;
+  color: #555;
+  font-size: 0.82rem;
   cursor: pointer;
   padding: 0.3rem 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   transition: color 0.2s;
+  letter-spacing: 0.02em;
 }
 
 .back-btn:hover {
-  color: #ccc;
+  color: #c8a0ff;
 }
 
 .lesson-header {
   text-align: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #2a2a2a;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+.lesson-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 25%;
+  right: 25%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 160, 255, 0.3), transparent);
 }
 
 .lesson-header .kanji {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
+  text-shadow: 0 0 40px rgba(200, 160, 255, 0.12);
 }
 
 .lesson-header .kana {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.1rem;
   color: #666;
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
+  letter-spacing: 0.08em;
 }
 
 .lesson-header .meaning {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #888;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
+  font-style: italic;
 }
 
 .lesson-content {
   font-size: 0.95rem;
-  line-height: 1.85;
-  color: #c8c4be;
+  line-height: 1.9;
+  color: #b5b0a8;
 }
 
 .lesson-content p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.4rem;
 }
 
 .lesson-content em {
   font-style: italic;
-  color: #d4a574;
+  color: #e8a86d;
 }
 
 .lesson-content strong {
   font-weight: 600;
-  color: #e8e4de;
+  color: #ddd;
 }
 
 .lesson-actions {
   display: flex;
   gap: 0.75rem;
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #2a2a2a;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .lesson-actions button {
   flex: 1;
-  padding: 0.8rem 1rem;
-  border: 1px solid #333;
-  border-radius: 8px;
-  background: #1a1a1a;
-  font-size: 0.9rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.88rem;
   font-weight: 500;
-  color: #aaa;
+  color: #888;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.02em;
 }
 
 .lesson-actions button:hover {
-  background: #252525;
-  border-color: #444;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .lesson-actions .learned-btn {
-  background: #1a3d2a;
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.12) 0%, rgba(74, 222, 128, 0.06) 100%);
   color: #4ade80;
-  border-color: #2d5a3d;
+  border-color: rgba(74, 222, 128, 0.2);
 }
 
 .lesson-actions .learned-btn:hover {
-  background: #224a33;
-  border-color: #3d7a52;
-}
-
-.lesson-actions .skip-btn {
-  color: #666;
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.18) 0%, rgba(74, 222, 128, 0.1) 100%);
+  border-color: rgba(74, 222, 128, 0.35);
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.08);
 }
 
 .lesson-actions .skip-btn:hover {
-  color: #aaa;
+  color: #bbb;
 }
 
 /* ── Skipped Pool ── */
 
 .skipped-section {
   max-width: 620px;
-  margin: 1rem auto 0;
+  margin: 0.75rem auto 0;
   padding: 0 1.5rem 2rem;
 }
 
 .skipped-toggle {
   background: none;
-  border: 1px solid #2a2a2a;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  font-size: 0.8rem;
-  color: #555;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  font-size: 0.78rem;
+  color: #444;
   cursor: pointer;
   width: 100%;
   text-align: left;
-  transition: all 0.2s;
+  transition: all 0.25s;
+  letter-spacing: 0.02em;
 }
 
 .skipped-toggle:hover {
-  color: #888;
-  border-color: #3a3a3a;
+  color: #777;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .skipped-list {
@@ -336,14 +377,19 @@ header .list-btn:hover {
 }
 
 .skipped-card {
-  background: #151515;
-  border: 1px solid #252525;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
   padding: 0.65rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  opacity: 0.6;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.skipped-card:hover {
+  opacity: 0.7;
 }
 
 .skipped-card .word-info {
@@ -360,33 +406,37 @@ header .list-btn:hover {
 
 .skipped-card .kana {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 0.8rem;
-  color: #555;
+  font-size: 0.78rem;
+  color: #444;
 }
 
 .skipped-card .restore-btn {
-  background: none;
-  border: 1px solid #333;
-  border-radius: 5px;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.72rem;
   color: #555;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.02em;
 }
 
 .skipped-card .restore-btn:hover {
-  color: #aaa;
-  border-color: #555;
+  color: #c8a0ff;
+  border-color: rgba(200, 160, 255, 0.25);
+  background: rgba(200, 160, 255, 0.06);
 }
 
 /* ── Empty State ── */
 
 .empty-state {
   text-align: center;
-  padding: 3rem 1.5rem;
-  color: #444;
-  font-size: 0.9rem;
+  padding: 4rem 1.5rem;
+  color: #333;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
 }
 
 /* ── Full List View ── */
@@ -398,10 +448,12 @@ header .list-btn:hover {
 }
 
 .list-heading {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.88rem;
+  font-weight: 500;
   margin-bottom: 1rem;
-  color: #888;
+  color: #555;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .full-list {
@@ -414,11 +466,15 @@ header .list-btn:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.55rem 0.75rem;
-  background: #1a1a1a;
-  border: 1px solid #252525;
-  border-radius: 6px;
-  transition: opacity 0.15s;
+  padding: 0.6rem 0.8rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.list-row:hover {
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .list-row .word-info {
@@ -438,61 +494,69 @@ header .list-btn:hover {
 
 .list-row .kana {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 0.75rem;
-  color: #555;
+  font-size: 0.72rem;
+  color: #444;
   flex-shrink: 0;
 }
 
 .list-row .meaning {
-  font-size: 0.75rem;
-  color: #444;
+  font-size: 0.72rem;
+  color: #3a3a3a;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .list-row--learned {
-  opacity: 0.4;
+  opacity: 0.35;
 }
 
 .list-row--skipped {
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .list-actions {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.3rem;
   flex-shrink: 0;
 }
 
 .list-action-btn {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.75rem;
+  height: 1.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: none;
-  border: 1px solid #2a2a2a;
-  border-radius: 5px;
-  color: #444;
-  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  color: #333;
+  font-size: 0.78rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s;
 }
 
 .list-action-btn:hover {
-  border-color: #444;
-  color: #888;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #777;
 }
 
 .list-action-btn.active[data-action="learned"] {
-  background: #1a3d2a;
-  border-color: #2d5a3d;
+  background: rgba(74, 222, 128, 0.1);
+  border-color: rgba(74, 222, 128, 0.25);
   color: #4ade80;
 }
 
+.list-action-btn.active[data-action="learned"]:hover {
+  background: rgba(74, 222, 128, 0.15);
+}
+
 .list-action-btn.active[data-action="skipped"] {
-  background: #3d2a1a;
-  border-color: #5a3d2d;
-  color: #e8a060;
+  background: rgba(255, 160, 96, 0.1);
+  border-color: rgba(255, 160, 96, 0.25);
+  color: #ffa060;
+}
+
+.list-action-btn.active[data-action="skipped"]:hover {
+  background: rgba(255, 160, 96, 0.15);
 }
