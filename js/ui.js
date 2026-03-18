@@ -140,6 +140,7 @@ const UI = {
   showLesson(word) {
     this.els.batchView.style.display = 'none';
     this.els.fullListView.style.display = 'none';
+    this.els.lessonView.style.display = 'block';
     this.els.lessonView.classList.add('active');
     this.els.lessonKanji.textContent = word.kanji;
     this.els.lessonKana.textContent = word.kana;
@@ -151,6 +152,7 @@ const UI = {
   },
 
   showBatch() {
+    this.els.lessonView.style.display = 'none';
     this.els.lessonView.classList.remove('active');
     this.els.fullListView.style.display = 'none';
     this.els.batchView.style.display = 'block';
@@ -158,6 +160,7 @@ const UI = {
 
   showFullList() {
     this.els.batchView.style.display = 'none';
+    this.els.lessonView.style.display = 'none';
     this.els.lessonView.classList.remove('active');
     this.els.fullListView.style.display = 'block';
   },
