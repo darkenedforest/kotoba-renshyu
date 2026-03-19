@@ -421,7 +421,7 @@ body {
   letter-spacing: 0.04em; width: 5.5rem;
 }
 
-.conj-chart td:last-child {
+.conj-chart td:nth-child(2) {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 700; font-size: 1rem;
 }
@@ -433,8 +433,6 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.75rem; font-weight: 700;
   color: var(--g400);
-  text-align: right;
-  width: 3rem;
 }
 
 /* Buttons */
