@@ -398,6 +398,11 @@ body {
   background: var(--orange-pale); color: var(--orange-dark);
 }
 
+.particle-badge {
+  background: var(--g100); color: var(--g600);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 .conj-chart {
   width: 100%;
   border-collapse: collapse;
