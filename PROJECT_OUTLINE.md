@@ -31,7 +31,26 @@ Verb lessons include structured metadata in addition to the freeform lesson cont
 
 - **Group** — ichidan (一段) or godan (五段), displayed as a small label
 - **Transitivity** — 自動詞 (intransitive) or 他動詞 (transitive). If the verb has a 自動詞/他動詞 pair, name the counterpart and briefly explain the difference in use.
-- **Conjugation chart** — a compact table at the bottom of the lesson showing all key forms: dictionary, negative plain, polite present (ます), negative polite (ません), plain past (た), polite past (ました), て-form, plain volitional (よう/おう), polite volitional (ましょう), passive, causative, causative-passive, potential, plain imperative, imperative なさい, conditional ～ば, conditional ～たら. Use color highlighting to make the stem vs. changing parts visually obvious (e.g., stem in one color, inflection suffix in another). This is reference material, not the lesson itself — keep it clean and compact.
+- **Conjugation chart** — an HTML table with class `conj-chart` at the bottom of the lesson. Three columns per row:
+  1. **Label** (first `<td>`) — the form name
+  2. **Conjugation** (second `<td>`) — the conjugated form, split into `<span class="stem">` (unchanging part) and `<span class="ending">` (inflected part)
+  3. **Particle** (third `<td class="particle">`) — the particle the verb takes in that form
+
+  **Required rows, in this exact order:**
+  Dictionary, Negative, Polite, Polite neg, Past, Polite past, て-form, Volitional, Polite vol, Passive, Causative, Caus-pass, Potential, Imperative, Imp なさい, Cond ～ば, Cond ～たら
+
+  **Particle column rules:**
+  - Show the particle the verb takes for each form. For most forms this is the verb's base particle (を for transitive, に/へ for movement verbs, etc.).
+  - Forms where the particle shifts from the base: **Passive** → に (marks the agent), **Causative** → に／を (marks the causee), **Caus-pass** → に (marks the agent), **Potential** → が (marks what can be done, for transitive verbs; intransitive verbs keep their base particle).
+  - Use ／ (fullwidth slash) to separate either/or particle options. Never use dots, dashes, or other separators.
+
+  **Stem/ending split rules:**
+  - The stem is the part of the kana that never changes across any conjugation. The ending is everything after.
+  - For godan verbs: the stem is everything before the final consonant row (e.g., 買う → stem か, ending う/わない/います etc.)
+  - For ichidan verbs: the stem is everything before る (e.g., 見る → stem み, ending る/ます/ない etc.)
+  - For irregular verbs (する, 来る): the stem changes across forms — show whatever is most visually informative.
+
+  This is reference material, not the lesson itself — keep it clean and compact.
 
 ### Adjective Lessons
 
