@@ -79,7 +79,7 @@ const App = {
   openBatch(index) {
     this.currentBatchIndex = index;
     const progress = Storage.getProgress();
-    const batches = Queue.getBatches(progress.batchSize);
+    const batches = Queue.getBatches(progress.batchSize, progress);
     if (batches[index]) {
       UI.showBatchSheet(batches[index], progress);
     }
@@ -96,7 +96,7 @@ const App = {
     // Refresh batch sheet if open
     if (this.currentBatchIndex !== null) {
       const progress = Storage.getProgress();
-      const batches = Queue.getBatches(progress.batchSize);
+      const batches = Queue.getBatches(progress.batchSize, progress);
       if (batches[this.currentBatchIndex]) {
         UI.showBatchSheet(batches[this.currentBatchIndex], progress);
       }
@@ -107,13 +107,8 @@ const App = {
   markSkipped(id) {
     Storage.markSkipped(id);
     UI.hideLesson();
-    if (this.currentBatchIndex !== null) {
-      const progress = Storage.getProgress();
-      const batches = Queue.getBatches(progress.batchSize);
-      if (batches[this.currentBatchIndex]) {
-        UI.showBatchSheet(batches[this.currentBatchIndex], progress);
-      }
-    }
+    UI.hideBatchSheet();
+    this.currentBatchIndex = null;
     this.renderPath();
   },
 

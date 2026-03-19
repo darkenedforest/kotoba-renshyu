@@ -48,20 +48,18 @@ const UI = {
     const svg = this.els.pathSvg;
     nodes.innerHTML = '';
 
-    const batches = Queue.getBatches(progress.batchSize);
+    const batches = Queue.getBatches(progress.batchSize, progress);
     const learnedSet = new Set(progress.learnedIds);
-    const skippedSet = new Set(progress.skippedIds);
 
-    // Determine status of each batch
+    // Determine status of each batch (skipped words already excluded)
     let foundActive = false;
     const batchData = batches.map(batch => {
       const allLearned = batch.words.every(w => learnedSet.has(w.id));
-      const allHandled = batch.words.every(w => learnedSet.has(w.id) || skippedSet.has(w.id));
       const learnedCount = batch.words.filter(w => learnedSet.has(w.id)).length;
 
       let status;
-      if (allLearned || allHandled) {
-        status = allLearned ? 'complete' : 'done-mixed';
+      if (allLearned) {
+        status = 'complete';
       } else if (!foundActive) {
         status = 'active';
         foundActive = true;
@@ -180,7 +178,6 @@ const UI = {
 
   showBatchSheet(batch, progress) {
     const learnedSet = new Set(progress.learnedIds);
-    const skippedSet = new Set(progress.skippedIds);
 
     this.els.batchTitle.textContent = `Batch ${batch.index + 1}`;
     const done = batch.words.filter(w => learnedSet.has(w.id)).length;
@@ -191,10 +188,9 @@ const UI = {
 
     batch.words.forEach(word => {
       const isLearned = learnedSet.has(word.id);
-      const isSkipped = skippedSet.has(word.id);
 
       const row = document.createElement('div');
-      row.className = `bw-row ${isLearned ? 'bw-learned' : ''} ${isSkipped ? 'bw-skipped' : ''}`;
+      row.className = `bw-row ${isLearned ? 'bw-learned' : ''}`;
       row.innerHTML = `
         <div class="bw-left">
           <span class="bw-kanji">${word.kanji}</span>
@@ -203,7 +199,6 @@ const UI = {
         <div class="bw-right">
           <span class="bw-meaning">${word.meaning}</span>
           ${isLearned ? '<span class="bw-badge bw-badge-green">✓</span>' :
-            isSkipped ? '<span class="bw-badge bw-badge-orange">skipped</span>' :
             '<span class="bw-arrow">→</span>'}
         </div>
       `;
