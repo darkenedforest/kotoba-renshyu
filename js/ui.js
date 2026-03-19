@@ -2,6 +2,55 @@ const UI = {
   els: {},
   currentFilter: 'all',
 
+  _setupSwipeDismiss(sheet, onDismiss) {
+    const inner = sheet.querySelector('.sheet-inner');
+    let startY = 0, currentY = 0, dragging = false;
+
+    inner.addEventListener('touchstart', (e) => {
+      // Only start drag if scrolled to top
+      if (inner.scrollTop > 0) return;
+      startY = e.touches[0].clientY;
+      currentY = startY;
+      dragging = true;
+      inner.style.transition = 'none';
+    }, { passive: true });
+
+    inner.addEventListener('touchmove', (e) => {
+      if (!dragging) return;
+      currentY = e.touches[0].clientY;
+      const dy = currentY - startY;
+      if (dy > 0) {
+        inner.style.transform = `translateY(${dy}px)`;
+      } else if (dy < -10) {
+        // Scrolling up — cancel drag
+        dragging = false;
+        inner.style.transform = '';
+        inner.style.transition = '';
+      }
+    }, { passive: true });
+
+    const endDrag = () => {
+      if (!dragging) return;
+      dragging = false;
+      const dy = currentY - startY;
+      inner.style.transition = 'transform 0.2s ease-out';
+      if (dy > 80) {
+        inner.style.transform = `translateY(100%)`;
+        setTimeout(() => {
+          onDismiss();
+          inner.style.transform = '';
+          inner.style.transition = '';
+        }, 200);
+      } else {
+        inner.style.transform = '';
+        setTimeout(() => { inner.style.transition = ''; }, 200);
+      }
+    };
+
+    inner.addEventListener('touchend', endDrag, { passive: true });
+    inner.addEventListener('touchcancel', endDrag, { passive: true });
+  },
+
   init() {
     this.els = {
       pathNodes: document.getElementById('path-nodes'),
@@ -28,6 +77,10 @@ const UI = {
       statLearned: document.getElementById('stat-learned'),
       statRemaining: document.getElementById('stat-remaining')
     };
+
+    this._setupSwipeDismiss(this.els.lessonSheet, () => this.hideLesson());
+    this._setupSwipeDismiss(this.els.batchSheet, () => this.hideBatchSheet());
+    this._setupSwipeDismiss(this.els.settingsSheet, () => this.hideSettings());
   },
 
   showPage(name) {
