@@ -244,6 +244,7 @@ const UI = {
     this.els.learnedBtn.onclick = () => App.markLearned(word.id);
     this.els.skipBtn.onclick = () => App.markSkipped(word.id);
     this.els.lessonSheet.style.display = 'flex';
+    this.els.lessonSheet.querySelector('.sheet-inner').scrollTop = 0;
   },
 
   hideLesson() {

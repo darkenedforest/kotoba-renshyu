@@ -109,15 +109,27 @@ const App = {
 
   markLearned(id) {
     Storage.markLearned(id);
-    UI.hideLesson();
-    // Refresh batch sheet if open
+    const progress = Storage.getProgress();
+
+    // Find next unlearned word in the current batch
     if (this.currentBatchIndex !== null) {
-      const progress = Storage.getProgress();
       const batches = Queue.getBatches(progress.batchSize, progress);
-      if (batches[this.currentBatchIndex]) {
-        UI.showBatchSheet(batches[this.currentBatchIndex], progress);
+      const batch = batches[this.currentBatchIndex];
+      if (batch) {
+        const learnedSet = new Set(progress.learnedIds);
+        const next = batch.words.find(w => !learnedSet.has(w.id));
+        if (next) {
+          UI.showLesson(Queue.getLessonById(next.id));
+          this.renderPath();
+          return;
+        }
       }
     }
+
+    // No more words in batch — close and go back
+    UI.hideLesson();
+    UI.hideBatchSheet();
+    this.currentBatchIndex = null;
     this.renderPath();
   },
 
