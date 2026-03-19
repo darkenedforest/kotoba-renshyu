@@ -91,15 +91,20 @@ const UI = {
 
     // Draw curved path
     if (positions.length > 1) {
+      const activeIdx = batchData.findIndex(b => b.status === 'active');
+      // Grey path: draw up to one node past active (a teaser), not all the way
+      const greyEnd = activeIdx >= 0
+        ? Math.min(activeIdx + 1, positions.length - 1)
+        : positions.length - 1; // all complete — show full path
+
       let pathD = `M ${positions[0].x} ${positions[0].y}`;
-      for (let i = 1; i < positions.length; i++) {
+      for (let i = 1; i <= greyEnd; i++) {
         const prev = positions[i - 1];
         const curr = positions[i];
         const cpY = (prev.y + curr.y) / 2;
         pathD += ` C ${prev.x} ${cpY}, ${curr.x} ${cpY}, ${curr.x} ${curr.y}`;
       }
 
-      // Background path (grey)
       const bgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       bgPath.setAttribute('d', pathD);
       bgPath.setAttribute('stroke', '#e0e0e0');
@@ -108,12 +113,11 @@ const UI = {
       bgPath.setAttribute('stroke-linecap', 'round');
       svg.appendChild(bgPath);
 
-      // Progress path (colored) — up to active batch
-      const activeIdx = batchData.findIndex(b => b.status === 'active');
-      const progressEnd = activeIdx >= 0 ? activeIdx : batchData.length;
+      // Green progress path — up to active batch
+      const progressEnd = activeIdx >= 0 ? activeIdx : positions.length - 1;
       if (progressEnd > 0) {
         let progD = `M ${positions[0].x} ${positions[0].y}`;
-        for (let i = 1; i <= Math.min(progressEnd, positions.length - 1); i++) {
+        for (let i = 1; i <= progressEnd; i++) {
           const prev = positions[i - 1];
           const curr = positions[i];
           const cpY = (prev.y + curr.y) / 2;
