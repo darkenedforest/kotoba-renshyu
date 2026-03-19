@@ -31,7 +31,7 @@ Verb lessons include structured metadata in addition to the freeform lesson cont
 
 - **Group** — ichidan (一段) or godan (五段), displayed as a small label
 - **Transitivity** — 自動詞 (intransitive) or 他動詞 (transitive). If the verb has a 自動詞/他動詞 pair, name the counterpart and briefly explain the difference in use.
-- **Conjugation chart** — a compact table at the bottom of the lesson showing key forms (dictionary, ます, て, ない, た, potential, passive, causative). Use color highlighting to make the stem vs. changing parts visually obvious (e.g., stem in one color, inflection suffix in another). This is reference material, not the lesson itself — keep it clean and compact.
+- **Conjugation chart** — a compact table at the bottom of the lesson showing all key forms: dictionary, negative plain, polite present (ます), negative polite (ません), plain past (た), polite past (ました), て-form, plain volitional (よう/おう), polite volitional (ましょう), passive, causative, causative-passive, potential, plain imperative, imperative なさい, conditional ～ば, conditional ～たら. Use color highlighting to make the stem vs. changing parts visually obvious (e.g., stem in one color, inflection suffix in another). This is reference material, not the lesson itself — keep it clean and compact.
 
 ### Adjective Lessons
 
