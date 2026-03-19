@@ -25,6 +25,7 @@ const App = {
       const size = Math.max(1, Math.min(50, parseInt(e.target.value) || 3));
       e.target.value = size;
       Storage.setBatchSize(size);
+      this.renderPath();
     });
     UI.els.resetBtn.addEventListener('click', () => {
       if (confirm('Reset all progress?')) {

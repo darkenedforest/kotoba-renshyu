@@ -136,8 +136,6 @@ const UI = {
       const pos = positions[i];
       const node = document.createElement('div');
       node.className = `pnode pnode-${batch.status}`;
-      node.style.left = (pos.x - 32) + 'px';
-      node.style.top = (pos.y - 32) + 'px';
 
       const num = batch.index + 1;
       const wordCount = batch.words.length;
