@@ -31,7 +31,12 @@ Verb lessons include structured metadata in addition to the freeform lesson cont
 
 - **Group** — ichidan (一段) or godan (五段), displayed as a small label
 - **Transitivity** — 自動詞 (intransitive) or 他動詞 (transitive). If the verb has a 自動詞/他動詞 pair, name the counterpart and briefly explain the difference in use.
-- **Particle explanation** — a short paragraph just before the conjugation chart explaining why the verb takes the particle(s) it does. Don't just state the particle — explain the logic so the learner can reason about it. If the verb takes different particles in different contexts, briefly show when and why (e.g., に for destination vs を for the place you leave). Keep it to 2–4 sentences. The goal is intuition, not rules.
+- **Particle explanation** — a series of short paragraphs just before the conjugation chart, each wrapped in `<p class="particle-note">`. Cover **every** particle situation for the verb:
+  1. **Base particle** — why the verb takes the particle it does in its standard forms. Don't just say "it's transitive so it takes を." Explain what relationship the particle marks (e.g., を = you're acting on the thing, に = you're heading toward it).
+  2. **Potential** — if the particle shifts (e.g., を → が for transitive verbs), explain why: the thing is no longer something you're doing to, it's something that's possible.
+  3. **Passive** — explain that に marks the agent (the person who did the action to you). Give a concrete example.
+  4. **Causative** — explain the に／を split: に for the person being made/allowed to act, を for what they're acting on (for transitive verbs). If the verb is intransitive, explain the を (coercive) vs に (permissive) distinction for the causee.
+  Keep each paragraph to 1–3 sentences. The goal is intuition — the learner should understand *why* the particle changes, not just memorize which one to use.
 
 - **Conjugation chart** — an HTML table with class `conj-chart` at the bottom of the lesson. Three columns per row:
   1. **Label** (first `<td>`) — the form name
