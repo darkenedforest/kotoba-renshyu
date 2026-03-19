@@ -22,7 +22,16 @@ These are ingredients, not a checklist. A lesson uses whichever of these genuine
 - **Cultural context** — when knowing how/where the word is actually used changes understanding
 - **Surprising usage** — things that defy expectations (e.g., 夢を見る — you "see" dreams in Japanese, you don't "have" them)
 - **Common confusion** — distinguishing from similar words the learner likely already knows
+- **Word neighborhood** — when it makes sense, show what other words live in the same semantic space and *why you'd pick this one*. Not a synonym list — a practical comparison. Examples: an adverb meaning "just now" vs other time-related adverbs (さっき vs 先ほど vs ついさっき — when do you reach for each?). An adjective vs its adverb form (早い vs 早く — why the adverb here?). A 自動詞/他動詞 pair (開く vs 開ける — what changes?). Only include this when the distinction is genuinely useful for the word at hand; don't force comparisons where there's nothing interesting to say.
 - **Register and nuance** — formal vs casual, written vs spoken, connotation
+
+### Verb Lessons
+
+Verb lessons include structured metadata in addition to the freeform lesson content:
+
+- **Group** — ichidan (一段) or godan (五段), displayed as a small label
+- **Transitivity** — 自動詞 (intransitive) or 他動詞 (transitive). If the verb has a 自動詞/他動詞 pair, name the counterpart and briefly explain the difference in use.
+- **Conjugation chart** — a compact table at the bottom of the lesson showing key forms (dictionary, ます, て, ない, た, potential, passive, causative). Use color highlighting to make the stem vs. changing parts visually obvious (e.g., stem in one color, inflection suffix in another). This is reference material, not the lesson itself — keep it clean and compact.
 
 ### Target Level
 
@@ -34,7 +43,7 @@ Low intermediate: knows hiragana and katakana, basic grammar, roughly 200–400 
 - **No templates.** If you can describe a formula that all the lessons follow (e.g., "paragraph 1 is always etymology, paragraph 2 is always sound, paragraph 3 is always usage"), you've failed. Each lesson should feel like it was written specifically for that word, with its own shape and emphasis. Some words need three paragraphs. Some need five. Some should lead with the sound, some with the kanji, some with a cultural detail. Let the word dictate the structure.
 - **No padding.** If the word is straightforward, the lesson is short. Not every word needs a cultural deep-dive.
 - **No dictionary regurgitation.** The learner can look up the definition themselves. The lesson adds what a dictionary can't.
-- **No dry grammar notes.** Conjugation tables, grammar labels (ichidan, godan), and textbook explanations are not interesting. If grammar is relevant, weave it into a story or a practical insight, don't present it as a fact sheet.
+- **No dry grammar notes.** Textbook explanations are not interesting. If grammar is relevant, weave it into a story or a practical insight, don't present it as a fact sheet. (Exception: verb lessons include a conjugation chart as structured reference at the bottom — but the lesson *content* itself should still not read like a grammar textbook.)
 
 ### Generation Process
 
