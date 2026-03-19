@@ -61,9 +61,9 @@ const App = {
   async loadLessons() {
     const files = [
       'data/lessons-001-050.json',
-      'data/lessons-021-070.json',
-      'data/lessons-071-120.json',
-      'data/lessons-121-170.json'
+      'data/lessons-051-100.json',
+      'data/lessons-101-150.json',
+      'data/lessons-151-200.json'
     ];
     try {
       const results = await Promise.all(files.map(f => fetch(f).then(r => r.json())));
