@@ -398,10 +398,6 @@ body {
   background: var(--orange-pale); color: var(--orange-dark);
 }
 
-.particle-badge {
-  background: var(--g100); color: var(--g600);
-  font-family: 'Noto Sans JP', sans-serif;
-}
 
 .conj-chart {
   width: 100%;
@@ -432,6 +428,14 @@ body {
 
 .conj-chart .stem { color: var(--g800); }
 .conj-chart .ending { color: var(--sky); }
+
+.conj-chart .particle {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--g400);
+  text-align: right;
+  width: 3rem;
+}
 
 /* Buttons */
 .lesson-btns {
