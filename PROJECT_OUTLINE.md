@@ -126,9 +126,22 @@ Each lesson is written then iteratively revised until it's as good as it can be:
 
 ## 5. Data Format
 
-### Lesson Storage
+### Index File
 
-Lessons are stored as JSON files chunked by word range:
+`data/index.json` contains lightweight metadata for every word — just enough to render the path, batch lists, and word list without loading full lesson content:
+
+```json
+[
+  {"id": 1, "kanji": "行く", "kana": "いく", "meaning": "to go", "tags": ["godan verb", "自動詞", "irregular て-form"]},
+  ...
+]
+```
+
+This is the only file fetched on app init. Everything else is lazy-loaded.
+
+### Chunked Lesson Files
+
+Full lesson content (including HTML lesson text, conjugation charts, etc.) is stored in chunked JSON files by word range:
 
 ```
 data/lessons-001-050.json
@@ -145,6 +158,7 @@ Each file contains an array of lesson objects:
     "kanji": "人",
     "kana": "ひと",
     "meaning": "person",
+    "tags": ["noun"],
     "lesson": "<p>Lesson HTML content here...</p>"
   }
 ]
@@ -153,6 +167,8 @@ Each file contains an array of lesson objects:
 - `id` matches the word's position in the CSV (1-indexed)
 - `lesson` contains rendered HTML (not markdown), ready to inject into the page
 - Chunk size of 50 keeps individual files small enough for fast loading
+- Chunks are lazy-loaded on demand: when a user opens a lesson, the app fetches the chunk containing that word (determined by `Math.ceil(id/50)`), caches all lessons from the chunk, and shows the requested lesson
+- Once a chunk is cached, subsequent lessons from the same chunk load instantly
 
 ### Source Data
 
@@ -171,7 +187,8 @@ kotoba-renshyu/
 │   ├── storage.js           # localStorage interface
 │   └── ui.js                # DOM manipulation and rendering
 ├── data/
-│   ├── lessons-001-050.json # Lesson data chunks
+│   ├── index.json           # Word metadata index (loaded on init)
+│   ├── lessons-001-050.json # Full lesson content chunks (lazy-loaded)
 │   ├── lessons-051-100.json
 │   └── ...
 ├── scripts/

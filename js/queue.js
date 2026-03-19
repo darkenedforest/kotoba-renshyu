@@ -1,8 +1,9 @@
 const Queue = {
   allLessons: [],
+  lessonCache: {},
 
-  init(lessons) {
-    this.allLessons = lessons;
+  init(indexData) {
+    this.allLessons = indexData;
   },
 
   // Group non-skipped words into batches of given size
@@ -20,7 +21,31 @@ const Queue = {
   },
 
   getLessonById(id) {
-    return this.allLessons.find(l => l.id === id) || null;
+    return this.lessonCache[id] || null;
+  },
+
+  async loadLesson(id) {
+    // Return from cache if already loaded
+    if (this.lessonCache[id]) return this.lessonCache[id];
+
+    // Determine which chunk file contains this word
+    const chunkStart = Math.floor((id - 1) / 50) * 50 + 1;
+    const chunkEnd = chunkStart + 49;
+    const pad = n => String(n).padStart(3, '0');
+    const file = `data/lessons-${pad(chunkStart)}-${pad(chunkEnd)}.json`;
+
+    try {
+      const res = await fetch(file);
+      const lessons = await res.json();
+      // Cache all lessons from the chunk
+      for (const lesson of lessons) {
+        this.lessonCache[lesson.id] = lesson;
+      }
+      return this.lessonCache[id] || null;
+    } catch (e) {
+      console.error(`Failed to load lesson chunk ${file}:`, e);
+      return null;
+    }
   },
 
   getLearnedCount(progress) {

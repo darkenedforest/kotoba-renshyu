@@ -52,35 +52,18 @@ const App = {
       btn.addEventListener('click', () => this.renderList(btn.dataset.filter));
     });
 
-    // Load
-    const lessons = await this.loadLessons();
-    Queue.init(lessons);
+    // Load index only — full lessons are lazy-loaded on demand
+    const index = await this.loadIndex();
+    Queue.init(index);
     this.renderPath();
   },
 
-  async loadLessons() {
-    const files = [
-      'data/lessons-001-050.json',
-      'data/lessons-051-100.json',
-      'data/lessons-101-150.json',
-      'data/lessons-151-200.json'
-    ];
+  async loadIndex() {
     try {
-      const results = await Promise.all(files.map(f => fetch(f).then(r => r.json())));
-      // Merge and deduplicate by id (later files don't override earlier ones)
-      const seen = new Set();
-      const all = [];
-      for (const arr of results) {
-        for (const lesson of arr) {
-          if (!seen.has(lesson.id)) {
-            seen.add(lesson.id);
-            all.push(lesson);
-          }
-        }
-      }
-      return all.sort((a, b) => a.id - b.id);
+      const res = await fetch('data/index.json');
+      return await res.json();
     } catch (e) {
-      console.error('Failed to load lessons:', e);
+      console.error('Failed to load index:', e);
       return [];
     }
   },
@@ -102,12 +85,12 @@ const App = {
     }
   },
 
-  showLesson(id) {
-    const word = Queue.getLessonById(id);
+  async showLesson(id) {
+    const word = await Queue.loadLesson(id);
     if (word) UI.showLesson(word);
   },
 
-  markLearned(id) {
+  async markLearned(id) {
     Storage.markLearned(id);
     const progress = Storage.getProgress();
 
@@ -119,9 +102,12 @@ const App = {
         const learnedSet = new Set(progress.learnedIds);
         const next = batch.words.find(w => !learnedSet.has(w.id));
         if (next) {
-          UI.showLesson(Queue.getLessonById(next.id));
-          this.renderPath();
-          return;
+          const nextWord = await Queue.loadLesson(next.id);
+          if (nextWord) {
+            UI.showLesson(nextWord);
+            this.renderPath();
+            return;
+          }
         }
       }
     }
