@@ -59,9 +59,26 @@ const App = {
   },
 
   async loadLessons() {
+    const files = [
+      'data/lessons-001-050.json',
+      'data/lessons-021-070.json',
+      'data/lessons-071-120.json',
+      'data/lessons-121-170.json'
+    ];
     try {
-      const resp = await fetch('data/lessons-001-050.json');
-      return await resp.json();
+      const results = await Promise.all(files.map(f => fetch(f).then(r => r.json())));
+      // Merge and deduplicate by id (later files don't override earlier ones)
+      const seen = new Set();
+      const all = [];
+      for (const arr of results) {
+        for (const lesson of arr) {
+          if (!seen.has(lesson.id)) {
+            seen.add(lesson.id);
+            all.push(lesson);
+          }
+        }
+      }
+      return all.sort((a, b) => a.id - b.id);
     } catch (e) {
       console.error('Failed to load lessons:', e);
       return [];
