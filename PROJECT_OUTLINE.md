@@ -33,6 +33,13 @@ Verb lessons include structured metadata in addition to the freeform lesson cont
 - **Transitivity** — 自動詞 (intransitive) or 他動詞 (transitive). If the verb has a 自動詞/他動詞 pair, name the counterpart and briefly explain the difference in use.
 - **Conjugation chart** — a compact table at the bottom of the lesson showing key forms (dictionary, ます, て, ない, た, potential, passive, causative). Use color highlighting to make the stem vs. changing parts visually obvious (e.g., stem in one color, inflection suffix in another). This is reference material, not the lesson itself — keep it clean and compact.
 
+### Adjective Lessons
+
+い-adjective and な-adjective lessons include a conjugation chart at the bottom, just like verbs:
+
+- **い-adjectives** — key forms: dictionary, negative (〜くない), past (〜かった), past negative (〜くなかった), adverb (〜く), て-form (〜くて). Use the same stem/ending color highlighting as verb charts.
+- **な-adjectives** — key forms: dictionary, negative (〜じゃない), past (〜だった), past negative (〜じゃなかった), adverb (〜に), て-form (〜で). Same color treatment.
+
 ### Target Level
 
 Low intermediate: knows hiragana and katakana, basic grammar, roughly 200–400 words. Lessons can reference basic vocabulary and grammar without explanation but should not assume knowledge of advanced structures.
