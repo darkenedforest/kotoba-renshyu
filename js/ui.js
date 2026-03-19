@@ -287,13 +287,38 @@ const UI = {
 
       const row = document.createElement('div');
       row.className = 'trow';
-      row.innerHTML = `
+
+      const info = document.createElement('div');
+      info.className = 'trow-info';
+      info.innerHTML = `
         <span class="trow-num">${word.id}</span>
         <span class="trow-kanji">${word.kanji}</span>
         <span class="trow-kana">${word.kana}</span>
         <span class="trow-meaning">${word.meaning}</span>
-        <span class="trow-badge badge-${state}">${state === 'learned' ? '✓' : state === 'skipped' ? '—' : '•'}</span>
       `;
+      info.addEventListener('click', () => App.showLesson(word.id));
+
+      const actions = document.createElement('div');
+      actions.className = 'trow-actions';
+
+      if (isLearned) {
+        actions.innerHTML = `<button class="trow-btn trow-btn-undo" title="Undo learned">↩</button>`;
+        actions.querySelector('.trow-btn-undo').addEventListener('click', () => App.restoreWord(word.id));
+      } else if (isSkipped) {
+        actions.innerHTML = `<button class="trow-btn trow-btn-undo" title="Restore">↩</button>`;
+        actions.querySelector('.trow-btn-undo').addEventListener('click', () => App.restoreWord(word.id));
+      } else {
+        actions.innerHTML = `<button class="trow-btn trow-btn-skip" title="Skip">✕</button>`;
+        actions.querySelector('.trow-btn-skip').addEventListener('click', () => App.skipFromList(word.id));
+      }
+
+      const badge = document.createElement('span');
+      badge.className = `trow-badge badge-${state}`;
+      badge.textContent = state === 'learned' ? '✓' : state === 'skipped' ? '—' : '•';
+
+      row.appendChild(info);
+      row.appendChild(badge);
+      row.appendChild(actions);
       table.appendChild(row);
     });
   },

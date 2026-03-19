@@ -115,6 +115,18 @@ const App = {
       }
     }
     this.renderPath();
+  },
+
+  restoreWord(id) {
+    Storage.restoreWord(id);
+    this.renderPath();
+    this.renderList();
+  },
+
+  skipFromList(id) {
+    Storage.markSkipped(id);
+    this.renderPath();
+    this.renderList();
   }
 };
 

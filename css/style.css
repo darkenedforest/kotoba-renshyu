@@ -536,15 +536,42 @@ body {
   font-size: 0.8rem;
 }
 
-.trow-num { font-size: 0.6rem; font-weight: 800; color: var(--g300); width: 1.2rem; text-align: right; }
-.trow-kanji { font-family:'Noto Sans JP',sans-serif; font-weight: 700; color: var(--g800); width: 2.5rem; }
-.trow-kana { font-family:'Noto Sans JP',sans-serif; font-size: 0.7rem; font-weight: 600; color: var(--g400); width: 2.5rem; }
+.trow-info {
+  display: flex; align-items: center; gap: 0.4rem;
+  flex: 1; min-width: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.trow-num { font-size: 0.6rem; font-weight: 800; color: var(--g300); width: 1.2rem; text-align: right; flex-shrink: 0; }
+.trow-kanji { font-family:'Noto Sans JP',sans-serif; font-weight: 700; color: var(--g800); width: 2.5rem; flex-shrink: 0; }
+.trow-kana { font-family:'Noto Sans JP',sans-serif; font-size: 0.7rem; font-weight: 600; color: var(--g400); width: 2.5rem; flex-shrink: 0; }
 .trow-meaning { flex: 1; font-size: 0.7rem; font-weight: 600; color: var(--g400); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .trow-badge {
   font-size: 0.7rem; font-weight: 800;
-  width: 1.2rem; text-align: center;
+  width: 1.2rem; text-align: center; flex-shrink: 0;
 }
 .badge-learned { color: var(--green); }
 .badge-skipped { color: var(--orange); }
+
+.trow-actions { flex-shrink: 0; }
+
+.trow-btn {
+  width: 1.8rem; height: 1.8rem;
+  border-radius: 50%; border: none;
+  font-size: 0.7rem; font-weight: 800;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s;
+}
+.trow-btn:active { transform: scale(0.85); }
+
+.trow-btn-skip {
+  background: var(--g100); color: var(--g400);
+}
+
+.trow-btn-undo {
+  background: var(--sky-pale); color: var(--sky-dark);
+}
 .badge-active { color: var(--g300); }
