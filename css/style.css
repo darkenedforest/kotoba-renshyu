@@ -211,6 +211,8 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+#lesson-sheet { z-index: 210; }
+
 .sheet-inner {
   background: #fff;
   border-radius: 20px 20px 0 0;
@@ -374,6 +376,57 @@ body {
 .lesson-body .highlight { background: var(--sky-pale); padding: 0.1rem 0.35rem; border-radius: 5px; color: var(--sky-dark); font-weight: 700; }
 .lesson-body .wrong { text-decoration: line-through; text-decoration-color: var(--red); text-decoration-thickness: 2px; color: var(--g400); }
 .lesson-body .note-label { display: inline-block; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; background: #fff7ed; color: #ea580c; padding: 0.12rem 0.45rem; border-radius: 5px; margin-right: 0.2rem; border: 1px solid #fed7aa; }
+
+/* ── Verb metadata & conjugation chart ── */
+
+.verb-meta {
+  display: flex; gap: 0.4rem; flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.group-badge, .trans-badge {
+  font-size: 0.62rem; font-weight: 800;
+  padding: 0.2rem 0.55rem; border-radius: 100px;
+  letter-spacing: 0.03em;
+}
+
+.group-badge {
+  background: var(--sky-pale); color: var(--sky-dark);
+}
+
+.trans-badge {
+  background: var(--orange-pale); color: var(--orange-dark);
+}
+
+.conj-chart {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  background: var(--g50);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.conj-chart td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--g100);
+}
+
+.conj-chart tr:last-child td { border-bottom: none; }
+
+.conj-chart td:first-child {
+  font-weight: 700; color: var(--g400);
+  font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.04em; width: 5.5rem;
+}
+
+.conj-chart td:last-child {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700; font-size: 1rem;
+}
+
+.conj-chart .stem { color: var(--g800); }
+.conj-chart .ending { color: var(--sky); }
 
 /* Buttons */
 .lesson-btns {
