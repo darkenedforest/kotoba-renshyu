@@ -31,6 +31,8 @@ Verb lessons include structured metadata in addition to the freeform lesson cont
 
 - **Group** — ichidan (一段) or godan (五段), displayed as a small label
 - **Transitivity** — 自動詞 (intransitive) or 他動詞 (transitive). If the verb has a 自動詞/他動詞 pair, name the counterpart and briefly explain the difference in use.
+- **Particle explanation** — a short paragraph just before the conjugation chart explaining why the verb takes the particle(s) it does. Don't just state the particle — explain the logic so the learner can reason about it. If the verb takes different particles in different contexts, briefly show when and why (e.g., に for destination vs を for the place you leave). Keep it to 2–4 sentences. The goal is intuition, not rules.
+
 - **Conjugation chart** — an HTML table with class `conj-chart` at the bottom of the lesson. Three columns per row:
   1. **Label** (first `<td>`) — the form name
   2. **Conjugation** (second `<td>`) — the conjugated form, split into `<span class="stem">` (unchanging part) and `<span class="ending">` (inflected part)
