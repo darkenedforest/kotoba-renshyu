@@ -1661,5 +1661,4859 @@
       "pronoun",
       "plural"
     ]
+  },
+  {
+    "id": 171,
+    "kanji": "見方",
+    "kana": "みかた",
+    "meaning": "(point of) view, perspective",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 172,
+    "kanji": "鳥",
+    "kana": "とり",
+    "meaning": "bird",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 173,
+    "kanji": "犬",
+    "kana": "いぬ",
+    "meaning": "dog",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 174,
+    "kanji": "返事",
+    "kana": "へんじ",
+    "meaning": "answer, reply, response",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 175,
+    "kanji": "また",
+    "kana": "また",
+    "meaning": "again, also",
+    "tags": [
+      "adverb",
+      "conjunction"
+    ]
+  },
+  {
+    "id": 176,
+    "kanji": "年間",
+    "kana": "ねんかん",
+    "meaning": "period of 1 year, per year, annual",
+    "tags": [
+      "noun",
+      "suffix"
+    ]
+  },
+  {
+    "id": 177,
+    "kanji": "青",
+    "kana": "あお",
+    "meaning": "blue, green (e.g. traffic light), unripe",
+    "tags": [
+      "noun",
+      "color"
+    ]
+  },
+  {
+    "id": 178,
+    "kanji": "赤",
+    "kana": "あか",
+    "meaning": "red (color)",
+    "tags": [
+      "noun",
+      "color"
+    ]
+  },
+  {
+    "id": 179,
+    "kanji": "信号",
+    "kana": "しんごう",
+    "meaning": "traffic light, signal",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 180,
+    "kanji": "円",
+    "kana": "えん",
+    "meaning": "Japanese yen, circle",
+    "tags": [
+      "noun",
+      "counter"
+    ]
+  },
+  {
+    "id": 181,
+    "kanji": "非常に",
+    "kana": "ひじょうに",
+    "meaning": "very, extremely, considerably",
+    "tags": [
+      "adverb",
+      "formal"
+    ]
+  },
+  {
+    "id": 182,
+    "kanji": "複雑",
+    "kana": "ふくざつ",
+    "meaning": "complicated, intricate, complex",
+    "tags": [
+      "な-adjective",
+      "noun"
+    ]
+  },
+  {
+    "id": 183,
+    "kanji": "平和",
+    "kana": "へいわ",
+    "meaning": "peace, harmony",
+    "tags": [
+      "noun",
+      "な-adjective"
+    ]
+  },
+  {
+    "id": 184,
+    "kanji": "回る",
+    "kana": "まわる",
+    "meaning": "to turn around, go around, rotate, revolve",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 185,
+    "kanji": "若者",
+    "kana": "わかもの",
+    "meaning": "young person, youth",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 186,
+    "kanji": "雪",
+    "kana": "ゆき",
+    "meaning": "snow, snowfall",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 187,
+    "kanji": "うまい",
+    "kana": "うまい",
+    "meaning": "tasty, delicious (often used by males)",
+    "tags": [
+      "い-adjective",
+      "casual"
+    ]
+  },
+  {
+    "id": 188,
+    "kanji": "思い出す",
+    "kana": "おもいだす",
+    "meaning": "to remember, recollect, recall",
+    "tags": [
+      "godan verb",
+      "他動詞",
+      "compound verb"
+    ]
+  },
+  {
+    "id": 189,
+    "kanji": "聞こえる",
+    "kana": "きこえる",
+    "meaning": "to hear, be heard",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 190,
+    "kanji": "借りる",
+    "kana": "かりる",
+    "meaning": "to borrow, rent",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 191,
+    "kanji": "返す",
+    "kana": "かえす",
+    "meaning": "to return (something), repay",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 192,
+    "kanji": "受け取る",
+    "kana": "うけとる",
+    "meaning": "to receive, get (physical object)",
+    "tags": [
+      "godan verb",
+      "他動詞",
+      "compound verb"
+    ]
+  },
+  {
+    "id": 193,
+    "kanji": "捨てる",
+    "kana": "すてる",
+    "meaning": "to discard, abandon",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 194,
+    "kanji": "一緒",
+    "kana": "いっしょ",
+    "meaning": "together, same",
+    "tags": [
+      "noun",
+      "adverb"
+    ]
+  },
+  {
+    "id": 195,
+    "kanji": "遊び",
+    "kana": "あそび",
+    "meaning": "play, game, amusement, recreation",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 196,
+    "kanji": "移す",
+    "kana": "うつす",
+    "meaning": "to move, transfer",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 197,
+    "kanji": "大きさ",
+    "kana": "おおきさ",
+    "meaning": "size, dimension, volume",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 198,
+    "kanji": "考え",
+    "kana": "かんがえ",
+    "meaning": "thought, idea, plan, way of thinking",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 199,
+    "kanji": "空港",
+    "kana": "くうこう",
+    "meaning": "airport",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 200,
+    "kanji": "出発",
+    "kana": "しゅっぱつ",
+    "meaning": "departure, starting off",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 201,
+    "kanji": "地図",
+    "kana": "ちず",
+    "meaning": "map",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 202,
+    "kanji": "運転",
+    "kana": "うんてん",
+    "meaning": "drive, driving",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 203,
+    "kanji": "降りる",
+    "kana": "おりる",
+    "meaning": "to get off bus/train, go down, descend, land",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 204,
+    "kanji": "ガス",
+    "kana": "がす",
+    "meaning": "gas",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 205,
+    "kanji": "必ず",
+    "kana": "かならず",
+    "meaning": "without fail, always",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 206,
+    "kanji": "カメラ",
+    "kana": "かめら",
+    "meaning": "camera",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 207,
+    "kanji": "通う",
+    "kana": "かよう",
+    "meaning": "to commute, go regularly, frequent a place",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 208,
+    "kanji": "急に",
+    "kana": "きゅうに",
+    "meaning": "suddenly, unexpectedly, abruptly",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 209,
+    "kanji": "サラリーマン",
+    "kana": "さらりーまん",
+    "meaning": "salaried office worker",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 210,
+    "kanji": "給料",
+    "kana": "きゅうりょう",
+    "meaning": "salary, pay, wage",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 211,
+    "kanji": "曲",
+    "kana": "きょく",
+    "meaning": "piece of music, tune, song, melody",
+    "tags": [
+      "noun",
+      "counter"
+    ]
+  },
+  {
+    "id": 212,
+    "kanji": "切れる",
+    "kana": "きれる",
+    "meaning": "to be cut, break, run out, cut well",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 213,
+    "kanji": "正しい",
+    "kana": "ただしい",
+    "meaning": "correct, righteous",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 214,
+    "kanji": "苦しい",
+    "kana": "くるしい",
+    "meaning": "painful, agonizing, difficult",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 215,
+    "kanji": "細かい",
+    "kana": "こまかい",
+    "meaning": "small, detailed, precise, fine",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 216,
+    "kanji": "静か",
+    "kana": "しずか",
+    "meaning": "quiet",
+    "tags": [
+      "な-adjective"
+    ]
+  },
+  {
+    "id": 217,
+    "kanji": "健康",
+    "kana": "けんこう",
+    "meaning": "healthy, health, well-being",
+    "tags": [
+      "noun",
+      "な-adjective"
+    ]
+  },
+  {
+    "id": 218,
+    "kanji": "ゴルフ",
+    "kana": "ごるふ",
+    "meaning": "golf",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 219,
+    "kanji": "コース",
+    "kana": "こーす",
+    "meaning": "course, route",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 220,
+    "kanji": "頼む",
+    "kana": "たのむ",
+    "meaning": "to request, ask, beg, order (food/drink), entrust",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 221,
+    "kanji": "近く",
+    "kana": "ちかく",
+    "meaning": "near, close to; in the near future, before long",
+    "tags": [
+      "noun",
+      "adverb",
+      "duplicate reading"
+    ]
+  },
+  {
+    "id": 222,
+    "kanji": "甘い",
+    "kana": "あまい",
+    "meaning": "sweet",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 223,
+    "kanji": "テーブル",
+    "kana": "てーぶる",
+    "meaning": "table",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 224,
+    "kanji": "食べ物",
+    "kana": "たべもの",
+    "meaning": "food",
+    "tags": [
+      "noun",
+      "compound"
+    ]
+  },
+  {
+    "id": 225,
+    "kanji": "始まる",
+    "kana": "はじまる",
+    "meaning": "to begin, start (no direct object)",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 226,
+    "kanji": "ゲーム",
+    "kana": "げーむ",
+    "meaning": "game (loan word)",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 227,
+    "kanji": "十",
+    "kana": "じゅう",
+    "meaning": "ten",
+    "tags": [
+      "number",
+      "kanji numeral"
+    ]
+  },
+  {
+    "id": 228,
+    "kanji": "天気",
+    "kana": "てんき",
+    "meaning": "weather",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 229,
+    "kanji": "暑い",
+    "kana": "あつい",
+    "meaning": "hot (of weather)",
+    "tags": [
+      "い-adjective",
+      "easily confused"
+    ]
+  },
+  {
+    "id": 230,
+    "kanji": "太い",
+    "kana": "ふとい",
+    "meaning": "thick, fat, bulky",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 231,
+    "kanji": "晩",
+    "kana": "ばん",
+    "meaning": "evening, night",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 232,
+    "kanji": "土曜日",
+    "kana": "どようび",
+    "meaning": "Saturday",
+    "tags": [
+      "noun",
+      "day of the week"
+    ]
+  },
+  {
+    "id": 233,
+    "kanji": "痛い",
+    "kana": "いたい",
+    "meaning": "painful, hurts, sore",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 234,
+    "kanji": "お父さん",
+    "kana": "おとうさん",
+    "meaning": "father, dad (colloquial)",
+    "tags": [
+      "noun",
+      "family",
+      "honorific"
+    ]
+  },
+  {
+    "id": 235,
+    "kanji": "多分",
+    "kana": "たぶん",
+    "meaning": "probably, perhaps, maybe",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 236,
+    "kanji": "時計",
+    "kana": "とけい",
+    "meaning": "clock, watch",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 237,
+    "kanji": "泊まる",
+    "kana": "とまる",
+    "meaning": "to stay overnight",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 238,
+    "kanji": "どうして",
+    "kana": "どうして",
+    "meaning": "why, how come",
+    "tags": [
+      "question word",
+      "adverb"
+    ]
+  },
+  {
+    "id": 239,
+    "kanji": "掛ける",
+    "kana": "かける",
+    "meaning": "to hang, put on (direct object, eg glasses)",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 240,
+    "kanji": "曲がる",
+    "kana": "まがる",
+    "meaning": "to turn, bend, curve (no direct object)",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 241,
+    "kanji": "お腹",
+    "kana": "おなか",
+    "meaning": "stomach, belly",
+    "tags": [
+      "noun",
+      "body part",
+      "honorific"
+    ]
+  },
+  {
+    "id": 242,
+    "kanji": "ミーティング",
+    "kana": "みーてぃんぐ",
+    "meaning": "meeting",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 243,
+    "kanji": "嫌い",
+    "kana": "きらい",
+    "meaning": "hate, dislike",
+    "tags": [
+      "な-adjective"
+    ]
+  },
+  {
+    "id": 244,
+    "kanji": "金曜日",
+    "kana": "きんようび",
+    "meaning": "Friday",
+    "tags": [
+      "noun",
+      "day of the week"
+    ]
+  },
+  {
+    "id": 245,
+    "kanji": "要る",
+    "kana": "いる",
+    "meaning": "to need, require",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 246,
+    "kanji": "無い",
+    "kana": "ない",
+    "meaning": "not there (inanimate things)",
+    "tags": [
+      "い-adjective",
+      "fundamental grammar"
+    ]
+  },
+  {
+    "id": 247,
+    "kanji": "黄色い",
+    "kana": "きいろい",
+    "meaning": "yellow",
+    "tags": [
+      "い-adjective",
+      "color"
+    ]
+  },
+  {
+    "id": 248,
+    "kanji": "風邪",
+    "kana": "かぜ",
+    "meaning": "cold (illness)",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 249,
+    "kanji": "優しい",
+    "kana": "やさしい",
+    "meaning": "kind, gentle",
+    "tags": [
+      "い-adjective",
+      "easily confused"
+    ]
+  },
+  {
+    "id": 250,
+    "kanji": "晴れる",
+    "kana": "はれる",
+    "meaning": "to become sunny, clear up, be sunny",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 251,
+    "kanji": "汚い",
+    "kana": "きたない",
+    "meaning": "dirty",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 252,
+    "kanji": "茶色",
+    "kana": "ちゃいろ",
+    "meaning": "brown",
+    "tags": [
+      "noun",
+      "color"
+    ]
+  },
+  {
+    "id": 253,
+    "kanji": "空く",
+    "kana": "すく",
+    "meaning": "to become empty, become less crowded (no direct object)",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 254,
+    "kanji": "上る",
+    "kana": "のぼる",
+    "meaning": "to go up, ascend, rise (no direct object)",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 255,
+    "kanji": "ご飯",
+    "kana": "ごはん",
+    "meaning": "(cooked) rice, meal",
+    "tags": [
+      "noun",
+      "food"
+    ]
+  },
+  {
+    "id": 256,
+    "kanji": "日",
+    "kana": "にち",
+    "meaning": "counter for days",
+    "tags": [
+      "counter",
+      "suffix"
+    ]
+  },
+  {
+    "id": 257,
+    "kanji": "髪の毛",
+    "kana": "かみのけ",
+    "meaning": "hair, each strand of hair",
+    "tags": [
+      "noun",
+      "body part"
+    ]
+  },
+  {
+    "id": 258,
+    "kanji": "つける",
+    "kana": "つける",
+    "meaning": "to turn on, switch on (direct object)",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 259,
+    "kanji": "月曜日",
+    "kana": "げつようび",
+    "meaning": "Monday",
+    "tags": [
+      "noun",
+      "day of the week"
+    ]
+  },
+  {
+    "id": 260,
+    "kanji": "入る",
+    "kana": "はいる",
+    "meaning": "to enter, go inside (no direct object)",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 261,
+    "kanji": "カタカナ",
+    "kana": "かたかな",
+    "meaning": "katakana",
+    "tags": [
+      "noun",
+      "writing system"
+    ]
+  },
+  {
+    "id": 262,
+    "kanji": "今週",
+    "kana": "こんしゅう",
+    "meaning": "this week",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 263,
+    "kanji": "開く",
+    "kana": "ひらく",
+    "meaning": "to open (abstractly opens and spreads itself, e.g., flower, events, doors)",
+    "tags": [
+      "godan verb",
+      "自動詞／他動詞"
+    ]
+  },
+  {
+    "id": 264,
+    "kanji": "水",
+    "kana": "みず",
+    "meaning": "water",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 265,
+    "kanji": "あれ",
+    "kana": "あれ",
+    "meaning": "that (over there)",
+    "tags": [
+      "pronoun",
+      "ko-so-a-do"
+    ]
+  },
+  {
+    "id": 266,
+    "kanji": "二",
+    "kana": "に",
+    "meaning": "two",
+    "tags": [
+      "number",
+      "kanji numeral"
+    ]
+  },
+  {
+    "id": 267,
+    "kanji": "締める",
+    "kana": "しめる",
+    "meaning": "to tighten, fasten, tie (direct object)",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 268,
+    "kanji": "まずい",
+    "kana": "まずい",
+    "meaning": "unpleasant, bad tasting",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 269,
+    "kanji": "平仮名",
+    "kana": "ひらがな",
+    "meaning": "hiragana",
+    "tags": [
+      "noun",
+      "writing system"
+    ]
+  },
+  {
+    "id": 270,
+    "kanji": "曇る",
+    "kana": "くもる",
+    "meaning": "to become cloudy",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 271,
+    "kanji": "曇る",
+    "kana": "くもる",
+    "meaning": "to become cloudy",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 272,
+    "kanji": "触る",
+    "kana": "さわる",
+    "meaning": "to touch, feel",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 273,
+    "kanji": "駄目",
+    "kana": "だめ",
+    "meaning": "no good, useless, not allowed",
+    "tags": [
+      "な-adjective",
+      "noun"
+    ]
+  },
+  {
+    "id": 274,
+    "kanji": "飲み物",
+    "kana": "のみもの",
+    "meaning": "beverage, drink",
+    "tags": [
+      "noun",
+      "compound"
+    ]
+  },
+  {
+    "id": 275,
+    "kanji": "木曜日",
+    "kana": "もくようび",
+    "meaning": "Thursday",
+    "tags": [
+      "noun",
+      "day of the week"
+    ]
+  },
+  {
+    "id": 276,
+    "kanji": "曜日",
+    "kana": "ようび",
+    "meaning": "day of the week",
+    "tags": [
+      "noun",
+      "suffix"
+    ]
+  },
+  {
+    "id": 277,
+    "kanji": "そば",
+    "kana": "そば",
+    "meaning": "beside, nearby, near, side, vicinity",
+    "tags": [
+      "noun",
+      "no common kanji"
+    ]
+  },
+  {
+    "id": 278,
+    "kanji": "こっち",
+    "kana": "こっち",
+    "meaning": "here, this way (casual)",
+    "tags": [
+      "pronoun",
+      "ko-so-a-do",
+      "casual"
+    ]
+  },
+  {
+    "id": 279,
+    "kanji": "火曜日",
+    "kana": "かようび",
+    "meaning": "Tuesday",
+    "tags": [
+      "noun",
+      "day of the week"
+    ]
+  },
+  {
+    "id": 280,
+    "kanji": "渇く",
+    "kana": "かわく",
+    "meaning": "to become thirsty, be thirsty, dry up",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 281,
+    "kanji": "三",
+    "kana": "さん",
+    "meaning": "three",
+    "tags": [
+      "number",
+      "noun"
+    ]
+  },
+  {
+    "id": 282,
+    "kanji": "水曜日",
+    "kana": "すいようび",
+    "meaning": "Wednesday",
+    "tags": [
+      "noun",
+      "day of the week"
+    ]
+  },
+  {
+    "id": 283,
+    "kanji": "二つ",
+    "kana": "ふたつ",
+    "meaning": "two (things)",
+    "tags": [
+      "counter",
+      "native Japanese number"
+    ]
+  },
+  {
+    "id": 284,
+    "kanji": "今晩",
+    "kana": "こんばん",
+    "meaning": "this evening, tonight",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 285,
+    "kanji": "千",
+    "kana": "せん",
+    "meaning": "thousand",
+    "tags": [
+      "number",
+      "noun"
+    ]
+  },
+  {
+    "id": 286,
+    "kanji": "六日",
+    "kana": "むいか",
+    "meaning": "six days, sixth of the month",
+    "tags": [
+      "noun",
+      "date counter"
+    ]
+  },
+  {
+    "id": 287,
+    "kanji": "お姉さん",
+    "kana": "おねえさん",
+    "meaning": "older sister",
+    "tags": [
+      "noun",
+      "honorific",
+      "family"
+    ]
+  },
+  {
+    "id": 288,
+    "kanji": "直る",
+    "kana": "なおる",
+    "meaning": "to be/get fixed, get repaired",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 289,
+    "kanji": "ちょっと",
+    "kana": "ちょっと",
+    "meaning": "a bit, a little",
+    "tags": [
+      "adverb",
+      "social lubricant"
+    ]
+  },
+  {
+    "id": 290,
+    "kanji": "四",
+    "kana": "よん",
+    "meaning": "four (Japanese origin)",
+    "tags": [
+      "number",
+      "noun"
+    ]
+  },
+  {
+    "id": 291,
+    "kanji": "これから",
+    "kana": "これから",
+    "meaning": "from now on, after this",
+    "tags": [
+      "adverb",
+      "time expression"
+    ]
+  },
+  {
+    "id": 292,
+    "kanji": "考える",
+    "kana": "かんがえる",
+    "meaning": "to think (about), consider, ponder",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 293,
+    "kanji": "戻る",
+    "kana": "もどる",
+    "meaning": "to return to (point of departure/origin)",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 294,
+    "kanji": "変える",
+    "kana": "かえる",
+    "meaning": "to change (something), alter",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 295,
+    "kanji": "朝",
+    "kana": "あさ",
+    "meaning": "morning",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 296,
+    "kanji": "歯",
+    "kana": "は",
+    "meaning": "tooth",
+    "tags": [
+      "noun",
+      "body part"
+    ]
+  },
+  {
+    "id": 297,
+    "kanji": "頑張る",
+    "kana": "がんばる",
+    "meaning": "to do one's best, work hard, persist",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 298,
+    "kanji": "携帯電話",
+    "kana": "けいたいでんわ",
+    "meaning": "cellular phone, mobile phone",
+    "tags": [
+      "noun",
+      "compound"
+    ]
+  },
+  {
+    "id": 299,
+    "kanji": "雨",
+    "kana": "あめ",
+    "meaning": "rain",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 300,
+    "kanji": "金",
+    "kana": "かね",
+    "meaning": "money (colloquial)",
+    "tags": [
+      "noun",
+      "colloquial"
+    ]
+  },
+  {
+    "id": 301,
+    "kanji": "易しい",
+    "kana": "やさしい",
+    "meaning": "easy, simple",
+    "tags": [
+      "い-adjective",
+      "homophone trap"
+    ]
+  },
+  {
+    "id": 302,
+    "kanji": "お兄さん",
+    "kana": "おにいさん",
+    "meaning": "older brother",
+    "tags": [
+      "noun",
+      "honorific",
+      "family"
+    ]
+  },
+  {
+    "id": 303,
+    "kanji": "大きい",
+    "kana": "おおきい",
+    "meaning": "big",
+    "tags": [
+      "い-adjective",
+      "irregular prenominal"
+    ]
+  },
+  {
+    "id": 304,
+    "kanji": "小さい",
+    "kana": "ちいさい",
+    "meaning": "small",
+    "tags": [
+      "い-adjective",
+      "irregular prenominal"
+    ]
+  },
+  {
+    "id": 305,
+    "kanji": "辛い",
+    "kana": "からい",
+    "meaning": "spicy, hot, salty, harsh/strict",
+    "tags": [
+      "い-adjective",
+      "homograph"
+    ]
+  },
+  {
+    "id": 306,
+    "kanji": "八",
+    "kana": "はち",
+    "meaning": "eight",
+    "tags": [
+      "number",
+      "noun"
+    ]
+  },
+  {
+    "id": 307,
+    "kanji": "あそこ",
+    "kana": "あそこ",
+    "meaning": "over there",
+    "tags": [
+      "pronoun",
+      "ko-so-a-do"
+    ]
+  },
+  {
+    "id": 308,
+    "kanji": "来る",
+    "kana": "くる",
+    "meaning": "to come",
+    "tags": [
+      "irregular verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 309,
+    "kanji": "前",
+    "kana": "まえ",
+    "meaning": "in front of, before",
+    "tags": [
+      "noun",
+      "spatial/temporal"
+    ]
+  },
+  {
+    "id": 310,
+    "kanji": "五日",
+    "kana": "いつか",
+    "meaning": "five days, fifth of the month",
+    "tags": [
+      "noun",
+      "date counter"
+    ]
+  },
+  {
+    "id": 311,
+    "kanji": "いっぱい",
+    "kana": "いっぱい",
+    "meaning": "full, a lot, as much as possible",
+    "tags": [
+      "adverb",
+      "noun",
+      "colloquial"
+    ]
+  },
+  {
+    "id": 312,
+    "kanji": "九",
+    "kana": "きゅう",
+    "meaning": "nine",
+    "tags": [
+      "number",
+      "noun"
+    ]
+  },
+  {
+    "id": 313,
+    "kanji": "酸っぱい",
+    "kana": "すっぱい",
+    "meaning": "sour",
+    "tags": [
+      "い-adjective",
+      "taste"
+    ]
+  },
+  {
+    "id": 314,
+    "kanji": "違う",
+    "kana": "ちがう",
+    "meaning": "to differ, be wrong",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 315,
+    "kanji": "細い",
+    "kana": "ほそい",
+    "meaning": "thin, fine, slender",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 316,
+    "kanji": "三つ",
+    "kana": "みっつ",
+    "meaning": "three (things)",
+    "tags": [
+      "counter",
+      "native Japanese number"
+    ]
+  },
+  {
+    "id": 317,
+    "kanji": "八日",
+    "kana": "ようか",
+    "meaning": "eight days, eighth of the month",
+    "tags": [
+      "noun",
+      "date counter"
+    ]
+  },
+  {
+    "id": 318,
+    "kanji": "高校生",
+    "kana": "こうこうせい",
+    "meaning": "high school student",
+    "tags": [
+      "noun",
+      "compound"
+    ]
+  },
+  {
+    "id": 319,
+    "kanji": "上手",
+    "kana": "じょうず",
+    "meaning": "skilled, skillful, good at",
+    "tags": [
+      "な-adjective"
+    ]
+  },
+  {
+    "id": 320,
+    "kanji": "強い",
+    "kana": "つよい",
+    "meaning": "strong, potent, powerful",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 321,
+    "kanji": "二十日",
+    "kana": "はつか",
+    "meaning": "20 days, 20th of the month",
+    "tags": [
+      "noun",
+      "counter",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 322,
+    "kanji": "左",
+    "kana": "ひだり",
+    "meaning": "left",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 323,
+    "kanji": "二日",
+    "kana": "ふつか",
+    "meaning": "two days, second of the month",
+    "tags": [
+      "noun",
+      "counter",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 324,
+    "kanji": "四つ",
+    "kana": "よっつ",
+    "meaning": "four (things)",
+    "tags": [
+      "counter",
+      "native Japanese"
+    ]
+  },
+  {
+    "id": 325,
+    "kanji": "暖かい",
+    "kana": "あたたかい",
+    "meaning": "warm",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 326,
+    "kanji": "ある",
+    "kana": "ある",
+    "meaning": "to exist, be, there is (inanimate)",
+    "tags": [
+      "godan verb",
+      "自動詞",
+      "irregular negative"
+    ]
+  },
+  {
+    "id": 327,
+    "kanji": "いい",
+    "kana": "いい",
+    "meaning": "good, fine, okay",
+    "tags": [
+      "い-adjective",
+      "irregular conjugation"
+    ]
+  },
+  {
+    "id": 328,
+    "kanji": "上",
+    "kana": "うえ",
+    "meaning": "up, above",
+    "tags": [
+      "noun",
+      "positional"
+    ]
+  },
+  {
+    "id": 329,
+    "kanji": "駅",
+    "kana": "えき",
+    "meaning": "train station",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 330,
+    "kanji": "美味しい",
+    "kana": "おいしい",
+    "meaning": "tasty, delicious",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 331,
+    "kanji": "昨日",
+    "kana": "きのう",
+    "meaning": "yesterday",
+    "tags": [
+      "noun",
+      "time word",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 332,
+    "kanji": "綺麗",
+    "kana": "きれい",
+    "meaning": "pretty, lovely, clean",
+    "tags": [
+      "な-adjective"
+    ]
+  },
+  {
+    "id": 333,
+    "kanji": "五",
+    "kana": "ご",
+    "meaning": "five",
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": 334,
+    "kanji": "九つ",
+    "kana": "ここのつ",
+    "meaning": "nine (things)",
+    "tags": [
+      "counter",
+      "native Japanese"
+    ]
+  },
+  {
+    "id": 335,
+    "kanji": "お願い",
+    "kana": "おねがい",
+    "meaning": "request, favor, wish",
+    "tags": [
+      "noun",
+      "set phrase"
+    ]
+  },
+  {
+    "id": 336,
+    "kanji": "答える",
+    "kana": "こたえる",
+    "meaning": "to answer, reply, respond",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 337,
+    "kanji": "先",
+    "kana": "さき",
+    "meaning": "tip, ahead, first, beyond",
+    "tags": [
+      "noun",
+      "multi-meaning"
+    ]
+  },
+  {
+    "id": 338,
+    "kanji": "寒い",
+    "kana": "さむい",
+    "meaning": "cold (weather and feeling cold)",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 339,
+    "kanji": "四",
+    "kana": "し",
+    "meaning": "four (Chinese origin)",
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": 340,
+    "kanji": "三日",
+    "kana": "みっか",
+    "meaning": "three days, third of the month",
+    "tags": [
+      "noun",
+      "counter",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 341,
+    "kanji": "下",
+    "kana": "した",
+    "meaning": "under, below",
+    "tags": [
+      "noun",
+      "positional"
+    ]
+  },
+  {
+    "id": 342,
+    "kanji": "大丈夫",
+    "kana": "だいじょうぶ",
+    "meaning": "all right, OK",
+    "tags": [
+      "な-adjective",
+      "set phrase"
+    ]
+  },
+  {
+    "id": 343,
+    "kanji": "大人",
+    "kana": "おとな",
+    "meaning": "adult",
+    "tags": [
+      "noun",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 344,
+    "kanji": "出す",
+    "kana": "だす",
+    "meaning": "to take out, submit, send",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 345,
+    "kanji": "父",
+    "kana": "ちち",
+    "meaning": "my (one's own) father",
+    "tags": [
+      "noun",
+      "humble/in-group"
+    ]
+  },
+  {
+    "id": 346,
+    "kanji": "母",
+    "kana": "はは",
+    "meaning": "my (one's own) mother",
+    "tags": [
+      "noun",
+      "humble/in-group"
+    ]
+  },
+  {
+    "id": 347,
+    "kanji": "月",
+    "kana": "つき",
+    "meaning": "moon",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 348,
+    "kanji": "妹",
+    "kana": "いもうと",
+    "meaning": "younger sister",
+    "tags": [
+      "noun",
+      "humble/in-group"
+    ]
+  },
+  {
+    "id": 349,
+    "kanji": "冷たい",
+    "kana": "つめたい",
+    "meaning": "cold (to touch)",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 350,
+    "kanji": "弟",
+    "kana": "おとうと",
+    "meaning": "younger brother",
+    "tags": [
+      "noun",
+      "humble/in-group"
+    ]
+  },
+  {
+    "id": 351,
+    "kanji": "手",
+    "kana": "て",
+    "meaning": "hand",
+    "tags": [
+      "noun",
+      "body part"
+    ]
+  },
+  {
+    "id": 352,
+    "kanji": "十日",
+    "kana": "とおか",
+    "meaning": "ten days, tenth of the month",
+    "tags": [
+      "noun",
+      "counter",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 353,
+    "kanji": "口",
+    "kana": "くち",
+    "meaning": "mouth",
+    "tags": [
+      "noun",
+      "body part",
+      "radical"
+    ]
+  },
+  {
+    "id": 354,
+    "kanji": "夏",
+    "kana": "なつ",
+    "meaning": "summer",
+    "tags": [
+      "noun",
+      "season"
+    ]
+  },
+  {
+    "id": 355,
+    "kanji": "七つ",
+    "kana": "ななつ",
+    "meaning": "seven (things)",
+    "tags": [
+      "counter",
+      "native Japanese"
+    ]
+  },
+  {
+    "id": 356,
+    "kanji": "時々",
+    "kana": "ときどき",
+    "meaning": "sometimes",
+    "tags": [
+      "adverb",
+      "reduplication"
+    ]
+  },
+  {
+    "id": 357,
+    "kanji": "何",
+    "kana": "なに",
+    "meaning": "what",
+    "tags": [
+      "question word"
+    ]
+  },
+  {
+    "id": 358,
+    "kanji": "人",
+    "kana": "ひと",
+    "meaning": "person",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 359,
+    "kanji": "一人",
+    "kana": "ひとり",
+    "meaning": "one person",
+    "tags": [
+      "counter",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 360,
+    "kanji": "一日",
+    "kana": "ついたち",
+    "meaning": "first of the month",
+    "tags": [
+      "noun",
+      "counter",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 361,
+    "kanji": "九日",
+    "kana": "ここのか",
+    "meaning": "nine days, ninth of the month",
+    "tags": [
+      "noun",
+      "counter",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 362,
+    "kanji": "方",
+    "kana": "ほう",
+    "meaning": "direction, way, side",
+    "tags": [
+      "noun",
+      "comparison marker"
+    ]
+  },
+  {
+    "id": 363,
+    "kanji": "他",
+    "kana": "ほか",
+    "meaning": "another, other",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 364,
+    "kanji": "僕",
+    "kana": "ぼく",
+    "meaning": "I, me (usually used by young males)",
+    "tags": [
+      "pronoun",
+      "register-sensitive"
+    ]
+  },
+  {
+    "id": 365,
+    "kanji": "欲しい",
+    "kana": "ほしい",
+    "meaning": "to want, desire",
+    "tags": [
+      "い-adjective",
+      "speaker-only"
+    ]
+  },
+  {
+    "id": 366,
+    "kanji": "万",
+    "kana": "まん",
+    "meaning": "ten thousand",
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": 367,
+    "kanji": "見える",
+    "kana": "みえる",
+    "meaning": "to be visible, seem, look like, appear",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 368,
+    "kanji": "道",
+    "kana": "みち",
+    "meaning": "road, street, way",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 369,
+    "kanji": "五つ",
+    "kana": "いつつ",
+    "meaning": "five (things)",
+    "tags": [
+      "counter",
+      "native Japanese"
+    ]
+  },
+  {
+    "id": 370,
+    "kanji": "目",
+    "kana": "め",
+    "meaning": "eye",
+    "tags": [
+      "noun",
+      "body part",
+      "radical",
+      "suffix"
+    ]
+  },
+  {
+    "id": 371,
+    "kanji": "八つ",
+    "kana": "やっつ",
+    "meaning": "eight (things)",
+    "tags": [
+      "counter",
+      "つ-counter"
+    ]
+  },
+  {
+    "id": 372,
+    "kanji": "止める",
+    "kana": "やめる",
+    "meaning": "to stop, give up (doing something)",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 373,
+    "kanji": "四日",
+    "kana": "よっか",
+    "meaning": "four days, fourth of the month",
+    "tags": [
+      "counter",
+      "date"
+    ]
+  },
+  {
+    "id": 374,
+    "kanji": "夜",
+    "kana": "よる",
+    "meaning": "night (from sunset to sunrise)",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 375,
+    "kanji": "来年",
+    "kana": "らいねん",
+    "meaning": "next year",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 376,
+    "kanji": "六",
+    "kana": "ろく",
+    "meaning": "six",
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": 377,
+    "kanji": "悪い",
+    "kana": "わるい",
+    "meaning": "bad, at fault",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 378,
+    "kanji": "お手洗い",
+    "kana": "おてあらい",
+    "meaning": "restroom, lavatory",
+    "tags": [
+      "noun",
+      "polite"
+    ]
+  },
+  {
+    "id": 379,
+    "kanji": "ご主人",
+    "kana": "ごしゅじん",
+    "meaning": "(someone else's) husband, head of household",
+    "tags": [
+      "noun",
+      "honorific"
+    ]
+  },
+  {
+    "id": 380,
+    "kanji": "本当に",
+    "kana": "ほんとうに",
+    "meaning": "really, truly",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 381,
+    "kanji": "自分",
+    "kana": "じぶん",
+    "meaning": "self, oneself",
+    "tags": [
+      "noun",
+      "pronoun-like"
+    ]
+  },
+  {
+    "id": 382,
+    "kanji": "ため",
+    "kana": "ため",
+    "meaning": "for, sake, purpose, in order to",
+    "tags": [
+      "noun",
+      "grammar word"
+    ]
+  },
+  {
+    "id": 383,
+    "kanji": "見つかる",
+    "kana": "みつかる",
+    "meaning": "to be found, be caught",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 384,
+    "kanji": "休む",
+    "kana": "やすむ",
+    "meaning": "to rest, take a break, take a day off, be absent",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 385,
+    "kanji": "ゆっくり",
+    "kana": "ゆっくり",
+    "meaning": "slowly, leisurely",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 386,
+    "kanji": "六つ",
+    "kana": "むっつ",
+    "meaning": "six (things)",
+    "tags": [
+      "counter",
+      "つ-counter"
+    ]
+  },
+  {
+    "id": 387,
+    "kanji": "花",
+    "kana": "はな",
+    "meaning": "flower",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 388,
+    "kanji": "動く",
+    "kana": "うごく",
+    "meaning": "to move (no direct object)",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 389,
+    "kanji": "線",
+    "kana": "せん",
+    "meaning": "line",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 390,
+    "kanji": "七日",
+    "kana": "なのか",
+    "meaning": "seven days, seventh of the month",
+    "tags": [
+      "counter",
+      "date"
+    ]
+  },
+  {
+    "id": 391,
+    "kanji": "以外",
+    "kana": "いがい",
+    "meaning": "except (for), other than",
+    "tags": [
+      "noun",
+      "suffix"
+    ]
+  },
+  {
+    "id": 392,
+    "kanji": "男",
+    "kana": "おとこ",
+    "meaning": "man, male",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 393,
+    "kanji": "彼",
+    "kana": "かれ",
+    "meaning": "he, one's boyfriend",
+    "tags": [
+      "pronoun"
+    ]
+  },
+  {
+    "id": 394,
+    "kanji": "女",
+    "kana": "おんな",
+    "meaning": "woman",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 395,
+    "kanji": "妻",
+    "kana": "つま",
+    "meaning": "my (one's own) wife",
+    "tags": [
+      "noun",
+      "humble"
+    ]
+  },
+  {
+    "id": 396,
+    "kanji": "百",
+    "kana": "ひゃく",
+    "meaning": "hundred",
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": 397,
+    "kanji": "辺",
+    "kana": "へん",
+    "meaning": "area, vicinity",
+    "tags": [
+      "noun",
+      "suffix"
+    ]
+  },
+  {
+    "id": 398,
+    "kanji": "店",
+    "kana": "みせ",
+    "meaning": "shop, store",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 399,
+    "kanji": "閉まる",
+    "kana": "しまる",
+    "meaning": "to close, be shut, be closed",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 400,
+    "kanji": "問題",
+    "kana": "もんだい",
+    "meaning": "problem, question, issue",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 401,
+    "kanji": "必要",
+    "kana": "ひつよう",
+    "meaning": "necessary, needed, essential",
+    "tags": [
+      "な-adjective",
+      "noun"
+    ]
+  },
+  {
+    "id": 402,
+    "kanji": "もつ",
+    "kana": "もつ",
+    "meaning": "to last long, be durable",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 403,
+    "kanji": "開く",
+    "kana": "あく",
+    "meaning": "to open (no direct object)",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 404,
+    "kanji": "昨年",
+    "kana": "さくねん",
+    "meaning": "last year (formal)",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 405,
+    "kanji": "治る",
+    "kana": "なおる",
+    "meaning": "to get healed, be cured, get well",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 406,
+    "kanji": "ドル",
+    "kana": "どる",
+    "meaning": "dollar",
+    "tags": [
+      "noun",
+      "loan word"
+    ]
+  },
+  {
+    "id": 407,
+    "kanji": "システム",
+    "kana": "しすてむ",
+    "meaning": "system",
+    "tags": [
+      "noun",
+      "loan word"
+    ]
+  },
+  {
+    "id": 408,
+    "kanji": "以上",
+    "kana": "いじょう",
+    "meaning": "more than or equal to, that's all",
+    "tags": [
+      "noun",
+      "suffix"
+    ]
+  },
+  {
+    "id": 409,
+    "kanji": "最近",
+    "kana": "さいきん",
+    "meaning": "recently, lately",
+    "tags": [
+      "noun",
+      "adverb"
+    ]
+  },
+  {
+    "id": 410,
+    "kanji": "世界",
+    "kana": "せかい",
+    "meaning": "world",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 411,
+    "kanji": "コンピューター",
+    "kana": "こんぴゅーたー",
+    "meaning": "computer",
+    "tags": [
+      "noun",
+      "loan word"
+    ]
+  },
+  {
+    "id": 412,
+    "kanji": "やる",
+    "kana": "やる",
+    "meaning": "to do, perform, give (to inferiors)",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 413,
+    "kanji": "意味",
+    "kana": "いみ",
+    "meaning": "meaning, significance, sense",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 414,
+    "kanji": "増える",
+    "kana": "ふえる",
+    "meaning": "to increase, grow",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 415,
+    "kanji": "選ぶ",
+    "kana": "えらぶ",
+    "meaning": "to choose, select",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 416,
+    "kanji": "生活",
+    "kana": "せいかつ",
+    "meaning": "life, lifestyle, living",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 417,
+    "kanji": "進める",
+    "kana": "すすめる",
+    "meaning": "to move (something) forward, advance (something)",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 418,
+    "kanji": "続ける",
+    "kana": "つづける",
+    "meaning": "to continue (something)",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 419,
+    "kanji": "ほとんど",
+    "kana": "ほとんど",
+    "meaning": "hardly (negative); almost, mostly (positive)",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 420,
+    "kanji": "会社",
+    "kana": "かいしゃ",
+    "meaning": "company, corporation",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 421,
+    "kanji": "会社",
+    "kana": "かいしゃ",
+    "meaning": "company, corporation",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 422,
+    "kanji": "家",
+    "kana": "いえ",
+    "meaning": "house, dwelling",
+    "tags": [
+      "noun",
+      "うち vs いえ"
+    ]
+  },
+  {
+    "id": 423,
+    "kanji": "多く",
+    "kana": "おおく",
+    "meaning": "many, much, a lot, a large amount",
+    "tags": [
+      "noun",
+      "adverb",
+      "from 多い"
+    ]
+  },
+  {
+    "id": 424,
+    "kanji": "話",
+    "kana": "はなし",
+    "meaning": "conversation, story, talk",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 425,
+    "kanji": "上がる",
+    "kana": "あがる",
+    "meaning": "to go up, rise, increase",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 426,
+    "kanji": "もう",
+    "kana": "もう",
+    "meaning": "now, soon; already (past), anymore (neg); another, again",
+    "tags": [
+      "adverb",
+      "multiple meanings"
+    ]
+  },
+  {
+    "id": 427,
+    "kanji": "集める",
+    "kana": "あつめる",
+    "meaning": "to gather, collect",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 428,
+    "kanji": "声",
+    "kana": "こえ",
+    "meaning": "voice, sound (made by living beings)",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 429,
+    "kanji": "初めて",
+    "kana": "はじめて",
+    "meaning": "for the first time",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 430,
+    "kanji": "変わる",
+    "kana": "かわる",
+    "meaning": "to change, turn into",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 431,
+    "kanji": "まず",
+    "kana": "まず",
+    "meaning": "first (of all), to begin with, for now",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 432,
+    "kanji": "社会",
+    "kana": "しゃかい",
+    "meaning": "society",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 433,
+    "kanji": "プログラム",
+    "kana": "ぷろぐらむ",
+    "meaning": "program booklet",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 434,
+    "kanji": "力",
+    "kana": "ちから",
+    "meaning": "strength, power",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 435,
+    "kanji": "今回",
+    "kana": "こんかい",
+    "meaning": "this time",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 436,
+    "kanji": "予定",
+    "kana": "よてい",
+    "meaning": "schedule, plan",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 437,
+    "kanji": "まま",
+    "kana": "まま",
+    "meaning": "as is, still (in the current state)",
+    "tags": [
+      "noun",
+      "grammatical"
+    ]
+  },
+  {
+    "id": 438,
+    "kanji": "テレビ",
+    "kana": "てれび",
+    "meaning": "television",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 439,
+    "kanji": "減る",
+    "kana": "へる",
+    "meaning": "to decrease, diminish, reduce",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 440,
+    "kanji": "消える",
+    "kana": "きえる",
+    "meaning": "to disappear, vanish, go out",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 441,
+    "kanji": "家族",
+    "kana": "かぞく",
+    "meaning": "family, household",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 442,
+    "kanji": "比べる",
+    "kana": "くらべる",
+    "meaning": "to compare, contrast",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 443,
+    "kanji": "生まれる",
+    "kana": "うまれる",
+    "meaning": "to be born, come into existence",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 444,
+    "kanji": "ただ",
+    "kana": "ただ",
+    "meaning": "free of charge",
+    "tags": [
+      "noun",
+      "adverb"
+    ]
+  },
+  {
+    "id": 445,
+    "kanji": "これら",
+    "kana": "これら",
+    "meaning": "these",
+    "tags": [
+      "pronoun"
+    ]
+  },
+  {
+    "id": 446,
+    "kanji": "調べる",
+    "kana": "しらべる",
+    "meaning": "to investigate, examine, check, look into",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 447,
+    "kanji": "事故",
+    "kana": "じこ",
+    "meaning": "accident, incident, mishap, trouble",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 448,
+    "kanji": "電話",
+    "kana": "でんわ",
+    "meaning": "telephone, phone call",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 449,
+    "kanji": "外国",
+    "kana": "がいこく",
+    "meaning": "foreign country",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 450,
+    "kanji": "銀行",
+    "kana": "ぎんこう",
+    "meaning": "bank",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 451,
+    "kanji": "十分",
+    "kana": "じゅうぶん",
+    "meaning": "enough, sufficient, fully, plenty",
+    "tags": [
+      "な-adjective",
+      "adverb"
+    ]
+  },
+  {
+    "id": 452,
+    "kanji": "あまり",
+    "kana": "あまり",
+    "meaning": "not much, not really, not particularly, not so",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 453,
+    "kanji": "写真",
+    "kana": "しゃしん",
+    "meaning": "photograph, photo, picture",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 454,
+    "kanji": "繰り返す",
+    "kana": "くりかえす",
+    "meaning": "to repeat",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 455,
+    "kanji": "種類",
+    "kana": "しゅるい",
+    "meaning": "type, kind, category",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 456,
+    "kanji": "意見",
+    "kana": "いけん",
+    "meaning": "opinion, view",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 457,
+    "kanji": "新聞",
+    "kana": "しんぶん",
+    "meaning": "newspaper",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 458,
+    "kanji": "文章",
+    "kana": "ぶんしょう",
+    "meaning": "sentence(s), writing (in general), any written text",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 459,
+    "kanji": "目立つ",
+    "kana": "めだつ",
+    "meaning": "to stand out, be conspicuous",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 460,
+    "kanji": "相手",
+    "kana": "あいて",
+    "meaning": "the other party, ally, opponent",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 461,
+    "kanji": "病院",
+    "kana": "びょういん",
+    "meaning": "hospital",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 462,
+    "kanji": "厚い",
+    "kana": "あつい",
+    "meaning": "thick, bulky, deep",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 463,
+    "kanji": "忙しい",
+    "kana": "いそがしい",
+    "meaning": "busy, occupied",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 464,
+    "kanji": "薄い",
+    "kana": "うすい",
+    "meaning": "thin, weak, light, pale",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 465,
+    "kanji": "川",
+    "kana": "かわ",
+    "meaning": "river, stream",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 466,
+    "kanji": "暗い",
+    "kana": "くらい",
+    "meaning": "dark, gloomy, depressing",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 467,
+    "kanji": "クラス",
+    "kana": "くらす",
+    "meaning": "class (in school)",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 468,
+    "kanji": "黒い",
+    "kana": "くろい",
+    "meaning": "black, dark",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 469,
+    "kanji": "バス",
+    "kana": "ばす",
+    "meaning": "bus",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 470,
+    "kanji": "青い",
+    "kana": "あおい",
+    "meaning": "blue, green",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 471,
+    "kanji": "薬",
+    "kana": "くすり",
+    "meaning": "medicine, drug",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 472,
+    "kanji": "砂糖",
+    "kana": "さとう",
+    "meaning": "sugar",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 473,
+    "kanji": "休み",
+    "kana": "やすみ",
+    "meaning": "rest, break, holiday, vacation",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 474,
+    "kanji": "郵便局",
+    "kana": "ゆうびんきょく",
+    "meaning": "post office",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 475,
+    "kanji": "住所",
+    "kana": "じゅうしょ",
+    "meaning": "address",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 476,
+    "kanji": "こちら",
+    "kana": "こちら",
+    "meaning": "here, this way (polite)",
+    "tags": [
+      "pronoun",
+      "ko-so-a-do"
+    ]
+  },
+  {
+    "id": 477,
+    "kanji": "財布",
+    "kana": "さいふ",
+    "meaning": "purse, wallet",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 478,
+    "kanji": "パスポート",
+    "kana": "ぱすぽーと",
+    "meaning": "passport",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 479,
+    "kanji": "椅子",
+    "kana": "いす",
+    "meaning": "chair",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 480,
+    "kanji": "可愛い",
+    "kana": "かわいい",
+    "meaning": "cute, sweet",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 481,
+    "kanji": "お祖父さん",
+    "kana": "おじいさん",
+    "meaning": "grandfather, elderly man",
+    "tags": [
+      "noun",
+      "honorific"
+    ]
+  },
+  {
+    "id": 482,
+    "kanji": "切手",
+    "kana": "きって",
+    "meaning": "postage stamp",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 483,
+    "kanji": "涼しい",
+    "kana": "すずしい",
+    "meaning": "cool, refreshing (of weather or air)",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 484,
+    "kanji": "いくつ",
+    "kana": "いくつ",
+    "meaning": "how many, how old",
+    "tags": [
+      "question word"
+    ]
+  },
+  {
+    "id": 485,
+    "kanji": "メニュー",
+    "kana": "めにゅー",
+    "meaning": "menu",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 486,
+    "kanji": "電気",
+    "kana": "でんき",
+    "meaning": "electricity, electric light",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 487,
+    "kanji": "勝つ",
+    "kana": "かつ",
+    "meaning": "to win",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 488,
+    "kanji": "負ける",
+    "kana": "まける",
+    "meaning": "to lose (in a match/competition), be defeated",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 489,
+    "kanji": "建てる",
+    "kana": "たてる",
+    "meaning": "to build, erect",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 490,
+    "kanji": "日記",
+    "kana": "にっき",
+    "meaning": "diary",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 491,
+    "kanji": "売り切れ",
+    "kana": "うりきれ",
+    "meaning": "sold out, sellout",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 492,
+    "kanji": "お巡りさん",
+    "kana": "おまわりさん",
+    "meaning": "police officer (casual)",
+    "tags": [
+      "noun",
+      "honorific"
+    ]
+  },
+  {
+    "id": 493,
+    "kanji": "目覚まし時計",
+    "kana": "めざましどけい",
+    "meaning": "alarm clock",
+    "tags": [
+      "noun",
+      "compound"
+    ]
+  },
+  {
+    "id": 494,
+    "kanji": "レシート",
+    "kana": "れしーと",
+    "meaning": "receipt (loan word)",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 495,
+    "kanji": "ティッシュ",
+    "kana": "てぃっしゅ",
+    "meaning": "tissue, Kleenex",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 496,
+    "kanji": "歯ブラシ",
+    "kana": "はぶらし",
+    "meaning": "toothbrush",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 497,
+    "kanji": "下りる",
+    "kana": "おりる",
+    "meaning": "to go down, descend, get off (bus, train, etc), land",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 498,
+    "kanji": "洗う",
+    "kana": "あらう",
+    "meaning": "to wash",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 499,
+    "kanji": "パート",
+    "kana": "ぱーと",
+    "meaning": "part-time",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 500,
+    "kanji": "氏名",
+    "kana": "しめい",
+    "meaning": "full name",
+    "tags": [
+      "noun",
+      "formal"
+    ]
+  },
+  {
+    "id": 501,
+    "kanji": "今夜",
+    "kana": "こんや",
+    "meaning": "tonight, this evening",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 502,
+    "kanji": "夜中",
+    "kana": "よなか",
+    "meaning": "midnight",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 503,
+    "kanji": "来週",
+    "kana": "らいしゅう",
+    "meaning": "next week",
+    "tags": [
+      "noun",
+      "time word"
+    ]
+  },
+  {
+    "id": 504,
+    "kanji": "誰か",
+    "kana": "だれか",
+    "meaning": "someone",
+    "tags": [
+      "pronoun"
+    ]
+  },
+  {
+    "id": 505,
+    "kanji": "何",
+    "kana": "なん",
+    "meaning": "what",
+    "tags": [
+      "question word"
+    ]
+  },
+  {
+    "id": 506,
+    "kanji": "今朝",
+    "kana": "けさ",
+    "meaning": "this morning",
+    "tags": [
+      "noun",
+      "time word",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 507,
+    "kanji": "寿司",
+    "kana": "すし",
+    "meaning": "sushi",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 508,
+    "kanji": "履く",
+    "kana": "はく",
+    "meaning": "to wear (below the waist), put on (below the waist)",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 509,
+    "kanji": "おじさん",
+    "kana": "おじさん",
+    "meaning": "uncle",
+    "tags": [
+      "noun",
+      "family"
+    ]
+  },
+  {
+    "id": 510,
+    "kanji": "おばさん",
+    "kana": "おばさん",
+    "meaning": "aunt",
+    "tags": [
+      "noun",
+      "family"
+    ]
+  },
+  {
+    "id": 511,
+    "kanji": "お祖母さん",
+    "kana": "おばあさん",
+    "meaning": "grandmother, elderly woman",
+    "tags": [
+      "noun",
+      "honorific"
+    ]
+  },
+  {
+    "id": 512,
+    "kanji": "いとこ",
+    "kana": "いとこ",
+    "meaning": "cousin",
+    "tags": [
+      "noun",
+      "family"
+    ]
+  },
+  {
+    "id": 513,
+    "kanji": "辞書",
+    "kana": "じしょ",
+    "meaning": "dictionary",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 514,
+    "kanji": "朝ご飯",
+    "kana": "あさごはん",
+    "meaning": "breakfast",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 515,
+    "kanji": "白",
+    "kana": "しろ",
+    "meaning": "white color",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 516,
+    "kanji": "どっち",
+    "kana": "どっち",
+    "meaning": "which, which one (2 things, casual)",
+    "tags": [
+      "pronoun",
+      "ko-so-a-do"
+    ]
+  },
+  {
+    "id": 517,
+    "kanji": "そっち",
+    "kana": "そっち",
+    "meaning": "there (casual)",
+    "tags": [
+      "pronoun",
+      "ko-so-a-do"
+    ]
+  },
+  {
+    "id": 518,
+    "kanji": "明日",
+    "kana": "あした",
+    "meaning": "tomorrow",
+    "tags": [
+      "noun",
+      "time word",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 519,
+    "kanji": "明後日",
+    "kana": "あさって",
+    "meaning": "day after tomorrow",
+    "tags": [
+      "noun",
+      "time word",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 520,
+    "kanji": "一昨日",
+    "kana": "おととい",
+    "meaning": "the day before yesterday",
+    "tags": [
+      "noun",
+      "time word",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 521,
+    "kanji": "お祝い",
+    "kana": "おいわい",
+    "meaning": "celebration",
+    "tags": [
+      "noun",
+      "polite prefix"
+    ]
+  },
+  {
+    "id": 522,
+    "kanji": "くし",
+    "kana": "くし",
+    "meaning": "comb",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 523,
+    "kanji": "こぼれる",
+    "kana": "こぼれる",
+    "meaning": "to spill, overflow",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 524,
+    "kanji": "伝える",
+    "kana": "つたえる",
+    "meaning": "to convey, transmit, communicate",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 525,
+    "kanji": "膝",
+    "kana": "ひざ",
+    "meaning": "knee",
+    "tags": [
+      "noun",
+      "body part"
+    ]
+  },
+  {
+    "id": 526,
+    "kanji": "肘",
+    "kana": "ひじ",
+    "meaning": "elbow",
+    "tags": [
+      "noun",
+      "body part"
+    ]
+  },
+  {
+    "id": 527,
+    "kanji": "枕",
+    "kana": "まくら",
+    "meaning": "pillow",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 528,
+    "kanji": "建物",
+    "kana": "たてもの",
+    "meaning": "building, structure",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 529,
+    "kanji": "道路",
+    "kana": "どうろ",
+    "meaning": "road",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 530,
+    "kanji": "四つ角",
+    "kana": "よつかど",
+    "meaning": "intersection, crossroad",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 531,
+    "kanji": "曲がり角",
+    "kana": "まがりかど",
+    "meaning": "turning point, corner",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 532,
+    "kanji": "警察",
+    "kana": "けいさつ",
+    "meaning": "police",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 533,
+    "kanji": "空気",
+    "kana": "くうき",
+    "meaning": "air, atmosphere",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 534,
+    "kanji": "スポーツ",
+    "kana": "すぽーつ",
+    "meaning": "sport",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 535,
+    "kanji": "チャンス",
+    "kana": "ちゃんす",
+    "meaning": "chance, opportunity",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 536,
+    "kanji": "クリーニング",
+    "kana": "くりーにんぐ",
+    "meaning": "dry cleaning",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 537,
+    "kanji": "サービス",
+    "kana": "さーびす",
+    "meaning": "service",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 538,
+    "kanji": "グループ",
+    "kana": "ぐるーぷ",
+    "meaning": "group",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 539,
+    "kanji": "自宅",
+    "kana": "じたく",
+    "meaning": "my (one's) house / home",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 540,
+    "kanji": "家庭",
+    "kana": "かてい",
+    "meaning": "family, home, household (formal)",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 541,
+    "kanji": "期間",
+    "kana": "きかん",
+    "meaning": "(time) period, term, duration",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 542,
+    "kanji": "年度",
+    "kana": "ねんど",
+    "meaning": "fiscal year, academic year",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 543,
+    "kanji": "経験",
+    "kana": "けいけん",
+    "meaning": "experience, knowledge or skill gained",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 544,
+    "kanji": "安全",
+    "kana": "あんぜん",
+    "meaning": "safety, security, safe",
+    "tags": [
+      "な-adjective",
+      "noun"
+    ]
+  },
+  {
+    "id": 545,
+    "kanji": "危険",
+    "kana": "きけん",
+    "meaning": "danger, dangerous",
+    "tags": [
+      "な-adjective",
+      "noun"
+    ]
+  },
+  {
+    "id": 546,
+    "kanji": "注意",
+    "kana": "ちゅうい",
+    "meaning": "attention, warning, caution, care",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 547,
+    "kanji": "成功",
+    "kana": "せいこう",
+    "meaning": "success, achievement",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 548,
+    "kanji": "努力",
+    "kana": "どりょく",
+    "meaning": "endeavor, effort, hard work",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 549,
+    "kanji": "説明",
+    "kana": "せつめい",
+    "meaning": "explanation, description",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 550,
+    "kanji": "地震",
+    "kana": "じしん",
+    "meaning": "earthquake",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 551,
+    "kanji": "手術",
+    "kana": "しゅじゅつ",
+    "meaning": "surgery, surgical operation",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 552,
+    "kanji": "火傷",
+    "kana": "やけど",
+    "meaning": "burn (injury)",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 553,
+    "kanji": "課題",
+    "kana": "かだい",
+    "meaning": "task, assignment",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 554,
+    "kanji": "子",
+    "kana": "こ",
+    "meaning": "(young) child, kid",
+    "tags": [
+      "noun",
+      "suffix"
+    ]
+  },
+  {
+    "id": 555,
+    "kanji": "確認",
+    "kana": "かくにん",
+    "meaning": "confirmation, verification",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 556,
+    "kanji": "実際",
+    "kana": "じっさい",
+    "meaning": "truth, actually, reality, in fact",
+    "tags": [
+      "noun",
+      "adverb"
+    ]
+  },
+  {
+    "id": 557,
+    "kanji": "国際",
+    "kana": "こくさい",
+    "meaning": "international",
+    "tags": [
+      "noun",
+      "prefix"
+    ]
+  },
+  {
+    "id": 558,
+    "kanji": "会議",
+    "kana": "かいぎ",
+    "meaning": "meeting, conference",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 559,
+    "kanji": "提案",
+    "kana": "ていあん",
+    "meaning": "suggestion, proposal, recommendation",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 560,
+    "kanji": "事務所",
+    "kana": "じむしょ",
+    "meaning": "office, business office",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 561,
+    "kanji": "教授",
+    "kana": "きょうじゅ",
+    "meaning": "professor",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 562,
+    "kanji": "世紀",
+    "kana": "せいき",
+    "meaning": "century",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 563,
+    "kanji": "あちこち",
+    "kana": "あちこち",
+    "meaning": "all over, here and there",
+    "tags": [
+      "adverb",
+      "noun"
+    ]
+  },
+  {
+    "id": 564,
+    "kanji": "そちら",
+    "kana": "そちら",
+    "meaning": "there, that way, that (polite)",
+    "tags": [
+      "pronoun",
+      "ko-so-a-do"
+    ]
+  },
+  {
+    "id": 565,
+    "kanji": "あちら",
+    "kana": "あちら",
+    "meaning": "over there (polite)",
+    "tags": [
+      "pronoun",
+      "ko-so-a-do"
+    ]
+  },
+  {
+    "id": 566,
+    "kanji": "もし",
+    "kana": "もし",
+    "meaning": "if, in case of",
+    "tags": [
+      "adverb",
+      "conjunction"
+    ]
+  },
+  {
+    "id": 567,
+    "kanji": "うるさい",
+    "kana": "うるさい",
+    "meaning": "loud, noisy, annoying",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 568,
+    "kanji": "固い",
+    "kana": "かたい",
+    "meaning": "stiff, hard, strict, firm, tight",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 569,
+    "kanji": "深い",
+    "kana": "ふかい",
+    "meaning": "deep, profound, intense",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 570,
+    "kanji": "面白い",
+    "kana": "おもしろい",
+    "meaning": "interesting, funny",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 571,
+    "kanji": "動かす",
+    "kana": "うごかす",
+    "meaning": "to move (something)",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 572,
+    "kanji": "壊れる",
+    "kana": "こわれる",
+    "meaning": "to break (down), be broken, fall apart",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 573,
+    "kanji": "復習",
+    "kana": "ふくしゅう",
+    "meaning": "review",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 574,
+    "kanji": "眉",
+    "kana": "まゆ",
+    "meaning": "eyebrow",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 575,
+    "kanji": "客",
+    "kana": "きゃく",
+    "meaning": "customer, guest, visitor",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 576,
+    "kanji": "机",
+    "kana": "つくえ",
+    "meaning": "desk",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 577,
+    "kanji": "風呂",
+    "kana": "ふろ",
+    "meaning": "bath",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 578,
+    "kanji": "湯",
+    "kana": "ゆ",
+    "meaning": "hot water",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 579,
+    "kanji": "ぬるい",
+    "kana": "ぬるい",
+    "meaning": "lukewarm, tepid",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 580,
+    "kanji": "風邪薬",
+    "kana": "かぜぐすり",
+    "meaning": "cold medicine",
+    "tags": [
+      "noun",
+      "compound"
+    ]
+  },
+  {
+    "id": 581,
+    "kanji": "靴下",
+    "kana": "くつした",
+    "meaning": "socks",
+    "tags": [
+      "noun",
+      "compound"
+    ]
+  },
+  {
+    "id": 582,
+    "kanji": "たばこ",
+    "kana": "たばこ",
+    "meaning": "tobacco, cigarette",
+    "tags": [
+      "noun",
+      "Portuguese origin"
+    ]
+  },
+  {
+    "id": 583,
+    "kanji": "アイスコーヒー",
+    "kana": "あいすこーひー",
+    "meaning": "iced coffee",
+    "tags": [
+      "noun",
+      "loanword"
+    ]
+  },
+  {
+    "id": 584,
+    "kanji": "天ぷら",
+    "kana": "てんぷら",
+    "meaning": "Japanese deep-fried food",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 585,
+    "kanji": "肉",
+    "kana": "にく",
+    "meaning": "meat, flesh",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 586,
+    "kanji": "昨夜",
+    "kana": "ゆうべ",
+    "meaning": "last night, last evening",
+    "tags": [
+      "noun",
+      "adverb",
+      "irregular reading"
+    ]
+  },
+  {
+    "id": 587,
+    "kanji": "流行る",
+    "kana": "はやる",
+    "meaning": "to be in fashion, be popular",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 588,
+    "kanji": "連れてくる",
+    "kana": "つれてくる",
+    "meaning": "to bring (a person)",
+    "tags": [
+      "compound verb",
+      "他動詞",
+      "irregular (くる)"
+    ]
+  },
+  {
+    "id": 589,
+    "kanji": "方",
+    "kana": "かた",
+    "meaning": "person (polite)",
+    "tags": [
+      "noun",
+      "polite register"
+    ]
+  },
+  {
+    "id": 590,
+    "kanji": "零",
+    "kana": "れい",
+    "meaning": "zero",
+    "tags": [
+      "noun",
+      "number"
+    ]
+  },
+  {
+    "id": 591,
+    "kanji": "雲",
+    "kana": "くも",
+    "meaning": "cloud",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 592,
+    "kanji": "空",
+    "kana": "そら",
+    "meaning": "sky",
+    "tags": [
+      "noun",
+      "multiple readings"
+    ]
+  },
+  {
+    "id": 593,
+    "kanji": "人気",
+    "kana": "にんき",
+    "meaning": "popular, popularity",
+    "tags": [
+      "noun",
+      "な-adjective-like"
+    ]
+  },
+  {
+    "id": 594,
+    "kanji": "兄さん",
+    "kana": "にいさん",
+    "meaning": "(one's own) older brother (polite)",
+    "tags": [
+      "noun",
+      "family term"
+    ]
+  },
+  {
+    "id": 595,
+    "kanji": "姉さん",
+    "kana": "ねえさん",
+    "meaning": "(one's own) older sister (polite)",
+    "tags": [
+      "noun",
+      "family term"
+    ]
+  },
+  {
+    "id": 596,
+    "kanji": "平成",
+    "kana": "へいせい",
+    "meaning": "Heisei era (1989-2019)",
+    "tags": [
+      "noun",
+      "era name"
+    ]
+  },
+  {
+    "id": 597,
+    "kanji": "毎月",
+    "kana": "まいつき",
+    "meaning": "every month",
+    "tags": [
+      "noun",
+      "adverb",
+      "毎-series"
+    ]
+  },
+  {
+    "id": 598,
+    "kanji": "半日",
+    "kana": "はんにち",
+    "meaning": "half a day",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 599,
+    "kanji": "半月",
+    "kana": "はんつき",
+    "meaning": "half a month",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 600,
+    "kanji": "なるほど",
+    "kana": "なるほど",
+    "meaning": "now I see, now I understand",
+    "tags": [
+      "interjection",
+      "adverb"
+    ]
+  },
+  {
+    "id": 601,
+    "kanji": "つまり",
+    "kana": "つまり",
+    "meaning": "in short; in other words",
+    "tags": [
+      "adverb",
+      "conjunction"
+    ]
+  },
+  {
+    "id": 602,
+    "kanji": "そのまま",
+    "kana": "そのまま",
+    "meaning": "as it is, just like that",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 603,
+    "kanji": "はっきり",
+    "kana": "はっきり",
+    "meaning": "clearly",
+    "tags": [
+      "adverb",
+      "する-adverb"
+    ]
+  },
+  {
+    "id": 604,
+    "kanji": "大変",
+    "kana": "たいへん",
+    "meaning": "very; serious, terrible, difficult",
+    "tags": [
+      "な-adjective",
+      "adverb",
+      "noun"
+    ]
+  },
+  {
+    "id": 605,
+    "kanji": "簡単",
+    "kana": "かんたん",
+    "meaning": "easy, simple",
+    "tags": [
+      "な-adjective",
+      "noun"
+    ]
+  },
+  {
+    "id": 606,
+    "kanji": "似ている",
+    "kana": "にている",
+    "meaning": "to look like, resemble",
+    "tags": [
+      "ichidan verb",
+      "自動詞",
+      "usually ている form"
+    ]
+  },
+  {
+    "id": 607,
+    "kanji": "驚く",
+    "kana": "おどろく",
+    "meaning": "to be surprised, be startled",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 608,
+    "kanji": "嫌",
+    "kana": "いや",
+    "meaning": "dislike, don't like",
+    "tags": [
+      "な-adjective",
+      "noun"
+    ]
+  },
+  {
+    "id": 609,
+    "kanji": "喧嘩",
+    "kana": "けんか",
+    "meaning": "fight, argument",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 610,
+    "kanji": "遅れる",
+    "kana": "おくれる",
+    "meaning": "to be late",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 611,
+    "kanji": "にんじん",
+    "kana": "にんじん",
+    "meaning": "carrot",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 612,
+    "kanji": "ジャガイモ",
+    "kana": "じゃがいも",
+    "meaning": "potato",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 613,
+    "kanji": "ナス",
+    "kana": "なす",
+    "meaning": "eggplant",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 614,
+    "kanji": "やかん",
+    "kana": "やかん",
+    "meaning": "kettle",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 615,
+    "kanji": "話し合う",
+    "kana": "はなしあう",
+    "meaning": "to discuss, talk together",
+    "tags": [
+      "godan verb",
+      "compound verb"
+    ]
+  },
+  {
+    "id": 616,
+    "kanji": "残す",
+    "kana": "のこす",
+    "meaning": "to leave behind, save, not finish",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 617,
+    "kanji": "ごちそうする",
+    "kana": "ごちそうする",
+    "meaning": "to treat, host (someone to a meal)",
+    "tags": [
+      "する-verb",
+      "他動詞",
+      "polite"
+    ]
+  },
+  {
+    "id": 618,
+    "kanji": "合う",
+    "kana": "あう",
+    "meaning": "to fit, match",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 619,
+    "kanji": "当たる",
+    "kana": "あたる",
+    "meaning": "to hit, strike, win, be correct, succeed",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 620,
+    "kanji": "集まる",
+    "kana": "あつまる",
+    "meaning": "to gather, be collected",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 621,
+    "kanji": "場所",
+    "kana": "ばしょ",
+    "meaning": "place, space, location",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 622,
+    "kanji": "海",
+    "kana": "うみ",
+    "meaning": "sea, ocean",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 623,
+    "kanji": "少年",
+    "kana": "しょうねん",
+    "meaning": "(young) boy (between 7 and 18 years old)",
+    "tags": [
+      "noun",
+      "formal"
+    ]
+  },
+  {
+    "id": 624,
+    "kanji": "孫",
+    "kana": "まご",
+    "meaning": "grandchild",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 625,
+    "kanji": "生徒",
+    "kana": "せいと",
+    "meaning": "student (K-12), pupil",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 626,
+    "kanji": "高校",
+    "kana": "こうこう",
+    "meaning": "high school (for short)",
+    "tags": [
+      "noun",
+      "abbreviation"
+    ]
+  },
+  {
+    "id": 627,
+    "kanji": "年上",
+    "kana": "としうえ",
+    "meaning": "older, senior",
+    "tags": [
+      "noun",
+      "な-adjective"
+    ]
+  },
+  {
+    "id": 628,
+    "kanji": "卒業",
+    "kana": "そつぎょう",
+    "meaning": "graduation",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 629,
+    "kanji": "運動",
+    "kana": "うんどう",
+    "meaning": "exercise, movement",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 630,
+    "kanji": "選手",
+    "kana": "せんしゅ",
+    "meaning": "athlete, (sports) player",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 631,
+    "kanji": "映画",
+    "kana": "えいが",
+    "meaning": "movie",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 632,
+    "kanji": "英語",
+    "kana": "えいご",
+    "meaning": "English",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 633,
+    "kanji": "手紙",
+    "kana": "てがみ",
+    "meaning": "letter",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 634,
+    "kanji": "動物",
+    "kana": "どうぶつ",
+    "meaning": "animal",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 635,
+    "kanji": "音",
+    "kana": "おと",
+    "meaning": "sound, noise",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 636,
+    "kanji": "海外",
+    "kana": "かいがい",
+    "meaning": "overseas, abroad",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 637,
+    "kanji": "外国人",
+    "kana": "がいこくじん",
+    "meaning": "foreigner",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 638,
+    "kanji": "帰国",
+    "kana": "きこく",
+    "meaning": "return to one's country",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 639,
+    "kanji": "彼ら",
+    "kana": "かれら",
+    "meaning": "they (group of males or mixed gender)",
+    "tags": [
+      "pronoun"
+    ]
+  },
+  {
+    "id": 640,
+    "kanji": "機械",
+    "kana": "きかい",
+    "meaning": "machine",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 641,
+    "kanji": "基本",
+    "kana": "きほん",
+    "meaning": "basics, foundation, fundamentals, principles",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 642,
+    "kanji": "今度",
+    "kana": "こんど",
+    "meaning": "this time, next time",
+    "tags": [
+      "noun",
+      "adverb"
+    ]
+  },
+  {
+    "id": 643,
+    "kanji": "最後",
+    "kana": "さいご",
+    "meaning": "last, final, end",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 644,
+    "kanji": "最初",
+    "kana": "さいしょ",
+    "meaning": "first, the beginning, outset",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 645,
+    "kanji": "準備",
+    "kana": "じゅんび",
+    "meaning": "preparation, arrangement",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 646,
+    "kanji": "進む",
+    "kana": "すすむ",
+    "meaning": "to move forward, advance",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 647,
+    "kanji": "直接",
+    "kana": "ちょくせつ",
+    "meaning": "directly",
+    "tags": [
+      "adverb",
+      "な-adjective"
+    ]
+  },
+  {
+    "id": 648,
+    "kanji": "特に",
+    "kana": "とくに",
+    "meaning": "especially, particularly",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 649,
+    "kanji": "届く",
+    "kana": "とどく",
+    "meaning": "to be received, be delivered, reach, arrive",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 650,
+    "kanji": "なぜ",
+    "kana": "なぜ",
+    "meaning": "why (most polite)",
+    "tags": [
+      "adverb",
+      "question word"
+    ]
+  },
+  {
+    "id": 651,
+    "kanji": "並ぶ",
+    "kana": "ならぶ",
+    "meaning": "to line up, be arranged (parallel)",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 652,
+    "kanji": "運ぶ",
+    "kana": "はこぶ",
+    "meaning": "to carry, transport",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 653,
+    "kanji": "直す",
+    "kana": "なおす",
+    "meaning": "to repair, fix",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 654,
+    "kanji": "反対",
+    "kana": "はんたい",
+    "meaning": "opposition, objection, against",
+    "tags": [
+      "noun",
+      "する-noun",
+      "な-adjective"
+    ]
+  },
+  {
+    "id": 655,
+    "kanji": "場合",
+    "kana": "ばあい",
+    "meaning": "situation, case",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 656,
+    "kanji": "詳しい",
+    "kana": "くわしい",
+    "meaning": "detailed, knowledgeable, well-informed",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 657,
+    "kanji": "いたずら",
+    "kana": "いたずら",
+    "meaning": "mischief, prank",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 658,
+    "kanji": "お祝い",
+    "kana": "おいわい",
+    "meaning": "celebration",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 659,
+    "kanji": "くし",
+    "kana": "くし",
+    "meaning": "comb",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 660,
+    "kanji": "こぼれる",
+    "kana": "こぼれる",
+    "meaning": "to spill, overflow",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 661,
+    "kanji": "伝える",
+    "kana": "つたえる",
+    "meaning": "to convey, transmit, communicate",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 662,
+    "kanji": "膝",
+    "kana": "ひざ",
+    "meaning": "knee",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 663,
+    "kanji": "肘",
+    "kana": "ひじ",
+    "meaning": "elbow",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 664,
+    "kanji": "枕",
+    "kana": "まくら",
+    "meaning": "pillow",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 665,
+    "kanji": "建物",
+    "kana": "たてもの",
+    "meaning": "building, structure",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 666,
+    "kanji": "道路",
+    "kana": "どうろ",
+    "meaning": "road",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 667,
+    "kanji": "四つ角",
+    "kana": "よつかど",
+    "meaning": "intersection, crossroad",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 668,
+    "kanji": "曲がり角",
+    "kana": "まがりかど",
+    "meaning": "turning point, corner",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 669,
+    "kanji": "警察",
+    "kana": "けいさつ",
+    "meaning": "police",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 670,
+    "kanji": "空気",
+    "kana": "くうき",
+    "meaning": "air, atmosphere",
+    "tags": [
+      "noun"
+    ]
   }
 ]
