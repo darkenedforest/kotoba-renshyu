@@ -80,9 +80,25 @@ Low intermediate: knows hiragana and katakana, basic grammar, roughly 200–400 
 
 ### Generation Process
 
-Each lesson is written then iteratively revised until it's as good as it can be:
-1. **Writing pass** — generate the lesson content
-2. **Revision loop** — review for slop, padding, accuracy, and tone; tighten and improve; repeat until the lesson can't be meaningfully improved
+Lessons are produced through a two-role editorial loop: a **Reviser** writes and rewrites, an **Editor** reviews and gates quality. They alternate until the Editor signs off.
+
+1. **Reviser pass** — write the lesson content for each word, following the spec above
+2. **Editor review** — a separate agent (or separate pass) reviews every lesson against the criteria below. The Editor produces specific notes for every lesson that fails. No lesson ships without Editor sign-off.
+3. **Reviser revision** — rewrite only the flagged lessons based on Editor notes
+4. **Editor re-review** — check the revisions. If any still fail, write more notes and kick back.
+5. **Repeat steps 3–4** until the Editor has zero notes remaining.
+
+### Editor Directive
+
+The Editor's job is to ensure every lesson passes four gates. A lesson must clear **all four** to ship.
+
+**1. Memorability** — Does the lesson contain a single clear brain-anchor that will make this word stick on the next Anki review? Not a definition, not a list of facts — one vivid thing (an image, a story, a surprising connection, a usage trap) that the learner will actually remember. If you read the lesson and can't point to that one thing, it fails.
+
+**2. Authenticity** — Does the lesson sound like a knowledgeable human wrote it, or like AI generated it? Check for: formulaic transitions ("Here's the thing", "Interestingly"), uniform paragraph lengths, enthusiasm without substance, generic comparisons ("Both mean X but occupy different spaces"), and any phrasing you could swap into a different word's lesson without noticing. If it reads like it could be about any word, it fails.
+
+**3. Structural variety** — Does this lesson have its own shape, or does it follow the same formula as the others? Compare against the surrounding 5–10 lessons. If you can describe a template they all share (e.g., "opens with kanji etymology, then usage, then comparison"), the batch fails. Lessons should vary in: what they lead with, paragraph count, paragraph length, which ingredients they use, and which they skip.
+
+**4. Accuracy** — Are all conjugations correct? Are particle assignments right (including shifts for passive, causative, potential)? Are kanji etymologies grounded in real history, not invented? Are usage examples natural Japanese, not awkward constructions? Any factual error is an automatic fail.
 
 ## 3. App Behavior
 
