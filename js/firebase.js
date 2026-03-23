@@ -280,6 +280,58 @@ const Firebase = {
     }
   },
 
+  // ── Motivational quotes ──
+
+  async submitQuote(text, batchIndex) {
+    const user = this.getUser();
+    if (!user || !this.db) return null;
+    const displayName = this._customName || (user.email ? user.email.split('@')[0] : user.displayName || 'Anonymous');
+    try {
+      const ref = await this.db.collection('motivationalQuotes').add({
+        text: text,
+        uid: user.uid,
+        displayName: displayName,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        lessonBatchIndex: batchIndex,
+        reported: false
+      });
+      this.logEvent('quote_submitted', { batch_index: batchIndex });
+      return ref.id;
+    } catch (e) {
+      console.error('Submit quote failed:', e);
+      return null;
+    }
+  },
+
+  async fetchRecentQuotes() {
+    if (!this.db) return [];
+    try {
+      const snap = await this.db.collection('motivationalQuotes')
+        .where('reported', '==', false)
+        .orderBy('timestamp', 'desc')
+        .limit(20)
+        .get();
+      return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    } catch (e) {
+      console.error('Fetch quotes failed:', e);
+      return [];
+    }
+  },
+
+  async reportQuote(quoteId) {
+    if (!this.db) return false;
+    try {
+      await this.db.collection('motivationalQuotes').doc(quoteId).update({
+        reported: true
+      });
+      this.logEvent('quote_reported', { quote_id: quoteId });
+      return true;
+    } catch (e) {
+      console.error('Report quote failed:', e);
+      return false;
+    }
+  },
+
   async postComment(lessonId, text) {
     const user = this.getUser();
     if (!user || !this.db) return null;

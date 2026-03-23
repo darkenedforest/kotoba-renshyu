@@ -182,6 +182,28 @@
         </div>
     </div>
 
+    <!-- ── Quote prompt sheet (after batch completion) ── -->
+    <div id="quote-sheet" class="sheet" style="display:none;">
+        <div class="sheet-inner sheet-narrow">
+            <button class="sheet-close" id="quote-close">&times;</button>
+            <div class="quote-prompt-header">
+                <div class="quote-prompt-emoji">&#127881;</div>
+                <h2 class="quote-prompt-title">Batch complete!</h2>
+                <p class="quote-prompt-sub">Leave a motivational quote for the community</p>
+            </div>
+            <div id="quote-auth-area">
+                <textarea id="quote-input" class="quote-input" maxlength="140" placeholder="Write something encouraging..."></textarea>
+                <div class="quote-char-count"><span id="quote-char-count">0</span>/140</div>
+                <p class="quote-guidelines">This is a community of positivity. Negative comments or vulgar language will result in a ban.</p>
+                <button class="btn btn-green quote-share-btn" id="quote-share-btn">Share</button>
+            </div>
+            <div id="quote-auth-prompt" class="quote-auth-msg" style="display:none;">
+                Sign in to share motivational quotes with the community
+            </div>
+            <button class="quote-skip-link" id="quote-skip-btn">Skip</button>
+        </div>
+    </div>
+
     <!-- ── App shell ── -->
     <div id="app">
         <div class="topbar">
@@ -195,6 +217,7 @@
         </div>
 
         <div id="page-path" class="page active">
+            <div id="quote-stickers" class="quote-stickers"></div>
             <div class="path-scroll">
                 <svg id="path-svg" class="path-svg"></svg>
                 <div id="path-nodes" class="path-nodes"></div>

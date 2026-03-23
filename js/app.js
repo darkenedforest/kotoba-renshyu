@@ -2,6 +2,12 @@ const App = {
   currentBatchIndex: null,
   _lessonOpenTime: null,
   _currentLessonId: null,
+  _cachedQuotes: null,
+  _profanityList: [
+    'fuck','shit','ass','bitch','damn','dick','cunt','bastard','piss','cock',
+    'whore','slut','fag','nigger','nigga','retard','stfu','gtfo','kys',
+    'くそ','クソ','糞','死ね','しね','ばか','バカ','馬鹿','アホ','きもい','キモい'
+  ],
 
   async init() {
     // Initialize Firebase
@@ -128,10 +134,24 @@ const App = {
     // Comments: post
     document.getElementById('comment-post-btn').addEventListener('click', () => this._postComment());
 
+    // Quote prompt
+    document.getElementById('quote-close').addEventListener('click', () => this._closeQuotePrompt());
+    document.getElementById('quote-sheet').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('quote-sheet')) this._closeQuotePrompt();
+    });
+    document.getElementById('quote-skip-btn').addEventListener('click', () => this._closeQuotePrompt());
+    document.getElementById('quote-share-btn').addEventListener('click', () => this._submitQuote());
+    document.getElementById('quote-input').addEventListener('input', (e) => {
+      document.getElementById('quote-char-count').textContent = e.target.value.length;
+    });
+
     // Load index only — full lessons are lazy-loaded on demand
     const index = await this.loadIndex();
     Queue.init(index);
     this.renderPath();
+
+    // Load motivational quote stickers
+    this._loadQuoteStickers();
 
     // Start floating particles
     Particles.init();
@@ -209,10 +229,10 @@ const App = {
       }
     }
 
-    // No more words in batch — close and go back
+    // No more words in batch — show quote prompt before closing
     UI.hideLesson();
-    UI.hideBatchSheet();
-    this.currentBatchIndex = null;
+    UI.showQuotePrompt();
+    this._pendingBatchClose = true;
     this.renderPath();
   },
 
@@ -313,6 +333,69 @@ const App = {
       const comments = await Firebase.loadComments(lessonId);
       UI.renderComments(comments);
     }
+  },
+
+  // ── Motivational Quotes ──
+
+  _closeQuotePrompt() {
+    UI.hideQuotePrompt();
+    if (this._pendingBatchClose) {
+      UI.hideBatchSheet();
+      this.currentBatchIndex = null;
+      this._pendingBatchClose = false;
+    }
+  },
+
+  _containsProfanity(text) {
+    const lower = text.toLowerCase();
+    return this._profanityList.some(word => lower.includes(word));
+  },
+
+  async _submitQuote() {
+    const input = document.getElementById('quote-input');
+    const text = input.value.trim();
+    if (!text) return;
+
+    // Remove previous error if any
+    const sheet = document.getElementById('quote-sheet');
+    const existingErr = sheet.querySelector('.quote-error');
+    if (existingErr) existingErr.remove();
+
+    if (this._containsProfanity(text)) {
+      const err = document.createElement('div');
+      err.className = 'quote-error';
+      err.textContent = 'Please keep it positive!';
+      document.getElementById('quote-share-btn').insertAdjacentElement('afterend', err);
+      return;
+    }
+
+    const batchIndex = this.currentBatchIndex !== null ? this.currentBatchIndex : 0;
+    const result = await Firebase.submitQuote(text, batchIndex);
+    if (result) {
+      // Clear cache so new quotes load on next visit
+      this._cachedQuotes = null;
+      this._closeQuotePrompt();
+      this._loadQuoteStickers();
+    }
+  },
+
+  async _loadQuoteStickers() {
+    // Use cached quotes for the session
+    if (this._cachedQuotes) {
+      UI.renderQuoteStickers(this._cachedQuotes);
+      return;
+    }
+
+    const allQuotes = await Firebase.fetchRecentQuotes();
+    if (allQuotes.length === 0) {
+      this._cachedQuotes = [];
+      return;
+    }
+
+    // Pick 3 random from the pool
+    const shuffled = allQuotes.sort(() => Math.random() - 0.5);
+    this._cachedQuotes = shuffled.slice(0, 3);
+    UI.renderQuoteStickers(this._cachedQuotes);
   }
 };
 

@@ -452,6 +452,106 @@ const UI = {
     }
   },
 
+  /* ═══════════════════════════════════
+     QUOTE PROMPT
+     ═══════════════════════════════════ */
+
+  showQuotePrompt() {
+    const sheet = document.getElementById('quote-sheet');
+    const authArea = document.getElementById('quote-auth-area');
+    const authPrompt = document.getElementById('quote-auth-prompt');
+    const input = document.getElementById('quote-input');
+    const charCount = document.getElementById('quote-char-count');
+
+    // Reset
+    input.value = '';
+    charCount.textContent = '0';
+    const existingErr = sheet.querySelector('.quote-error');
+    if (existingErr) existingErr.remove();
+
+    const user = Firebase.getUser();
+    if (user) {
+      authArea.style.display = 'block';
+      authPrompt.style.display = 'none';
+    } else {
+      authArea.style.display = 'none';
+      authPrompt.style.display = 'block';
+    }
+
+    sheet.style.display = 'flex';
+  },
+
+  hideQuotePrompt() {
+    document.getElementById('quote-sheet').style.display = 'none';
+  },
+
+  /* ═══════════════════════════════════
+     QUOTE STICKERS (path page)
+     ═══════════════════════════════════ */
+
+  _quoteStickerCache: null,
+
+  renderQuoteStickers(quotes) {
+    const container = document.getElementById('quote-stickers');
+    if (!container) return;
+    container.innerHTML = '';
+
+    if (!quotes || quotes.length === 0) return;
+
+    const isMobile = window.innerWidth < 500;
+    const maxQuotes = isMobile ? 2 : 3;
+    const displayQuotes = quotes.slice(0, maxQuotes);
+
+    const palette = ['#e11d48', '#7c3aed', '#2563eb', '#0891b2', '#059669', '#ca8a04', '#ea580c', '#be185d', '#4f46e5', '#0d9488'];
+
+    // Predefined positions to avoid overlap: alternate left and right edges
+    const positions = [
+      { side: 'left', top: 120 },
+      { side: 'right', top: 300 },
+      { side: 'left', top: 480 }
+    ];
+
+    displayQuotes.forEach((quote, i) => {
+      const sticker = document.createElement('div');
+      sticker.className = 'quote-sticker';
+
+      const color = palette[(quote.text.length + i) % palette.length];
+      const tilt = -6 + ((quote.text.charCodeAt(0) + i * 37) % 13);
+
+      sticker.style.transform = `rotate(${tilt}deg)`;
+
+      const pos = positions[i];
+      sticker.style.top = pos.top + 'px';
+      if (pos.side === 'left') {
+        sticker.style.left = '6px';
+      } else {
+        sticker.style.right = '6px';
+      }
+
+      const textEl = document.createElement('div');
+      textEl.className = 'quote-sticker-text';
+      textEl.style.color = color;
+      textEl.textContent = quote.text;
+
+      const authorEl = document.createElement('div');
+      authorEl.className = 'quote-sticker-author';
+      authorEl.textContent = '\u2014 ' + (quote.displayName || 'Anonymous');
+
+      const reportBtn = document.createElement('button');
+      reportBtn.className = 'quote-sticker-report';
+      reportBtn.textContent = 'report';
+      reportBtn.addEventListener('click', () => {
+        Firebase.reportQuote(quote.id);
+        sticker.remove();
+      });
+
+      sticker.appendChild(textEl);
+      sticker.appendChild(authorEl);
+      sticker.appendChild(reportBtn);
+      container.appendChild(sticker);
+    });
+  },
+
   _escapeHtml(str) {
     const div = document.createElement('div');
     div.textContent = str;

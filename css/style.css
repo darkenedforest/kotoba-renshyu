@@ -1169,3 +1169,165 @@ body {
 
 .btn-comment-post:hover { background: var(--sky-dark); }
 .btn-comment-post:active { transform: translateY(1px); }
+
+/* ═══ QUOTE PROMPT SHEET ═══ */
+
+#quote-sheet { z-index: 220; }
+
+.quote-prompt-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.quote-prompt-emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.quote-prompt-title {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--green-dark);
+}
+
+.quote-prompt-sub {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--g400);
+  margin-top: 0.2rem;
+}
+
+.quote-input {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 2px solid var(--g200);
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--g700);
+  resize: none;
+  min-height: 4.5rem;
+}
+
+.quote-input:focus { outline: none; border-color: var(--sky); }
+
+.quote-char-count {
+  text-align: right;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--g300);
+  margin-top: 0.2rem;
+}
+
+.quote-guidelines {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--g400);
+  text-align: center;
+  line-height: 1.5;
+  margin: 0.6rem 0;
+  font-style: italic;
+}
+
+.quote-share-btn {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.quote-auth-msg {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--g400);
+  text-align: center;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.quote-skip-link {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--g400);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  margin-top: 0.6rem;
+  padding: 0.3rem;
+  text-align: center;
+}
+
+.quote-skip-link:hover { color: var(--g600); }
+
+.quote-error {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red);
+  text-align: center;
+  margin-top: 0.3rem;
+  min-height: 1.1rem;
+}
+
+/* ═══ QUOTE STICKERS (on path page) ═══ */
+
+.quote-stickers {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.quote-sticker {
+  position: absolute;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07), 0 0.5px 2px rgba(0,0,0,0.04);
+  max-width: 180px;
+  pointer-events: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.quote-sticker-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.quote-sticker-author {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  opacity: 0.55;
+  text-align: right;
+}
+
+.quote-sticker-report {
+  display: block;
+  background: none;
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: var(--g300);
+  cursor: pointer;
+  text-align: right;
+  width: 100%;
+  margin-top: 0.15rem;
+  text-decoration: underline;
+  text-underline-offset: 1px;
+  pointer-events: auto;
+}
+
+.quote-sticker-report:hover { color: var(--g500); }
