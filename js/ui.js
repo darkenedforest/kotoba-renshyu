@@ -734,6 +734,31 @@ const UI = {
     return div.innerHTML;
   },
 
+  showConfirm(icon, message, yesLabel, yesClass) {
+    return new Promise((resolve) => {
+      const overlay = document.getElementById('confirm-dialog');
+      document.getElementById('confirm-icon').textContent = icon;
+      document.getElementById('confirm-msg').textContent = message;
+      const yesBtn = document.getElementById('confirm-yes');
+      yesBtn.textContent = yesLabel || 'Confirm';
+      yesBtn.className = 'confirm-yes ' + (yesClass || 'btn btn-red-sm');
+
+      overlay.style.display = 'flex';
+
+      const cleanup = (result) => {
+        overlay.style.display = 'none';
+        yesBtn.onclick = null;
+        document.getElementById('confirm-cancel').onclick = null;
+        overlay.onclick = null;
+        resolve(result);
+      };
+
+      yesBtn.onclick = () => cleanup(true);
+      document.getElementById('confirm-cancel').onclick = () => cleanup(false);
+      overlay.onclick = (e) => { if (e.target === overlay) cleanup(false); };
+    });
+  },
+
   /* ═══════════════════════════════════
      LIST
      ═══════════════════════════════════ */

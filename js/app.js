@@ -446,15 +446,21 @@ const App = {
     }
   },
 
-  _handleQuoteReport() {
+  async _handleQuoteReport() {
     const sheet = document.getElementById('quote-detail-sheet');
     const quote = sheet._quoteData;
     if (!quote) return;
 
-    if (confirm('Report this quote as inappropriate?')) {
+    const confirmed = await UI.showConfirm(
+      '🚩',
+      'Report this quote as inappropriate? It will be hidden and reviewed.',
+      'Report',
+      'btn btn-red-sm'
+    );
+
+    if (confirmed) {
       Firebase.reportQuote(quote.id);
       UI.closeQuoteDetail();
-      // Remove from cached quotes
       if (this._cachedQuotes) {
         this._cachedQuotes = this._cachedQuotes.filter(q => q.id !== quote.id);
         UI.renderQuoteStickers(this._cachedQuotes);

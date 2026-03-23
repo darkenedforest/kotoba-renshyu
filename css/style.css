@@ -1349,6 +1349,69 @@ body {
   .quote-sticker-report { font-size: 0.8rem; }
 }
 
+/* ═══ CUSTOM CONFIRM DIALOG ═══ */
+
+.confirm-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 300;
+  display: flex; align-items: center; justify-content: center;
+  animation: confirmFadeIn 0.15s ease-out;
+}
+
+@keyframes confirmFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.confirm-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem 1.25rem;
+  max-width: 300px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  animation: confirmPop 0.2s cubic-bezier(0.17, 0.67, 0.21, 1.3);
+}
+
+@keyframes confirmPop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.confirm-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.confirm-msg {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--g600);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.confirm-btns {
+  display: flex; gap: 0.5rem;
+}
+
+.confirm-cancel {
+  flex: 1;
+  padding: 0.6rem;
+  font-size: 0.82rem;
+}
+
+.confirm-yes {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  border-radius: 10px;
+}
+
 /* ═══ QUOTE DETAIL POPUP ═══ */
 
 #quote-detail-sheet { z-index: 215; }
