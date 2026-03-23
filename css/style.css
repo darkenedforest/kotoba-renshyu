@@ -614,6 +614,51 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.landing::before, .landing::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+.landing::before {
+  width: 340px; height: 340px;
+  top: -60px; right: -80px;
+  background: radial-gradient(circle, #bae6fd 0%, transparent 70%);
+}
+
+.landing::after {
+  width: 280px; height: 280px;
+  bottom: 10%; left: -60px;
+  background: radial-gradient(circle, #bbf7d0 0%, transparent 70%);
+}
+
+.landing-bubble-1, .landing-bubble-2, .landing-bubble-3 {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.landing-bubble-1 {
+  width: 200px; height: 200px;
+  top: 35%; right: 5%;
+  background: radial-gradient(circle, #fde68a 0%, transparent 70%);
+}
+
+.landing-bubble-2 {
+  width: 160px; height: 160px;
+  bottom: 25%; right: 30%;
+  background: radial-gradient(circle, #c7d2fe 0%, transparent 70%);
+}
+
+.landing-bubble-3 {
+  width: 240px; height: 240px;
+  top: 15%; left: 15%;
+  background: radial-gradient(circle, #fbcfe8 0%, transparent 75%);
+}
+
 .landing-inner {
   min-height: 100vh;
   display: flex;

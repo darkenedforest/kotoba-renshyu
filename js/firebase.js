@@ -31,6 +31,13 @@ const Firebase = {
         Storage.onSignIn(user);
         const customName = await this.loadDisplayName();
         UI.updateAuthUI(user, customName);
+        // If landing page is showing, dismiss it
+        const landing = document.getElementById('landing');
+        if (landing && landing.style.display !== 'none') {
+          localStorage.setItem('kotoba-seen-intro', '1');
+          landing.style.display = 'none';
+          document.getElementById('app').style.display = '';
+        }
       } else {
         UI.updateAuthUI(null);
       }
