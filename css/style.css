@@ -340,7 +340,7 @@ body {
 }
 
 .bw-row:active { background: var(--g100); }
-.bw-learned { opacity: 0.5; cursor: default; }
+.bw-learned { opacity: 0.7; }
 .bw-skipped { opacity: 0.4; }
 
 .bw-left { display: flex; align-items: baseline; gap: 0.5rem; }

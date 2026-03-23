@@ -279,9 +279,7 @@ const UI = {
         </div>
       `;
 
-      if (!isLearned) {
-        row.addEventListener('click', () => App.showLesson(word.id));
-      }
+      row.addEventListener('click', () => App.showLesson(word.id));
 
       list.appendChild(row);
     });
