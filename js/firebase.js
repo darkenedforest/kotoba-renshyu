@@ -38,8 +38,13 @@ const Firebase = {
           landing.style.display = 'none';
           document.getElementById('app').style.display = '';
         }
+        // Check for new hearts on sign-in
+        if (typeof App !== 'undefined') {
+          App._checkNewHearts();
+        }
       } else {
         UI.updateAuthUI(null);
+        UI.updateHeartBadge(0);
       }
     });
   },
@@ -293,7 +298,8 @@ const Firebase = {
         displayName: displayName,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         lessonBatchIndex: batchIndex,
-        reported: false
+        reported: false,
+        hearts: 0
       });
       this.logEvent('quote_submitted', { batch_index: batchIndex });
       return ref.id;
@@ -354,6 +360,133 @@ const Firebase = {
     } catch (e) {
       console.error('Report quote failed:', e);
       return false;
+    }
+  },
+
+  // ── Quote hearts ──
+
+  async heartQuote(quoteId) {
+    if (!this.db) return null;
+    const odId = this.getUserOrVisitorId();
+    const heartDocId = `${quoteId}_${odId}`;
+
+    try {
+      const heartRef = this.db.collection('quoteHearts').doc(heartDocId);
+      const existing = await heartRef.get();
+      if (existing.exists) return null; // Already hearted
+
+      await heartRef.set({
+        quoteId: quoteId,
+        odId: odId,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      // Increment heart count on the quote doc
+      await this.db.collection('motivationalQuotes').doc(quoteId).update({
+        hearts: firebase.firestore.FieldValue.increment(1)
+      });
+
+      this.logEvent('quote_hearted', { quote_id: quoteId });
+      return true;
+    } catch (e) {
+      console.error('Heart quote failed:', e);
+      return null;
+    }
+  },
+
+  async hasHeartedQuote(quoteId) {
+    if (!this.db) return false;
+    const odId = this.getUserOrVisitorId();
+    const heartDocId = `${quoteId}_${odId}`;
+    try {
+      const doc = await this.db.collection('quoteHearts').doc(heartDocId).get();
+      return doc.exists;
+    } catch (e) {
+      return false;
+    }
+  },
+
+  async getQuoteHeartCount(quoteId) {
+    if (!this.db) return 0;
+    try {
+      const doc = await this.db.collection('motivationalQuotes').doc(quoteId).get();
+      return doc.exists ? (doc.data().hearts || 0) : 0;
+    } catch (e) {
+      return 0;
+    }
+  },
+
+  async fetchMyQuotes() {
+    const user = this.getUser();
+    if (!user || !this.db) return [];
+    try {
+      const snap = await this.db.collection('motivationalQuotes')
+        .where('uid', '==', user.uid)
+        .orderBy('timestamp', 'desc')
+        .limit(50)
+        .get();
+      return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    } catch (e) {
+      // Fallback without ordering if index missing
+      console.warn('fetchMyQuotes ordered query failed, trying fallback:', e.message);
+      try {
+        const snap = await this.db.collection('motivationalQuotes')
+          .where('uid', '==', user.uid)
+          .limit(50)
+          .get();
+        return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      } catch (e2) {
+        console.error('fetchMyQuotes failed:', e2);
+        return [];
+      }
+    }
+  },
+
+  async getNewHeartCount() {
+    const user = this.getUser();
+    if (!user || !this.db) return 0;
+
+    try {
+      // Get lastSeenHeartsAt from user doc
+      const userDoc = await this.db.collection('users').doc(user.uid).get();
+      const lastSeen = userDoc.exists && userDoc.data().lastSeenHeartsAt
+        ? userDoc.data().lastSeenHeartsAt.toDate()
+        : new Date(0);
+
+      // Get all quotes by this user
+      const myQuotes = await this.fetchMyQuotes();
+      if (myQuotes.length === 0) return 0;
+
+      // Count hearts on those quotes that happened after lastSeen
+      let newHearts = 0;
+      for (const quote of myQuotes) {
+        try {
+          const heartSnap = await this.db.collection('quoteHearts')
+            .where('quoteId', '==', quote.id)
+            .where('timestamp', '>', lastSeen)
+            .get();
+          newHearts += heartSnap.size;
+        } catch (e) {
+          // If index missing, skip this quote's hearts
+          console.warn('Heart count query failed for quote', quote.id, e.message);
+        }
+      }
+      return newHearts;
+    } catch (e) {
+      console.error('getNewHeartCount failed:', e);
+      return 0;
+    }
+  },
+
+  async markHeartsSeen() {
+    const user = this.getUser();
+    if (!user || !this.db) return;
+    try {
+      await this.db.collection('users').doc(user.uid).set({
+        lastSeenHeartsAt: firebase.firestore.FieldValue.serverTimestamp()
+      }, { merge: true });
+    } catch (e) {
+      console.error('markHeartsSeen failed:', e);
     }
   },
 

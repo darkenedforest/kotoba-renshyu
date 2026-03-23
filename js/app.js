@@ -145,6 +145,23 @@ const App = {
       document.getElementById('quote-char-count').textContent = e.target.value.length;
     });
 
+    // Quote detail popup
+    document.getElementById('quote-detail-close').addEventListener('click', () => UI.closeQuoteDetail());
+    document.getElementById('quote-detail-sheet').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('quote-detail-sheet')) UI.closeQuoteDetail();
+    });
+    document.getElementById('quote-heart-btn').addEventListener('click', () => this._handleQuoteHeart());
+    document.getElementById('quote-report-btn').addEventListener('click', () => this._handleQuoteReport());
+
+    // Inspiration sheet
+    document.getElementById('inspiration-close').addEventListener('click', () => UI.hideInspirationSheet());
+    document.getElementById('inspiration-sheet').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('inspiration-sheet')) UI.hideInspirationSheet();
+    });
+
+    // Topbar user pill — open inspiration sheet
+    document.getElementById('topbar-user').addEventListener('click', () => this._openInspiration());
+
     // Load index only — full lessons are lazy-loaded on demand
     const index = await this.loadIndex();
     Queue.init(index);
@@ -152,6 +169,9 @@ const App = {
 
     // Load motivational quote stickers
     this._loadQuoteStickers();
+
+    // Check for new hearts (once on init, only if signed in)
+    this._checkNewHearts();
 
     // Start floating particles
     Particles.init();
@@ -396,6 +416,75 @@ const App = {
     const shuffled = allQuotes.sort(() => Math.random() - 0.5);
     this._cachedQuotes = shuffled;
     UI.renderQuoteStickers(this._cachedQuotes);
+  },
+
+  // ── Quote detail interactions ──
+
+  async _handleQuoteHeart() {
+    const sheet = document.getElementById('quote-detail-sheet');
+    const quote = sheet._quoteData;
+    if (!quote) return;
+
+    const heartBtn = document.getElementById('quote-heart-btn');
+    const heartIcon = document.getElementById('quote-heart-icon');
+    const heartCount = document.getElementById('quote-heart-count');
+
+    // Already hearted?
+    if (heartBtn.classList.contains('hearted')) return;
+
+    const result = await Firebase.heartQuote(quote.id);
+    if (result) {
+      heartBtn.classList.add('hearted', 'heart-bounce');
+      heartIcon.innerHTML = '&#10084;';
+      const current = parseInt(heartCount.textContent) || 0;
+      heartCount.textContent = current + 1;
+      // Also update the cached quote
+      quote.hearts = (quote.hearts || 0) + 1;
+
+      // Remove bounce class after animation
+      setTimeout(() => heartBtn.classList.remove('heart-bounce'), 300);
+    }
+  },
+
+  _handleQuoteReport() {
+    const sheet = document.getElementById('quote-detail-sheet');
+    const quote = sheet._quoteData;
+    if (!quote) return;
+
+    if (confirm('Report this quote as inappropriate?')) {
+      Firebase.reportQuote(quote.id);
+      UI.closeQuoteDetail();
+      // Remove from cached quotes
+      if (this._cachedQuotes) {
+        this._cachedQuotes = this._cachedQuotes.filter(q => q.id !== quote.id);
+        UI.renderQuoteStickers(this._cachedQuotes);
+      }
+    }
+  },
+
+  // ── Heart notification badge ──
+
+  async _checkNewHearts() {
+    const user = Firebase.getUser();
+    if (!user) return;
+
+    const count = await Firebase.getNewHeartCount();
+    UI.updateHeartBadge(count);
+  },
+
+  // ── Inspiration sheet ──
+
+  async _openInspiration() {
+    const user = Firebase.getUser();
+    if (!user) return;
+
+    // Mark hearts as seen and clear badge
+    await Firebase.markHeartsSeen();
+    UI.updateHeartBadge(0);
+
+    // Fetch user's quotes
+    const quotes = await Firebase.fetchMyQuotes();
+    UI.showInspirationSheet(quotes);
   }
 };
 

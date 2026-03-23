@@ -382,7 +382,8 @@ const UI = {
       }
       topbarSignin.style.display = 'none';
       topbarUser.style.display = '';
-      topbarUser.textContent = displayName;
+      const nameSpan = document.getElementById('topbar-user-name');
+      if (nameSpan) nameSpan.textContent = displayName;
     } else {
       signedOut.style.display = 'block';
       signedIn.style.display = 'none';
@@ -581,25 +582,140 @@ const UI = {
       authorEl.style.color = color;
       authorEl.textContent = '\u2014 ' + (quote.displayName || 'Anonymous');
 
-      const reportBtn = document.createElement('button');
-      reportBtn.className = 'quote-sticker-report';
-      reportBtn.textContent = 'report';
-      reportBtn.addEventListener('click', () => {
-        if (confirm('Report this quote as inappropriate?')) {
-          Firebase.reportQuote(quote.id);
-          sticker.remove();
-        }
+      sticker.appendChild(textEl);
+      sticker.appendChild(authorEl);
+
+      // Store color with quote data for popup use
+      quote._stickerColor = color;
+
+      // Tap to open detail popup
+      sticker.addEventListener('click', () => {
+        UI.openQuoteDetail(quote, color);
       });
 
-      const bottomRow = document.createElement('div');
-      bottomRow.className = 'quote-sticker-bottom';
-      bottomRow.appendChild(reportBtn);
-      bottomRow.appendChild(authorEl);
-
-      sticker.appendChild(textEl);
-      sticker.appendChild(bottomRow);
       container.appendChild(sticker);
     });
+  },
+
+  /* ═══════════════════════════════════
+     QUOTE DETAIL POPUP
+     ═══════════════════════════════════ */
+
+  openQuoteDetail(quote, color) {
+    const sheet = document.getElementById('quote-detail-sheet');
+    const inner = sheet.querySelector('.quote-detail-inner');
+    const textEl = document.getElementById('quote-detail-text');
+    const authorEl = document.getElementById('quote-detail-author');
+    const heartBtn = document.getElementById('quote-heart-btn');
+    const heartIcon = document.getElementById('quote-heart-icon');
+    const heartCount = document.getElementById('quote-heart-count');
+
+    // Set color-tinted background
+    inner.style.background = `linear-gradient(180deg, ${color}0D 0%, #fff 40%)`;
+
+    // Set text
+    textEl.textContent = quote.text;
+    textEl.style.color = color;
+    authorEl.textContent = '\u2014 ' + (quote.displayName || 'Anonymous');
+    authorEl.style.color = color;
+
+    // Reset heart state
+    heartBtn.classList.remove('hearted', 'heart-bounce');
+    heartIcon.innerHTML = '&#9825;';
+    heartCount.textContent = quote.hearts || 0;
+
+    // Store quote data on the sheet for event handlers
+    sheet._quoteData = quote;
+    sheet._quoteColor = color;
+
+    // Check if already hearted
+    Firebase.hasHeartedQuote(quote.id).then(hearted => {
+      if (hearted) {
+        heartBtn.classList.add('hearted');
+        heartIcon.innerHTML = '&#10084;';
+      }
+    });
+
+    sheet.style.display = 'flex';
+  },
+
+  closeQuoteDetail() {
+    document.getElementById('quote-detail-sheet').style.display = 'none';
+  },
+
+  /* ═══════════════════════════════════
+     MY INSPIRATION SHEET
+     ═══════════════════════════════════ */
+
+  showInspirationSheet(quotes) {
+    const sheet = document.getElementById('inspiration-sheet');
+    const list = document.getElementById('inspiration-list');
+    list.innerHTML = '';
+
+    const palette = ['#e11d48', '#7c3aed', '#2563eb', '#0891b2', '#059669', '#ca8a04', '#ea580c', '#be185d', '#4f46e5', '#0d9488'];
+
+    if (!quotes || quotes.length === 0) {
+      list.innerHTML = '<div class="inspiration-empty">Complete a batch to share your first quote!</div>';
+    } else {
+      quotes.forEach((q, i) => {
+        const item = document.createElement('div');
+        item.className = 'inspiration-item';
+
+        const color = palette[i % palette.length];
+        const timeStr = this._relativeTime(q.timestamp);
+
+        item.innerHTML = `
+          <div class="inspiration-quote-text" style="color:${color}">"${this._escapeHtml(q.text)}"</div>
+          <div class="inspiration-meta">
+            <span class="inspiration-hearts">&#10084; ${q.hearts || 0}</span>
+            <span class="inspiration-time">${timeStr}</span>
+          </div>
+        `;
+        list.appendChild(item);
+      });
+    }
+
+    sheet.style.display = 'flex';
+  },
+
+  hideInspirationSheet() {
+    document.getElementById('inspiration-sheet').style.display = 'none';
+  },
+
+  /* ═══════════════════════════════════
+     NOTIFICATION BADGE
+     ═══════════════════════════════════ */
+
+  updateHeartBadge(count) {
+    const badge = document.getElementById('heart-badge');
+    if (!badge) return;
+    if (count > 0) {
+      badge.textContent = count > 99 ? '99+' : count;
+      badge.style.display = '';
+    } else {
+      badge.style.display = 'none';
+    }
+  },
+
+  /* ═══════════════════════════════════
+     HELPERS
+     ═══════════════════════════════════ */
+
+  _relativeTime(timestamp) {
+    if (!timestamp) return '';
+    const date = timestamp.seconds ? new Date(timestamp.seconds * 1000) : new Date(timestamp);
+    const now = new Date();
+    const diffMs = now - date;
+    const diffMin = Math.floor(diffMs / 60000);
+    const diffHr = Math.floor(diffMs / 3600000);
+    const diffDay = Math.floor(diffMs / 86400000);
+
+    if (diffMin < 1) return 'just now';
+    if (diffMin < 60) return `${diffMin} min ago`;
+    if (diffHr < 24) return `${diffHr} hour${diffHr > 1 ? 's' : ''} ago`;
+    if (diffDay === 1) return 'yesterday';
+    if (diffDay < 30) return `${diffDay} days ago`;
+    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
   },
 
   _escapeHtml(str) {

@@ -204,6 +204,31 @@
         </div>
     </div>
 
+    <!-- ── Quote detail popup ── -->
+    <div id="quote-detail-sheet" class="sheet" style="display:none;">
+        <div class="sheet-inner sheet-narrow quote-detail-inner">
+            <button class="sheet-close" id="quote-detail-close">&times;</button>
+            <div id="quote-detail-text" class="quote-detail-text"></div>
+            <div id="quote-detail-author" class="quote-detail-author"></div>
+            <div class="quote-detail-actions">
+                <button class="quote-heart-btn" id="quote-heart-btn">
+                    <span class="quote-heart-icon" id="quote-heart-icon">&#9825;</span>
+                    <span class="quote-heart-count" id="quote-heart-count">0</span>
+                </button>
+                <button class="quote-report-btn" id="quote-report-btn">&#128681;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── My Inspiration sheet ── -->
+    <div id="inspiration-sheet" class="sheet" style="display:none;">
+        <div class="sheet-inner sheet-narrow">
+            <button class="sheet-close" id="inspiration-close">&times;</button>
+            <h2 class="sheet-title">My Inspiration</h2>
+            <div id="inspiration-list" class="inspiration-list"></div>
+        </div>
+    </div>
+
     <!-- ── App shell ── -->
     <div id="app">
         <div class="topbar">
@@ -212,7 +237,7 @@
                 <div class="pill pill-green"><span id="stat-learned">0</span> learned</div>
                 <div class="pill pill-blue"><span id="stat-remaining">0</span> to go</div>
                 <button class="topbar-signin" id="topbar-signin">Sign in</button>
-                <span class="topbar-user" id="topbar-user" style="display:none;"></span>
+                <span class="topbar-user" id="topbar-user" style="display:none;"><span id="topbar-user-name"></span><span class="heart-badge" id="heart-badge" style="display:none;">0</span></span>
             </div>
         </div>
 
