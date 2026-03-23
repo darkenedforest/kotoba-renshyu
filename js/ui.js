@@ -525,21 +525,25 @@ const UI = {
 
     const palette = ['#e11d48', '#7c3aed', '#2563eb', '#0891b2', '#059669', '#ca8a04', '#ea580c', '#be185d', '#4f46e5', '#0d9488'];
 
-    // How many quotes to show: 1 per every 4 completed batches
+    // 1 quote per completed batch
     const batchSize = progress.batchSize || 3;
     const learnedCount = progress.learnedIds ? progress.learnedIds.length : 0;
     const completedBatches = Math.floor(learnedCount / batchSize);
-    const quoteSlots = Math.max(1, Math.floor(completedBatches / 4));
-    const displayQuotes = quotes.slice(0, quoteSlots);
+    const quoteSlots = Math.max(completedBatches, 1);
+
+    // If we don't have enough quotes, repeat from the pool
+    const displayQuotes = [];
+    for (let i = 0; i < quoteSlots; i++) {
+      if (quotes.length > 0) {
+        displayQuotes.push(quotes[i % quotes.length]);
+      }
+    }
 
     if (displayQuotes.length === 0) return;
 
     // Path layout constants (must match renderPath)
     const nodeSpacing = 130;
-    const containerWidth = Math.min(window.innerWidth, 400);
     const pageWidth = window.innerWidth;
-    const pathCenterX = pageWidth / 2;
-    const pathRadius = 120; // stay clear of this radius from any node center
 
     // Session random seed (changes each page load)
     if (!this._quoteSessionSeed) {
@@ -551,16 +555,18 @@ const UI = {
       return ((h >>> 0) % 10000) / 10000;
     };
 
-    // Quote size scaling: random per quote, responsive to screen
+    // Quote size scaling
     const isMobileQ = pageWidth < 500;
     const quoteBaseSize = isMobileQ ? 0.75 : pageWidth < 1000 ? 0.85 : 1.0;
-    const quoteMaxScale = 1.35; // up to 35% bigger than base
+    const quoteMaxScale = 1.35;
+
+    // Track placed quote bounding boxes to prevent overlap
+    const placed = []; // { top, bottom, left, right }
 
     displayQuotes.forEach((quote, i) => {
       const sticker = document.createElement('div');
       sticker.className = 'quote-sticker';
 
-      // Random size — use square root to bias toward smaller sizes
       const rawRand = sessionRand(i, 8);
       const scale = 1 + Math.sqrt(rawRand) * (quoteMaxScale - 1);
       const fontSize = quoteBaseSize * scale;
@@ -569,31 +575,45 @@ const UI = {
       const color = palette[Math.floor(sessionRand(i, 1) * palette.length)];
       const tilt = -18 + sessionRand(i, 2) * 36;
 
-      // Vertical position: spread along the completed portion of the path
-      const slotBatch = Math.floor((i + 1) * (completedBatches / (displayQuotes.length + 1)));
-      const baseY = 50 + slotBatch * nodeSpacing + nodeSpacing * 0.5;
-      const yJitter = (sessionRand(i, 3) - 0.5) * 60;
-      const top = baseY + yJitter;
+      // Vertical: anchored to batch i's position, wander within ±2 batches
+      const batchY = 50 + i * nodeSpacing + nodeSpacing * 0.5;
+      const yWander = (sessionRand(i, 3) - 0.5) * nodeSpacing * 4;
+      let top = Math.max(20, batchY + yWander);
 
-      // Horizontal position: ALWAYS in the margins, never in the center path area
-      // The path + nodes occupy roughly the center 200px on any screen
+      // Horizontal: margins only, avoid center 200px path area
       const pathLeft = (pageWidth - 200) / 2;
       const pathRight = pathLeft + 200;
-
       let x;
-      if (sessionRand(i, 4) > 0.5) {
-        // Left margin: 4px to pathLeft - 10px
+      if (isMobileQ) {
+        x = sessionRand(i, 4) > 0.5 ? 4 : pageWidth - 100;
+      } else if (sessionRand(i, 4) > 0.5) {
         x = 4 + sessionRand(i, 5) * Math.max(0, pathLeft - 30);
       } else {
-        // Right margin: pathRight + 10px to edge
         const rightMargin = pageWidth - pathRight - 10;
         x = pathRight + 10 + sessionRand(i, 6) * Math.max(0, rightMargin - 20);
       }
 
-      // On narrow screens where margins are tiny, push to far edges
-      if (pageWidth < 500) {
-        x = sessionRand(i, 4) > 0.5 ? 4 : pageWidth - 100;
+      // Estimate bounding box (rough: ~12em wide, ~4em tall at this font size)
+      const estW = fontSize * 12 * 16; // px
+      const estH = fontSize * 4 * 16;
+      const box = { top: top, bottom: top + estH, left: x, right: x + estW };
+
+      // Nudge if overlapping any placed quote
+      let attempts = 0;
+      while (attempts < 8) {
+        const overlaps = placed.some(p =>
+          box.left < p.right + 10 && box.right > p.left - 10 &&
+          box.top < p.bottom + 10 && box.bottom > p.top - 10
+        );
+        if (!overlaps) break;
+        // Shift down by estimated height + gap
+        top += estH + 20;
+        box.top = top;
+        box.bottom = top + estH;
+        attempts++;
       }
+
+      placed.push(box);
 
       sticker.style.transform = `rotate(${tilt}deg)`;
       sticker.style.top = top + 'px';
