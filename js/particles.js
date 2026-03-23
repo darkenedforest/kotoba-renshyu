@@ -11,6 +11,8 @@ const Particles = {
   _lastSpawn: 0,
   _nextDelay: 2000,
   _enabled: true,
+  _lastLearnedSpawn: 0,
+  LEARNED_MAX_GAP: 12000, // force a learned word at least every 12 seconds
 
   CHARS: [
     // Hiragana
@@ -84,12 +86,19 @@ const Particles = {
       : [];
     const total = typeof Queue !== 'undefined' ? Queue.getTotalCount() : 1;
 
-    // Chance of using a learned word: at least 20%, scales with progress
-    const learnedChance = Math.max(0.2, learnedWords.length / total);
+    if (learnedWords.length > 0) {
+      // Force a learned word if it's been too long since the last one
+      const timeSinceLast = performance.now() - this._lastLearnedSpawn;
+      const forceLearned = timeSinceLast > this.LEARNED_MAX_GAP;
 
-    if (learnedWords.length > 0 && Math.random() < learnedChance) {
-      const word = learnedWords[Math.floor(Math.random() * learnedWords.length)];
-      return { text: word.kanji, isLearned: true };
+      // Chance of using a learned word: at least 30%, scales with progress
+      const learnedChance = Math.max(0.3, learnedWords.length / total);
+
+      if (forceLearned || Math.random() < learnedChance) {
+        const word = learnedWords[Math.floor(Math.random() * learnedWords.length)];
+        this._lastLearnedSpawn = performance.now();
+        return { text: word.kanji, isLearned: true };
+      }
     }
     return { text: this.CHARS[Math.floor(Math.random() * this.CHARS.length)], isLearned: false };
   },
