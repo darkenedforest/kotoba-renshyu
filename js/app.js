@@ -1,7 +1,12 @@
 const App = {
   currentBatchIndex: null,
+  _lessonOpenTime: null,
+  _currentLessonId: null,
 
   async init() {
+    // Initialize Firebase
+    Firebase.init();
+
     // Landing page logic
     const landing = document.getElementById('landing');
     const seenIntro = localStorage.getItem('kotoba-seen-intro');
@@ -48,6 +53,14 @@ const App = {
       }
     });
 
+    // Auth buttons in settings
+    document.getElementById('google-sign-in-btn').addEventListener('click', () => {
+      Firebase.signInWithGoogle();
+    });
+    document.getElementById('sign-out-btn').addEventListener('click', () => {
+      Firebase.signOut();
+    });
+
     // Batch sheet
     UI.els.batchClose.addEventListener('click', () => UI.hideBatchSheet());
     UI.els.batchSheet.addEventListener('click', (e) => {
@@ -55,15 +68,35 @@ const App = {
     });
 
     // Lesson sheet
-    UI.els.lessonClose.addEventListener('click', () => UI.hideLesson());
+    UI.els.lessonClose.addEventListener('click', () => {
+      this._logLessonTime();
+      UI.hideLesson();
+    });
     UI.els.lessonSheet.addEventListener('click', (e) => {
-      if (e.target === UI.els.lessonSheet) UI.hideLesson();
+      if (e.target === UI.els.lessonSheet) {
+        this._logLessonTime();
+        UI.hideLesson();
+      }
     });
 
     // List filters
     document.querySelectorAll('.fpill').forEach(btn => {
       btn.addEventListener('click', () => this.renderList(btn.dataset.filter));
     });
+
+    // Feedback: vote buttons
+    document.getElementById('vote-up-btn').addEventListener('click', () => this._handleVote('up'));
+    document.getElementById('vote-down-btn').addEventListener('click', () => this._handleVote('down'));
+
+    // Feedback: report error
+    document.getElementById('report-error-link').addEventListener('click', () => {
+      const form = document.getElementById('report-form');
+      form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    });
+    document.getElementById('report-submit-btn').addEventListener('click', () => this._submitReport());
+
+    // Comments: post
+    document.getElementById('comment-post-btn').addEventListener('click', () => this._postComment());
 
     // Load index only — full lessons are lazy-loaded on demand
     const index = await this.loadIndex();
@@ -99,11 +132,25 @@ const App = {
   },
 
   async showLesson(id) {
+    // Log time for previous lesson if still open
+    this._logLessonTime();
+
     const word = await Queue.loadLesson(id);
-    if (word) UI.showLesson(word);
+    if (word) {
+      this._lessonOpenTime = Date.now();
+      this._currentLessonId = id;
+      Firebase.logEvent('lesson_open', { lesson_id: id, word: word.kanji });
+      UI.showLesson(word);
+      // Load feedback UI
+      this._loadLessonFeedback(id);
+    }
   },
 
   async markLearned(id) {
+    this._logLessonTime();
+    const word = Queue.getLessonById(id);
+    Firebase.logEvent('lesson_learned', { lesson_id: id, word: word ? word.kanji : '' });
+
     Storage.markLearned(id);
     const progress = Storage.getProgress();
 
@@ -117,7 +164,11 @@ const App = {
         if (next) {
           const nextWord = await Queue.loadLesson(next.id);
           if (nextWord) {
+            this._lessonOpenTime = Date.now();
+            this._currentLessonId = next.id;
+            Firebase.logEvent('lesson_open', { lesson_id: next.id, word: nextWord.kanji });
             UI.showLesson(nextWord);
+            this._loadLessonFeedback(next.id);
             this.renderPath();
             return;
           }
@@ -133,6 +184,10 @@ const App = {
   },
 
   markSkipped(id) {
+    this._logLessonTime();
+    const word = Queue.getLessonById(id);
+    Firebase.logEvent('lesson_skipped', { lesson_id: id, word: word ? word.kanji : '' });
+
     Storage.markSkipped(id);
     UI.hideLesson();
     UI.hideBatchSheet();
@@ -150,6 +205,81 @@ const App = {
     Storage.markSkipped(id);
     this.renderPath();
     this.renderList();
+  },
+
+  // ── Lesson time tracking ──
+
+  _logLessonTime() {
+    if (this._lessonOpenTime && this._currentLessonId) {
+      const duration = Math.round((Date.now() - this._lessonOpenTime) / 1000);
+      if (duration > 0 && duration < 3600) {
+        Firebase.logEvent('lesson_time', {
+          lesson_id: this._currentLessonId,
+          duration_seconds: duration
+        });
+      }
+    }
+    this._lessonOpenTime = null;
+    this._currentLessonId = null;
+  },
+
+  // ── Feedback ──
+
+  async _handleVote(direction) {
+    const lessonId = this._currentLessonId;
+    if (!lessonId) return;
+
+    const result = await Firebase.submitVote(lessonId, direction);
+    if (result) {
+      UI.updateVoteButtons(result);
+    }
+  },
+
+  async _loadLessonFeedback(lessonId) {
+    // Reset feedback UI
+    UI.resetFeedbackUI();
+
+    // Load existing vote
+    const existingVote = await Firebase.getExistingVote(lessonId);
+    if (existingVote) {
+      UI.updateVoteButtons(existingVote);
+    }
+
+    // Load comments
+    const comments = await Firebase.loadComments(lessonId);
+    UI.renderComments(comments);
+    UI.updateCommentAuth(Firebase.getUser());
+  },
+
+  async _submitReport() {
+    const lessonId = this._currentLessonId;
+    const textarea = document.getElementById('report-text');
+    const text = textarea.value.trim();
+    if (!lessonId || !text) return;
+
+    await Firebase.submitReport(lessonId, text);
+    textarea.value = '';
+    document.getElementById('report-form').style.display = 'none';
+    // Brief confirmation
+    const link = document.getElementById('report-error-link');
+    const orig = link.textContent;
+    link.textContent = 'Report sent!';
+    setTimeout(() => { link.textContent = orig; }, 2000);
+  },
+
+  async _postComment() {
+    const lessonId = this._currentLessonId;
+    const input = document.getElementById('comment-input');
+    const text = input.value.trim();
+    if (!lessonId || !text) return;
+
+    const result = await Firebase.postComment(lessonId, text);
+    if (result) {
+      input.value = '';
+      // Reload comments
+      const comments = await Firebase.loadComments(lessonId);
+      UI.renderComments(comments);
+    }
   }
 };
 

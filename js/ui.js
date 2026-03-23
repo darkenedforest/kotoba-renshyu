@@ -144,7 +144,7 @@ const UI = {
       const preview = batch.words.map(w => w.kanji).join('');
 
       if (batch.status === 'complete' || batch.status === 'done-mixed') {
-        node.innerHTML = `<span class="pnode-check">✓</span>`;
+        node.innerHTML = `<span class="pnode-check">\u2713</span>`;
       } else if (batch.status === 'active') {
         node.innerHTML = `<span class="pnode-num">${num}</span>`;
       } else {
@@ -202,8 +202,8 @@ const UI = {
         </div>
         <div class="bw-right">
           <span class="bw-meaning">${word.meaning}</span>
-          ${isLearned ? '<span class="bw-badge bw-badge-green">✓</span>' :
-            '<span class="bw-arrow">→</span>'}
+          ${isLearned ? '<span class="bw-badge bw-badge-green">\u2713</span>' :
+            '<span class="bw-arrow">\u2192</span>'}
         </div>
       `;
 
@@ -265,6 +265,105 @@ const UI = {
   },
 
   /* ═══════════════════════════════════
+     AUTH UI
+     ═══════════════════════════════════ */
+
+  updateAuthUI(user) {
+    const signedOut = document.getElementById('auth-signed-out');
+    const signedIn = document.getElementById('auth-signed-in');
+    const userName = document.getElementById('auth-user-name');
+    const userAvatar = document.getElementById('auth-user-avatar');
+
+    if (user) {
+      signedOut.style.display = 'none';
+      signedIn.style.display = 'flex';
+      userName.textContent = user.displayName || user.email || 'User';
+      if (user.photoURL) {
+        userAvatar.src = user.photoURL;
+        userAvatar.style.display = 'block';
+      } else {
+        userAvatar.style.display = 'none';
+      }
+    } else {
+      signedOut.style.display = 'block';
+      signedIn.style.display = 'none';
+    }
+  },
+
+  /* ═══════════════════════════════════
+     FEEDBACK UI
+     ═══════════════════════════════════ */
+
+  resetFeedbackUI() {
+    const upBtn = document.getElementById('vote-up-btn');
+    const downBtn = document.getElementById('vote-down-btn');
+    upBtn.classList.remove('vote-active');
+    downBtn.classList.remove('vote-active');
+    upBtn.classList.remove('vote-dim');
+    downBtn.classList.remove('vote-dim');
+
+    document.getElementById('report-form').style.display = 'none';
+    document.getElementById('report-text').value = '';
+    document.getElementById('comments-list').innerHTML = '';
+    document.getElementById('comment-input').value = '';
+  },
+
+  updateVoteButtons(direction) {
+    const upBtn = document.getElementById('vote-up-btn');
+    const downBtn = document.getElementById('vote-down-btn');
+
+    upBtn.classList.toggle('vote-active', direction === 'up');
+    downBtn.classList.toggle('vote-active', direction === 'down');
+    upBtn.classList.toggle('vote-dim', direction === 'down');
+    downBtn.classList.toggle('vote-dim', direction === 'up');
+  },
+
+  renderComments(comments) {
+    const list = document.getElementById('comments-list');
+    list.innerHTML = '';
+
+    if (comments.length === 0) {
+      list.innerHTML = '<div class="comments-empty">No comments yet</div>';
+      return;
+    }
+
+    comments.forEach(c => {
+      const div = document.createElement('div');
+      div.className = 'comment-item';
+
+      const ts = c.timestamp ? new Date(c.timestamp.seconds * 1000) : new Date();
+      const timeStr = ts.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+      div.innerHTML = `
+        <div class="comment-header">
+          <span class="comment-author">${this._escapeHtml(c.displayName || 'Anonymous')}</span>
+          <span class="comment-time">${timeStr}</span>
+        </div>
+        <div class="comment-text">${this._escapeHtml(c.text)}</div>
+      `;
+      list.appendChild(div);
+    });
+  },
+
+  updateCommentAuth(user) {
+    const authPrompt = document.getElementById('comment-auth-prompt');
+    const commentForm = document.getElementById('comment-form');
+    if (user) {
+      authPrompt.style.display = 'none';
+      commentForm.style.display = 'flex';
+    } else {
+      authPrompt.style.display = 'block';
+      commentForm.style.display = 'none';
+    }
+  },
+
+  _escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  },
+
+  /* ═══════════════════════════════════
      LIST
      ═══════════════════════════════════ */
 
@@ -302,19 +401,19 @@ const UI = {
       actions.className = 'trow-actions';
 
       if (isLearned) {
-        actions.innerHTML = `<button class="trow-btn trow-btn-undo" title="Undo learned">↩</button>`;
+        actions.innerHTML = `<button class="trow-btn trow-btn-undo" title="Undo learned">\u21A9</button>`;
         actions.querySelector('.trow-btn-undo').addEventListener('click', () => App.restoreWord(word.id));
       } else if (isSkipped) {
-        actions.innerHTML = `<button class="trow-btn trow-btn-undo" title="Restore">↩</button>`;
+        actions.innerHTML = `<button class="trow-btn trow-btn-undo" title="Restore">\u21A9</button>`;
         actions.querySelector('.trow-btn-undo').addEventListener('click', () => App.restoreWord(word.id));
       } else {
-        actions.innerHTML = `<button class="trow-btn trow-btn-skip" title="Skip">✕</button>`;
+        actions.innerHTML = `<button class="trow-btn trow-btn-skip" title="Skip">\u2715</button>`;
         actions.querySelector('.trow-btn-skip').addEventListener('click', () => App.skipFromList(word.id));
       }
 
       const badge = document.createElement('span');
       badge.className = `trow-badge badge-${state}`;
-      badge.textContent = state === 'learned' ? '✓' : state === 'skipped' ? '—' : '•';
+      badge.textContent = state === 'learned' ? '\u2713' : state === 'skipped' ? '\u2014' : '\u2022';
 
       row.appendChild(info);
       row.appendChild(badge);

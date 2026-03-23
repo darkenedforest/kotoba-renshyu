@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Users can only read/write their own progress
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    // Anyone can read feedback aggregates
+    match /lessonFeedback/{lessonId} {
+      allow read: if true;
+      allow write: if true; // Updated by client-side increment
+    }
+    // Votes: one per user per lesson
+    match /lessonVotes/{voteId} {
+      allow read: if true;
+      allow create, update: if true; // Allow anonymous voting via visitorId
+    }
+    // Reports: anyone can submit
+    match /lessonReports/{reportId} {
+      allow create: if true;
+      allow read: if false; // Admin only
+    }
+    // Comments: signed-in users can create, anyone can read
+    match /lessonComments/{commentId} {
+      allow read: if true;
+      allow create: if request.auth != null;
+    }
+  }
+}
