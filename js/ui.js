@@ -573,7 +573,7 @@ const UI = {
       sticker.style.fontSize = fontSize + 'rem';
 
       const color = palette[Math.floor(sessionRand(i, 1) * palette.length)];
-      const tilt = -18 + sessionRand(i, 2) * 36;
+      const tilt = -50 + sessionRand(i, 2) * 100;
 
       // Vertical: anchored to batch i's position, wander within ±2 batches
       const batchY = 50 + i * nodeSpacing + nodeSpacing * 0.5;
