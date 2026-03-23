@@ -1286,7 +1286,7 @@ body {
 
 .quote-sticker {
   position: absolute;
-  max-width: 220px;
+  max-width: 8.5rem; /* ~15 chars per line */
   pointer-events: auto;
   word-wrap: break-word;
   overflow-wrap: break-word;

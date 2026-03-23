@@ -538,7 +538,7 @@ const UI = {
       sticker.className = 'quote-sticker';
 
       const color = palette[Math.floor(sessionRand(i, 1) * palette.length)];
-      const tilt = -8 + sessionRand(i, 2) * 16;
+      const tilt = -18 + sessionRand(i, 2) * 36; // -18 to +18 degrees
 
       // Vertical position: spread along the completed portion of the path
       // Place between batch nodes, offset to avoid nodes
