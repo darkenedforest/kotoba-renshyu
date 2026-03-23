@@ -37,6 +37,12 @@ const UI = {
     const btn = document.querySelector(`.tab[data-page="${name}"]`);
     if (page) page.classList.add('active');
     if (btn) btn.classList.add('active');
+
+    // Only show particles on the Lessons path page
+    const particleLayer = document.querySelector('.jp-particle-layer');
+    if (particleLayer) {
+      particleLayer.style.display = name === 'path' ? '' : 'none';
+    }
   },
 
   /* ═══════════════════════════════════
