@@ -1281,7 +1281,7 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 3; /* above watermarks (0) and path nodes (1-2) for tappability */
+  z-index: 0; /* below path nodes so they don't block buttons */
   overflow: hidden;
 }
 
@@ -1310,7 +1310,7 @@ body {
 
 .quote-sticker-author {
   font-family: 'Nunito', sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.7em;
   font-weight: 700;
   opacity: 0.35;
   text-align: right;
@@ -1320,14 +1320,14 @@ body {
   background: none;
   border: none;
   font-family: 'Nunito', sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.6em;
   font-weight: 700;
   color: var(--g500);
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 1px;
   pointer-events: auto;
-  padding: 0.3rem 0.3rem 0.3rem 0; /* bigger tap target */
+  padding: 0.3em 0.3em 0.3em 0;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1335,14 +1335,8 @@ body {
   color: var(--red);
 }
 
-/* Quote sizes are now set inline via JS — these just set max-width */
-@media (min-width: 600px) {
-  .quote-sticker { max-width: 18rem; }
-}
-
-@media (min-width: 1000px) {
-  .quote-sticker { max-width: 24rem; }
-}
+/* Max-width scales with font-size since it's set inline */
+.quote-sticker { max-width: 12em; }
 
 /* ═══ CUSTOM CONFIRM DIALOG ═══ */
 

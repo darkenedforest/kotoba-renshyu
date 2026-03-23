@@ -552,47 +552,48 @@ const UI = {
     };
 
     // Quote size scaling: random per quote, responsive to screen
+    // Range: base to base * 1.75 (75% bigger max)
     const isMobileQ = pageWidth < 500;
-    const quoteBaseSize = isMobileQ ? 0.85 : pageWidth < 1000 ? 1.5 : 2.2;
-    const quoteMaxScale = isMobileQ ? 1.75 : 1.5; // up to 1.75x on mobile, 1.5x on desktop
+    const quoteBaseSize = isMobileQ ? 0.85 : pageWidth < 1000 ? 1.2 : 1.6;
+    const quoteMaxScale = 1.75;
 
     displayQuotes.forEach((quote, i) => {
       const sticker = document.createElement('div');
       sticker.className = 'quote-sticker';
 
-      // Random size variation per quote
-      const scale = 1 + sessionRand(i, 8) * (quoteMaxScale - 1);
+      // Random size — use square root to bias toward smaller sizes
+      const rawRand = sessionRand(i, 8);
+      const scale = 1 + Math.sqrt(rawRand) * (quoteMaxScale - 1);
       const fontSize = quoteBaseSize * scale;
       sticker.style.fontSize = fontSize + 'rem';
 
       const color = palette[Math.floor(sessionRand(i, 1) * palette.length)];
-      const tilt = -18 + sessionRand(i, 2) * 36; // -18 to +18 degrees
+      const tilt = -18 + sessionRand(i, 2) * 36;
 
       // Vertical position: spread along the completed portion of the path
-      // Place between batch nodes, offset to avoid nodes
       const slotBatch = Math.floor((i + 1) * (completedBatches / (displayQuotes.length + 1)));
-      const baseY = 50 + slotBatch * nodeSpacing + nodeSpacing * 0.5; // between nodes
+      const baseY = 50 + slotBatch * nodeSpacing + nodeSpacing * 0.5;
       const yJitter = (sessionRand(i, 3) - 0.5) * 60;
       const top = baseY + yJitter;
 
-      // Horizontal position: LEFT or RIGHT margin, clear of center path
-      // The S-curve node at this height is at: centerX + sin(slotBatch * 0.8) * amplitude
-      const nodeX = pathCenterX + Math.sin(slotBatch * 0.8) * (containerWidth * 0.22);
+      // Horizontal position: ALWAYS in the margins, never in the center path area
+      // The path + nodes occupy roughly the center 200px on any screen
+      const pathLeft = (pageWidth - 200) / 2;
+      const pathRight = pathLeft + 200;
 
-      // Pick the side with more room
-      const leftSpace = nodeX - pathRadius;
-      const rightSpace = pageWidth - nodeX - pathRadius;
       let x;
-
-      if (sessionRand(i, 4) > 0.5 && leftSpace > 40) {
-        // Place on the left
-        x = 8 + sessionRand(i, 5) * Math.max(0, leftSpace - 50);
-      } else if (rightSpace > 40) {
-        // Place on the right
-        x = nodeX + pathRadius + sessionRand(i, 6) * Math.max(0, rightSpace - 50);
+      if (sessionRand(i, 4) > 0.5) {
+        // Left margin: 4px to pathLeft - 10px
+        x = 4 + sessionRand(i, 5) * Math.max(0, pathLeft - 30);
       } else {
-        // Narrow screen — place far left or far right edge
-        x = sessionRand(i, 7) > 0.5 ? 8 : pageWidth - 180;
+        // Right margin: pathRight + 10px to edge
+        const rightMargin = pageWidth - pathRight - 10;
+        x = pathRight + 10 + sessionRand(i, 6) * Math.max(0, rightMargin - 20);
+      }
+
+      // On narrow screens where margins are tiny, push to far edges
+      if (pageWidth < 500) {
+        x = sessionRand(i, 4) > 0.5 ? 4 : pageWidth - 100;
       }
 
       sticker.style.transform = `rotate(${tilt}deg)`;
