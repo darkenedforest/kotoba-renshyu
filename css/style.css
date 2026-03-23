@@ -1281,7 +1281,7 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 0; /* below path nodes so they don't block buttons */
+  z-index: 2;
   overflow: hidden;
 }
 

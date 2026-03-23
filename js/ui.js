@@ -552,10 +552,9 @@ const UI = {
     };
 
     // Quote size scaling: random per quote, responsive to screen
-    // Range: base to base * 1.75 (75% bigger max)
     const isMobileQ = pageWidth < 500;
-    const quoteBaseSize = isMobileQ ? 0.85 : pageWidth < 1000 ? 1.2 : 1.6;
-    const quoteMaxScale = 1.75;
+    const quoteBaseSize = isMobileQ ? 0.75 : pageWidth < 1000 ? 0.85 : 1.0;
+    const quoteMaxScale = 1.35; // up to 35% bigger than base
 
     displayQuotes.forEach((quote, i) => {
       const sticker = document.createElement('div');
