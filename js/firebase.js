@@ -306,6 +306,7 @@ const Firebase = {
   async fetchRecentQuotes() {
     if (!this.db) return [];
     try {
+      // Try composite query first (requires index)
       const snap = await this.db.collection('motivationalQuotes')
         .where('reported', '==', false)
         .orderBy('timestamp', 'desc')
@@ -313,8 +314,32 @@ const Firebase = {
         .get();
       return snap.docs.map(d => ({ id: d.id, ...d.data() }));
     } catch (e) {
-      console.error('Fetch quotes failed:', e);
-      return [];
+      // Fallback if index doesn't exist yet — fetch all recent and filter client-side
+      console.warn('Composite query failed, using fallback:', e.message);
+      try {
+        const snap = await this.db.collection('motivationalQuotes')
+          .orderBy('timestamp', 'desc')
+          .limit(30)
+          .get();
+        return snap.docs
+          .map(d => ({ id: d.id, ...d.data() }))
+          .filter(q => !q.reported)
+          .slice(0, 20);
+      } catch (e2) {
+        // Final fallback — no ordering, just get what we can
+        console.warn('Ordered query failed too, fetching unordered:', e2.message);
+        try {
+          const snap = await this.db.collection('motivationalQuotes')
+            .limit(20)
+            .get();
+          return snap.docs
+            .map(d => ({ id: d.id, ...d.data() }))
+            .filter(q => !q.reported);
+        } catch (e3) {
+          console.error('All quote fetches failed:', e3);
+          return [];
+        }
+      }
     }
   },
 
