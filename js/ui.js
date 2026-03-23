@@ -208,26 +208,34 @@ const UI = {
       nodes.appendChild(wrap);
     });
 
-    // Kanji watermarks — scatter learned kanji behind the path
+    // Kanji watermarks — each learned word gets a fixed position based on its ID
     const page = document.getElementById('page-path');
-    page.querySelectorAll('.kanji-watermark, .path-particles').forEach(el => el.remove());
+    page.querySelectorAll('.kanji-watermark').forEach(el => el.remove());
+
+    // Deterministic pseudo-random from word ID (so positions are stable)
+    const seeded = (id, salt) => {
+      let h = id * 2654435761 + salt * 40503;
+      h = ((h >>> 16) ^ h) * 45679;
+      return ((h >>> 16) ^ h) / 4294967296 + 0.5; // 0-1
+    };
 
     const learnedWords = Queue.allLessons.filter(w => learnedSet.has(w.id));
-    if (learnedWords.length > 0) {
-      const watermarkCount = Math.min(learnedWords.length, 8);
-      const step = Math.max(1, Math.floor(learnedWords.length / watermarkCount));
-      for (let i = 0; i < watermarkCount; i++) {
-        const word = learnedWords[i * step];
-        if (!word) break;
-        const wm = document.createElement('div');
-        wm.className = 'kanji-watermark';
-        wm.textContent = word.kanji;
-        wm.style.fontSize = (3 + Math.random() * 5) + 'rem';
-        wm.style.top = (60 + i * (totalHeight / watermarkCount)) + 'px';
-        wm.style.left = (5 + Math.random() * 70) + '%';
-        wm.style.transform = `rotate(${-15 + Math.random() * 30}deg)`;
-        page.appendChild(wm);
-      }
+    const batchSize = progress.batchSize;
+
+    for (const word of learnedWords) {
+      // Position vertically near where this word's batch sits on the path
+      const wordIndex = Queue.allLessons.filter(w => !new Set(progress.skippedIds).has(w.id)).findIndex(w => w.id === word.id);
+      const batchIndex = wordIndex >= 0 ? Math.floor(wordIndex / batchSize) : 0;
+      const batchY = 50 + batchIndex * nodeSpacing;
+
+      const wm = document.createElement('div');
+      wm.className = 'kanji-watermark';
+      wm.textContent = word.kanji;
+      wm.style.fontSize = (3 + seeded(word.id, 1) * 4) + 'rem';
+      wm.style.top = (batchY - 30 + seeded(word.id, 2) * 100) + 'px';
+      wm.style.left = (5 + seeded(word.id, 3) * 75) + '%';
+      wm.style.transform = `rotate(${-15 + seeded(word.id, 4) * 30}deg)`;
+      page.appendChild(wm);
     }
 
     this.updateStats(progress);
