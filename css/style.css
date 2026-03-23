@@ -1320,14 +1320,15 @@ body {
   font-family: 'Nunito', sans-serif;
   font-size: 0.5rem;
   font-weight: 600;
-  color: transparent;
+  color: var(--g300);
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 1px;
   pointer-events: auto;
   padding: 0;
+  opacity: 0.5;
 }
 
-.quote-sticker:hover .quote-sticker-report {
-  color: var(--g300);
-  text-decoration: underline;
+.quote-sticker-report:active {
+  opacity: 1;
 }
