@@ -2,6 +2,19 @@ const App = {
   currentBatchIndex: null,
 
   async init() {
+    // Landing page logic
+    const landing = document.getElementById('landing');
+    const seenIntro = localStorage.getItem('kotoba-seen-intro');
+    if (!seenIntro) {
+      landing.style.display = '';
+      document.getElementById('app').style.display = 'none';
+      document.getElementById('landing-start').addEventListener('click', () => {
+        localStorage.setItem('kotoba-seen-intro', '1');
+        landing.style.display = 'none';
+        document.getElementById('app').style.display = '';
+      });
+    }
+
     UI.init();
 
     // Tab nav

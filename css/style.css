@@ -582,3 +582,152 @@ body {
   background: var(--sky-pale); color: var(--sky-dark);
 }
 .badge-active { color: var(--g300); }
+
+/* ═══ LANDING PAGE ═══ */
+
+.landing {
+  position: fixed; inset: 0;
+  z-index: 500;
+  background: linear-gradient(180deg, #e0f2fe 0%, #f0fdf4 40%, #fefce8 100%);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.landing-inner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  max-width: 460px;
+  margin: 0 auto;
+  gap: 1.75rem;
+}
+
+.landing-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.landing-logo-text {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--g800);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.landing-sub {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--g400);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.landing-lead {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--g600);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.landing-lead a {
+  color: var(--sky-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--sky);
+  text-underline-offset: 2px;
+  font-weight: 700;
+}
+
+.landing-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.landing-point {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.landing-icon {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--sky);
+  flex-shrink: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sky-pale);
+  border-radius: 10px;
+}
+
+.landing-point strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--g800);
+  margin-bottom: 0.15rem;
+}
+
+.landing-point span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--g500);
+  line-height: 1.55;
+}
+
+.landing-goal {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--g600);
+  text-align: center;
+  line-height: 1.65;
+  font-style: italic;
+}
+
+.landing-cta {
+  width: 100%;
+  max-width: 280px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 14px;
+  margin-top: 0.25rem;
+}
+
+.landing-anki-link {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--g400);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.15s;
+}
+
+.landing-anki-link:hover {
+  color: var(--sky-dark);
+}
