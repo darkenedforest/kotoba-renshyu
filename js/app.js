@@ -392,9 +392,9 @@ const App = {
       return;
     }
 
-    // Pick 3 random from the pool
+    // Shuffle and cache — renderQuoteStickers decides how many to show based on progress
     const shuffled = allQuotes.sort(() => Math.random() - 0.5);
-    this._cachedQuotes = shuffled.slice(0, 3);
+    this._cachedQuotes = shuffled;
     UI.renderQuoteStickers(this._cachedQuotes);
   }
 };

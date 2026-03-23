@@ -497,47 +497,79 @@ const UI = {
 
   _quoteStickerCache: null,
 
-  renderQuoteStickers(quotes) {
+  renderQuoteStickers(quotes, progress) {
     const container = document.getElementById('quote-stickers');
     if (!container) return;
     container.innerHTML = '';
 
     if (!quotes || quotes.length === 0) return;
-
-    const isMobile = window.innerWidth < 500;
-    const maxQuotes = isMobile ? 2 : 3;
-    const displayQuotes = quotes.slice(0, maxQuotes);
+    if (!progress) progress = Storage.getProgress();
 
     const palette = ['#e11d48', '#7c3aed', '#2563eb', '#0891b2', '#059669', '#ca8a04', '#ea580c', '#be185d', '#4f46e5', '#0d9488'];
 
-    // Seeded random from quote text (stable per quote, varies between quotes)
-    const seed = (str, salt) => {
-      let h = salt;
-      for (let i = 0; i < str.length; i++) h = ((h << 5) - h + str.charCodeAt(i)) | 0;
-      return ((h >>> 0) % 1000) / 1000; // 0-1
+    // How many quotes to show: 1 per every 4 completed batches
+    const batchSize = progress.batchSize || 3;
+    const learnedCount = progress.learnedIds ? progress.learnedIds.length : 0;
+    const completedBatches = Math.floor(learnedCount / batchSize);
+    const quoteSlots = Math.max(1, Math.floor(completedBatches / 4));
+    const displayQuotes = quotes.slice(0, quoteSlots);
+
+    if (displayQuotes.length === 0) return;
+
+    // Path layout constants (must match renderPath)
+    const nodeSpacing = 130;
+    const containerWidth = Math.min(window.innerWidth, 400);
+    const pageWidth = window.innerWidth;
+    const pathCenterX = pageWidth / 2;
+    const pathRadius = 120; // stay clear of this radius from any node center
+
+    // Session random seed (changes each page load)
+    if (!this._quoteSessionSeed) {
+      this._quoteSessionSeed = Math.random();
+    }
+    const sessionRand = (i, salt) => {
+      let h = Math.floor(this._quoteSessionSeed * 99999) + i * 7919 + salt * 104729;
+      h = ((h >>> 16) ^ h) * 45679;
+      return ((h >>> 0) % 10000) / 10000;
     };
-
-    const viewW = window.innerWidth;
-    const pathH = container.parentElement ? container.parentElement.scrollHeight : 800;
-
-    // Divide page into vertical zones to prevent overlap
-    const zoneHeight = Math.max(200, pathH / (maxQuotes + 1));
 
     displayQuotes.forEach((quote, i) => {
       const sticker = document.createElement('div');
       sticker.className = 'quote-sticker';
 
-      const color = palette[Math.floor(seed(quote.text, 7) * palette.length)];
-      const tilt = -8 + seed(quote.text, 13) * 16; // -8 to +8 degrees
+      const color = palette[Math.floor(sessionRand(i, 1) * palette.length)];
+      const tilt = -8 + sessionRand(i, 2) * 16;
 
-      // Position: random within a vertical zone, random left/right
-      const zoneTop = 80 + i * zoneHeight;
-      const top = zoneTop + seed(quote.text, 31) * (zoneHeight - 100);
-      const leftPct = 3 + seed(quote.text, 47) * 60; // 3% to 63% from left
+      // Vertical position: spread along the completed portion of the path
+      // Place between batch nodes, offset to avoid nodes
+      const slotBatch = Math.floor((i + 1) * (completedBatches / (displayQuotes.length + 1)));
+      const baseY = 50 + slotBatch * nodeSpacing + nodeSpacing * 0.5; // between nodes
+      const yJitter = (sessionRand(i, 3) - 0.5) * 60;
+      const top = baseY + yJitter;
+
+      // Horizontal position: LEFT or RIGHT margin, clear of center path
+      // The S-curve node at this height is at: centerX + sin(slotBatch * 0.8) * amplitude
+      const nodeX = pathCenterX + Math.sin(slotBatch * 0.8) * (containerWidth * 0.22);
+
+      // Pick the side with more room
+      const leftSpace = nodeX - pathRadius;
+      const rightSpace = pageWidth - nodeX - pathRadius;
+      let x;
+
+      if (sessionRand(i, 4) > 0.5 && leftSpace > 40) {
+        // Place on the left
+        x = 8 + sessionRand(i, 5) * Math.max(0, leftSpace - 50);
+      } else if (rightSpace > 40) {
+        // Place on the right
+        x = nodeX + pathRadius + sessionRand(i, 6) * Math.max(0, rightSpace - 50);
+      } else {
+        // Narrow screen — place far left or far right edge
+        x = sessionRand(i, 7) > 0.5 ? 8 : pageWidth - 180;
+      }
 
       sticker.style.transform = `rotate(${tilt}deg)`;
       sticker.style.top = top + 'px';
-      sticker.style.left = leftPct + '%';
+      sticker.style.left = x + 'px';
 
       const textEl = document.createElement('div');
       textEl.className = 'quote-sticker-text';
