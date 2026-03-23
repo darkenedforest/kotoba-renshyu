@@ -232,33 +232,31 @@ const UI = {
     const sizeBase = screenW < 500 ? 2 : screenW < 900 ? 3 : 4;
     const sizeRange = screenW < 500 ? 4 : screenW < 900 ? 5 : 7;
 
-    // Use the full rendered height, with some padding
-    const spreadHeight = Math.max(totalHeight, window.innerHeight);
+    const skippedSet = new Set(progress.skippedIds);
+    const activeWords = Queue.allLessons.filter(w => !skippedSet.has(w.id));
 
     for (let li = 0; li < learnedWords.length; li++) {
       const word = learnedWords[li];
 
-      // Distribute across the full height using a grid with jitter
-      // Use columns to avoid horizontal clustering too
-      const cols = 3;
-      const rows = Math.ceil(learnedWords.length / cols);
-      const row = Math.floor(li / cols);
-      const col = li % cols;
+      // Find this word's batch position on the path
+      const wordIndex = activeWords.findIndex(w => w.id === word.id);
+      const batchIndex = wordIndex >= 0 ? Math.floor(wordIndex / progress.batchSize) : 0;
+      const batchY = 50 + batchIndex * nodeSpacing;
 
-      const cellH = spreadHeight / Math.max(rows, 1);
-      const cellW = 100 / cols; // percentage
+      // Scatter within ±5 batches of its home batch
+      const wanderRange = 5 * nodeSpacing;
+      const yOffset = (seeded(word.id, 2) - 0.5) * wanderRange * 2;
+      const finalY = Math.max(0, batchY + yOffset);
 
-      const baseY = row * cellH;
-      const yJitter = seeded(word.id, 2) * cellH * 0.7;
-      const baseX = col * cellW;
-      const xJitter = seeded(word.id, 3) * cellW * 0.6;
+      // Horizontal: full width with jitter
+      const xPct = 2 + seeded(word.id, 3) * 85;
 
       const wm = document.createElement('div');
       wm.className = 'kanji-watermark';
       wm.textContent = word.kanji;
       wm.style.fontSize = (sizeBase + seeded(word.id, 1) * sizeRange) + 'rem';
-      wm.style.top = (baseY + yJitter) + 'px';
-      wm.style.left = (baseX + xJitter) + '%';
+      wm.style.top = finalY + 'px';
+      wm.style.left = xPct + '%';
       wm.style.transform = `rotate(${-25 + seeded(word.id, 4) * 50}deg)`;
       page.appendChild(wm);
     }
