@@ -26,13 +26,18 @@ const Firebase = {
     this._ready = true;
 
     // Listen for auth state changes
-    this.auth.onAuthStateChanged(user => {
+    this.auth.onAuthStateChanged(async (user) => {
       if (user) {
         Storage.onSignIn(user);
+        const customName = await this.loadDisplayName();
+        UI.updateAuthUI(user, customName);
+      } else {
+        UI.updateAuthUI(null);
       }
-      UI.updateAuthUI(user);
     });
   },
+
+  _customName: null,
 
   // ── Auth ──
 
@@ -47,6 +52,7 @@ const Firebase = {
 
   async signOut() {
     try {
+      this._customName = null;
       await this.auth.signOut();
     } catch (e) {
       console.error('Sign-out failed:', e);
@@ -55,6 +61,69 @@ const Firebase = {
 
   getUser() {
     return this.auth ? this.auth.currentUser : null;
+  },
+
+  getDisplayName() {
+    return this._customName;
+  },
+
+  // ── Display name ──
+
+  async loadDisplayName() {
+    const user = this.getUser();
+    if (!user || !this.db) return null;
+    try {
+      const doc = await this.db.collection('displayNames').doc(user.uid).get();
+      if (doc.exists) {
+        this._customName = doc.data().name;
+        return this._customName;
+      }
+    } catch (e) {
+      console.error('Load display name failed:', e);
+    }
+    return null;
+  },
+
+  async isNameTaken(name) {
+    if (!this.db) return false;
+    const normalized = name.trim().toLowerCase();
+    try {
+      const snap = await this.db.collection('displayNames')
+        .where('nameLower', '==', normalized)
+        .limit(1)
+        .get();
+      if (snap.empty) return false;
+      // If the only match is the current user, it's fine
+      const user = this.getUser();
+      return snap.docs[0].id !== (user ? user.uid : '');
+    } catch (e) {
+      console.error('Name check failed:', e);
+      return false;
+    }
+  },
+
+  async saveDisplayName(name) {
+    const user = this.getUser();
+    if (!user || !this.db) return { ok: false, error: 'Not signed in' };
+    const trimmed = name.trim();
+    if (trimmed.length < 1 || trimmed.length > 20) return { ok: false, error: 'Name must be 1-20 characters' };
+
+    const taken = await this.isNameTaken(trimmed);
+    if (taken) return { ok: false, error: 'That name is already taken' };
+
+    try {
+      await this.db.collection('displayNames').doc(user.uid).set({
+        name: trimmed,
+        nameLower: trimmed.toLowerCase(),
+        uid: user.uid
+      });
+      this._customName = trimmed;
+      UI.updateAuthUI(user, trimmed);
+      return { ok: true };
+    } catch (e) {
+      console.error('Save name failed:', e);
+      return { ok: false, error: 'Save failed' };
+    }
   },
 
   // ── Firestore: user progress ──

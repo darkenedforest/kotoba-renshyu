@@ -56,7 +56,28 @@ body {
 }
 .logo-hl { color: var(--sky); }
 
-.topbar-right { display: flex; gap: 0.4rem; }
+.topbar-right { display: flex; gap: 0.4rem; align-items: center; }
+
+.topbar-signin {
+  font-size: 0.65rem; font-weight: 800;
+  color: var(--sky-dark);
+  background: var(--sky-pale);
+  border: none; border-radius: 100px;
+  padding: 0.2rem 0.55rem;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.topbar-user {
+  font-size: 0.65rem; font-weight: 800;
+  color: var(--green-dark);
+  background: var(--green-pale);
+  border-radius: 100px;
+  padding: 0.2rem 0.55rem;
+  letter-spacing: 0.02em;
+  cursor: default;
+}
 
 .pill {
   font-size: 0.65rem;
@@ -711,12 +732,36 @@ body {
 }
 
 .landing-cta {
+  padding: 0.6rem 2rem;
+  font-size: 0.88rem;
+  border-radius: 10px;
+}
+
+.landing-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
   width: 100%;
-  max-width: 280px;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 14px;
-  margin-top: 0.25rem;
+}
+
+.landing-google-btn {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,255,255,0.85);
+  border: 1.5px solid var(--g200);
+  border-radius: 10px;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--g600);
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  transition: border-color 0.15s;
+}
+.landing-google-btn:hover { border-color: var(--sky); }
+
+.landing-sync-hint {
+  font-size: 0.7rem; font-weight: 600;
+  color: var(--g400); margin-top: -0.35rem;
 }
 
 .landing-anki-link {
@@ -804,6 +849,39 @@ body {
   cursor: pointer;
   font-family: 'Nunito', sans-serif;
 }
+
+.display-name-row {
+  display: flex; align-items: center; gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.display-name-input {
+  flex: 1;
+  padding: 0.3rem 0.5rem;
+  border: 2px solid var(--g200);
+  border-radius: 8px;
+  font-size: 0.8rem; font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  color: var(--g700);
+  background: #fff;
+}
+.display-name-input:focus { outline: none; border-color: var(--sky); }
+
+.btn-save-name {
+  background: var(--sky); color: #fff;
+  border: none; border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.72rem; font-weight: 800;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+}
+
+.name-status {
+  font-size: 0.68rem; font-weight: 600;
+  margin-top: 0.25rem; min-height: 1rem;
+}
+.name-status-ok { color: var(--green-dark); }
+.name-status-err { color: var(--red); }
 
 .btn-sign-out:hover { color: var(--g700); }
 

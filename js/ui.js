@@ -268,25 +268,37 @@ const UI = {
      AUTH UI
      ═══════════════════════════════════ */
 
-  updateAuthUI(user) {
+  updateAuthUI(user, customName) {
     const signedOut = document.getElementById('auth-signed-out');
     const signedIn = document.getElementById('auth-signed-in');
     const userName = document.getElementById('auth-user-name');
     const userAvatar = document.getElementById('auth-user-avatar');
+    const topbarSignin = document.getElementById('topbar-signin');
+    const topbarUser = document.getElementById('topbar-user');
+    const nameInput = document.getElementById('display-name-input');
+
+    const emailPrefix = user && user.email ? user.email.split('@')[0] : '';
+    const displayName = customName || emailPrefix || (user ? user.displayName : '') || 'User';
 
     if (user) {
       signedOut.style.display = 'none';
-      signedIn.style.display = 'flex';
-      userName.textContent = user.displayName || user.email || 'User';
+      signedIn.style.display = 'block';
+      userName.textContent = displayName;
+      nameInput.value = customName || emailPrefix;
       if (user.photoURL) {
         userAvatar.src = user.photoURL;
         userAvatar.style.display = 'block';
       } else {
         userAvatar.style.display = 'none';
       }
+      topbarSignin.style.display = 'none';
+      topbarUser.style.display = '';
+      topbarUser.textContent = displayName;
     } else {
       signedOut.style.display = 'block';
       signedIn.style.display = 'none';
+      topbarSignin.style.display = '';
+      topbarUser.style.display = 'none';
     }
   },
 

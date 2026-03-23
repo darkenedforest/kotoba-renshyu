@@ -25,5 +25,10 @@ service cloud.firestore {
       allow read: if true;
       allow create: if request.auth != null;
     }
+    // Display names: owner can write, anyone can read (for uniqueness check)
+    match /displayNames/{userId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
   }
 }

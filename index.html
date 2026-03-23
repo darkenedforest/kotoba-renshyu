@@ -46,9 +46,15 @@
                 <p class="landing-goal">The goal: give your brain something to hold onto, so you're not just memorizing a word list.</p>
             </div>
 
-            <button class="btn btn-green landing-cta" id="landing-start">Get Started</button>
-
-            <a class="landing-anki-link" href="https://ankiweb.net/shared/info/567658455" target="_blank" rel="noopener">Get the Anki deck &rarr;</a>
+            <div class="landing-actions">
+                <button class="btn btn-green landing-cta" id="landing-start">Get Started</button>
+                <button class="landing-google-btn" id="landing-google-signin">
+                    <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                    Sign in with Google to sync progress
+                </button>
+                <span class="landing-sync-hint">Optional — track your progress across devices</span>
+                <a class="landing-anki-link" href="https://ankiweb.net/shared/info/567658455" target="_blank" rel="noopener">Get the Anki deck &rarr;</a>
+            </div>
         </div>
     </div>
 
@@ -130,12 +136,19 @@
                         Sign in with Google
                     </button>
                 </div>
-                <div id="auth-signed-in" class="auth-section auth-user-row" style="display:none;">
-                    <div class="auth-user-info">
-                        <img id="auth-user-avatar" class="auth-avatar" src="" alt="">
-                        <span id="auth-user-name" class="auth-name"></span>
+                <div id="auth-signed-in" class="auth-section" style="display:none;">
+                    <div class="auth-user-row">
+                        <div class="auth-user-info">
+                            <img id="auth-user-avatar" class="auth-avatar" src="" alt="">
+                            <span id="auth-user-name" class="auth-name"></span>
+                        </div>
+                        <button class="btn-sign-out" id="sign-out-btn">Sign out</button>
                     </div>
-                    <button class="btn-sign-out" id="sign-out-btn">Sign out</button>
+                    <div class="display-name-row">
+                        <input type="text" id="display-name-input" class="display-name-input" placeholder="Display name" maxlength="20">
+                        <button class="btn-save-name" id="save-name-btn">Save</button>
+                    </div>
+                    <div id="name-status" class="name-status"></div>
                 </div>
             </div>
 
@@ -163,6 +176,8 @@
             <div class="topbar-right">
                 <div class="pill pill-green"><span id="stat-learned">0</span> learned</div>
                 <div class="pill pill-blue"><span id="stat-remaining">0</span> to go</div>
+                <button class="topbar-signin" id="topbar-signin">Sign in</button>
+                <span class="topbar-user" id="topbar-user" style="display:none;"></span>
             </div>
         </div>
 

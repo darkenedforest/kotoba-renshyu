@@ -53,12 +53,35 @@ const App = {
       }
     });
 
-    // Auth buttons in settings
+    // Auth buttons — settings, topbar, and landing page
     document.getElementById('google-sign-in-btn').addEventListener('click', () => {
+      Firebase.signInWithGoogle();
+    });
+    document.getElementById('topbar-signin').addEventListener('click', () => {
+      Firebase.signInWithGoogle();
+    });
+    document.getElementById('landing-google-signin').addEventListener('click', () => {
       Firebase.signInWithGoogle();
     });
     document.getElementById('sign-out-btn').addEventListener('click', () => {
       Firebase.signOut();
+    });
+
+    // Display name save
+    document.getElementById('save-name-btn').addEventListener('click', async () => {
+      const input = document.getElementById('display-name-input');
+      const status = document.getElementById('name-status');
+      status.textContent = 'Saving...';
+      status.className = 'name-status';
+      const result = await Firebase.saveDisplayName(input.value);
+      if (result.ok) {
+        status.textContent = 'Saved!';
+        status.className = 'name-status name-status-ok';
+      } else {
+        status.textContent = result.error;
+        status.className = 'name-status name-status-err';
+      }
+      setTimeout(() => { status.textContent = ''; }, 3000);
     });
 
     // Batch sheet
