@@ -117,6 +117,51 @@ body {
 
 /* ═══ LEARNING PATH ═══ */
 
+/* Dot grid background */
+#page-path {
+  position: relative;
+  background-image: radial-gradient(circle, var(--g200) 0.8px, transparent 0.8px);
+  background-size: 28px 28px;
+  background-position: 14px 14px;
+}
+
+/* Kanji watermarks */
+.kanji-watermark {
+  position: absolute;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 900;
+  color: var(--g800);
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
+}
+
+/* Floating particles */
+.path-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--sky);
+  opacity: 0;
+  animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 0.3; }
+  90% { opacity: 0.15; }
+  100% { transform: translateY(-120px); opacity: 0; }
+}
+
 .path-scroll {
   position: relative;
   display: flex;
@@ -124,6 +169,7 @@ body {
   align-items: center;
   padding: 1rem 0 2rem;
   min-height: 70vh;
+  z-index: 1;
 }
 
 .path-svg {
@@ -619,7 +665,7 @@ body {
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.7;
 }
 
 .landing::before {
@@ -638,7 +684,7 @@ body {
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
-  opacity: 0.25;
+  opacity: 0.55;
 }
 
 .landing-bubble-1 {

@@ -113,6 +113,29 @@ const UI = {
       bgPath.setAttribute('stroke-linecap', 'round');
       svg.appendChild(bgPath);
 
+      // Glow filter for progress path
+      const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+      const filter = document.createElementNS('http://www.w3.org/2000/svg', 'filter');
+      filter.setAttribute('id', 'path-glow');
+      filter.setAttribute('x', '-50%');
+      filter.setAttribute('y', '-50%');
+      filter.setAttribute('width', '200%');
+      filter.setAttribute('height', '200%');
+      const blur = document.createElementNS('http://www.w3.org/2000/svg', 'feGaussianBlur');
+      blur.setAttribute('stdDeviation', '6');
+      blur.setAttribute('result', 'glow');
+      const merge = document.createElementNS('http://www.w3.org/2000/svg', 'feMerge');
+      const m1 = document.createElementNS('http://www.w3.org/2000/svg', 'feMergeNode');
+      m1.setAttribute('in', 'glow');
+      const m2 = document.createElementNS('http://www.w3.org/2000/svg', 'feMergeNode');
+      m2.setAttribute('in', 'SourceGraphic');
+      merge.appendChild(m1);
+      merge.appendChild(m2);
+      filter.appendChild(blur);
+      filter.appendChild(merge);
+      defs.appendChild(filter);
+      svg.appendChild(defs);
+
       // Green progress path — up to active batch
       const progressEnd = activeIdx >= 0 ? activeIdx : positions.length - 1;
       if (progressEnd > 0) {
@@ -123,6 +146,18 @@ const UI = {
           const cpY = (prev.y + curr.y) / 2;
           progD += ` C ${prev.x} ${cpY}, ${curr.x} ${cpY}, ${curr.x} ${curr.y}`;
         }
+        // Glow layer (wider, filtered)
+        const glowPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        glowPath.setAttribute('d', progD);
+        glowPath.setAttribute('stroke', '#34d399');
+        glowPath.setAttribute('stroke-width', '10');
+        glowPath.setAttribute('fill', 'none');
+        glowPath.setAttribute('stroke-linecap', 'round');
+        glowPath.setAttribute('filter', 'url(#path-glow)');
+        glowPath.setAttribute('opacity', '0.4');
+        svg.appendChild(glowPath);
+
+        // Solid progress line on top
         const progPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         progPath.setAttribute('d', progD);
         progPath.setAttribute('stroke', '#34d399');
@@ -172,6 +207,43 @@ const UI = {
       wrap.appendChild(label);
       nodes.appendChild(wrap);
     });
+
+    // Kanji watermarks — scatter learned kanji behind the path
+    const page = document.getElementById('page-path');
+    page.querySelectorAll('.kanji-watermark, .path-particles').forEach(el => el.remove());
+
+    const learnedWords = Queue.allLessons.filter(w => learnedSet.has(w.id));
+    if (learnedWords.length > 0) {
+      const watermarkCount = Math.min(learnedWords.length, 8);
+      const step = Math.max(1, Math.floor(learnedWords.length / watermarkCount));
+      for (let i = 0; i < watermarkCount; i++) {
+        const word = learnedWords[i * step];
+        if (!word) break;
+        const wm = document.createElement('div');
+        wm.className = 'kanji-watermark';
+        wm.textContent = word.kanji;
+        wm.style.fontSize = (3 + Math.random() * 5) + 'rem';
+        wm.style.top = (60 + i * (totalHeight / watermarkCount)) + 'px';
+        wm.style.left = (5 + Math.random() * 70) + '%';
+        wm.style.transform = `rotate(${-15 + Math.random() * 30}deg)`;
+        page.appendChild(wm);
+      }
+    }
+
+    // Floating particles
+    const particleContainer = document.createElement('div');
+    particleContainer.className = 'path-particles';
+    for (let i = 0; i < 12; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = (5 + Math.random() * 90) + '%';
+      p.style.top = (Math.random() * 100) + '%';
+      p.style.animationDuration = (4 + Math.random() * 6) + 's';
+      p.style.animationDelay = (Math.random() * 8) + 's';
+      p.style.width = p.style.height = (2 + Math.random() * 2) + 'px';
+      particleContainer.appendChild(p);
+    }
+    page.appendChild(particleContainer);
 
     this.updateStats(progress);
   },
