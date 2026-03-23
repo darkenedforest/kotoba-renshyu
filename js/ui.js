@@ -226,31 +226,27 @@ const UI = {
     };
 
     const learnedWords = Queue.allLessons.filter(w => learnedSet.has(w.id));
-    const batchSize = progress.batchSize;
 
-    // Size scaling: base on screen width and batch size
+    // Size scaling based on screen width
     const screenW = window.innerWidth;
-    const sizeBase = screenW < 500 ? 2.5 : screenW < 900 ? 3.5 : 5;
-    const sizeRange = screenW < 500 ? 2.5 : screenW < 900 ? 3.5 : 4;
-    const skippedSet = new Set(progress.skippedIds);
-    const activeWords = Queue.allLessons.filter(w => !skippedSet.has(w.id));
+    const sizeBase = screenW < 500 ? 2 : screenW < 900 ? 3 : 4;
+    const sizeRange = screenW < 500 ? 4 : screenW < 900 ? 5 : 7;
 
-    for (const word of learnedWords) {
-      const wordIndex = activeWords.findIndex(w => w.id === word.id);
-      const batchIndex = wordIndex >= 0 ? Math.floor(wordIndex / batchSize) : 0;
-      const batchY = 50 + batchIndex * nodeSpacing;
+    for (let li = 0; li < learnedWords.length; li++) {
+      const word = learnedWords[li];
 
-      // Spread vertically across the full nodeSpacing, not just 100px
-      const verticalSpread = nodeSpacing * 0.9;
-      const yOffset = (seeded(word.id, 2) - 0.5) * verticalSpread;
+      // Spread evenly across the full page height, with random jitter
+      const slotHeight = totalHeight / Math.max(learnedWords.length, 1);
+      const baseY = 30 + li * slotHeight;
+      const yJitter = (seeded(word.id, 2) - 0.5) * slotHeight * 0.8;
 
       const wm = document.createElement('div');
       wm.className = 'kanji-watermark';
       wm.textContent = word.kanji;
       wm.style.fontSize = (sizeBase + seeded(word.id, 1) * sizeRange) + 'rem';
-      wm.style.top = (batchY + yOffset) + 'px';
-      wm.style.left = (3 + seeded(word.id, 3) * 80) + '%';
-      wm.style.transform = `rotate(${-20 + seeded(word.id, 4) * 40}deg)`;
+      wm.style.top = (baseY + yJitter) + 'px';
+      wm.style.left = (2 + seeded(word.id, 3) * 85) + '%';
+      wm.style.transform = `rotate(${-25 + seeded(word.id, 4) * 50}deg)`;
       page.appendChild(wm);
     }
 
