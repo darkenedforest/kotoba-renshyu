@@ -228,19 +228,29 @@ const UI = {
     const learnedWords = Queue.allLessons.filter(w => learnedSet.has(w.id));
     const batchSize = progress.batchSize;
 
+    // Size scaling: base on screen width and batch size
+    const screenW = window.innerWidth;
+    const sizeBase = screenW < 500 ? 2.5 : screenW < 900 ? 3.5 : 5;
+    const sizeRange = screenW < 500 ? 2.5 : screenW < 900 ? 3.5 : 4;
+    const skippedSet = new Set(progress.skippedIds);
+    const activeWords = Queue.allLessons.filter(w => !skippedSet.has(w.id));
+
     for (const word of learnedWords) {
-      // Position vertically near where this word's batch sits on the path
-      const wordIndex = Queue.allLessons.filter(w => !new Set(progress.skippedIds).has(w.id)).findIndex(w => w.id === word.id);
+      const wordIndex = activeWords.findIndex(w => w.id === word.id);
       const batchIndex = wordIndex >= 0 ? Math.floor(wordIndex / batchSize) : 0;
       const batchY = 50 + batchIndex * nodeSpacing;
+
+      // Spread vertically across the full nodeSpacing, not just 100px
+      const verticalSpread = nodeSpacing * 0.9;
+      const yOffset = (seeded(word.id, 2) - 0.5) * verticalSpread;
 
       const wm = document.createElement('div');
       wm.className = 'kanji-watermark';
       wm.textContent = word.kanji;
-      wm.style.fontSize = (3 + seeded(word.id, 1) * 4) + 'rem';
-      wm.style.top = (batchY - 30 + seeded(word.id, 2) * 100) + 'px';
-      wm.style.left = (5 + seeded(word.id, 3) * 75) + '%';
-      wm.style.transform = `rotate(${-15 + seeded(word.id, 4) * 30}deg)`;
+      wm.style.fontSize = (sizeBase + seeded(word.id, 1) * sizeRange) + 'rem';
+      wm.style.top = (batchY + yOffset) + 'px';
+      wm.style.left = (3 + seeded(word.id, 3) * 80) + '%';
+      wm.style.transform = `rotate(${-20 + seeded(word.id, 4) * 40}deg)`;
       page.appendChild(wm);
     }
 

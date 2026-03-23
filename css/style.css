@@ -1334,6 +1334,21 @@ body {
   color: var(--red);
 }
 
+/* Desktop: scale up quotes */
+@media (min-width: 600px) {
+  .quote-sticker { max-width: 16rem; }
+  .quote-sticker-text { font-size: 1.5rem; }
+  .quote-sticker-author { font-size: 1rem; }
+  .quote-sticker-report { font-size: 0.7rem; }
+}
+
+@media (min-width: 1000px) {
+  .quote-sticker { max-width: 22rem; }
+  .quote-sticker-text { font-size: 2.2rem; }
+  .quote-sticker-author { font-size: 1.2rem; }
+  .quote-sticker-report { font-size: 0.8rem; }
+}
+
 /* ═══ QUOTE DETAIL POPUP ═══ */
 
 #quote-detail-sheet { z-index: 215; }
