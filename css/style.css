@@ -137,29 +137,24 @@ body {
   line-height: 1;
 }
 
-/* Floating particles */
-.path-particles {
-  position: absolute;
+/* Floating Japanese particles */
+.jp-particle-layer {
+  position: fixed;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
   z-index: 0;
 }
 
-.particle {
+.jp-particle {
   position: absolute;
-  width: 3px; height: 3px;
-  border-radius: 50%;
-  background: var(--sky);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  color: var(--sky);
   opacity: 0;
-  animation: particleFloat linear infinite;
-}
-
-@keyframes particleFloat {
-  0% { transform: translateY(0); opacity: 0; }
-  10% { opacity: 0.3; }
-  90% { opacity: 0.15; }
-  100% { transform: translateY(-120px); opacity: 0; }
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition: none;
 }
 
 .path-scroll {

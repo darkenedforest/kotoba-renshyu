@@ -125,6 +125,9 @@ const App = {
     const index = await this.loadIndex();
     Queue.init(index);
     this.renderPath();
+
+    // Start floating particles
+    Particles.init();
   },
 
   async loadIndex() {

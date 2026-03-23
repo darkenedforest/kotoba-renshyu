@@ -230,21 +230,6 @@ const UI = {
       }
     }
 
-    // Floating particles
-    const particleContainer = document.createElement('div');
-    particleContainer.className = 'path-particles';
-    for (let i = 0; i < 12; i++) {
-      const p = document.createElement('div');
-      p.className = 'particle';
-      p.style.left = (5 + Math.random() * 90) + '%';
-      p.style.top = (Math.random() * 100) + '%';
-      p.style.animationDuration = (4 + Math.random() * 6) + 's';
-      p.style.animationDelay = (Math.random() * 8) + 's';
-      p.style.width = p.style.height = (2 + Math.random() * 2) + 'px';
-      particleContainer.appendChild(p);
-    }
-    page.appendChild(particleContainer);
-
     this.updateStats(progress);
   },
 
@@ -311,8 +296,28 @@ const UI = {
       });
     }
 
-    this.els.learnedBtn.onclick = () => App.markLearned(word.id);
-    this.els.skipBtn.onclick = () => App.markSkipped(word.id);
+    // Check if word is already learned
+    const progress = Storage.getProgress();
+    const isLearned = progress.learnedIds.includes(word.id);
+
+    if (isLearned) {
+      this.els.skipBtn.textContent = 'Unlearn';
+      this.els.skipBtn.className = 'btn btn-ghost';
+      this.els.skipBtn.onclick = () => {
+        App.restoreWord(word.id);
+        UI.hideLesson();
+      };
+      this.els.learnedBtn.textContent = 'Continue';
+      this.els.learnedBtn.className = 'btn btn-green';
+      this.els.learnedBtn.onclick = () => UI.hideLesson();
+    } else {
+      this.els.skipBtn.textContent = 'Skip';
+      this.els.skipBtn.className = 'btn btn-ghost';
+      this.els.skipBtn.onclick = () => App.markSkipped(word.id);
+      this.els.learnedBtn.textContent = 'Got it!';
+      this.els.learnedBtn.className = 'btn btn-green';
+      this.els.learnedBtn.onclick = () => App.markLearned(word.id);
+    }
     this.els.lessonSheet.style.display = 'flex';
     this.els.lessonSheet.querySelector('.sheet-inner').scrollTop = 0;
   },
