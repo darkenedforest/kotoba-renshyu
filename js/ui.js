@@ -510,29 +510,34 @@ const UI = {
 
     const palette = ['#e11d48', '#7c3aed', '#2563eb', '#0891b2', '#059669', '#ca8a04', '#ea580c', '#be185d', '#4f46e5', '#0d9488'];
 
-    // Predefined positions to avoid overlap: alternate left and right edges
-    const positions = [
-      { side: 'left', top: 120 },
-      { side: 'right', top: 300 },
-      { side: 'left', top: 480 }
-    ];
+    // Seeded random from quote text (stable per quote, varies between quotes)
+    const seed = (str, salt) => {
+      let h = salt;
+      for (let i = 0; i < str.length; i++) h = ((h << 5) - h + str.charCodeAt(i)) | 0;
+      return ((h >>> 0) % 1000) / 1000; // 0-1
+    };
+
+    const viewW = window.innerWidth;
+    const pathH = container.parentElement ? container.parentElement.scrollHeight : 800;
+
+    // Divide page into vertical zones to prevent overlap
+    const zoneHeight = Math.max(200, pathH / (maxQuotes + 1));
 
     displayQuotes.forEach((quote, i) => {
       const sticker = document.createElement('div');
       sticker.className = 'quote-sticker';
 
-      const color = palette[(quote.text.length + i) % palette.length];
-      const tilt = -6 + ((quote.text.charCodeAt(0) + i * 37) % 13);
+      const color = palette[Math.floor(seed(quote.text, 7) * palette.length)];
+      const tilt = -8 + seed(quote.text, 13) * 16; // -8 to +8 degrees
+
+      // Position: random within a vertical zone, random left/right
+      const zoneTop = 80 + i * zoneHeight;
+      const top = zoneTop + seed(quote.text, 31) * (zoneHeight - 100);
+      const leftPct = 3 + seed(quote.text, 47) * 60; // 3% to 63% from left
 
       sticker.style.transform = `rotate(${tilt}deg)`;
-
-      const pos = positions[i];
-      sticker.style.top = pos.top + 'px';
-      if (pos.side === 'left') {
-        sticker.style.left = '6px';
-      } else {
-        sticker.style.right = '6px';
-      }
+      sticker.style.top = top + 'px';
+      sticker.style.left = leftPct + '%';
 
       const textEl = document.createElement('div');
       textEl.className = 'quote-sticker-text';
@@ -541,19 +546,26 @@ const UI = {
 
       const authorEl = document.createElement('div');
       authorEl.className = 'quote-sticker-author';
+      authorEl.style.color = color;
       authorEl.textContent = '\u2014 ' + (quote.displayName || 'Anonymous');
 
       const reportBtn = document.createElement('button');
       reportBtn.className = 'quote-sticker-report';
       reportBtn.textContent = 'report';
       reportBtn.addEventListener('click', () => {
-        Firebase.reportQuote(quote.id);
-        sticker.remove();
+        if (confirm('Report this quote as inappropriate?')) {
+          Firebase.reportQuote(quote.id);
+          sticker.remove();
+        }
       });
 
+      const bottomRow = document.createElement('div');
+      bottomRow.className = 'quote-sticker-bottom';
+      bottomRow.appendChild(reportBtn);
+      bottomRow.appendChild(authorEl);
+
       sticker.appendChild(textEl);
-      sticker.appendChild(authorEl);
-      sticker.appendChild(reportBtn);
+      sticker.appendChild(bottomRow);
       container.appendChild(sticker);
     });
   },
