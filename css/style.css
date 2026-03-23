@@ -1280,7 +1280,7 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 1; /* above watermarks (0), below particles and nodes */
+  z-index: 3; /* above watermarks (0) and path nodes (1-2) for tappability */
   overflow: hidden;
 }
 
@@ -1318,17 +1318,17 @@ body {
   background: none;
   border: none;
   font-family: 'Nunito', sans-serif;
-  font-size: 0.5rem;
-  font-weight: 600;
-  color: var(--g300);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--g500);
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 1px;
   pointer-events: auto;
-  padding: 0;
-  opacity: 0.5;
+  padding: 0.3rem 0.3rem 0.3rem 0; /* bigger tap target */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .quote-sticker-report:active {
-  opacity: 1;
+  color: var(--red);
 }
