@@ -1313,6 +1313,7 @@ body {
   font-size: 0.6rem;
   font-weight: 700;
   opacity: 0.35;
+  text-align: right;
 }
 
 .quote-sticker-report {
