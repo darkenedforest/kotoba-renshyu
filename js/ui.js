@@ -232,20 +232,33 @@ const UI = {
     const sizeBase = screenW < 500 ? 2 : screenW < 900 ? 3 : 4;
     const sizeRange = screenW < 500 ? 4 : screenW < 900 ? 5 : 7;
 
+    // Use the full rendered height, with some padding
+    const spreadHeight = Math.max(totalHeight, window.innerHeight);
+
     for (let li = 0; li < learnedWords.length; li++) {
       const word = learnedWords[li];
 
-      // Spread evenly across the full page height, with random jitter
-      const slotHeight = totalHeight / Math.max(learnedWords.length, 1);
-      const baseY = 30 + li * slotHeight;
-      const yJitter = (seeded(word.id, 2) - 0.5) * slotHeight * 0.8;
+      // Distribute across the full height using a grid with jitter
+      // Use columns to avoid horizontal clustering too
+      const cols = 3;
+      const rows = Math.ceil(learnedWords.length / cols);
+      const row = Math.floor(li / cols);
+      const col = li % cols;
+
+      const cellH = spreadHeight / Math.max(rows, 1);
+      const cellW = 100 / cols; // percentage
+
+      const baseY = row * cellH;
+      const yJitter = seeded(word.id, 2) * cellH * 0.7;
+      const baseX = col * cellW;
+      const xJitter = seeded(word.id, 3) * cellW * 0.6;
 
       const wm = document.createElement('div');
       wm.className = 'kanji-watermark';
       wm.textContent = word.kanji;
       wm.style.fontSize = (sizeBase + seeded(word.id, 1) * sizeRange) + 'rem';
       wm.style.top = (baseY + yJitter) + 'px';
-      wm.style.left = (2 + seeded(word.id, 3) * 85) + '%';
+      wm.style.left = (baseX + xJitter) + '%';
       wm.style.transform = `rotate(${-25 + seeded(word.id, 4) * 50}deg)`;
       page.appendChild(wm);
     }
@@ -540,9 +553,19 @@ const UI = {
       return ((h >>> 0) % 10000) / 10000;
     };
 
+    // Quote size scaling: random per quote, responsive to screen
+    const isMobileQ = pageWidth < 500;
+    const quoteBaseSize = isMobileQ ? 0.85 : pageWidth < 1000 ? 1.5 : 2.2;
+    const quoteMaxScale = isMobileQ ? 1.75 : 1.5; // up to 1.75x on mobile, 1.5x on desktop
+
     displayQuotes.forEach((quote, i) => {
       const sticker = document.createElement('div');
       sticker.className = 'quote-sticker';
+
+      // Random size variation per quote
+      const scale = 1 + sessionRand(i, 8) * (quoteMaxScale - 1);
+      const fontSize = quoteBaseSize * scale;
+      sticker.style.fontSize = fontSize + 'rem';
 
       const color = palette[Math.floor(sessionRand(i, 1) * palette.length)];
       const tilt = -18 + sessionRand(i, 2) * 36; // -18 to +18 degrees

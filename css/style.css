@@ -132,7 +132,7 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 900;
   color: var(--g800);
-  opacity: 0.03;
+  opacity: 0.045;
   pointer-events: none;
   z-index: 0;
   line-height: 1;
@@ -1295,7 +1295,7 @@ body {
 
 .quote-sticker-text {
   font-family: 'Nunito', sans-serif;
-  font-size: 0.85rem;
+  font-size: 1em;
   font-weight: 800;
   line-height: 1.5;
   opacity: 0.5;
@@ -1335,19 +1335,13 @@ body {
   color: var(--red);
 }
 
-/* Desktop: scale up quotes */
+/* Quote sizes are now set inline via JS — these just set max-width */
 @media (min-width: 600px) {
-  .quote-sticker { max-width: 16rem; }
-  .quote-sticker-text { font-size: 1.5rem; }
-  .quote-sticker-author { font-size: 1rem; }
-  .quote-sticker-report { font-size: 0.7rem; }
+  .quote-sticker { max-width: 18rem; }
 }
 
 @media (min-width: 1000px) {
-  .quote-sticker { max-width: 22rem; }
-  .quote-sticker-text { font-size: 2.2rem; }
-  .quote-sticker-author { font-size: 1.2rem; }
-  .quote-sticker-report { font-size: 0.8rem; }
+  .quote-sticker { max-width: 24rem; }
 }
 
 /* ═══ CUSTOM CONFIRM DIALOG ═══ */

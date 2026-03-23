@@ -311,42 +311,35 @@ const Firebase = {
 
   async fetchRecentQuotes() {
     if (!this.db) return [];
+
+    // Fetch all non-reported quotes (no limit — we want the full pool)
+    let allQuotes = [];
     try {
-      // Try composite query first (requires index)
       const snap = await this.db.collection('motivationalQuotes')
         .where('reported', '==', false)
-        .orderBy('timestamp', 'desc')
-        .limit(20)
         .get();
-      return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      allQuotes = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     } catch (e) {
-      // Fallback if index doesn't exist yet — fetch all recent and filter client-side
-      console.warn('Composite query failed, using fallback:', e.message);
+      // Fallback — fetch without filter, filter client-side
+      console.warn('Filtered query failed, using fallback:', e.message);
       try {
-        const snap = await this.db.collection('motivationalQuotes')
-          .orderBy('timestamp', 'desc')
-          .limit(30)
-          .get();
-        return snap.docs
+        const snap = await this.db.collection('motivationalQuotes').get();
+        allQuotes = snap.docs
           .map(d => ({ id: d.id, ...d.data() }))
-          .filter(q => !q.reported)
-          .slice(0, 20);
+          .filter(q => !q.reported);
       } catch (e2) {
-        // Final fallback — no ordering, just get what we can
-        console.warn('Ordered query failed too, fetching unordered:', e2.message);
-        try {
-          const snap = await this.db.collection('motivationalQuotes')
-            .limit(20)
-            .get();
-          return snap.docs
-            .map(d => ({ id: d.id, ...d.data() }))
-            .filter(q => !q.reported);
-        } catch (e3) {
-          console.error('All quote fetches failed:', e3);
-          return [];
-        }
+        console.error('All quote fetches failed:', e2);
+        return [];
       }
     }
+
+    // Prioritize unhearted quotes: sort unhearted first, then shuffle within groups
+    const unhearted = allQuotes.filter(q => !q.hearts || q.hearts === 0);
+    const hearted = allQuotes.filter(q => q.hearts && q.hearts > 0);
+
+    // Shuffle each group
+    const shuffle = arr => arr.sort(() => Math.random() - 0.5);
+    return [...shuffle(unhearted), ...shuffle(hearted)];
   },
 
   async reportQuote(quoteId) {
