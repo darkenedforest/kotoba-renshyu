@@ -10,6 +10,7 @@ const Particles = {
   _raf: null,
   _lastSpawn: 0,
   _nextDelay: 2000,
+  _enabled: true,
 
   CHARS: [
     // Hiragana
@@ -32,6 +33,9 @@ const Particles = {
     this._container.className = 'jp-particle-layer';
     document.getElementById('app').appendChild(this._container);
 
+    // Load saved preference
+    this._enabled = localStorage.getItem('kotoba-particles') !== 'off';
+
     // Track mouse/touch
     document.addEventListener('mousemove', (e) => {
       this._mouse.x = e.clientX;
@@ -53,20 +57,60 @@ const Particles = {
     this._tick();
   },
 
+  setEnabled(on) {
+    this._enabled = on;
+    localStorage.setItem('kotoba-particles', on ? 'on' : 'off');
+    if (!on) {
+      // Clear existing particles
+      this._particles.forEach(p => p.el.remove());
+      this._particles = [];
+    }
+  },
+
+  isEnabled() {
+    return this._enabled;
+  },
+
   _randomDelay() {
     return 2000 + Math.random() * 2000; // 2-4 seconds
+  },
+
+  _pickChar() {
+    // Get learned words from progress
+    const progress = typeof Storage !== 'undefined' ? Storage.getProgress() : { learnedIds: [] };
+    const learnedIds = progress.learnedIds || [];
+    const learnedWords = typeof Queue !== 'undefined'
+      ? Queue.allLessons.filter(w => learnedIds.includes(w.id))
+      : [];
+    const total = typeof Queue !== 'undefined' ? Queue.getTotalCount() : 1;
+
+    // Chance of using a learned word: at least 20%, scales with progress
+    const learnedChance = Math.max(0.2, learnedWords.length / total);
+
+    if (learnedWords.length > 0 && Math.random() < learnedChance) {
+      const word = learnedWords[Math.floor(Math.random() * learnedWords.length)];
+      return { text: word.kanji, isLearned: true };
+    }
+    return { text: this.CHARS[Math.floor(Math.random() * this.CHARS.length)], isLearned: false };
   },
 
   _spawn() {
     if (this._particles.length >= this.MAX_PARTICLES) return;
 
-    const char = this.CHARS[Math.floor(Math.random() * this.CHARS.length)];
+    const pick = this._pickChar();
     const el = document.createElement('span');
     el.className = 'jp-particle';
-    el.textContent = char;
+    el.textContent = pick.text;
 
-    // Random size
-    const size = 0.8 + Math.random() * 0.6; // 0.8rem - 1.4rem
+    // Learned words get a slightly different color
+    if (pick.isLearned) {
+      el.style.color = '#34d399';
+    }
+
+    // Random size — learned words slightly larger
+    const size = pick.isLearned
+      ? (1.0 + Math.random() * 0.6)
+      : (0.8 + Math.random() * 0.5);
     el.style.fontSize = size + 'rem';
 
     const viewW = window.innerWidth;
@@ -114,8 +158,8 @@ const Particles = {
   _tick() {
     const now = performance.now();
 
-    // Spawn check
-    if (now - this._lastSpawn > this._nextDelay) {
+    // Spawn check (only if enabled)
+    if (this._enabled && now - this._lastSpawn > this._nextDelay) {
       this._spawn();
       this._lastSpawn = now;
       this._nextDelay = this._randomDelay();

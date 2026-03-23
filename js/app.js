@@ -53,6 +53,13 @@ const App = {
       }
     });
 
+    // Particles toggle
+    const particlesToggle = document.getElementById('particles-toggle');
+    particlesToggle.checked = Particles.isEnabled();
+    particlesToggle.addEventListener('change', (e) => {
+      Particles.setEnabled(e.target.checked);
+    });
+
     // Auth buttons — settings, topbar, and landing page
     document.getElementById('google-sign-in-btn').addEventListener('click', () => {
       Firebase.signInWithGoogle();
