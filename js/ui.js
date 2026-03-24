@@ -317,13 +317,12 @@ const UI = {
     this.els.lessonMeaning.textContent = word.meaning;
     this.els.lessonContent.innerHTML = word.lesson;
 
-    // Progress counter (e.g., "2 of 10")
+    // Progress counter (e.g., "3 of 10" — which word you're on)
     const progressEl = document.getElementById('lesson-progress');
     if (batchContext) {
-      const progress = Storage.getProgress();
-      const learnedSet = new Set(progress.learnedIds);
-      const done = batchContext.words.filter(w => learnedSet.has(w.id)).length;
-      progressEl.textContent = `${done} of ${batchContext.words.length}`;
+      const wordIndex = batchContext.words.findIndex(w => w.id === word.id);
+      const position = wordIndex >= 0 ? wordIndex + 1 : '?';
+      progressEl.textContent = `${position} of ${batchContext.words.length}`;
     } else {
       progressEl.textContent = '';
     }
