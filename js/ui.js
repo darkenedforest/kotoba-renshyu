@@ -2,6 +2,57 @@ const UI = {
   els: {},
   currentFilter: 'all',
 
+  _setupSwipeDismiss(sheet, onDismiss) {
+    const inner = sheet.querySelector('.sheet-inner');
+    let startY = 0, dragging = false, scrollable = true;
+
+    inner.addEventListener('touchstart', (e) => {
+      scrollable = inner.scrollTop > 0;
+      if (scrollable) return;
+      startY = e.touches[0].clientY;
+      dragging = true;
+      inner.style.transition = 'none';
+    }, { passive: true });
+
+    inner.addEventListener('touchmove', (e) => {
+      if (!dragging) return;
+      const dy = e.touches[0].clientY - startY;
+      if (dy > 0) {
+        inner.style.transform = `translateY(${dy}px)`;
+        inner.style.opacity = Math.max(0.3, 1 - dy / 400);
+      } else if (dy < -5) {
+        dragging = false;
+        inner.style.transform = '';
+        inner.style.opacity = '';
+        inner.style.transition = '';
+      }
+    }, { passive: true });
+
+    const endDrag = () => {
+      if (!dragging) return;
+      dragging = false;
+      const currentY = parseFloat(inner.style.transform.replace(/[^0-9.-]/g, '')) || 0;
+      inner.style.transition = 'transform 0.2s ease-out, opacity 0.2s ease-out';
+      if (currentY > 100) {
+        inner.style.transform = 'translateY(100%)';
+        inner.style.opacity = '0';
+        setTimeout(() => {
+          onDismiss();
+          inner.style.transform = '';
+          inner.style.opacity = '';
+          inner.style.transition = '';
+        }, 200);
+      } else {
+        inner.style.transform = '';
+        inner.style.opacity = '';
+        setTimeout(() => { inner.style.transition = ''; }, 200);
+      }
+    };
+
+    inner.addEventListener('touchend', endDrag, { passive: true });
+    inner.addEventListener('touchcancel', endDrag, { passive: true });
+  },
+
   init() {
     this.els = {
       pathNodes: document.getElementById('path-nodes'),
@@ -28,6 +79,10 @@ const UI = {
       statLearned: document.getElementById('stat-learned'),
       statRemaining: document.getElementById('stat-remaining')
     };
+
+    // Swipe down to dismiss on lesson and batch sheets
+    this._setupSwipeDismiss(this.els.lessonSheet, () => this.hideLesson());
+    this._setupSwipeDismiss(this.els.batchSheet, () => this.hideBatchSheet());
   },
 
   showPage(name) {
