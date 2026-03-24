@@ -322,7 +322,7 @@ const UI = {
     if (batchContext) {
       const wordIndex = batchContext.words.findIndex(w => w.id === word.id);
       const position = wordIndex >= 0 ? wordIndex + 1 : '?';
-      progressEl.textContent = `${position} of ${batchContext.words.length}`;
+      progressEl.textContent = `Lesson ${position} of ${batchContext.words.length}`;
     } else {
       progressEl.textContent = '';
     }
