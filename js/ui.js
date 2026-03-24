@@ -2,6 +2,39 @@ const UI = {
   els: {},
   currentFilter: 'all',
 
+  // ── Back button / swipe-back support ──
+  _sheetStack: [],
+
+  _pushSheet(name, closeFn) {
+    this._sheetStack.push({ name, closeFn });
+    history.pushState({ sheet: name }, '');
+  },
+
+  _popSheet() {
+    const entry = this._sheetStack.pop();
+    if (entry) entry.closeFn();
+  },
+
+  _removeSheet(name) {
+    const idx = this._sheetStack.findIndex(s => s.name === name);
+    if (idx >= 0) {
+      this._sheetStack.splice(idx, 1);
+      // Go back in history to remove the state we pushed
+      if (history.state && history.state.sheet) {
+        history.back();
+      }
+    }
+  },
+
+  _initBackHandler() {
+    window.addEventListener('popstate', (e) => {
+      if (this._sheetStack.length > 0) {
+        const entry = this._sheetStack.pop();
+        if (entry) entry.closeFn();
+      }
+    });
+  },
+
   _setupSwipeDismiss(sheet, onDismiss) {
     const inner = sheet.querySelector('.sheet-inner');
     let startY = 0, dragging = false, scrollable = true;
@@ -83,6 +116,9 @@ const UI = {
     // Swipe down to dismiss on lesson and batch sheets
     this._setupSwipeDismiss(this.els.lessonSheet, () => this.hideLesson());
     this._setupSwipeDismiss(this.els.batchSheet, () => this.hideBatchSheet());
+
+    // Back button closes sheets
+    this._initBackHandler();
   },
 
   showPage(name) {
@@ -356,10 +392,12 @@ const UI = {
     });
 
     this.els.batchSheet.style.display = 'flex';
+    this._pushSheet('batch', () => { this.els.batchSheet.style.display = 'none'; });
   },
 
   hideBatchSheet() {
     this.els.batchSheet.style.display = 'none';
+    this._removeSheet('batch');
   },
 
   /* ═══════════════════════════════════
@@ -416,10 +454,12 @@ const UI = {
     }
     this.els.lessonSheet.style.display = 'flex';
     this.els.lessonSheet.querySelector('.sheet-inner').scrollTop = 0;
+    this._pushSheet('lesson', () => { this.els.lessonSheet.style.display = 'none'; });
   },
 
   hideLesson() {
     this.els.lessonSheet.style.display = 'none';
+    this._removeSheet('lesson');
   },
 
   /* ═══════════════════════════════════
@@ -429,10 +469,12 @@ const UI = {
   showSettings(progress) {
     this.els.batchSizeInput.value = progress.batchSize;
     this.els.settingsSheet.style.display = 'flex';
+    this._pushSheet('settings', () => { this.els.settingsSheet.style.display = 'none'; });
   },
 
   hideSettings() {
     this.els.settingsSheet.style.display = 'none';
+    this._removeSheet('settings');
   },
 
   /* ═══════════════════════════════════
@@ -568,10 +610,12 @@ const UI = {
     }
 
     sheet.style.display = 'flex';
+    this._pushSheet('quote', () => { sheet.style.display = 'none'; });
   },
 
   hideQuotePrompt() {
     document.getElementById('quote-sheet').style.display = 'none';
+    this._removeSheet('quote');
   },
 
   /* ═══════════════════════════════════
@@ -749,10 +793,12 @@ const UI = {
     });
 
     sheet.style.display = 'flex';
+    this._pushSheet('quoteDetail', () => { sheet.style.display = 'none'; });
   },
 
   closeQuoteDetail() {
     document.getElementById('quote-detail-sheet').style.display = 'none';
+    this._removeSheet('quoteDetail');
   },
 
   /* ═══════════════════════════════════
@@ -788,10 +834,12 @@ const UI = {
     }
 
     sheet.style.display = 'flex';
+    this._pushSheet('inspiration', () => { sheet.style.display = 'none'; });
   },
 
   hideInspirationSheet() {
     document.getElementById('inspiration-sheet').style.display = 'none';
+    this._removeSheet('inspiration');
   },
 
   /* ═══════════════════════════════════
