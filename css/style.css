@@ -385,6 +385,15 @@ body {
   border-radius: 50%;
 }
 
+.hero-progress {
+  position: absolute;
+  top: 0.6rem; left: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.6);
+  z-index: 2;
+}
+
 .hero-kanji {
   font-family: 'Noto Sans JP',sans-serif;
   font-size: 3.5rem; font-weight: 900; line-height: 1.1;

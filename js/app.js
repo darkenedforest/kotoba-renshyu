@@ -204,6 +204,13 @@ const App = {
     }
   },
 
+  _getCurrentBatch() {
+    if (this.currentBatchIndex === null) return null;
+    const progress = Storage.getProgress();
+    const batches = Queue.getBatches(progress.batchSize, progress);
+    return batches[this.currentBatchIndex] || null;
+  },
+
   async showLesson(id) {
     // Log time for previous lesson if still open
     this._logLessonTime();
@@ -213,7 +220,7 @@ const App = {
       this._lessonOpenTime = Date.now();
       this._currentLessonId = id;
       Firebase.logEvent('lesson_open', { lesson_id: id, word: word.kanji });
-      UI.showLesson(word);
+      UI.showLesson(word, this._getCurrentBatch());
       // Load feedback UI
       this._loadLessonFeedback(id);
     }
@@ -232,6 +239,9 @@ const App = {
       const batches = Queue.getBatches(progress.batchSize, progress);
       const batch = batches[this.currentBatchIndex];
       if (batch) {
+        // Refresh the batch sheet behind the lesson
+        UI.showBatchSheet(batch, progress);
+
         const learnedSet = new Set(progress.learnedIds);
         const next = batch.words.find(w => !learnedSet.has(w.id));
         if (next) {
@@ -240,7 +250,7 @@ const App = {
             this._lessonOpenTime = Date.now();
             this._currentLessonId = next.id;
             Firebase.logEvent('lesson_open', { lesson_id: next.id, word: nextWord.kanji });
-            UI.showLesson(nextWord);
+            UI.showLesson(nextWord, batch);
             this._loadLessonFeedback(next.id);
             this.renderPath();
             return;
@@ -254,6 +264,32 @@ const App = {
     UI.showQuotePrompt();
     this._pendingBatchClose = true;
     this.renderPath();
+  },
+
+  async continueFromLesson(id) {
+    // "Continue" from a reviewed (already learned) lesson — advance to next unlearned in batch
+    if (this.currentBatchIndex !== null) {
+      const progress = Storage.getProgress();
+      const batches = Queue.getBatches(progress.batchSize, progress);
+      const batch = batches[this.currentBatchIndex];
+      if (batch) {
+        const learnedSet = new Set(progress.learnedIds);
+        const next = batch.words.find(w => !learnedSet.has(w.id));
+        if (next) {
+          const nextWord = await Queue.loadLesson(next.id);
+          if (nextWord) {
+            this._lessonOpenTime = Date.now();
+            this._currentLessonId = next.id;
+            Firebase.logEvent('lesson_open', { lesson_id: next.id, word: nextWord.kanji });
+            UI.showLesson(nextWord, batch);
+            this._loadLessonFeedback(next.id);
+            return;
+          }
+        }
+      }
+    }
+    // No unlearned words left in batch — just close
+    UI.hideLesson();
   },
 
   markSkipped(id) {

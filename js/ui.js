@@ -311,11 +311,22 @@ const UI = {
      LESSON SHEET
      ═══════════════════════════════════ */
 
-  showLesson(word) {
+  showLesson(word, batchContext) {
     this.els.lessonKanji.textContent = word.kanji;
     this.els.lessonKana.textContent = word.kana;
     this.els.lessonMeaning.textContent = word.meaning;
     this.els.lessonContent.innerHTML = word.lesson;
+
+    // Progress counter (e.g., "2 of 10")
+    const progressEl = document.getElementById('lesson-progress');
+    if (batchContext) {
+      const progress = Storage.getProgress();
+      const learnedSet = new Set(progress.learnedIds);
+      const done = batchContext.words.filter(w => learnedSet.has(w.id)).length;
+      progressEl.textContent = `${done} of ${batchContext.words.length}`;
+    } else {
+      progressEl.textContent = '';
+    }
 
     this.els.lessonTags.innerHTML = '';
     if (word.tags) {
@@ -328,8 +339,8 @@ const UI = {
     }
 
     // Check if word is already learned
-    const progress = Storage.getProgress();
-    const isLearned = progress.learnedIds.includes(word.id);
+    const prog = Storage.getProgress();
+    const isLearned = prog.learnedIds.includes(word.id);
 
     if (isLearned) {
       this.els.skipBtn.textContent = 'Unlearn';
@@ -340,7 +351,7 @@ const UI = {
       };
       this.els.learnedBtn.textContent = 'Continue';
       this.els.learnedBtn.className = 'btn btn-green';
-      this.els.learnedBtn.onclick = () => UI.hideLesson();
+      this.els.learnedBtn.onclick = () => App.continueFromLesson(word.id);
     } else {
       this.els.skipBtn.textContent = 'Skip';
       this.els.skipBtn.className = 'btn btn-ghost';
