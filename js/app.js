@@ -1,3 +1,5 @@
+const APP_VERSION = '20260324a';
+
 const App = {
   currentBatchIndex: null,
   _lessonOpenTime: null,
@@ -179,7 +181,7 @@ const App = {
 
   async loadIndex() {
     try {
-      const res = await fetch('data/index.json');
+      const res = await fetch('data/index.json?v=' + APP_VERSION);
       return await res.json();
     } catch (e) {
       console.error('Failed to load index:', e);

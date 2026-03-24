@@ -35,7 +35,7 @@ const Queue = {
     const file = `data/lessons-${pad(chunkStart)}-${pad(chunkEnd)}.json`;
 
     try {
-      const res = await fetch(file);
+      const res = await fetch(file + '?v=' + (typeof APP_VERSION !== 'undefined' ? APP_VERSION : ''));
       const lessons = await res.json();
       // Cache all lessons from the chunk
       for (const lesson of lessons) {
