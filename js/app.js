@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325e';
+const APP_VERSION = '20260325f';
 
 const App = {
   currentBatchIndex: null,
@@ -544,7 +544,6 @@ const App = {
     document.getElementById("editor-kanji").textContent = word.kanji;
     document.getElementById("editor-kana").textContent = word.kana;
     document.getElementById("editor-meaning").textContent = word.meaning;
-    document.getElementById("editor-html-source").style.display = "none";
     document.getElementById("editor-preview").style.display = "none";
     document.getElementById("editor-preview-toggle").textContent = "Preview";
     if (!this._editorLoaded) {
@@ -552,8 +551,13 @@ const App = {
       this._initQuillEditor();
       this._editorLoaded = true;
     }
-    document.getElementById("quill-container").style.display = '';
-    this._editorQuill.root.innerHTML = this._editorOriginalHtml;
+    // Default to HTML source mode so tables/ruby/custom elements aren't stripped
+    const htmlEl = document.getElementById("editor-html-source");
+    const quillEl = document.getElementById("quill-container");
+    htmlEl.value = this._editorOriginalHtml;
+    htmlEl.style.display = "block";
+    quillEl.style.display = "none";
+    this._editorHtmlMode = true;
     document.getElementById("editor-sheet").style.display = "flex";
   },
   _loadQuill() {
