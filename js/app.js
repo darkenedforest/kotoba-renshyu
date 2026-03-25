@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325g';
+const APP_VERSION = '20260325h';
 
 const App = {
   currentBatchIndex: null,
@@ -551,14 +551,18 @@ const App = {
       this._initQuillEditor();
       this._editorLoaded = true;
     }
-    // Default to HTML source mode so tables/ruby/custom elements aren't stripped
+    // Default to HTML source mode so tables/ruby/custom elements aren't stripped by Quill
     const htmlEl = document.getElementById("editor-html-source");
     const quillEl = document.getElementById("quill-container");
-    htmlEl.value = this._editorOriginalHtml;
-    htmlEl.style.display = "block";
     quillEl.style.display = "none";
+    htmlEl.style.display = "block";
     this._editorHtmlMode = true;
     document.getElementById("editor-sheet").style.display = "flex";
+    // Set textarea value AFTER sheet is visible, using a timeout to ensure
+    // Quill doesn't interfere with it
+    setTimeout(() => {
+      htmlEl.value = this._editorOriginalHtml;
+    }, 50);
   },
   _loadQuill() {
     return new Promise((resolve, reject) => {
@@ -722,10 +726,14 @@ const App = {
   },
 
   _getEditorHtml() {
+    // Always prefer the HTML source textarea if it has content and we're in HTML mode
     if (this._editorHtmlMode) {
-      return document.getElementById("editor-html-source").value;
+      const val = document.getElementById("editor-html-source").value;
+      if (val && val.trim()) return val;
     }
-    return this._editorQuill.root.innerHTML;
+    // Fall back to Quill only if we're in visual mode
+    if (this._editorQuill) return this._editorQuill.root.innerHTML;
+    return this._editorOriginalHtml;
   },
 
   async _saveEditor() {
