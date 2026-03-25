@@ -1685,85 +1685,19 @@ body {
   display: flex; align-items: center; justify-content: center;
 }
 
-.editor-toolbar-wrap {
-  border-bottom: 1px solid var(--g200);
-  flex-shrink: 0;
-  overflow-x: auto;
-}
-
-#editor-toolbar {
-  background: var(--g50);
-  border: none !important;
-  padding: 0.25rem 0.5rem;
-}
-
-#editor-toolbar .ql-formats {
-  margin-right: 8px;
-}
-
-/* Custom toolbar buttons */
-.ql-ruby, .ql-html-source, .ql-undo, .ql-redo {
-  font-family: "Noto Sans JP", "Nunito", sans-serif !important;
-  font-size: 0.72rem !important;
-  font-weight: 800 !important;
-  width: auto !important;
-  padding: 0 6px !important;
-}
-
-.quill-container {
+/* TinyMCE editor container */
+.editor-tinymce-wrap {
   flex: 1;
-  overflow-y: auto;
+  overflow: hidden;
   min-height: 200px;
+  display: flex;
+  flex-direction: column;
 }
 
-.quill-container .ql-editor {
-  min-height: 300px;
-  font-family: "Nunito", "Noto Sans JP", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.85;
-  color: var(--g600);
-  font-weight: 600;
-  padding: 1rem;
-}
-
-/* Mirror lesson-body styles inside editor */
-.quill-container .ql-editor .jp { font-family:'Noto Sans JP',sans-serif; color: var(--g800); font-weight: 700; }
-.quill-container .ql-editor .jp-example { font-family:'Noto Sans JP',sans-serif; color: var(--sky); font-weight: 700; }
-.quill-container .ql-editor .gloss { color: var(--g400); font-size: 0.88em; }
-.quill-container .ql-editor .reading { color: #2563eb; font-weight: 700; font-style: italic; }
-.quill-container .ql-editor .highlight { background: var(--sky-pale); padding: 0.1rem 0.35rem; border-radius: 5px; color: var(--sky-dark); font-weight: 700; }
-.quill-container .ql-editor .wrong { text-decoration: line-through; text-decoration-color: var(--red); color: var(--g400); }
-.quill-container .ql-editor .note-label { display: inline-block; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; background: #fff7ed; color: #ea580c; padding: 0.12rem 0.45rem; border-radius: 5px; margin-right: 0.2rem; border: 1px solid #fed7aa; }
-.quill-container .ql-editor .stem { color: var(--g800); }
-.quill-container .ql-editor .ending { color: var(--sky); }
-.quill-container .ql-editor .particle { color: var(--g400); font-size: 0.75rem; }
-.quill-container .ql-editor em { font-style: normal; color: #ea580c; font-weight: 700; }
-.quill-container .ql-editor ruby rt { font-size: 0.6em; }
-
-/* Quill snow theme overrides */
-.quill-container .ql-toolbar {
-  display: none !important;
-}
-
-.quill-container .ql-container {
-  border: none !important;
-  font-family: "Nunito", "Noto Sans JP", sans-serif;
-}
-
-.editor-html-source {
+.editor-tinymce-wrap .tox.tox-tinymce {
   flex: 1;
-  width: 100%;
-  min-height: 200px;
-  background: #1e1e2e;
-  color: #e0e0e0;
-  font-family: "Consolas", "Monaco", "Courier New", monospace;
-  font-size: 0.82rem;
-  line-height: 1.6;
-  padding: 1rem;
-  border: none;
-  resize: none;
-  outline: none;
-  overflow-y: auto;
+  border: none !important;
+  border-radius: 0 !important;
 }
 
 .editor-preview {
@@ -1843,23 +1777,6 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Quill font family overrides */
-.ql-font-noto-sans-jp {
-  font-family: "Noto Sans JP", sans-serif;
-}
-.ql-font-serif {
-  font-family: Georgia, serif;
-}
-.ql-font-monospace {
-  font-family: "Consolas", "Monaco", monospace;
-}
-
-/* Quill picker label for custom font */
-.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="noto-sans-jp"]::before,
-.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="noto-sans-jp"]::before {
-  content: "Noto Sans JP";
-  font-family: "Noto Sans JP", sans-serif;
-}
 
 @media (max-width: 500px) {
   .editor-inner {

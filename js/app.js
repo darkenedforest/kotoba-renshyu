@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325h';
+const APP_VERSION = '20260325i';
 
 const App = {
   currentBatchIndex: null,
@@ -527,11 +527,31 @@ const App = {
   // ── Lesson Editor (admin) ──
 
   _editorLoaded: false,
-  _editorQuill: null,
   _editorOriginalHtml: '',
   _editorLessonId: null,
-  _editorHtmlMode: false,
   _editorPreviewMode: false,
+
+  _tinymceContentStyle: [
+    '.jp { font-family: "Noto Sans JP", sans-serif; color: #27272a; font-weight: 700; }',
+    '.jp-example { font-family: "Noto Sans JP", sans-serif; color: #0ea5e9; font-weight: 700; }',
+    '.gloss { color: #a1a1aa; font-size: 0.88em; }',
+    '.highlight { background: #e0f2fe; padding: 0.1rem 0.35rem; border-radius: 5px; color: #0284c7; font-weight: 700; }',
+    '.note-label { display: inline-block; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; background: #fff7ed; color: #ea580c; padding: 0.12rem 0.45rem; border-radius: 5px; border: 1px solid #fed7aa; }',
+    '.wrong { text-decoration: line-through; color: #a1a1aa; }',
+    '.reading { color: #2563eb; font-weight: 700; font-style: italic; }',
+    '.stem { color: #27272a; }',
+    '.ending { color: #0ea5e9; }',
+    '.particle { color: #a1a1aa; font-size: 0.75rem; }',
+    '.verb-meta { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.5rem; }',
+    '.group-badge, .trans-badge { font-size: 0.62rem; font-weight: 800; padding: 0.2rem 0.55rem; border-radius: 100px; }',
+    '.group-badge { background: #e0f2fe; color: #0284c7; }',
+    '.trans-badge { background: #fef3c7; color: #b45309; }',
+    '.conj-chart { width: 100%; border-collapse: collapse; font-size: 0.82rem; }',
+    '.conj-chart td { padding: 0.45rem 0.75rem; border-bottom: 1px solid #f4f4f5; }',
+    '.particle-note { font-size: 0.88rem; }',
+    'ruby rt { font-size: 0.6em; }',
+    'body { font-family: "Nunito", "Noto Sans JP", sans-serif; font-size: 0.9rem; line-height: 1.85; color: #52525b; }'
+  ].join('\n'),
 
   async openEditor(lessonId) {
     if (!Firebase.isAdmin()) return;
@@ -539,208 +559,148 @@ const App = {
     if (!word) return;
     this._editorLessonId = lessonId;
     this._editorOriginalHtml = word.lesson || '';
-    this._editorHtmlMode = false;
     this._editorPreviewMode = false;
     document.getElementById("editor-kanji").textContent = word.kanji;
     document.getElementById("editor-kana").textContent = word.kana;
     document.getElementById("editor-meaning").textContent = word.meaning;
     document.getElementById("editor-preview").style.display = "none";
     document.getElementById("editor-preview-toggle").textContent = "Preview";
+    document.getElementById("editor-sheet").style.display = "flex";
+
     if (!this._editorLoaded) {
-      await this._loadQuill();
-      this._initQuillEditor();
+      await this._loadTinyMCE();
       this._editorLoaded = true;
     }
-    // Default to HTML source mode so tables/ruby/custom elements aren't stripped by Quill
-    const htmlEl = document.getElementById("editor-html-source");
-    const quillEl = document.getElementById("quill-container");
-    quillEl.style.display = "none";
-    htmlEl.style.display = "block";
-    this._editorHtmlMode = true;
-    document.getElementById("editor-sheet").style.display = "flex";
-    // Set textarea value AFTER sheet is visible, using a timeout to ensure
-    // Quill doesn't interfere with it
-    setTimeout(() => {
-      htmlEl.value = this._editorOriginalHtml;
-    }, 50);
+
+    // If TinyMCE is already initialized, just set content
+    if (tinymce.get('editor-content')) {
+      tinymce.get('editor-content').setContent(this._editorOriginalHtml);
+    } else {
+      await this._initTinyMCE();
+    }
   },
-  _loadQuill() {
-    return new Promise((resolve, reject) => {
-      if (!document.querySelector('link[href*="quill.snow.css"]')) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://cdn.quilljs.com/1.3.7/quill.snow.css';
-        document.head.appendChild(link);
-      }
-      if (window.Quill) { resolve(); return; }
-      const script = document.createElement('script');
-      script.src = 'https://cdn.quilljs.com/1.3.7/quill.min.js';
+
+  _loadTinyMCE() {
+    return new Promise(function(resolve, reject) {
+      if (window.tinymce) { resolve(); return; }
+      var script = document.createElement('script');
+      script.src = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js';
+      script.referrerPolicy = 'origin';
       script.onload = resolve;
       script.onerror = reject;
       document.head.appendChild(script);
     });
   },
 
-  _initQuillEditor() {
-    const toolbar = document.getElementById('editor-toolbar');
-    toolbar.innerHTML =
-      '<span class="ql-formats">' +
-      '<button class="ql-bold" title="Bold"></button>' +
-      '<button class="ql-italic" title="Italic"></button>' +
-      '<button class="ql-underline" title="Underline"></button>' +
-      '<button class="ql-strike" title="Strikethrough"></button>' +
-      '</span>' +
-      '<span class="ql-formats">' +
-      '<select class="ql-size"><option value="small">Small</option><option selected>Normal</option><option value="large">Large</option><option value="huge">Huge</option></select>' +
-      '</span>' +
-      '<span class="ql-formats">' +
-      '<select class="ql-font"><option selected>Nunito</option><option value="noto-sans-jp">Noto Sans JP</option><option value="serif">Serif</option><option value="monospace">Monospace</option></select>' +
-      '</span>' +
-      '<span class="ql-formats">' +
-      '<select class="ql-color" title="Text Color"></select>' +
-      '<select class="ql-background" title="Background Color"></select>' +
-      '</span>' +
-      '<span class="ql-formats">' +
-      '<button class="ql-ruby" title="Insert Ruby (furigana)">ルビ</button>' +
-      '<select class="ql-css-class" title="CSS Class"><option selected>Class...</option><option value="jp">jp</option><option value="jp-example">jp-example</option><option value="gloss">gloss</option><option value="note-label">note-label</option><option value="highlight">highlight</option><option value="wrong">wrong</option><option value="reading">reading</option><option value="stem">stem</option><option value="ending">ending</option><option value="particle">particle</option></select>' +
-      '</span>' +
-      '<span class="ql-formats">' +
-      '<button class="ql-html-source" title="HTML Source">&lt;/&gt;</button>' +
-      '</span>' +
-      '<span class="ql-formats">' +
-      '<button class="ql-undo" title="Undo">↩</button>' +
-      '<button class="ql-redo" title="Redo">↪</button>' +
-      '<button class="ql-clean" title="Clean Formatting"></button>' +
-      '</span>';
-    const Font = Quill.import("formats/font");
-    Font.whitelist = ["noto-sans-jp", "serif", "monospace"];
-    Quill.register(Font, true);
-
-    this._editorQuill = new Quill("#quill-container", {
-      theme: "snow",
-      modules: {
-        toolbar: {
-          container: "#editor-toolbar",
-          handlers: {
-            "ruby": function() { App._insertRuby(); },
-            "css-class": function(value) { App._applyCssClass(value); },
-            "html-source": function() { App._toggleHtmlSource(); },
-            "undo": function() { App._editorQuill.history.undo(); },
-            "redo": function() { App._editorQuill.history.redo(); },
+  _initTinyMCE() {
+    var self = this;
+    return tinymce.init({
+      selector: '#editor-content',
+      promotion: false,
+      branding: false,
+      skin: 'oxide',
+      height: '100%',
+      min_height: 400,
+      resize: false,
+      menubar: false,
+      statusbar: false,
+      valid_elements: '*[*]',
+      extended_valid_elements: 'ruby[*],rt[*],rp[*],span[*],div[*],table[*],tr[*],td[*],th[*],thead[*],tbody[*]',
+      valid_children: '+body[style|ruby|rt|rp]',
+      verify_html: false,
+      entity_encoding: 'raw',
+      plugins: 'code table lists',
+      toolbar: 'undo redo | bold italic underline strikethrough | forecolor backcolor | fontsize fontfamily | table | code | removeformat | rubyBtn cssClassBtn',
+      content_style: self._tinymceContentStyle,
+      content_css: false,
+      font_family_formats: 'Nunito=Nunito,sans-serif; Noto Sans JP=Noto Sans JP,sans-serif; Serif=Georgia,serif; Monospace=Consolas,Monaco,monospace',
+      setup: function(editor) {
+        // Ruby button
+        editor.ui.registry.addButton('rubyBtn', {
+          text: 'Ruby',
+          tooltip: 'Insert Ruby (furigana)',
+          onAction: function() {
+            self._insertRuby();
           }
-        },
-        history: {
-          delay: 1000,
-          maxStack: 100,
-          userOnly: true
-        }
+        });
+
+        // CSS Class dropdown
+        editor.ui.registry.addMenuButton('cssClassBtn', {
+          text: 'Class',
+          tooltip: 'Apply CSS class',
+          fetch: function(callback) {
+            var classes = ['jp', 'jp-example', 'gloss', 'note-label', 'highlight', 'wrong', 'reading', 'stem', 'ending', 'particle'];
+            var items = classes.map(function(cls) {
+              return {
+                type: 'menuitem',
+                text: cls,
+                onAction: function() {
+                  self._applyCssClass(cls);
+                }
+              };
+            });
+            callback(items);
+          }
+        });
+
+        editor.on('init', function() {
+          editor.setContent(self._editorOriginalHtml);
+        });
       }
     });
   },
 
   _insertRuby() {
-    // Ruby tags require HTML mode since Quill strips unknown elements
-    const reading = window.prompt('Enter the reading (furigana):');
+    var editor = tinymce.get('editor-content');
+    if (!editor) return;
+    var selectedText = editor.selection.getContent({ format: 'text' });
+    if (!selectedText) {
+      selectedText = window.prompt('Enter the kanji text:');
+      if (!selectedText) return;
+    }
+    var reading = window.prompt('Enter the reading (furigana):');
     if (!reading) return;
-
-    // Get selected text from Quill
-    const selection = this._editorQuill.getSelection();
-    let baseText = '';
-    if (selection && selection.length > 0) {
-      baseText = this._editorQuill.getText(selection.index, selection.length);
-    } else {
-      baseText = window.prompt('Enter the kanji text:');
-      if (!baseText) return;
-    }
-
-    // Switch to HTML mode, do the insertion there, switch back
-    const htmlEl = document.getElementById('editor-html-source');
-    const quillEl = document.getElementById('quill-container');
-
-    // Get current HTML
-    let html = this._editorQuill.root.innerHTML;
-
-    // Find and replace the selected text with ruby version
-    const rubyHtml = '<ruby>' + baseText + '<rt>' + reading + '</rt></ruby>';
-    if (baseText && html.includes(baseText)) {
-      // Replace first occurrence only
-      html = html.replace(baseText, rubyHtml);
-      this._editorQuill.root.innerHTML = html;
-    } else {
-      // Append at cursor via HTML
-      const idx = selection ? selection.index : this._editorQuill.getLength() - 1;
-      this._editorQuill.clipboard.dangerouslyPasteHTML(idx, rubyHtml);
-    }
+    editor.selection.setContent('<ruby>' + selectedText + '<rt>' + reading + '</rt></ruby>');
   },
 
-  _applyCssClass(value) {
-    if (!value || value === "Class...") return;
-    const selection = this._editorQuill.getSelection();
-    if (!selection || selection.length === 0) return;
-    const selectedText = this._editorQuill.getText(selection.index, selection.length);
-    const wrapped = '<span class="' + value + '">' + selectedText + '</span>';
-    this._editorQuill.deleteText(selection.index, selection.length);
-    this._editorQuill.clipboard.dangerouslyPasteHTML(selection.index, wrapped);
-    const dropdown = document.querySelector("#editor-toolbar .ql-css-class");
-    if (dropdown) dropdown.value = "Class...";
-  },
-  _toggleHtmlSource() {
-    const quillEl = document.getElementById("quill-container");
-    const htmlEl = document.getElementById("editor-html-source");
-    if (this._editorHtmlMode) {
-      this._editorQuill.root.innerHTML = htmlEl.value;
-      htmlEl.style.display = "none";
-      quillEl.style.display = "";
-      this._editorHtmlMode = false;
-    } else {
-      htmlEl.value = this._editorQuill.root.innerHTML;
-      quillEl.style.display = "none";
-      htmlEl.style.display = "block";
-      this._editorHtmlMode = true;
-    }
+  _applyCssClass(cls) {
+    var editor = tinymce.get('editor-content');
+    if (!editor) return;
+    var selectedText = editor.selection.getContent({ format: 'html' });
+    if (!selectedText) return;
+    editor.selection.setContent('<span class="' + cls + '">' + selectedText + '</span>');
   },
 
   _toggleEditorPreview() {
-    const quillEl = document.getElementById("quill-container");
-    const htmlEl = document.getElementById("editor-html-source");
-    const previewEl = document.getElementById("editor-preview");
-    const toggleBtn = document.getElementById("editor-preview-toggle");
+    var previewEl = document.getElementById("editor-preview");
+    var tinymceWrap = document.getElementById("editor-tinymce-wrap");
+    var toggleBtn = document.getElementById("editor-preview-toggle");
     if (this._editorPreviewMode) {
       previewEl.style.display = "none";
-      if (this._editorHtmlMode) {
-        htmlEl.style.display = "block";
-      } else {
-        quillEl.style.display = "";
-      }
+      tinymceWrap.style.display = "";
       toggleBtn.textContent = "Preview";
       this._editorPreviewMode = false;
     } else {
-      const html = this._editorHtmlMode ? htmlEl.value : this._editorQuill.root.innerHTML;
+      var html = this._getEditorHtml();
       previewEl.innerHTML = html;
       previewEl.style.display = "block";
-      quillEl.style.display = "none";
-      htmlEl.style.display = "none";
+      tinymceWrap.style.display = "none";
       toggleBtn.textContent = "Edit";
       this._editorPreviewMode = true;
     }
   },
 
   _getEditorHtml() {
-    // Always prefer the HTML source textarea if it has content and we're in HTML mode
-    if (this._editorHtmlMode) {
-      const val = document.getElementById("editor-html-source").value;
-      if (val && val.trim()) return val;
-    }
-    // Fall back to Quill only if we're in visual mode
-    if (this._editorQuill) return this._editorQuill.root.innerHTML;
+    var editor = tinymce.get('editor-content');
+    if (editor) return editor.getContent();
     return this._editorOriginalHtml;
   },
 
   async _saveEditor() {
-    const html = this._getEditorHtml();
-    const lessonId = this._editorLessonId;
+    var html = this._getEditorHtml();
+    var lessonId = this._editorLessonId;
     if (!lessonId) return;
-    const saveBtn = document.getElementById("editor-save");
+    var saveBtn = document.getElementById("editor-save");
     saveBtn.textContent = "Saving...";
     saveBtn.disabled = true;
 
@@ -750,13 +710,13 @@ const App = {
     }
 
     // 2. Update the currently displayed lesson content
-    const lessonContent = document.getElementById('lesson-content');
+    var lessonContent = document.getElementById('lesson-content');
     if (lessonContent) {
       lessonContent.innerHTML = html;
     }
 
     // 3. Save to Firestore for back-sync
-    const result = await Firebase.saveLessonEdit(lessonId, html);
+    var result = await Firebase.saveLessonEdit(lessonId, html);
     saveBtn.textContent = "Save";
     saveBtn.disabled = false;
     if (result) {
@@ -777,7 +737,6 @@ const App = {
   _closeEditor() {
     document.getElementById("editor-sheet").style.display = "none";
     this._editorLessonId = null;
-    this._editorHtmlMode = false;
     this._editorPreviewMode = false;
   },
 
