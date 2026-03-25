@@ -430,6 +430,22 @@ const UI = {
       });
     }
 
+    // Admin edit button
+    const existingEditBtn = document.getElementById("admin-edit-btn");
+    if (existingEditBtn) existingEditBtn.remove();
+    if (Firebase.isAdmin()) {
+      const editBtn = document.createElement("button");
+      editBtn.id = "admin-edit-btn";
+      editBtn.className = "admin-edit-btn";
+      editBtn.innerHTML = "&#9998;";
+      editBtn.title = "Edit lesson";
+      editBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        App.openEditor(word.id);
+      });
+      document.getElementById("lesson-hero").appendChild(editBtn);
+    }
+
     // Check if word is already learned
     const prog = Storage.getProgress();
     const isLearned = prog.learnedIds.includes(word.id);
@@ -971,6 +987,23 @@ const UI = {
   /* ═══════════════════════════════════
      STATS
      ═══════════════════════════════════ */
+
+  showEditorToast(message) {
+    let toast = document.getElementById("editor-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "editor-toast";
+      toast.className = "editor-toast";
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.style.display = "block";
+    toast.style.opacity = "1";
+    setTimeout(() => {
+      toast.style.opacity = "0";
+      setTimeout(() => { toast.style.display = "none"; }, 300);
+    }, 3000);
+  },
 
   updateStats(progress) {
     const learned = Queue.getLearnedCount(progress);

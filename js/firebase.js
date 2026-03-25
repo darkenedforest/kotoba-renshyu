@@ -75,6 +75,11 @@ const Firebase = {
     return this.auth ? this.auth.currentUser : null;
   },
 
+  isAdmin() {
+    const user = this.getUser();
+    return user && user.email === 'darkenedforest@gmail.com';
+  },
+
   getDisplayName() {
     return this._customName;
   },
@@ -499,6 +504,28 @@ const Firebase = {
       return ref.id;
     } catch (e) {
       console.error('Post comment failed:', e);
+      return null;
+    }
+  },
+
+  // ── Lesson edits (admin staging) ──
+
+  async saveLessonEdit(lessonId, html) {
+    const user = this.getUser();
+    if (!user || !this.db) return null;
+    try {
+      const docId = String(lessonId);
+      await this.db.collection('lessonEdits').doc(docId).set({
+        lessonId: lessonId,
+        html: html,
+        editedAt: firebase.firestore.FieldValue.serverTimestamp(),
+        editedBy: user.uid,
+        status: 'pending'
+      });
+      this.logEvent('lesson_edit_saved', { lesson_id: lessonId });
+      return true;
+    } catch (e) {
+      console.error('Save lesson edit failed:', e);
       return null;
     }
   }

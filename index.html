@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Kotoba Renshyu</title>
-    <link rel="stylesheet" href="css/style.css?v=20260325a">
+    <link rel="stylesheet" href="css/style.css?v=20260325b">
     <link rel="apple-touch-icon" href="data:,">
 </head>
 <body>
@@ -231,6 +231,31 @@
         </div>
     </div>
 
+    <!-- ── Editor sheet (admin only, lazy-loaded) ── -->
+    <div id="editor-sheet" class="editor-sheet" style="display:none;">
+        <div class="editor-inner">
+            <div class="editor-topbar">
+                <div class="editor-context">
+                    <span id="editor-kanji" class="editor-kanji"></span>
+                    <span id="editor-kana" class="editor-kana"></span>
+                    <span id="editor-meaning" class="editor-meaning"></span>
+                </div>
+                <button class="editor-close-btn" id="editor-close">&times;</button>
+            </div>
+            <div class="editor-toolbar-wrap">
+                <div id="editor-toolbar"></div>
+            </div>
+            <div id="quill-container" class="quill-container"></div>
+            <textarea id="editor-html-source" class="editor-html-source" style="display:none;" spellcheck="false"></textarea>
+            <div id="editor-preview" class="editor-preview lesson-body" style="display:none;"></div>
+            <div class="editor-bottom">
+                <button class="btn btn-ghost editor-discard" id="editor-discard">Discard</button>
+                <button class="editor-preview-link" id="editor-preview-toggle">Preview</button>
+                <button class="btn btn-green editor-save" id="editor-save">Save</button>
+            </div>
+        </div>
+    </div>
+
     <!-- ── Confirm dialog ── -->
     <div id="confirm-dialog" class="confirm-overlay" style="display:none;">
         <div class="confirm-box">
@@ -300,11 +325,11 @@
     <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics-compat.js"></script>
 
     <!-- App scripts -->
-    <script src="js/firebase.js?v=20260325a"></script>
-    <script src="js/storage.js?v=20260325a"></script>
-    <script src="js/queue.js?v=20260325a"></script>
-    <script src="js/ui.js?v=20260325a"></script>
-    <script src="js/particles.js?v=20260325a"></script>
-    <script src="js/app.js?v=20260325a"></script>
+    <script src="js/firebase.js?v=20260325b"></script>
+    <script src="js/storage.js?v=20260325b"></script>
+    <script src="js/queue.js?v=20260325b"></script>
+    <script src="js/ui.js?v=20260325b"></script>
+    <script src="js/particles.js?v=20260325b"></script>
+    <script src="js/app.js?v=20260325b"></script>
 </body>
 </html>
