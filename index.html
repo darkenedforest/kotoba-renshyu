@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Kotoba Renshyu</title>
-    <link rel="stylesheet" href="css/style.css?v=20260325k">
+    <link rel="stylesheet" href="css/style.css?v=20260325m">
     <link rel="apple-touch-icon" href="data:,">
 </head>
 <body>
@@ -242,6 +242,24 @@
                 </div>
                 <button class="editor-close-btn" id="editor-close">&times;</button>
             </div>
+            <div class="editor-fields">
+                <div class="editor-field-row">
+                    <label class="editor-field-label">Kanji</label>
+                    <input type="text" id="editor-field-kanji" class="editor-field-input editor-field-jp">
+                </div>
+                <div class="editor-field-row">
+                    <label class="editor-field-label">Kana</label>
+                    <input type="text" id="editor-field-kana" class="editor-field-input editor-field-jp">
+                </div>
+                <div class="editor-field-row">
+                    <label class="editor-field-label">Meaning</label>
+                    <input type="text" id="editor-field-meaning" class="editor-field-input">
+                </div>
+                <div class="editor-field-row">
+                    <label class="editor-field-label">Tags</label>
+                    <input type="text" id="editor-field-tags" class="editor-field-input" placeholder="comma separated">
+                </div>
+            </div>
             <div id="editor-tinymce-wrap" class="editor-tinymce-wrap">
                 <textarea id="editor-content"></textarea>
             </div>
@@ -323,11 +341,11 @@
     <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics-compat.js"></script>
 
     <!-- App scripts -->
-    <script src="js/firebase.js?v=20260325k"></script>
-    <script src="js/storage.js?v=20260325k"></script>
-    <script src="js/queue.js?v=20260325k"></script>
-    <script src="js/ui.js?v=20260325k"></script>
-    <script src="js/particles.js?v=20260325k"></script>
-    <script src="js/app.js?v=20260325k"></script>
+    <script src="js/firebase.js?v=20260325m"></script>
+    <script src="js/storage.js?v=20260325m"></script>
+    <script src="js/queue.js?v=20260325m"></script>
+    <script src="js/ui.js?v=20260325m"></script>
+    <script src="js/particles.js?v=20260325m"></script>
+    <script src="js/app.js?v=20260325m"></script>
 </body>
 </html>

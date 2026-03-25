@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325k';
+const APP_VERSION = '20260325m';
 
 const App = {
   currentBatchIndex: null,
@@ -563,6 +563,11 @@ const App = {
     document.getElementById("editor-kanji").textContent = word.kanji;
     document.getElementById("editor-kana").textContent = word.kana;
     document.getElementById("editor-meaning").textContent = word.meaning;
+    // Editable header fields
+    document.getElementById("editor-field-kanji").value = word.kanji || '';
+    document.getElementById("editor-field-kana").value = word.kana || '';
+    document.getElementById("editor-field-meaning").value = word.meaning || '';
+    document.getElementById("editor-field-tags").value = (word.tags || []).join(', ');
     document.getElementById("editor-preview").style.display = "none";
     document.getElementById("editor-preview-toggle").textContent = "Preview";
     document.getElementById("editor-sheet").style.display = "flex";
@@ -572,17 +577,13 @@ const App = {
       this._editorLoaded = true;
     }
 
-    // If TinyMCE is already initialized, just set content
-    if (window.tinymce && tinymce.get('editor-content')) {
-      tinymce.get('editor-content').setContent(this._editorOriginalHtml);
-    } else {
-      try {
-        await this._initTinyMCE();
-      } catch(e) {
-        console.error('TinyMCE init failed:', e);
-        alert('Editor failed to load: ' + e.message);
-        return;
-      }
+    // Always init fresh (we destroy on close)
+    try {
+      await this._initTinyMCE();
+    } catch(e) {
+      console.error('TinyMCE init failed:', e);
+      alert('Editor failed to load: ' + e.message);
+      return;
     }
   },
 
@@ -710,19 +711,40 @@ const App = {
     saveBtn.textContent = "Saving...";
     saveBtn.disabled = true;
 
+    // Get header field values
+    var newKanji = document.getElementById("editor-field-kanji").value.trim();
+    var newKana = document.getElementById("editor-field-kana").value.trim();
+    var newMeaning = document.getElementById("editor-field-meaning").value.trim();
+    var newTags = document.getElementById("editor-field-tags").value.split(',').map(function(t) { return t.trim(); }).filter(Boolean);
+
     // 1. Update the live lesson cache immediately
     if (Queue.lessonCache[lessonId]) {
       Queue.lessonCache[lessonId].lesson = html;
+      Queue.lessonCache[lessonId].kanji = newKanji;
+      Queue.lessonCache[lessonId].kana = newKana;
+      Queue.lessonCache[lessonId].meaning = newMeaning;
+      Queue.lessonCache[lessonId].tags = newTags;
     }
 
-    // 2. Update the currently displayed lesson content
+    // 2. Update the currently displayed lesson content and header
     var lessonContent = document.getElementById('lesson-content');
     if (lessonContent) {
       lessonContent.innerHTML = html;
     }
+    var lessonKanji = document.getElementById('lesson-kanji');
+    var lessonKana = document.getElementById('lesson-kana');
+    var lessonMeaning = document.getElementById('lesson-meaning');
+    if (lessonKanji) lessonKanji.textContent = newKanji;
+    if (lessonKana) lessonKana.textContent = newKana;
+    if (lessonMeaning) lessonMeaning.textContent = newMeaning;
 
     // 3. Save to Firestore for back-sync
-    var result = await Firebase.saveLessonEdit(lessonId, html);
+    var result = await Firebase.saveLessonEdit(lessonId, html, {
+      kanji: newKanji,
+      kana: newKana,
+      meaning: newMeaning,
+      tags: newTags
+    });
     saveBtn.textContent = "Save";
     saveBtn.disabled = false;
     if (result) {
@@ -741,6 +763,11 @@ const App = {
   },
 
   _closeEditor() {
+    // Destroy TinyMCE instance so toolbar doesn't stick on screen
+    var editor = window.tinymce && tinymce.get('editor-content');
+    if (editor) {
+      editor.destroy();
+    }
     document.getElementById("editor-sheet").style.display = "none";
     this._editorLessonId = null;
     this._editorPreviewMode = false;

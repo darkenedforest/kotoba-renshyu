@@ -510,18 +510,25 @@ const Firebase = {
 
   // ── Lesson edits (admin staging) ──
 
-  async saveLessonEdit(lessonId, html) {
+  async saveLessonEdit(lessonId, html, metadata) {
     const user = this.getUser();
     if (!user || !this.db) return null;
     try {
       const docId = String(lessonId);
-      await this.db.collection('lessonEdits').doc(docId).set({
+      const data = {
         lessonId: lessonId,
         html: html,
         editedAt: firebase.firestore.FieldValue.serverTimestamp(),
         editedBy: user.uid,
         status: 'pending'
-      });
+      };
+      if (metadata) {
+        if (metadata.kanji) data.kanji = metadata.kanji;
+        if (metadata.kana) data.kana = metadata.kana;
+        if (metadata.meaning) data.meaning = metadata.meaning;
+        if (metadata.tags) data.tags = metadata.tags;
+      }
+      await this.db.collection('lessonEdits').doc(docId).set(data);
       this.logEvent('lesson_edit_saved', { lesson_id: lessonId });
       return true;
     } catch (e) {

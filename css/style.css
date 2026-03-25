@@ -1686,6 +1686,48 @@ body {
 }
 
 /* TinyMCE editor container */
+.editor-fields {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--g100);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.editor-field-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.editor-field-label {
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--g400);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.editor-field-input {
+  border: 1.5px solid var(--g200);
+  border-radius: 6px;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+  color: var(--g700);
+  background: #fff;
+}
+.editor-field-input:focus { outline: none; border-color: var(--sky); }
+
+.editor-field-jp {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  width: 5rem;
+}
+
 .editor-tinymce-wrap {
   flex: 1;
   overflow: hidden;
