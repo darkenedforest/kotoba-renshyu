@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325b';
+const APP_VERSION = '20260325c';
 
 const App = {
   currentBatchIndex: null,
@@ -558,15 +558,15 @@ const App = {
   },
   _loadQuill() {
     return new Promise((resolve, reject) => {
-      if (!document.querySelector("link[href*="quill.snow.css"]")) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = "https://cdn.quilljs.com/1.3.7/quill.snow.css";
+      if (!document.querySelector('link[href*="quill.snow.css"]')) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdn.quilljs.com/1.3.7/quill.snow.css';
         document.head.appendChild(link);
       }
       if (window.Quill) { resolve(); return; }
-      const script = document.createElement("script");
-      script.src = "https://cdn.quilljs.com/1.3.7/quill.min.js";
+      const script = document.createElement('script');
+      script.src = 'https://cdn.quilljs.com/1.3.7/quill.min.js';
       script.onload = resolve;
       script.onerror = reject;
       document.head.appendChild(script);
@@ -574,36 +574,36 @@ const App = {
   },
 
   _initQuillEditor() {
-    const toolbar = document.getElementById("editor-toolbar");
-    toolbar.innerHTML = 
-      "<span class="ql-formats">" +
-      "<button class="ql-bold" title="Bold"></button>" +
-      "<button class="ql-italic" title="Italic"></button>" +
-      "<button class="ql-underline" title="Underline"></button>" +
-      "<button class="ql-strike" title="Strikethrough"></button>" +
-      "</span>" +
-      "<span class="ql-formats">" +
-      "<select class="ql-size"><option value="small">Small</option><option selected>Normal</option><option value="large">Large</option><option value="huge">Huge</option></select>" +
-      "</span>" +
-      "<span class="ql-formats">" +
-      "<select class="ql-font"><option selected>Nunito</option><option value="noto-sans-jp">Noto Sans JP</option><option value="serif">Serif</option><option value="monospace">Monospace</option></select>" +
-      "</span>" +
-      "<span class="ql-formats">" +
-      "<select class="ql-color" title="Text Color"></select>" +
-      "<select class="ql-background" title="Background Color"></select>" +
-      "</span>" +
-      "<span class="ql-formats">" +
-      "<button class="ql-ruby" title="Insert Ruby (furigana)">ルビ</button>" +
-      "<select class="ql-css-class" title="CSS Class"><option selected>Class...</option><option value="jp">jp</option><option value="jp-example">jp-example</option><option value="gloss">gloss</option><option value="note-label">note-label</option><option value="highlight">highlight</option><option value="wrong">wrong</option><option value="reading">reading</option><option value="stem">stem</option><option value="ending">ending</option><option value="particle">particle</option></select>" +
-      "</span>" +
-      "<span class="ql-formats">" +
-      "<button class="ql-html-source" title="HTML Source">&lt;/&gt;</button>" +
-      "</span>" +
-      "<span class="ql-formats">" +
-      "<button class="ql-undo" title="Undo">↩</button>" +
-      "<button class="ql-redo" title="Redo">↪</button>" +
-      "<button class="ql-clean" title="Clean Formatting"></button>" +
-      "</span>";
+    const toolbar = document.getElementById('editor-toolbar');
+    toolbar.innerHTML =
+      '<span class="ql-formats">' +
+      '<button class="ql-bold" title="Bold"></button>' +
+      '<button class="ql-italic" title="Italic"></button>' +
+      '<button class="ql-underline" title="Underline"></button>' +
+      '<button class="ql-strike" title="Strikethrough"></button>' +
+      '</span>' +
+      '<span class="ql-formats">' +
+      '<select class="ql-size"><option value="small">Small</option><option selected>Normal</option><option value="large">Large</option><option value="huge">Huge</option></select>' +
+      '</span>' +
+      '<span class="ql-formats">' +
+      '<select class="ql-font"><option selected>Nunito</option><option value="noto-sans-jp">Noto Sans JP</option><option value="serif">Serif</option><option value="monospace">Monospace</option></select>' +
+      '</span>' +
+      '<span class="ql-formats">' +
+      '<select class="ql-color" title="Text Color"></select>' +
+      '<select class="ql-background" title="Background Color"></select>' +
+      '</span>' +
+      '<span class="ql-formats">' +
+      '<button class="ql-ruby" title="Insert Ruby (furigana)">ルビ</button>' +
+      '<select class="ql-css-class" title="CSS Class"><option selected>Class...</option><option value="jp">jp</option><option value="jp-example">jp-example</option><option value="gloss">gloss</option><option value="note-label">note-label</option><option value="highlight">highlight</option><option value="wrong">wrong</option><option value="reading">reading</option><option value="stem">stem</option><option value="ending">ending</option><option value="particle">particle</option></select>' +
+      '</span>' +
+      '<span class="ql-formats">' +
+      '<button class="ql-html-source" title="HTML Source">&lt;/&gt;</button>' +
+      '</span>' +
+      '<span class="ql-formats">' +
+      '<button class="ql-undo" title="Undo">↩</button>' +
+      '<button class="ql-redo" title="Redo">↪</button>' +
+      '<button class="ql-clean" title="Clean Formatting"></button>' +
+      '</span>';
     const Font = Quill.import("formats/font");
     Font.whitelist = ["noto-sans-jp", "serif", "monospace"];
     Quill.register(Font, true);
@@ -653,7 +653,7 @@ const App = {
     const selection = this._editorQuill.getSelection();
     if (!selection || selection.length === 0) return;
     const selectedText = this._editorQuill.getText(selection.index, selection.length);
-    const wrapped = "<span class="" + value + "">" + selectedText + "</span>";
+    const wrapped = '<span class="' + value + '">' + selectedText + '</span>';
     this._editorQuill.deleteText(selection.index, selection.length);
     this._editorQuill.clipboard.dangerouslyPasteHTML(selection.index, wrapped);
     const dropdown = document.querySelector("#editor-toolbar .ql-css-class");
