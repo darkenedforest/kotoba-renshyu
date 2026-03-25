@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325m';
+const APP_VERSION = '20260325n';
 
 const App = {
   currentBatchIndex: null,
@@ -246,6 +246,7 @@ const App = {
     if (this.currentBatchIndex !== null) {
       const batches = Queue.getBatches(progress.batchSize, progress);
       const batch = batches[this.currentBatchIndex];
+      console.log('markLearned: batchIndex=', this.currentBatchIndex, 'batch=', batch ? batch.words.length + ' words' : 'NULL');
       if (batch) {
         // Refresh the batch sheet behind the lesson
         UI.showBatchSheet(batch, progress);
@@ -268,6 +269,7 @@ const App = {
     }
 
     // No more words in batch — show quote prompt before closing
+    console.log('Batch complete! currentBatchIndex:', this.currentBatchIndex, 'Showing quote prompt');
     UI.hideLesson();
     UI.showQuotePrompt();
     this._pendingBatchClose = true;
