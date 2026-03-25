@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325j';
+const APP_VERSION = '20260325k';
 
 const App = {
   currentBatchIndex: null,
@@ -573,10 +573,16 @@ const App = {
     }
 
     // If TinyMCE is already initialized, just set content
-    if (tinymce.get('editor-content')) {
+    if (window.tinymce && tinymce.get('editor-content')) {
       tinymce.get('editor-content').setContent(this._editorOriginalHtml);
     } else {
-      await this._initTinyMCE();
+      try {
+        await this._initTinyMCE();
+      } catch(e) {
+        console.error('TinyMCE init failed:', e);
+        alert('Editor failed to load: ' + e.message);
+        return;
+      }
     }
   },
 
