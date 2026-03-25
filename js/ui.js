@@ -462,6 +462,11 @@ const UI = {
       this.els.skipBtn.className = 'btn btn-ghost';
       this.els.skipBtn.onclick = () => {
         App.restoreWord(word.id);
+        // Refresh the batch sheet to reflect the status change
+        var batch = App._getCurrentBatch();
+        if (batch) {
+          UI.showBatchSheet(batch, Storage.getProgress());
+        }
         UI.hideLesson();
       };
       this.els.learnedBtn.textContent = 'Continue';
