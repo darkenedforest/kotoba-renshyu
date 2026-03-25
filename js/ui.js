@@ -4,6 +4,7 @@ const UI = {
 
   // ── Back button / swipe-back support ──
   _sheetStack: [],
+  _suppressNextPop: false,
 
   _pushSheet(name, closeFn) {
     this._sheetStack.push({ name, closeFn });
@@ -20,6 +21,8 @@ const UI = {
     if (idx >= 0) {
       this._sheetStack.splice(idx, 1);
       // Go back in history to remove the state we pushed
+      // Suppress the popstate so it doesn't close the next sheet
+      this._suppressNextPop = true;
       if (history.state && history.state.sheet) {
         history.back();
       }
@@ -28,6 +31,10 @@ const UI = {
 
   _initBackHandler() {
     window.addEventListener('popstate', (e) => {
+      if (this._suppressNextPop) {
+        this._suppressNextPop = false;
+        return;
+      }
       if (this._sheetStack.length > 0) {
         const entry = this._sheetStack.pop();
         if (entry) entry.closeFn();
