@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325c';
+const APP_VERSION = '20260325d';
 
 const App = {
   currentBatchIndex: null,
@@ -631,18 +631,35 @@ const App = {
   },
 
   _insertRuby() {
-    const reading = window.prompt("Enter the reading (furigana):");
+    // Ruby tags require HTML mode since Quill strips unknown elements
+    const reading = window.prompt('Enter the reading (furigana):');
     if (!reading) return;
+
+    // Get selected text from Quill
     const selection = this._editorQuill.getSelection();
+    let baseText = '';
     if (selection && selection.length > 0) {
-      const selectedText = this._editorQuill.getText(selection.index, selection.length);
-      const rubyHtml = "<ruby>" + selectedText + "<rt>" + reading + "</rt></ruby>";
-      this._editorQuill.deleteText(selection.index, selection.length);
-      this._editorQuill.clipboard.dangerouslyPasteHTML(selection.index, rubyHtml);
+      baseText = this._editorQuill.getText(selection.index, selection.length);
     } else {
-      const text = window.prompt("Enter the base text:");
-      if (!text) return;
-      const rubyHtml = "<ruby>" + text + "<rt>" + reading + "</rt></ruby>";
+      baseText = window.prompt('Enter the kanji text:');
+      if (!baseText) return;
+    }
+
+    // Switch to HTML mode, do the insertion there, switch back
+    const htmlEl = document.getElementById('editor-html-source');
+    const quillEl = document.getElementById('quill-container');
+
+    // Get current HTML
+    let html = this._editorQuill.root.innerHTML;
+
+    // Find and replace the selected text with ruby version
+    const rubyHtml = '<ruby>' + baseText + '<rt>' + reading + '</rt></ruby>';
+    if (baseText && html.includes(baseText)) {
+      // Replace first occurrence only
+      html = html.replace(baseText, rubyHtml);
+      this._editorQuill.root.innerHTML = html;
+    } else {
+      // Append at cursor via HTML
       const idx = selection ? selection.index : this._editorQuill.getLength() - 1;
       this._editorQuill.clipboard.dangerouslyPasteHTML(idx, rubyHtml);
     }
@@ -719,9 +736,10 @@ const App = {
     saveBtn.disabled = false;
     if (result) {
       this._closeEditor();
-      UI.showEditorToast("Saved — will update on next deploy");
+      UI.showEditorToast('Saved — will update on next deploy');
     } else {
-      UI.showEditorToast("Save failed — check console");
+      UI.showEditorToast('Save failed — check Firestore rules in console');
+      console.error('Editor save failed. Make sure lessonEdits Firestore rules are set for admin email.');
     }
   },
 

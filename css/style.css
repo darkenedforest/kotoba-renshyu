@@ -1634,16 +1634,18 @@ body {
 /* ═══ LESSON EDITOR (admin) ═══ */
 
 .editor-sheet {
-  position: fixed; inset: 0;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0,0,0,0.5);
   z-index: 220;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: stretch; justify-content: center;
+  padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
 }
 
 .editor-inner {
   background: #fff;
   width: 100%; max-width: 700px;
-  height: 100vh; max-height: 100vh;
+  height: 100%; max-height: 100%;
   display: flex; flex-direction: column;
   overflow: hidden;
 }
@@ -1719,8 +1721,24 @@ body {
   font-family: "Nunito", "Noto Sans JP", sans-serif;
   font-size: 0.9rem;
   line-height: 1.85;
+  color: var(--g600);
+  font-weight: 600;
   padding: 1rem;
 }
+
+/* Mirror lesson-body styles inside editor */
+.quill-container .ql-editor .jp { font-family:'Noto Sans JP',sans-serif; color: var(--g800); font-weight: 700; }
+.quill-container .ql-editor .jp-example { font-family:'Noto Sans JP',sans-serif; color: var(--sky); font-weight: 700; }
+.quill-container .ql-editor .gloss { color: var(--g400); font-size: 0.88em; }
+.quill-container .ql-editor .reading { color: #2563eb; font-weight: 700; font-style: italic; }
+.quill-container .ql-editor .highlight { background: var(--sky-pale); padding: 0.1rem 0.35rem; border-radius: 5px; color: var(--sky-dark); font-weight: 700; }
+.quill-container .ql-editor .wrong { text-decoration: line-through; text-decoration-color: var(--red); color: var(--g400); }
+.quill-container .ql-editor .note-label { display: inline-block; font-size: 0.62rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; background: #fff7ed; color: #ea580c; padding: 0.12rem 0.45rem; border-radius: 5px; margin-right: 0.2rem; border: 1px solid #fed7aa; }
+.quill-container .ql-editor .stem { color: var(--g800); }
+.quill-container .ql-editor .ending { color: var(--sky); }
+.quill-container .ql-editor .particle { color: var(--g400); font-size: 0.75rem; }
+.quill-container .ql-editor em { font-style: normal; color: #ea580c; font-weight: 700; }
+.quill-container .ql-editor ruby rt { font-size: 0.6em; }
 
 /* Quill snow theme overrides */
 .quill-container .ql-toolbar {
