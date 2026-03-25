@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325f';
+const APP_VERSION = '20260325g';
 
 const App = {
   currentBatchIndex: null,
@@ -735,15 +735,30 @@ const App = {
     const saveBtn = document.getElementById("editor-save");
     saveBtn.textContent = "Saving...";
     saveBtn.disabled = true;
+
+    // 1. Update the live lesson cache immediately
+    if (Queue.lessonCache[lessonId]) {
+      Queue.lessonCache[lessonId].lesson = html;
+    }
+
+    // 2. Update the currently displayed lesson content
+    const lessonContent = document.getElementById('lesson-content');
+    if (lessonContent) {
+      lessonContent.innerHTML = html;
+    }
+
+    // 3. Save to Firestore for back-sync
     const result = await Firebase.saveLessonEdit(lessonId, html);
     saveBtn.textContent = "Save";
     saveBtn.disabled = false;
     if (result) {
       this._closeEditor();
-      UI.showEditorToast('Saved — will update on next deploy');
+      UI.showEditorToast('Saved');
     } else {
-      UI.showEditorToast('Save failed — check Firestore rules in console');
-      console.error('Editor save failed. Make sure lessonEdits Firestore rules are set for admin email.');
+      // Still applied locally even if Firestore failed
+      this._closeEditor();
+      UI.showEditorToast('Applied locally — Firestore save failed (check rules)');
+      console.error('Firestore save failed. Edit applied locally but not synced.');
     }
   },
 
