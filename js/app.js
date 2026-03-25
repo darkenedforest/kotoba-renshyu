@@ -1,4 +1,4 @@
-const APP_VERSION = '20260325i';
+const APP_VERSION = '20260325j';
 
 const App = {
   currentBatchIndex: null,
@@ -584,7 +584,7 @@ const App = {
     return new Promise(function(resolve, reject) {
       if (window.tinymce) { resolve(); return; }
       var script = document.createElement('script');
-      script.src = 'https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js';
+      script.src = 'https://cdn.tiny.cloud/1/dbuhlydx8p91bon3day87zmi28hbrxd5gyhwzpytrd0o02a9/tinymce/6/tinymce.min.js';
       script.referrerPolicy = 'origin';
       script.onload = resolve;
       script.onerror = reject;
