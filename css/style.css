@@ -441,8 +441,12 @@ body {
 
 /* Lesson body */
 .lesson-body {
-  font-size: 0.9rem; line-height: 1.85;
+  font-size: 1.125rem; line-height: 1.85;
   color: var(--g600); font-weight: 600;
+}
+
+.lesson-body ruby rt {
+  font-size: 0.55em;
 }
 
 .lesson-body p {
