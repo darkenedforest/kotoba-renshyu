@@ -445,47 +445,40 @@ const Firebase = {
     if (!user || !this.db) return 0;
 
     try {
-      // Get lastSeenHeartsAt from user doc
-      const userDoc = await this.db.collection('users').doc(user.uid).get();
-      const lastSeen = userDoc.exists && userDoc.data().lastSeenHeartsAt
-        ? userDoc.data().lastSeenHeartsAt.toDate()
-        : new Date(0);
+      // Use localStorage for last seen timestamp (reliable, no index needed)
+      const lastSeenMs = parseInt(localStorage.getItem('kotoba-hearts-seen') || '0');
+      const lastSeen = new Date(lastSeenMs);
 
       // Get all quotes by this user
       const myQuotes = await this.fetchMyQuotes();
       if (myQuotes.length === 0) return 0;
 
-      // Count hearts on those quotes that happened after lastSeen
-      let newHearts = 0;
+      // Sum total hearts on user's quotes, subtract what we've already seen
+      let totalHearts = 0;
       for (const quote of myQuotes) {
-        try {
-          const heartSnap = await this.db.collection('quoteHearts')
-            .where('quoteId', '==', quote.id)
-            .where('timestamp', '>', lastSeen)
-            .get();
-          newHearts += heartSnap.size;
-        } catch (e) {
-          // If index missing, skip this quote's hearts
-          console.warn('Heart count query failed for quote', quote.id, e.message);
-        }
+        totalHearts += (quote.hearts || 0);
       }
-      return newHearts;
+
+      // Compare against last seen total (stored locally)
+      const lastSeenTotal = parseInt(localStorage.getItem('kotoba-hearts-total') || '0');
+      return Math.max(0, totalHearts - lastSeenTotal);
     } catch (e) {
       console.error('getNewHeartCount failed:', e);
       return 0;
     }
   },
 
-  async markHeartsSeen() {
+  markHeartsSeen() {
+    // Store current total hearts locally so we can diff on next load
     const user = this.getUser();
-    if (!user || !this.db) return;
-    try {
-      await this.db.collection('users').doc(user.uid).set({
-        lastSeenHeartsAt: firebase.firestore.FieldValue.serverTimestamp()
-      }, { merge: true });
-    } catch (e) {
-      console.error('markHeartsSeen failed:', e);
-    }
+    if (!user) return;
+
+    this.fetchMyQuotes().then(quotes => {
+      let total = 0;
+      for (const q of quotes) total += (q.hearts || 0);
+      localStorage.setItem('kotoba-hearts-total', total.toString());
+      localStorage.setItem('kotoba-hearts-seen', Date.now().toString());
+    });
   },
 
   async postComment(lessonId, text) {
