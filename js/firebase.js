@@ -445,22 +445,20 @@ const Firebase = {
     if (!user || !this.db) return 0;
 
     try {
-      // Use localStorage for last seen timestamp (reliable, no index needed)
-      const lastSeenMs = parseInt(localStorage.getItem('kotoba-hearts-seen') || '0');
-      const lastSeen = new Date(lastSeenMs);
+      // Get the last seen total from Firestore user doc
+      const userDoc = await this.db.collection('users').doc(user.uid).get();
+      const lastSeenTotal = (userDoc.exists && userDoc.data().lastSeenHeartsTotal) || 0;
 
-      // Get all quotes by this user
+      // Get all quotes by this user and sum current hearts
       const myQuotes = await this.fetchMyQuotes();
       if (myQuotes.length === 0) return 0;
 
-      // Sum total hearts on user's quotes, subtract what we've already seen
       let totalHearts = 0;
       for (const quote of myQuotes) {
         totalHearts += (quote.hearts || 0);
       }
 
-      // Compare against last seen total (stored locally)
-      const lastSeenTotal = parseInt(localStorage.getItem('kotoba-hearts-total') || '0');
+      // New hearts = current total minus what was seen last time
       return Math.max(0, totalHearts - lastSeenTotal);
     } catch (e) {
       console.error('getNewHeartCount failed:', e);
@@ -468,17 +466,22 @@ const Firebase = {
     }
   },
 
-  markHeartsSeen() {
-    // Store current total hearts locally so we can diff on next load
+  async markHeartsSeen() {
     const user = this.getUser();
-    if (!user) return;
+    if (!user || !this.db) return;
 
-    this.fetchMyQuotes().then(quotes => {
-      let total = 0;
-      for (const q of quotes) total += (q.hearts || 0);
-      localStorage.setItem('kotoba-hearts-total', total.toString());
-      localStorage.setItem('kotoba-hearts-seen', Date.now().toString());
-    });
+    try {
+      // Get current total hearts and store it
+      const myQuotes = await this.fetchMyQuotes();
+      let totalHearts = 0;
+      for (const q of myQuotes) totalHearts += (q.hearts || 0);
+
+      await this.db.collection('users').doc(user.uid).set({
+        lastSeenHeartsTotal: totalHearts
+      }, { merge: true });
+    } catch (e) {
+      console.error('markHeartsSeen failed:', e);
+    }
   },
 
   async postComment(lessonId, text) {
