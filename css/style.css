@@ -190,6 +190,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 90px;
+  z-index: 2;
 }
 
 /* The circle */
@@ -1307,8 +1308,7 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 1; /* above SVG/watermarks (0), below node wraps (auto) */
 }
 
 .quote-sticker {
