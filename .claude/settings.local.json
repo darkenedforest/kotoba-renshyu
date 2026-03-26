@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__personal-drive__list_files",
+      "mcp__personal-drive__read_file",
+      "mcp__google-sheets__get_sheet_data",
+      "WebFetch(domain:darkenedforest.github.io)"
+    ]
+  }
+}
