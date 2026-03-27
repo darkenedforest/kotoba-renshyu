@@ -112,6 +112,23 @@
         </div>
     </div>
 
+    <!-- ── Kanji stroke order popup ── -->
+    <div id="stroke-sheet" class="sheet" style="display:none;">
+        <div class="sheet-inner sheet-narrow">
+            <button class="sheet-close" id="stroke-close">&times;</button>
+            <div class="stroke-header">
+                <span id="stroke-kanji" class="stroke-kanji-display"></span>
+            </div>
+            <div id="stroke-svg-container" class="stroke-svg-container">
+                <div class="stroke-loading">Loading...</div>
+            </div>
+            <div class="stroke-controls">
+                <button class="btn btn-ghost stroke-btn" id="stroke-animate-btn">Animate</button>
+                <a id="stroke-jisho-link" class="stroke-jisho-link" href="#" target="_blank" rel="noopener">View on Jisho &rarr;</a>
+            </div>
+        </div>
+    </div>
+
     <!-- ── Batch sheet (list of words in a batch) ── -->
     <div id="batch-sheet" class="sheet" style="display:none;">
         <div class="sheet-inner">

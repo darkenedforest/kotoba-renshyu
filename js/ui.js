@@ -411,9 +411,25 @@ const UI = {
      LESSON SHEET
      ═══════════════════════════════════ */
 
+  _hasKanji(text) {
+    // Returns true if the text contains at least one kanji character
+    return /[\u4e00-\u9faf\u3400-\u4dbf]/.test(text);
+  },
+
   showLesson(word, batchContext) {
     this.els.lessonKanji.textContent = word.kanji;
     this.els.lessonKana.textContent = word.kana;
+
+    // Make kanji tappable for stroke order (only if it contains kanji)
+    this.els.lessonKanji.className = 'hero-kanji';
+    this.els.lessonKanji.onclick = null;
+    if (this._hasKanji(word.kanji)) {
+      this.els.lessonKanji.classList.add('hero-kanji-tappable');
+      this.els.lessonKanji.onclick = (e) => {
+        e.stopPropagation();
+        App.showStrokeOrder(word.kanji);
+      };
+    }
     this.els.lessonMeaning.textContent = word.meaning;
     this.els.lessonContent.innerHTML = word.lesson;
 

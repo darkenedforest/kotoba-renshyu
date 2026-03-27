@@ -321,6 +321,75 @@ body {
   font-size: 1.1rem; font-weight: 800; margin-bottom: 1.2rem;
 }
 
+/* ═══ KANJI STROKE ORDER ═══ */
+
+#stroke-sheet { z-index: 215; }
+
+.stroke-header {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.stroke-kanji-display {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--g800);
+}
+
+.stroke-svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  padding: 1rem;
+}
+
+.stroke-svg-container svg {
+  max-width: 100%;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+}
+
+.stroke-svg-container .stroke-loading {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--g400);
+}
+
+.stroke-svg-container .stroke-error {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--g400);
+  text-align: center;
+}
+
+.stroke-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0 0;
+}
+
+.stroke-btn {
+  padding: 0.45rem 1rem;
+  font-size: 0.78rem;
+}
+
+.stroke-jisho-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--sky-dark);
+  text-decoration: none;
+}
+
+.hero-kanji-tappable {
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
 /* ═══ BATCH SHEET ═══ */
 
 .batch-sheet-header {

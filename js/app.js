@@ -183,6 +183,13 @@ const App = {
     document.getElementById('editor-save').addEventListener('click', () => this._saveEditor());
     document.getElementById('editor-discard').addEventListener('click', () => this._discardEditor());
     document.getElementById('editor-preview-toggle').addEventListener('click', () => this._toggleEditorPreview());
+
+    // Stroke order popup
+    document.getElementById('stroke-close').addEventListener('click', () => this._closeStrokeOrder());
+    document.getElementById('stroke-sheet').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('stroke-sheet')) this._closeStrokeOrder();
+    });
+    document.getElementById('stroke-animate-btn').addEventListener('click', () => this._animateStrokes());
   },
 
   async loadIndex() {
@@ -773,6 +780,123 @@ const App = {
     document.getElementById("editor-sheet").style.display = "none";
     this._editorLessonId = null;
     this._editorPreviewMode = false;
+  },
+
+  // ── Kanji Stroke Order ──
+
+  _strokeSvgCache: {},
+
+  async showStrokeOrder(text) {
+    // Extract all kanji from the text
+    var kanjiChars = text.match(/[\u4e00-\u9faf\u3400-\u4dbf]/g);
+    if (!kanjiChars || kanjiChars.length === 0) return;
+
+    // For multi-kanji words, show the first one (user can tap individual kanji later)
+    var kanji = kanjiChars[0];
+
+    document.getElementById('stroke-kanji').textContent = kanji;
+    var container = document.getElementById('stroke-svg-container');
+    container.innerHTML = '<div class="stroke-loading">Loading...</div>';
+
+    // Jisho link
+    var jishoLink = document.getElementById('stroke-jisho-link');
+    jishoLink.href = 'https://jisho.org/search/%23kanji%20' + encodeURIComponent(kanji);
+
+    // Show the sheet
+    document.getElementById('stroke-sheet').style.display = 'flex';
+    UI._pushSheet('stroke', function() {
+      document.getElementById('stroke-sheet').style.display = 'none';
+    });
+
+    // Fetch SVG from KanjiVG
+    var hex = kanji.codePointAt(0).toString(16).padStart(5, '0');
+    var url = 'https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/' + hex + '.svg';
+
+    if (this._strokeSvgCache[kanji]) {
+      container.innerHTML = this._strokeSvgCache[kanji];
+      this._styleStrokeSvg(container);
+      return;
+    }
+
+    try {
+      var resp = await fetch(url);
+      if (!resp.ok) throw new Error('Not found');
+      var svgText = await resp.text();
+      this._strokeSvgCache[kanji] = svgText;
+      container.innerHTML = svgText;
+      this._styleStrokeSvg(container);
+    } catch (e) {
+      container.innerHTML = '<div class="stroke-error">Stroke order not available for this kanji.<br><a href="' + jishoLink.href + '" target="_blank" style="color: var(--sky-dark);">View on Jisho instead</a></div>';
+    }
+  },
+
+  _styleStrokeSvg(container) {
+    var svg = container.querySelector('svg');
+    if (!svg) return;
+    // Make the SVG fill the container nicely
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('height', '100%');
+    svg.style.maxWidth = '280px';
+    svg.style.maxHeight = '280px';
+    // Style the strokes
+    var paths = svg.querySelectorAll('path');
+    paths.forEach(function(p) {
+      p.style.stroke = '#27272a';
+      p.style.strokeWidth = '3';
+    });
+    // Add stroke numbers
+    var groups = svg.querySelectorAll('g[id*="kvg:StrokeNumbers"]');
+    groups.forEach(function(g) {
+      g.style.display = 'block';
+      var texts = g.querySelectorAll('text');
+      texts.forEach(function(t) {
+        t.style.fontSize = '8px';
+        t.style.fill = '#0ea5e9';
+        t.style.fontWeight = '700';
+      });
+    });
+  },
+
+  _animateStrokes() {
+    var container = document.getElementById('stroke-svg-container');
+    var svg = container.querySelector('svg');
+    if (!svg) return;
+
+    // Find all stroke paths (in KanjiVG they're inside groups with kvg:StrokePaths)
+    var paths = [];
+    svg.querySelectorAll('path[d]').forEach(function(p) {
+      // Skip number/text paths — only get actual stroke paths
+      if (p.closest('g[id*="StrokeNumbers"]')) return;
+      paths.push(p);
+    });
+
+    if (paths.length === 0) return;
+
+    // Reset all paths
+    paths.forEach(function(p) {
+      var length = p.getTotalLength ? p.getTotalLength() : 500;
+      p.style.strokeDasharray = length;
+      p.style.strokeDashoffset = length;
+      p.style.fillOpacity = '0';
+      p.style.transition = 'none';
+    });
+
+    // Animate one by one
+    var delay = 0;
+    paths.forEach(function(p, i) {
+      var length = p.getTotalLength ? p.getTotalLength() : 500;
+      setTimeout(function() {
+        p.style.transition = 'stroke-dashoffset 0.5s ease, fill-opacity 0.3s ease 0.3s';
+        p.style.strokeDashoffset = '0';
+        p.style.fillOpacity = '1';
+      }, delay);
+      delay += 600;
+    });
+  },
+
+  _closeStrokeOrder() {
+    document.getElementById('stroke-sheet').style.display = 'none';
+    UI._removeSheet('stroke');
   },
 
   async _openInspiration() {
