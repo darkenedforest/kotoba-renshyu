@@ -384,7 +384,7 @@ body {
   text-decoration: none;
 }
 
-.hero-kanji-tappable {
+.hero-kanji-char {
   cursor: default;
   -webkit-tap-highlight-color: transparent;
   user-select: none;

@@ -786,13 +786,8 @@ const App = {
 
   _strokeSvgCache: {},
 
-  async showStrokeOrder(text) {
-    // Extract all kanji from the text
-    var kanjiChars = text.match(/[\u4e00-\u9faf\u3400-\u4dbf]/g);
-    if (!kanjiChars || kanjiChars.length === 0) return;
-
-    // For multi-kanji words, show the first one (user can tap individual kanji later)
-    var kanji = kanjiChars[0];
+  async showStrokeOrder(kanji) {
+    if (!kanji || kanji.length !== 1) return;
 
     document.getElementById('stroke-kanji').textContent = kanji;
     var container = document.getElementById('stroke-svg-container');

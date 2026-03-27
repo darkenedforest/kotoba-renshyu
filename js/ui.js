@@ -417,19 +417,29 @@ const UI = {
   },
 
   showLesson(word, batchContext) {
-    this.els.lessonKanji.textContent = word.kanji;
-    this.els.lessonKana.textContent = word.kana;
-
-    // Make kanji tappable for stroke order (only if it contains kanji)
+    // Build kanji display — each kanji character is independently tappable
+    this.els.lessonKanji.innerHTML = '';
     this.els.lessonKanji.className = 'hero-kanji';
-    this.els.lessonKanji.onclick = null;
-    if (this._hasKanji(word.kanji)) {
-      this.els.lessonKanji.classList.add('hero-kanji-tappable');
-      this.els.lessonKanji.onclick = (e) => {
-        e.stopPropagation();
-        App.showStrokeOrder(word.kanji);
-      };
+    var kanjiRegex = /[\u4e00-\u9faf\u3400-\u4dbf]/;
+    for (var i = 0; i < word.kanji.length; i++) {
+      var ch = word.kanji[i];
+      if (kanjiRegex.test(ch)) {
+        var span = document.createElement('span');
+        span.textContent = ch;
+        span.className = 'hero-kanji-char';
+        span.addEventListener('click', (function(c) {
+          return function(e) {
+            e.stopPropagation();
+            App.showStrokeOrder(c);
+          };
+        })(ch));
+        this.els.lessonKanji.appendChild(span);
+      } else {
+        this.els.lessonKanji.appendChild(document.createTextNode(ch));
+      }
     }
+
+    this.els.lessonKana.textContent = word.kana;
     this.els.lessonMeaning.textContent = word.meaning;
     this.els.lessonContent.innerHTML = word.lesson;
 
