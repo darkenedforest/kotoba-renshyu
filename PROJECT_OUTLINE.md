@@ -77,6 +77,7 @@ Low intermediate: knows hiragana and katakana, basic grammar, roughly 200–400 
 - **No padding.** If the word is straightforward, the lesson is short. Not every word needs a cultural deep-dive.
 - **No dictionary regurgitation.** The learner can look up the definition themselves. The lesson adds what a dictionary can't.
 - **No dry grammar notes.** Textbook explanations are not interesting. If grammar is relevant, weave it into a story or a practical insight, don't present it as a fact sheet. (Exception: verb lessons include a conjugation chart as structured reference at the bottom — but the lesson *content* itself should still not read like a grammar textbook.)
+- **No romaji.** The target level reads hiragana and katakana. Never write Japanese words in roman letters. Use kana or kanji with ruby.
 
 ### Generation Process
 
