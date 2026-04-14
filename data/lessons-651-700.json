@@ -81,9 +81,10 @@
     "kana": "おいわい",
     "meaning": "celebration",
     "tags": [
-      "noun"
+      "noun",
+      "polite prefix"
     ],
-    "lesson": "<p>The <span class=\"jp\">お</span> prefix here is the honorific <span class=\"jp\">お</span> that makes things polite and warm. The root is <span class=\"jp\">祝い</span> <span class=\"gloss\">(いわい, celebration/congratulations)</span>, from the verb <span class=\"jp\">祝う</span> <span class=\"gloss\">(いわう, to celebrate/congratulate)</span>. With <span class=\"jp\">お</span> attached, it becomes the standard form for gifts, parties, and expressions of congratulations.</p><p><span class=\"jp-example\">お祝いを言う</span> <span class=\"gloss\">(say congratulations)</span>. <span class=\"jp-example\">お祝いをもらう</span> <span class=\"gloss\">(receive a celebratory gift)</span>. <span class=\"jp-example\">お祝いの席</span> <span class=\"gloss\">(a celebration banquet)</span>. The word covers both the act of celebrating and the gift you give to mark the occasion.</p><p>The kanji <span class=\"jp\">祝</span> has the <span class=\"jp\">示</span> radical (altar, divine) on the left — celebrations in ancient times were religious rituals. The right side <span class=\"jp\">兄</span> (older brother) was originally a person kneeling in prayer. A person praying at an altar: the original celebration was asking the gods for blessings.</p>"
+    "lesson": "<p>The <span class=\"jp\">お</span> prefix here isn't optional politeness — it's fused to the word. While <span class=\"jp\">祝い</span> exists on its own (from the verb <span class=\"jp\">祝う</span>, to celebrate), you'll almost always hear the <span class=\"jp\">お</span> version. Taking it off sounds curt, like handing someone a birthday card and grunting \"congrats\" instead of \"congratulations.\"</p><p>The kanji <span class=\"jp\">祝</span> has the altar radical <span class=\"jp\">示</span> (originally a picture of a stone altar with offerings dripping down it) next to <span class=\"jp\">兄</span>, which here represents a person kneeling with arms raised in prayer. A person at an altar, giving thanks to the gods. That's the oldest layer of <span class=\"jp\">祝い</span> — not a party, but a sacred rite of gratitude. The festive meaning grew out of the ritual one.</p><p><span class=\"jp\">お祝い</span> covers everything from a wedding gift to a passing-the-exam dinner to the red envelope of money you hand someone at New Year's. <span class=\"jp-example\">お祝いを贈る</span> <span class=\"gloss\">(send a celebratory gift)</span>. <span class=\"jp-example\">お祝いの言葉</span> <span class=\"gloss\">(words of congratulation)</span>. <span class=\"jp-example\">合格のお祝いに食事に行こう</span> <span class=\"gloss\">(let's go eat to celebrate passing)</span>. It's both the act and the gift — context sorts out which.</p>"
   },
   {
     "id": 659,
@@ -93,7 +94,7 @@
     "tags": [
       "noun"
     ],
-    "lesson": "<p>Written in kanji as <span class=\"jp\">櫛</span> — tree (<span class=\"jp\">木</span>) on the left (combs were made of wood or bamboo) and a phonetic element on the right. But you'll almost always see it in hiragana. It's a small, common, physical object — the kind of word Japanese tends to leave in kana.</p><p>There's a cultural superstition worth knowing: giving a <span class=\"jp\">くし</span> as a gift is considered bad luck because the word can be split into <span class=\"jp\">く</span> (suffering, <span class=\"jp\">苦</span>) and <span class=\"jp\">し</span> (death, <span class=\"jp\">死</span>). It's the same logic that makes the number four (<span class=\"jp\">し</span> = <span class=\"jp\">死</span>) unlucky. Japanese gift-giving has a whole invisible rulebook of things to avoid, and combs are on the list.</p>"
+    "lesson": "<p>Written in kanji as <span class=\"jp\">櫛</span> — one of those characters so complicated that almost nobody writes it. The kanji packs <span class=\"jp\">木</span> (wood), <span class=\"jp\">節</span>-related elements (joints/teeth), and strokes suggesting something with many parallel tines. A perfect picture of what it is: a wooden object with teeth. But in practice, you'll see this word in hiragana.</p><p>There's a superstition around <span class=\"jp\">くし</span> as a gift: don't give one. The sounds <span class=\"jp\">く</span> and <span class=\"jp\">し</span> can be heard as <span class=\"jp\">苦</span> (suffering) and <span class=\"jp\">死</span> (death). This kind of phonetic taboo runs deep in Japanese culture — the number four (<span class=\"jp\">し</span>) gets avoided in hospitals for the same reason. A comb is a perfectly normal object to own, but handing one to someone as a present is like giving a clock in Chinese culture: the sound curses the gesture.</p>"
   },
   {
     "id": 660,
@@ -104,7 +105,7 @@
       "ichidan verb",
       "自動詞"
     ],
-    "lesson": "<p><span class=\"jp\">こぼれる</span> is intransitive — liquid spills on its own. The cup tipped, the milk ran over, tears fell. You didn't do it; it happened. The transitive partner is <span class=\"jp\">こぼす</span> — you spilled it. <span class=\"jp-example\">コーヒーがこぼれた</span> <span class=\"gloss\">(the coffee spilled)</span> vs <span class=\"jp-example\">コーヒーをこぼした</span> <span class=\"gloss\">(I spilled the coffee)</span>.</p><p>The beautiful figurative use: <span class=\"jp-example\">涙がこぼれる</span> <span class=\"gloss\">(tears spill over)</span> and <span class=\"jp-example\">笑みがこぼれる</span> <span class=\"gloss\">(a smile overflows — a smile you can't hold back, one that escapes)</span>. The word paints emotions as liquid that fills up and runs over the edge. You didn't choose to cry or smile; the feeling exceeded the container.</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">こぼれる</span> takes <span class=\"jp highlight\">が</span> for what spills. <span class=\"jp-example\">水がこぼれた</span> <span class=\"gloss\">(the water spilled)</span>. Also <span class=\"jp highlight\">から</span> for where it spills from: <span class=\"jp-example\">コップからこぼれた</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Passive</span>: rarely used since the verb is already intransitive.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">を／にこぼれさせる</span>: making something spill. <span class=\"jp-example\">コップから水をこぼれさせた</span> <span class=\"gloss\">(caused the water to spill from the cup)</span>.</p><div class=\"verb-meta\"><span class=\"group-badge\">一段 Ichidan</span><span class=\"trans-badge\">自動詞 — pair: こぼす</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">る</span></td><td class=\"particle\">が</td></tr><tr><td>Negative</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">ない</span></td><td class=\"particle\">が</td></tr><tr><td>Polite</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">ます</span></td><td class=\"particle\">が</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">ません</span></td><td class=\"particle\">が</td></tr><tr><td>Past</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">た</span></td><td class=\"particle\">が</td></tr><tr><td>Polite past</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">ました</span></td><td class=\"particle\">が</td></tr><tr><td>て-form</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">て</span></td><td class=\"particle\">が</td></tr><tr><td>Volitional</td><td></td><td class=\"particle\"></td></tr><tr><td>Polite vol</td><td></td><td class=\"particle\"></td></tr><tr><td>Passive</td><td></td><td class=\"particle\"></td></tr><tr><td>Causative</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">させる</span></td><td class=\"particle\">を／に</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">させられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td></td><td class=\"particle\"></td></tr><tr><td>Imperative</td><td></td><td class=\"particle\"></td></tr><tr><td>Imp なさい</td><td></td><td class=\"particle\"></td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">れば</span></td><td class=\"particle\">が</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">たら</span></td><td class=\"particle\">が</td></tr></table>"
+    "lesson": "<p>Things spill themselves in Japanese. <span class=\"jp\">こぼれる</span> is intransitive — the water spills, the rice falls off the spoon, the tears overflow. Nobody is doing it. It just happens. <span class=\"jp-example\">コーヒーがこぼれた</span> <span class=\"gloss\">(the coffee spilled)</span>. If you need to blame someone, reach for the transitive partner <span class=\"jp\">こぼす</span>: <span class=\"jp-example\">コーヒーをこぼした</span> <span class=\"gloss\">(I spilled the coffee)</span>.</p><p>The word has a surprisingly poetic second life. <span class=\"jp-example\">涙がこぼれる</span> — tears spill, tears overflow. Not crying on purpose, not weeping dramatically. Tears that escape on their own, that you couldn't hold back. <span class=\"jp-example\">笑みがこぼれる</span> — a smile spills out, breaks through despite yourself. In both cases, the intransitivity is the point: these aren't things you did. They happened to you. The emotion was too full and it overflowed.</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">こぼれる</span> takes <span class=\"jp highlight\">が</span> — the spilling thing is the subject, not an object. <span class=\"jp-example\">水がこぼれた</span> <span class=\"gloss\">(the water spilled)</span>. Use <span class=\"jp highlight\">から</span> for what it spills from: <span class=\"jp-example\">コップから水がこぼれた</span> <span class=\"gloss\">(water spilled from the glass)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Passive:</span> Rare — since the verb is already intransitive and describes something happening on its own, passivizing it is unusual. You'd more likely use こぼす (transitive) in passive: <span class=\"jp-example\">コーヒーをこぼされた</span> <span class=\"gloss\">(someone spilled coffee on me)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">を／にこぼれさせる</span>: making something spill. <span class=\"jp highlight\">を</span> for coercive — but in practice you'd almost always just use <span class=\"jp\">こぼす</span> instead.</p><div class=\"verb-meta\"><span class=\"group-badge\">一段 Ichidan</span><span class=\"trans-badge\">自動詞 — pair: こぼす</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">る</span></td><td class=\"particle\">が</td></tr><tr><td>Negative</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">ない</span></td><td class=\"particle\">が</td></tr><tr><td>Polite</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">ます</span></td><td class=\"particle\">が</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">ません</span></td><td class=\"particle\">が</td></tr><tr><td>Past</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">た</span></td><td class=\"particle\">が</td></tr><tr><td>Polite past</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">ました</span></td><td class=\"particle\">が</td></tr><tr><td>て-form</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">て</span></td><td class=\"particle\">が</td></tr><tr><td>Volitional</td><td></td><td class=\"particle\"></td></tr><tr><td>Polite vol</td><td></td><td class=\"particle\"></td></tr><tr><td>Passive</td><td></td><td class=\"particle\"></td></tr><tr><td>Causative</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">させる</span></td><td class=\"particle\">を／に</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">させられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td></td><td class=\"particle\"></td></tr><tr><td>Imperative</td><td></td><td class=\"particle\"></td></tr><tr><td>Imp なさい</td><td></td><td class=\"particle\"></td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">れば</span></td><td class=\"particle\">が</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">こぼれ</span><span class=\"ending\">たら</span></td><td class=\"particle\">が</td></tr></table>"
   },
   {
     "id": 661,
@@ -115,7 +116,7 @@
       "ichidan verb",
       "他動詞"
     ],
-    "lesson": "<p><span class=\"jp\">伝</span> has the person radical (<span class=\"jp\">亻</span>) and a component suggesting something passed along. One person handing something to another — that's the heart of <span class=\"jp\">伝える</span>: passing information, feelings, or traditions from one person to another. <span class=\"jp-example\">気持ちを伝える</span> <span class=\"gloss\">(convey your feelings)</span>. <span class=\"jp-example\">メッセージを伝える</span> <span class=\"gloss\">(relay a message)</span>.</p><p>The intransitive partner is <span class=\"jp\">伝わる</span> <span class=\"gloss\">(つたわる)</span> — something gets through on its own. <span class=\"jp-example\">気持ちが伝わる</span> <span class=\"gloss\">(the feelings come through)</span>. And <span class=\"jp\">伝える</span> has another intransitive cousin: <span class=\"jp\">伝う</span> <span class=\"gloss\">(つたう, to be handed down)</span> — for traditions and legends that travel through time. <span class=\"jp-example\">伝説</span> <span class=\"gloss\">(でんせつ, legend)</span> is literally \"transmitted tale.\"</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">伝える</span> takes <span class=\"jp highlight\">を</span> for what you convey and <span class=\"jp highlight\">に</span> for who you convey it to. <span class=\"jp-example\">先生に結果を伝える</span> <span class=\"gloss\">(convey the results to the teacher)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Potential</span> <span class=\"jp-example\">が伝えられる</span>: <span class=\"jp highlight\">が</span> — what can be conveyed becomes the subject. <span class=\"jp-example\">うまく気持ちが伝えられない</span> <span class=\"gloss\">(I can't convey my feelings well)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Passive</span> <span class=\"jp-example\">に伝えられる</span>: <span class=\"jp highlight\">に</span> marks who tells you. <span class=\"jp-example\">先生に伝えられた</span> <span class=\"gloss\">(I was told by the teacher)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">に…を伝えさせる</span>: <span class=\"jp highlight\">に</span> marks who you make relay the message, <span class=\"jp highlight\">を</span> marks what. <span class=\"jp-example\">後輩にメッセージを伝えさせる</span> <span class=\"gloss\">(have the junior relay the message)</span>.</p><div class=\"verb-meta\"><span class=\"group-badge\">一段 Ichidan</span><span class=\"trans-badge\">他動詞 — pair: 伝わる (つたわる)</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">る</span></td><td class=\"particle\">を</td></tr><tr><td>Negative</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ない</span></td><td class=\"particle\">を</td></tr><tr><td>Polite</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ます</span></td><td class=\"particle\">を</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ません</span></td><td class=\"particle\">を</td></tr><tr><td>Past</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">た</span></td><td class=\"particle\">を</td></tr><tr><td>Polite past</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ました</span></td><td class=\"particle\">を</td></tr><tr><td>て-form</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">て</span></td><td class=\"particle\">を</td></tr><tr><td>Volitional</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">よう</span></td><td class=\"particle\">を</td></tr><tr><td>Polite vol</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ましょう</span></td><td class=\"particle\">を</td></tr><tr><td>Passive</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">られる</span></td><td class=\"particle\">に</td></tr><tr><td>Causative</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">させる</span></td><td class=\"particle\">に／を</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">させられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">られる</span></td><td class=\"particle\">が</td></tr><tr><td>Imperative</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ろ</span></td><td class=\"particle\">を</td></tr><tr><td>Imp なさい</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">なさい</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">れば</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">たら</span></td><td class=\"particle\">を</td></tr></table>"
+    "lesson": "<p><span class=\"jp\">伝える</span> is what you do when something needs to get from one person to another — a message, a feeling, a tradition. Not \"say\" (that's <span class=\"jp\">言う</span>) and not \"teach\" (that's <span class=\"jp\">教える</span>). <span class=\"jp\">伝える</span> is about the <em>transmission</em> — making sure something crosses the gap between people. <span class=\"jp-example\">気持ちを伝える</span> <span class=\"gloss\">(convey your feelings)</span>. <span class=\"jp-example\">彼にメッセージを伝えてください</span> <span class=\"gloss\">(please pass the message to him)</span>.</p><p>The kanji <span class=\"jp\">伝</span> is <span class=\"jp\">亻</span> (person) plus <span class=\"jp\">云</span>, which originally meant clouds drifting. A person passing something along like clouds drifting across the sky — things that move from here to there. The same kanji gives you <span class=\"jp-example\">伝統</span> <span class=\"gloss\">(でんとう, tradition — things passed down)</span>, <span class=\"jp-example\">伝説</span> <span class=\"gloss\">(でんせつ, legend — a story passed along)</span>, and <span class=\"jp-example\">伝染</span> <span class=\"gloss\">(でんせん, contagion — disease passing between people)</span>. The thread is always the same: something moves from source to receiver.</p><p>Its intransitive partner <span class=\"jp\">伝わる</span> <span class=\"gloss\">(つたわる)</span> flips the perspective: the message arrives rather than being sent. <span class=\"jp-example\">気持ちが伝わった</span> <span class=\"gloss\">(the feelings got through)</span>. You tried to <span class=\"jp\">伝える</span>; did it <span class=\"jp\">伝わる</span>?</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">伝える</span> takes <span class=\"jp highlight\">を</span> for the content being conveyed and <span class=\"jp highlight\">に</span> for the recipient. <span class=\"jp-example\">彼にニュースを伝える</span> <span class=\"gloss\">(convey the news to him)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Potential</span> <span class=\"jp-example\">が伝えられる</span>: <span class=\"jp highlight\">が</span> marks what can be conveyed. <span class=\"jp-example\">言葉で伝えられないこともある</span> <span class=\"gloss\">(some things can't be conveyed with words)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Passive</span> <span class=\"jp-example\">に伝えられる</span>: <span class=\"jp highlight\">に</span> marks who does the conveying. <span class=\"jp-example\">先輩に伝えられた話</span> <span class=\"gloss\">(a story told to me by my senior)</span>. Also commonly used for traditions: <span class=\"jp-example\">代々伝えられてきた</span> <span class=\"gloss\">(passed down through generations)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">に…を伝えさせる</span>: <span class=\"jp highlight\">に</span> marks who you have convey the message, <span class=\"jp highlight\">を</span> marks the content. <span class=\"jp-example\">部下にニュースを伝えさせた</span> <span class=\"gloss\">(had my subordinate deliver the news)</span>.</p><div class=\"verb-meta\"><span class=\"group-badge\">一段 Ichidan</span><span class=\"trans-badge\">他動詞 — pair: 伝わる (つたわる)</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">る</span></td><td class=\"particle\">を</td></tr><tr><td>Negative</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ない</span></td><td class=\"particle\">を</td></tr><tr><td>Polite</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ます</span></td><td class=\"particle\">を</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ません</span></td><td class=\"particle\">を</td></tr><tr><td>Past</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">た</span></td><td class=\"particle\">を</td></tr><tr><td>Polite past</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ました</span></td><td class=\"particle\">を</td></tr><tr><td>て-form</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">て</span></td><td class=\"particle\">を</td></tr><tr><td>Volitional</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">よう</span></td><td class=\"particle\">を</td></tr><tr><td>Polite vol</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ましょう</span></td><td class=\"particle\">を</td></tr><tr><td>Passive</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">られる</span></td><td class=\"particle\">に</td></tr><tr><td>Causative</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">させる</span></td><td class=\"particle\">に／を</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">させられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">られる</span></td><td class=\"particle\">が</td></tr><tr><td>Imperative</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">ろ</span></td><td class=\"particle\">を</td></tr><tr><td>Imp なさい</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">なさい</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">れば</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">つたえ</span><span class=\"ending\">たら</span></td><td class=\"particle\">を</td></tr></table>"
   },
   {
     "id": 662,
@@ -123,9 +124,10 @@
     "kana": "ひざ",
     "meaning": "knee",
     "tags": [
-      "noun"
+      "noun",
+      "body part"
     ],
-    "lesson": "<p>A complicated kanji for a simple body part. <span class=\"jp\">膝</span> has the flesh/body radical (<span class=\"jp\">月</span>) on the left — the same radical in <span class=\"jp\">胸</span> (chest), <span class=\"jp\">腰</span> (waist), <span class=\"jp\">肩</span> (shoulder). Whenever you see <span class=\"jp\">月</span> on the left side of a kanji, think \"body part.\"</p><p><span class=\"jp\">ひざ</span> shows up in some good idioms. <span class=\"jp-example\">膝を打つ</span> <span class=\"gloss\">(slap your knee — the \"aha!\" moment)</span>. <span class=\"jp-example\">膝を交えて話す</span> <span class=\"gloss\">(talk with knees together — to have an intimate, face-to-face discussion)</span>. Japanese seating culture involves a lot of kneeling (<span class=\"jp\">正座</span>, <span class=\"reading\">せいずあ</span>), so the knee is culturally prominent in ways it isn't in chair-based cultures.</p><p>For learners, <span class=\"jp\">膝</span> is worth knowing mainly because body-part vocabulary comes up in daily life more than you'd expect — at the doctor, in sports, in describing where something hurts. The reading <span class=\"reading\">ひざ</span> is straightforward, no surprises.</p>"
+    "lesson": "<p><span class=\"jp\">膝</span> is one of those kanji that looks impossibly complicated until you break it apart: <span class=\"jp\">月</span> (flesh/body radical) on the left tells you it's a body part, and the right side is phonetic. But forget the kanji — nobody writes it by hand. Focus on the sound: <span class=\"jp\">ひざ</span>. Two syllables for one of the most culturally loaded joints in the Japanese body.</p><p>In traditional Japanese life, the knee is where you live. Sitting in <span class=\"jp\">正座</span> <span class=\"gloss\">(せいざ, formal kneeling)</span> means your knees bear your full weight for the entire visit, tea ceremony, or meal. <span class=\"jp-example\">膝が痛い</span> <span class=\"gloss\">(my knees hurt)</span> is something you'll hear from anyone who's spent an hour on a tatami floor. The phrase <span class=\"jp-example\">膝を付く</span> <span class=\"gloss\">(to kneel, literally \"attach one's knees\")</span> carries weight — it implies submission, formality, or real physical effort.</p><p>There's also <span class=\"jp-example\">膝の上</span> — on one's lap. A child sitting on your lap is on your <span class=\"jp\">膝</span>. The knee and the lap are the same word because, in a seated position, your knees <em>are</em> your lap.</p>"
   },
   {
     "id": 663,
@@ -145,7 +147,7 @@
     "tags": [
       "noun"
     ],
-    "lesson": "<p><span class=\"jp\">枕</span> is wood (<span class=\"jp\">木</span>) plus a phonetic element. Ancient pillows were wooden — or bamboo, or ceramic. The soft cotton pillows we think of are a relatively modern invention. In Japan, traditional pillows (<span class=\"jp\">そばまくら</span>, buckwheat pillows) are still popular, and they're firmer than Western ones.</p><p>The most famous <span class=\"jp\">枕</span> in Japanese culture is the <span class=\"jp-example\">枕草子</span> <span class=\"gloss\">(まくらのそうし, \"The Pillow Book\")</span>, written by Sei Shōnagon around the year 1000. It's a collection of observations, lists, and opinions — one of the earliest works of Japanese prose. The title comes from the practice of keeping a notebook by your pillow to jot down thoughts before sleep.</p><p>The sound <span class=\"reading\">まくら</span> has a soft, rounded quality that matches the object. Say it and notice how the <span class=\"jp\">ま</span> opens gently, the <span class=\"jp\">く</span> lifts slightly, and the <span class=\"jp\">ら</span> falls back down — like your head settling onto a pillow.</p>"
+    "lesson": "<p>The kanji <span class=\"jp\">枕</span> is <span class=\"jp\">木</span> (wood) plus <span class=\"jp\">冘</span>. Traditional Japanese pillows weren't the soft poufs Westerners imagine — they were hard wooden or ceramic blocks, sometimes with a small cushion on top, designed to keep your elaborate hairstyle intact while sleeping. The wooden radical isn't metaphorical. These things were literally made of wood.</p><p>If you know any classical Japanese literature, the word <span class=\"jp\">枕</span> might ring a bell: <span class=\"jp-example\">枕草子</span> <span class=\"gloss\">(まくらのそうし, The Pillow Book)</span>, written around the year 1000 by Sei Shonagon. It's one of the oldest works of Japanese prose — a collection of observations, lists, and complaints kept by a woman at the imperial court. The \"pillow\" in the title probably refers to notes kept by the bedside, jotted down before sleep.</p><p><span class=\"jp-example\">枕が変わると眠れない</span> <span class=\"gloss\">(when the pillow changes, I can't sleep)</span> — a common Japanese saying about being unable to sleep somewhere unfamiliar. The pillow stands in for the whole bed, the whole room, the whole feeling of home.</p>"
   },
   {
     "id": 665,
@@ -155,7 +157,7 @@
     "tags": [
       "noun"
     ],
-    "lesson": "<p>You saw <span class=\"jp\">物</span> (thing) in <span class=\"jp\">動物</span> (animal, \"moving thing\") and <span class=\"jp\">食べ物</span> (food, \"eating thing\"). Here it does the same trick: <span class=\"jp\">建</span> (build) + <span class=\"jp\">物</span> = a built thing. A building. The pattern is now old hat, but the word is everywhere.</p><p><span class=\"jp\">建物</span> covers any physical structure: houses, offices, temples, sheds. It's the generic catch-all. For more specific types: <span class=\"jp\">ビル</span> for commercial/office towers, <span class=\"jp\">マンション</span> for upscale apartments, <span class=\"jp\">家</span> for houses. <span class=\"jp\">建物</span> is what you reach for when the type doesn't matter — just the fact that something stands there, built by human hands.</p><p>The verb <span class=\"jp\">建てる</span> <span class=\"gloss\">(たてる, to build)</span> shares the same kanji. <span class=\"jp-example\">建物を建てる</span> <span class=\"gloss\">(build a building)</span> — redundant in English, totally natural in Japanese.</p>"
+    "lesson": "<p>Walk through any Japanese city and you'll notice something: buildings get described before they get named. <span class=\"jp-example\">あの白い建物</span> <span class=\"gloss\">(that white building)</span>. <span class=\"jp-example\">駅の前の建物</span> <span class=\"gloss\">(the building in front of the station)</span>. Japanese addresses don't always have street names the way Western ones do, so buildings become landmarks, and <span class=\"jp\">建物</span> is the word that turns them into reference points.</p><p>The compound is transparent: <span class=\"jp\">建</span> (to build, from <span class=\"jp\">建てる</span>) + <span class=\"jp\">物</span> (thing). A built thing. It's the all-purpose word — an apartment, a skyscraper, a shed, a temple. <span class=\"jp\">建物</span> doesn't care about size or prestige. Compare <span class=\"jp\">ビル</span> (from English \"building\"), which specifically means a multi-story commercial structure. You'd call Tokyo Tower a <span class=\"jp\">建物</span> but never a <span class=\"jp\">ビル</span>. A tiny neighborhood shrine is a <span class=\"jp\">建物</span> too.</p>"
   },
   {
     "id": 666,
@@ -165,7 +167,7 @@
     "tags": [
       "noun"
     ],
-    "lesson": "<p><span class=\"jp\">道</span> (way, road, path) + <span class=\"jp\">路</span> (route, path). Two characters that both mean \"road\" smashed together for emphasis: a proper, maintained road. Not a trail, not a path through the woods — a paved road that cars drive on.</p><p><span class=\"jp\">道路</span> vs <span class=\"jp\">道</span> vs <span class=\"jp\">通り</span>: these overlap but aren't identical. <span class=\"jp\">道</span> <span class=\"gloss\">(みち)</span> is the broadest — any road, path, or even a figurative \"way\" (<span class=\"jp-example\">武士の道</span>, the way of the warrior). <span class=\"jp\">通り</span> <span class=\"gloss\">(とおり)</span> is a specific named street in a city. <span class=\"jp\">道路</span> is the most concrete and official — the infrastructure, the thing with lane markings and traffic signs. <span class=\"jp-example\">道路工事</span> <span class=\"gloss\">(road construction)</span>. <span class=\"jp-example\">道路交通法</span> <span class=\"gloss\">(road traffic law)</span>.</p>"
+    "lesson": "<p>Two kanji that both mean \"road\" pressed together: <span class=\"jp\">道</span> (みち, the path, the way) and <span class=\"jp\">路</span> (ろ, a route or road). This kind of synonym-doubling is common in Chinese-origin compounds — the redundancy adds formality. <span class=\"jp\">道路</span> is the official, infrastructure-grade word for roads. Governments build <span class=\"jp\">道路</span>. Traffic reports talk about <span class=\"jp\">道路</span>. Signs say <span class=\"jp-example\">道路工事中</span> <span class=\"gloss\">(road construction in progress)</span>.</p><p>Compare: <span class=\"jp\">道</span> alone is warmer, more human-scale. A path through the woods, a street you walk down, the \"way\" of life. <span class=\"jp\">通り</span> <span class=\"gloss\">(とおり)</span> is a named street in a city. <span class=\"jp\">道路</span> is asphalt and engineering — the physical infrastructure. <span class=\"jp-example\">道路が混んでいる</span> <span class=\"gloss\">(the road is congested)</span> sounds natural. <span class=\"jp\">道が混んでいる</span> works too but feels more casual. <span class=\"jp-example\">高速道路</span> <span class=\"gloss\">(こうそくどうろ, expressway)</span> is one of the most common compounds.</p>"
   },
   {
     "id": 667,
@@ -195,7 +197,7 @@
     "tags": [
       "noun"
     ],
-    "lesson": "<p><span class=\"jp\">警</span> (warn, guard) + <span class=\"jp\">察</span> (observe, inspect). Those who guard by watching. The etymology captures the dual nature of policing: deterrence (warning) and surveillance (observing).</p><p>Japanese police have a distinctive feature: <span class=\"jp\">交番</span> <span class=\"gloss\">(こうばん)</span>, the ubiquitous neighborhood police boxes. These tiny stations are scattered throughout every city, staffed by officers who know the local area intimately. They give directions, hold lost items, and serve as community anchor points. The casual word for a police officer you'd see at one is <span class=\"jp\">お巡りさん</span> <span class=\"gloss\">(おまわりさん)</span> — literally \"the person who goes around\" on patrol.</p><p>Useful phrases: <span class=\"jp-example\">警察を呼ぶ</span> <span class=\"gloss\">(call the police)</span>. <span class=\"jp-example\">警察署</span> <span class=\"gloss\">(けいさつしょ, police station)</span>. The number to call is 110 (<span class=\"jp\">ひゃくとうばん</span>), the Japanese equivalent of 911.</p>"
+    "lesson": "<p><span class=\"jp\">警</span> means to warn or admonish. <span class=\"jp\">察</span> means to inspect or observe. Together: the people who warn and watch. The compound captures both halves of policing — deterrence and surveillance.</p><p><span class=\"jp-example\">警察を呼ぶ</span> <span class=\"gloss\">(call the police)</span> — the phrase you hope you'll never need but should absolutely know. <span class=\"jp-example\">警察官</span> <span class=\"gloss\">(けいさつかん)</span> is the formal word for a police officer. In casual speech, people say <span class=\"jp\">お巡りさん</span> <span class=\"gloss\">(おまわりさん)</span> — a friendly, almost affectionate term — or just <span class=\"jp\">警察</span> to refer to the institution and its people interchangeably.</p><p>Japanese police have a distinctive institution: <span class=\"jp-example\">交番</span> <span class=\"gloss\">(こうばん)</span>, the neighborhood police box. These small stations dot every few blocks in urban Japan, staffed by officers who handle everything from lost umbrellas to directions. The word <span class=\"jp\">交番</span> was even borrowed into English by international policing organizations as a model for community-based law enforcement.</p>"
   },
   {
     "id": 670,
@@ -206,5 +208,326 @@
       "noun"
     ],
     "lesson": "<p><span class=\"jp\">空</span> (empty, sky) + <span class=\"jp\">気</span> (spirit, energy, air). Empty energy — the invisible stuff that fills the space around you. The literal meaning is straightforward: the air we breathe. <span class=\"jp-example\">空気がきれい</span> <span class=\"gloss\">(the air is clean)</span>. <span class=\"jp-example\">空気を入れる</span> <span class=\"gloss\">(let air in / air out a room)</span>.</p><p>But the word you really need to know is the figurative one: <span class=\"jp highlight\">空気を読む</span> <span class=\"gloss\">(to read the air)</span>. This is one of the most important social skills in Japanese culture. It means sensing the unspoken mood of a room — knowing what people are thinking without them saying it, adjusting your behavior accordingly. Someone who can't <span class=\"jp\">空気を読む</span> is called <span class=\"jp-example\">KY</span> (from <span class=\"jp\">空気読めない</span>, can't read the air) — one of the more damning social labels in Japan.</p><p><span class=\"jp\">空気</span> in this figurative sense is what English might call \"the vibe\" or \"the room\" — but in Japanese it's more codified, more expected. Not reading the air isn't just a social misstep; it's a failure of empathy. The word carries the full weight of Japan's indirect communication culture.</p>"
+  },
+  {
+    "id": 671,
+    "kanji": "スポーツ",
+    "kana": "すぽーつ",
+    "meaning": "sport",
+    "tags": [
+      "noun",
+      "loanword"
+    ],
+    "lesson": "<p>From English \"sports,\" borrowed with the plural-ish form intact but used as a singular uncountable concept. <span class=\"jp-example\">スポーツをする</span> <span class=\"gloss\">(to do sports / play sports)</span> — note: <span class=\"jp\">する</span>, not <span class=\"jp\">やる</span>, is the standard pairing here, though <span class=\"jp\">やる</span> works too in casual speech.</p><p>Japanese uses <span class=\"jp\">スポーツ</span> where English might say \"athletics\" or \"exercise\" more broadly. <span class=\"jp-example\">スポーツの秋</span> <span class=\"gloss\">(autumn of sports)</span> is a set phrase — Japan's fall season is associated with outdoor athletic activities, partly because Sports Day (<span class=\"jp\">スポーツの日</span>, a national holiday) falls in October. The word has a healthy, wholesome connotation that the English \"sports\" doesn't always carry.</p><p>One common compound: <span class=\"jp-example\">スポーツ選手</span> <span class=\"gloss\">(athlete, literally \"sports player\")</span>. And <span class=\"jp-example\">スポーツカー</span> <span class=\"gloss\">(sports car)</span> — loanwords cheerfully compound with other loanwords in katakana.</p>"
+  },
+  {
+    "id": 672,
+    "kanji": "チャンス",
+    "kana": "ちゃんす",
+    "meaning": "chance, opportunity",
+    "tags": [
+      "noun",
+      "loanword"
+    ],
+    "lesson": "<p>Borrowed from English \"chance\" but the meaning narrowed on arrival. In English, \"chance\" can mean probability, luck, risk, or opportunity. In Japanese, <span class=\"jp\">チャンス</span> almost always means <em>opportunity</em> — a favorable opening you should seize. <span class=\"jp-example\">チャンスを逃す</span> <span class=\"gloss\">(miss a chance)</span>. <span class=\"jp-example\">今がチャンスだ</span> <span class=\"gloss\">(now's the opportunity)</span>.</p><p>For \"chance\" in the sense of probability or randomness, Japanese uses <span class=\"jp\">可能性</span> <span class=\"gloss\">(かのうせい)</span> or <span class=\"jp\">確率</span> <span class=\"gloss\">(かくりつ)</span>. For luck, <span class=\"jp\">運</span> <span class=\"gloss\">(うん)</span>. <span class=\"jp\">チャンス</span> is always positive — it's the window that opens, the moment to act. You wouldn't say <span class=\"jp\">チャンスがある</span> to mean \"there's a risk.\" It's pure upside.</p><p><span class=\"jp-example\">ピンチはチャンス</span> — a crisis is an opportunity. It's practically a slogan in Japanese motivational culture, and you'll hear it in sports commentary, business meetings, and pep talks.</p>"
+  },
+  {
+    "id": 673,
+    "kanji": "クリーニング",
+    "kana": "くりーにんぐ",
+    "meaning": "dry cleaning",
+    "tags": [
+      "noun",
+      "loanword"
+    ],
+    "lesson": "<p>From English \"cleaning,\" but it doesn't mean general cleaning in Japanese. <span class=\"jp\">クリーニング</span> specifically means dry cleaning — the professional service. <span class=\"jp-example\">クリーニングに出す</span> <span class=\"gloss\">(send to the dry cleaner's)</span> is the standard phrase. The verb is <span class=\"jp\">出す</span> (to put out, to send) because you're handing your clothes over to someone else.</p><p>For regular cleaning — mopping the floor, tidying the kitchen — Japanese uses <span class=\"jp\">掃除</span> <span class=\"gloss\">(そうじ)</span> or <span class=\"jp\">片付ける</span> <span class=\"gloss\">(かたづける)</span>. For laundry you do yourself, <span class=\"jp\">洗濯</span> <span class=\"gloss\">(せんたく)</span>. <span class=\"jp\">クリーニング</span> occupies a very specific slot: professional garment care.</p>"
+  },
+  {
+    "id": 674,
+    "kanji": "サービス",
+    "kana": "さーびす",
+    "meaning": "service",
+    "tags": [
+      "noun",
+      "loanword"
+    ],
+    "lesson": "<p>This loanword took a detour on its way into Japanese. Beyond the English meaning of \"service\" (customer service, a service you provide), <span class=\"jp\">サービス</span> developed an extra meaning: something given for free, a freebie, an extra thrown in as a bonus. <span class=\"jp-example\">これはサービスです</span> at a restaurant means \"this is on the house.\" <span class=\"jp-example\">サービスで付けておきます</span> <span class=\"gloss\">(I'll throw it in for free)</span>.</p><p>The logic of the drift makes sense: good service means giving the customer something extra. Over time, the \"extra\" part became the whole meaning. In a shop, <span class=\"jp-example\">サービス品</span> means a discounted or bonus item. <span class=\"jp-example\">サービスする</span> (as a する-verb) can mean to give a discount or add something gratis.</p><p>The original \"service\" meaning exists too — <span class=\"jp-example\">サービスが良い</span> <span class=\"gloss\">(the service is good)</span> works exactly like English. You just have to be aware that the same word might mean \"freebie\" in a different context.</p>"
+  },
+  {
+    "id": 675,
+    "kanji": "グループ",
+    "kana": "ぐるーぷ",
+    "meaning": "group",
+    "tags": [
+      "noun",
+      "loanword"
+    ],
+    "lesson": "<p>Straight from English \"group\" with no significant meaning shift. <span class=\"jp-example\">グループに分かれる</span> <span class=\"gloss\">(split into groups)</span>. <span class=\"jp-example\">グループ活動</span> <span class=\"gloss\">(group activity)</span>. Clean and predictable.</p><p>The interesting thing about <span class=\"jp\">グループ</span> is what it replaces — or doesn't replace. Japanese has native words for collections of people: <span class=\"jp\">仲間</span> <span class=\"gloss\">(なかま, companions/crew)</span> implies emotional closeness. <span class=\"jp\">集団</span> <span class=\"gloss\">(しゅうだん)</span> is a formal \"group\" with connotations of organized mass behavior. <span class=\"jp\">団体</span> <span class=\"gloss\">(だんたい)</span> is an organization or association. <span class=\"jp\">グループ</span> is neutral — no warmth, no formality, no organizational implication. Just a set of people or things lumped together. That neutrality is why it's used so broadly: school groups, work groups, music groups, discussion groups.</p>"
+  },
+  {
+    "id": 676,
+    "kanji": "自宅",
+    "kana": "じたく",
+    "meaning": "my (one's) house / home",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\">自</span> (self) + <span class=\"jp\">宅</span> (residence) = one's own home. This is the word news anchors use: <span class=\"jp-example\">容疑者は自宅で逮捕された</span> <span class=\"gloss\">(the suspect was arrested at his home)</span>. It's formal, objective, and neutral — it refers to someone's residence without the warmth of <span class=\"jp\">うち</span> or the physical structure connotation of <span class=\"jp\">家</span> <span class=\"gloss\">(いえ)</span>.</p><p><span class=\"jp-example\">自宅で仕事をする</span> <span class=\"gloss\">(work from home)</span> became ubiquitous vocabulary in recent years. The compound <span class=\"jp-example\">在宅</span> <span class=\"gloss\">(ざいたく, being at home)</span> uses the same <span class=\"jp\">宅</span> and shows up in <span class=\"jp-example\">在宅勤務</span> <span class=\"gloss\">(ざいたくきんむ, remote work)</span>.</p><p>The kanji <span class=\"jp\">宅</span> is the roof radical <span class=\"jp\">宀</span> over <span class=\"jp\">乇</span>. It's the formal, somewhat bureaucratic word for a dwelling — used in addresses (<span class=\"jp\">お宅</span>, your home — polite), delivery services, and official documents. <span class=\"jp\">自宅</span> is what you write on forms. <span class=\"jp\">うち</span> is what you say to friends.</p>"
+  },
+  {
+    "id": 677,
+    "kanji": "家庭",
+    "kana": "かてい",
+    "meaning": "family, home, household (formal)",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\">家</span> (house) + <span class=\"jp\">庭</span> (garden) = house and garden, the complete domestic picture. But <span class=\"jp\">家庭</span> doesn't mean a building with a yard. It means the <em>family unit</em> and the domestic sphere they inhabit — closer to \"household\" or \"home life\" than to \"house.\"</p><p><span class=\"jp-example\">家庭の事情</span> <span class=\"gloss\">(family circumstances)</span> is the polite, vague way Japanese explains personal problems — financial trouble, divorce, illness — without specifying what's wrong. It's a socially accepted black box. <span class=\"jp-example\">家庭科</span> <span class=\"gloss\">(かていか, home economics)</span> is the school subject where students learn cooking and sewing. <span class=\"jp-example\">家庭教師</span> <span class=\"gloss\">(かていきょうし, private tutor — literally \"home teacher\")</span>.</p><p>Compared to <span class=\"jp\">家族</span> <span class=\"gloss\">(かぞく)</span>, which means the people in the family, <span class=\"jp\">家庭</span> includes the people <em>and</em> the domestic environment. A dysfunctional <span class=\"jp\">家庭</span> doesn't just mean bad relatives — it means the whole home situation is troubled.</p>"
+  },
+  {
+    "id": 678,
+    "kanji": "期間",
+    "kana": "きかん",
+    "meaning": "(time) period, term, duration",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\">期</span> (a set time, deadline) + <span class=\"jp\">間</span> (interval, space between) = a defined stretch of time with a beginning and end. Not vague \"time\" — <span class=\"jp\">期間</span> always implies boundaries. A contract has a <span class=\"jp\">期間</span>. A sale runs for a <span class=\"jp\">期間</span>. A visa has a <span class=\"jp\">期間</span>.</p><p><span class=\"jp-example\">期間限定</span> <span class=\"gloss\">(きかんげんてい, limited-time)</span> — you'll see this everywhere in Japan. Limited-time flavors at convenience stores, seasonal menus at restaurants, special edition products. The phrase creates urgency: this exists for a <span class=\"jp\">期間</span>, then it's gone. Japanese consumer culture runs on this concept.</p><p><span class=\"jp-example\">試用期間</span> <span class=\"gloss\">(しようきかん, trial period)</span>. <span class=\"jp-example\">保証期間</span> <span class=\"gloss\">(ほしょうきかん, warranty period)</span>. <span class=\"jp-example\">長期間</span> <span class=\"gloss\">(ちょうきかん, long period)</span>. Every <span class=\"jp\">期間</span> compound reinforces the same idea: time with walls around it.</p>"
+  },
+  {
+    "id": 679,
+    "kanji": "年度",
+    "kana": "ねんど",
+    "meaning": "fiscal year, academic year",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p>Japan's year doesn't start when you think it does. The <span class=\"jp\">年度</span> — the official year for business, government, and school — runs from April 1 to March 31. Cherry blossoms mark the beginning, not the end. New employees start in April. School starts in April. Government budgets reset in April. If someone says <span class=\"jp-example\">今年度</span> <span class=\"gloss\">(こんねんど, this fiscal year)</span> in February, they mean the year that started last April.</p><p><span class=\"jp\">年</span> (year) + <span class=\"jp\">度</span> (degree, time, measure) = a measured year, a year defined by institutional purpose rather than the calendar. <span class=\"jp-example\">2024年度</span> means the fiscal/academic year starting April 2024. <span class=\"jp-example\">年度末</span> <span class=\"gloss\">(ねんどまつ, end of the fiscal year — March)</span> is crunch time in offices across Japan: budgets get spent, reports get filed, people scramble.</p><p>This word matters because so much of Japanese scheduling revolves around <span class=\"jp\">年度</span> rather than the calendar year. Knowing that April, not January, is the real starting line explains a lot about how Japan organizes itself.</p>"
+  },
+  {
+    "id": 680,
+    "kanji": "経験",
+    "kana": "けいけん",
+    "meaning": "experience, knowledge or skill gained",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p><span class=\"jp\">経</span> means to pass through. <span class=\"jp\">験</span> means to test or verify. Together: what you gain from passing through something — experience. Not abstract knowledge but the kind of understanding that only comes from having been there and done it.</p><p><span class=\"jp\">経験する</span> is the する-verb form: <span class=\"jp-example\">海外生活を経験する</span> <span class=\"gloss\">(experience living abroad)</span>. But <span class=\"jp\">経験</span> as a noun is even more common: <span class=\"jp-example\">経験がある</span> <span class=\"gloss\">(have experience)</span>, <span class=\"jp-example\">いい経験になった</span> <span class=\"gloss\">(it was a good experience)</span>. That second phrase is worth memorizing — Japanese speakers reach for it constantly, especially when something was difficult but valuable.</p><p><span class=\"jp\">経験</span> shows up on every Japanese resume. <span class=\"jp-example\">経験者優遇</span> <span class=\"gloss\">(けいけんしゃゆうぐう, experienced candidates preferred)</span> is standard in job postings. <span class=\"jp-example\">未経験</span> <span class=\"gloss\">(みけいけん, no experience)</span> marks the other side. In the Japanese workplace, what you've <em>done</em> matters at least as much as what you've studied.</p>"
+  },
+  {
+    "id": 681,
+    "kanji": "安全",
+    "kana": "あんぜん",
+    "meaning": "safety, security, safe",
+    "tags": [
+      "な-adjective",
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\">安</span> (peaceful, cheap, ease) + <span class=\"jp\">全</span> (complete, whole) = completely at peace. No danger, no risk, everything intact. The word covers both the state (safety) and the quality (safe): <span class=\"jp-example\">安全な場所</span> <span class=\"gloss\">(a safe place)</span>, <span class=\"jp-example\">安全を守る</span> <span class=\"gloss\">(protect safety)</span>.</p><p>Japan is famously obsessed with <span class=\"jp\">安全</span>. Construction sites have <span class=\"jp-example\">安全第一</span> <span class=\"gloss\">(あんぜんだいいち, safety first)</span> banners everywhere. Train announcements repeat safety reminders. Food packaging lists allergens in exhaustive detail. The culture treats safety not as a baseline but as an active, ongoing project.</p><p>Pair it with its opposite: <span class=\"jp\">危険</span> <span class=\"gloss\">(きけん, danger)</span> — the next word in this list. <span class=\"jp\">安全</span> and <span class=\"jp\">危険</span> are two sides of the same coin and frequently appear together: <span class=\"jp-example\">安全か危険か</span> <span class=\"gloss\">(safe or dangerous?)</span>.</p><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">あんぜん</span><span class=\"ending\"></span></td></tr><tr><td>Negative</td><td><span class=\"stem\">あんぜん</span><span class=\"ending\">じゃない</span></td></tr><tr><td>Past</td><td><span class=\"stem\">あんぜん</span><span class=\"ending\">だった</span></td></tr><tr><td>Past neg</td><td><span class=\"stem\">あんぜん</span><span class=\"ending\">じゃなかった</span></td></tr><tr><td>Adverb</td><td><span class=\"stem\">あんぜん</span><span class=\"ending\">に</span></td></tr><tr><td>て-form</td><td><span class=\"stem\">あんぜん</span><span class=\"ending\">で</span></td></tr></table>"
+  },
+  {
+    "id": 682,
+    "kanji": "危険",
+    "kana": "きけん",
+    "meaning": "danger, dangerous",
+    "tags": [
+      "な-adjective",
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\">危</span> is a person crouching on a cliff edge — the kanji itself looks precarious. <span class=\"jp\">険</span> means steep or perilous, with the hill radical <span class=\"jp\">阝</span> on the left. Together: clinging to a precipice. The visual is baked into the characters.</p><p><span class=\"jp\">危険</span> works as both a noun and a な-adjective. <span class=\"jp-example\">危険な目に遭う</span> <span class=\"gloss\">(encounter a dangerous situation)</span>. <span class=\"jp-example\">危険を冒す</span> <span class=\"gloss\">(take a risk)</span>. <span class=\"jp-example\">命に危険がある</span> <span class=\"gloss\">(there is danger to life)</span>. Signs screaming <span class=\"jp-example\">危険！</span> appear near construction sites, electrical equipment, cliffs — anywhere injury is possible.</p><p>There's a useful shortened form: <span class=\"jp\">危ない</span> <span class=\"gloss\">(あぶない)</span>, the い-adjective version of \"dangerous.\" <span class=\"jp\">危険</span> is the formal, official word — the one on warning labels. <span class=\"jp\">危ない</span> is what you shout when someone is about to step into traffic. Same concept, different registers.</p><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">きけん</span><span class=\"ending\"></span></td></tr><tr><td>Negative</td><td><span class=\"stem\">きけん</span><span class=\"ending\">じゃない</span></td></tr><tr><td>Past</td><td><span class=\"stem\">きけん</span><span class=\"ending\">だった</span></td></tr><tr><td>Past neg</td><td><span class=\"stem\">きけん</span><span class=\"ending\">じゃなかった</span></td></tr><tr><td>Adverb</td><td><span class=\"stem\">きけん</span><span class=\"ending\">に</span></td></tr><tr><td>て-form</td><td><span class=\"stem\">きけん</span><span class=\"ending\">で</span></td></tr></table>"
+  },
+  {
+    "id": 683,
+    "kanji": "注意",
+    "kana": "ちゅうい",
+    "meaning": "attention, warning, caution, care",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p><span class=\"jp\">注</span> (to pour) + <span class=\"jp\">意</span> (mind, intention) = to pour your mind into something. That's attention at its most visceral — not passive awareness but actively directing your mental energy somewhere.</p><p>The word does quadruple duty. As a warning: <span class=\"jp-example\">注意！足元に気をつけて</span> <span class=\"gloss\">(caution! watch your step)</span>. As attention: <span class=\"jp-example\">注意を払う</span> <span class=\"gloss\">(pay attention)</span>. As a scolding: <span class=\"jp-example\">先生に注意された</span> <span class=\"gloss\">(the teacher warned/scolded me)</span>. As care: <span class=\"jp-example\">注意深い</span> <span class=\"gloss\">(careful, cautious)</span>.</p><p>That third use — being scolded — catches learners off guard. <span class=\"jp-example\">注意する</span> when directed at a person doesn't mean \"to pay attention to them.\" It means \"to caution them, to call them out, to give them a talking-to.\" <span class=\"jp-example\">子供を注意する</span> = scold the child. <span class=\"jp-example\">子供に注意する</span> = pay attention to the child. The particle makes the difference: <span class=\"jp\">を</span> makes them the target of correction, <span class=\"jp\">に</span> makes them the object of your focus.</p>"
+  },
+  {
+    "id": 684,
+    "kanji": "成功",
+    "kana": "せいこう",
+    "meaning": "success, achievement",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p>In Japanese, you don't just \"achieve\" success — you <em>harvest</em> it. <span class=\"jp-example\">成功を収める</span> <span class=\"gloss\">(achieve success)</span> uses the verb <span class=\"jp\">収める</span>, which literally means to reap or gather in. Success is a crop. You plant effort, you tend it, you wait, and eventually you harvest <span class=\"jp\">成功</span>. The agricultural metaphor is telling: this culture doesn't believe in overnight success.</p><p><span class=\"jp\">成功</span> pairs naturally with <span class=\"jp\">努力</span> <span class=\"gloss\">(effort)</span> — in Japanese thinking, the two are practically inseparable. <span class=\"jp-example\">努力なしに成功はない</span> <span class=\"gloss\">(there is no success without effort)</span> isn't just a proverb; it's a cultural assumption. <span class=\"jp-example\">実験が成功した</span> <span class=\"gloss\">(the experiment succeeded)</span>. <span class=\"jp-example\">大成功</span> <span class=\"gloss\">(たいせいこう, great success)</span>.</p><p>Its opposite is <span class=\"jp\">失敗</span> <span class=\"gloss\">(しっぱい, failure)</span>, and the two constantly orbit each other: <span class=\"jp-example\">成功も失敗も経験だ</span> <span class=\"gloss\">(both success and failure are experience)</span>. The kanji themselves tell the story: <span class=\"jp\">成</span> (to accomplish) + <span class=\"jp\">功</span> (merit) — achievement through earned merit, not luck.</p>"
+  },
+  {
+    "id": 685,
+    "kanji": "努力",
+    "kana": "どりょく",
+    "meaning": "endeavor, effort, hard work",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p>If there's one word that captures the Japanese work ethic in two syllables, it might be <span class=\"jp\">努力</span>. <span class=\"jp\">努</span> means to exert oneself (it contains <span class=\"jp\">力</span>, power, at the bottom — power being squeezed out). <span class=\"jp\">力</span> is force. Together: the application of sustained force toward a goal.</p><p>Japanese culture values <span class=\"jp\">努力</span> as a near-universal explanation for outcomes. Talent matters, but effort is what gets respect. <span class=\"jp-example\">努力すれば必ずできる</span> <span class=\"gloss\">(if you put in the effort, you can definitely do it)</span> is the kind of thing teachers, parents, and coaches say constantly. Whether or not it's always true, the belief in <span class=\"jp\">努力</span> as the path to success is foundational.</p><p><span class=\"jp-example\">努力家</span> <span class=\"gloss\">(どりょくか, a hard worker — a person defined by their effort)</span> is always a compliment. <span class=\"jp-example\">もっと努力しなさい</span> <span class=\"gloss\">(try harder)</span> is what you hear when you're falling short. The word carries both encouragement and pressure in equal measure.</p>"
+  },
+  {
+    "id": 686,
+    "kanji": "説明",
+    "kana": "せつめい",
+    "meaning": "explanation, description",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p>Buy any appliance in Japan and it comes with a <span class=\"jp\">説明書</span> <span class=\"gloss\">(せつめいしょ, instruction manual)</span> that could double as a novella. Pages of diagrams, warnings, edge cases. That thoroughness is <span class=\"jp\">説明</span> in its natural habitat — the Japanese instinct to explain completely, leaving no gap for misunderstanding.</p><p><span class=\"jp-example\">説明する</span> is one of the most-used する-verbs in classrooms, meetings, and customer service. <span class=\"jp-example\">もう一度説明してください</span> <span class=\"gloss\">(please explain one more time)</span>. The kanji paint a picture of what good explanation does: <span class=\"jp\">説</span> (to explain) + <span class=\"jp\">明</span> (bright, clear) — words that bring light into a dark room.</p><p>Watch the grammar closely: <span class=\"jp-example\">Xについて（人）に説明する</span> — the person you explain to takes <span class=\"jp\">に</span>, the topic takes <span class=\"jp\">について</span> or <span class=\"jp\">を</span>. <span class=\"jp-example\">学生にルールを説明する</span> <span class=\"gloss\">(explain the rules to the students)</span>. Getting these particles right is the difference between being understood and causing the very confusion you were trying to clear up.</p>"
+  },
+  {
+    "id": 687,
+    "kanji": "地震",
+    "kana": "じしん",
+    "meaning": "earthquake",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\">地</span> (ground, earth) + <span class=\"jp\">震</span> (to shake, tremble). The ground shakes. No metaphor, no abstraction — the word is a statement of physical fact.</p><p>If you live in or visit Japan, this is survival vocabulary. Japan experiences thousands of earthquakes per year, most too small to notice, some devastating. <span class=\"jp-example\">地震が来た</span> <span class=\"gloss\">(an earthquake came)</span> — note the verb: earthquakes <em>come</em> in Japanese, like a visitor arriving. <span class=\"jp-example\">大地震</span> <span class=\"gloss\">(だいじしん or おおじしん, a big earthquake)</span>. <span class=\"jp-example\">震度</span> <span class=\"gloss\">(しんど, seismic intensity)</span> is the Japanese scale you'll hear on every earthquake broadcast — it measures how much the ground shakes at a specific location, from 1 (barely felt) to 7 (catastrophic).</p><p>The kanji <span class=\"jp\">震</span> is <span class=\"jp\">雨</span> (rain) over <span class=\"jp\">辰</span> (dragon). In ancient Chinese mythology, dragons caused storms and earthquakes — heavenly beasts whose movements made the earth tremble. The character preserves that old belief: rain and dragons, the powers that shake the world.</p>"
+  },
+  {
+    "id": 688,
+    "kanji": "手術",
+    "kana": "しゅじゅつ",
+    "meaning": "surgery, surgical operation",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p><span class=\"jp\">手</span> (hand) + <span class=\"jp\">術</span> (technique, art). Surgery as a hand-art — the technique of the hands. <span class=\"jp\">術</span> is the same kanji in <span class=\"jp\">技術</span> <span class=\"gloss\">(ぎじゅつ, technology/skill)</span> and <span class=\"jp\">芸術</span> <span class=\"gloss\">(げいじゅつ, art)</span>. It always implies mastery of a craft.</p><p><span class=\"jp-example\">手術を受ける</span> <span class=\"gloss\">(to undergo surgery — literally \"receive\" it)</span> is the standard patient-side phrase. <span class=\"jp-example\">手術する</span> is what the doctor does. <span class=\"jp-example\">手術室</span> <span class=\"gloss\">(しゅじゅつしつ, operating room)</span>. <span class=\"jp-example\">手術が成功した</span> <span class=\"gloss\">(the surgery was successful)</span>.</p><p>Pronunciation note: <span class=\"reading\">しゅじゅつ</span> is a tongue-twister for many learners. The <span class=\"jp\">じゅ</span> in the middle gets swallowed easily. Practice it slowly: <span class=\"reading\">shu-ju-tsu</span>. In fast speech, native speakers sometimes blur it to something like <span class=\"reading\">しじつ</span>, but you should aim for the full form.</p>"
+  },
+  {
+    "id": 689,
+    "kanji": "火傷",
+    "kana": "やけど",
+    "meaning": "burn (injury)",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p>The kanji tell you everything: <span class=\"jp\">火</span> (fire) + <span class=\"jp\">傷</span> (wound, injury). A fire-wound. A burn. But the reading <span class=\"jp\">やけど</span> comes from the native Japanese verb <span class=\"jp\">焼ける</span> <span class=\"gloss\">(やける, to burn/be burned)</span> — <span class=\"jp\">やけど</span> is the noun form of what happens when you get burned.</p><p><span class=\"jp-example\">火傷をする</span> <span class=\"gloss\">(to get burned)</span> — note that you \"do\" a burn to yourself, using <span class=\"jp\">する</span>. <span class=\"jp-example\">熱いお茶で火傷した</span> <span class=\"gloss\">(I burned myself with hot tea)</span>. It covers everything from a minor kitchen scalding to a serious injury.</p><p>There's an idiom worth knowing: <span class=\"jp-example\">大火傷をする</span> in a figurative sense means to suffer a major setback — to \"get burned\" in business, a relationship, or a risky venture. Same metaphor as English, same visceral punch.</p>"
+  },
+  {
+    "id": 690,
+    "kanji": "課題",
+    "kana": "かだい",
+    "meaning": "task, assignment",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\">課</span> (lesson, section, to assign) + <span class=\"jp\">題</span> (topic, title, problem). An assigned topic — something handed to you that needs solving or completing. In school: homework, a class project, a research assignment. In the workplace: a pending task, an unsolved problem, an area for improvement.</p><p>The workplace sense is the one that gives <span class=\"jp\">課題</span> its real weight. <span class=\"jp-example\">今後の課題</span> <span class=\"gloss\">(challenges going forward)</span> is a phrase you'll hear at the end of every Japanese business presentation. It means \"things we still need to figure out\" — a formal way of acknowledging that the work isn't done. <span class=\"jp-example\">課題を解決する</span> <span class=\"gloss\">(solve a problem/task)</span>. <span class=\"jp-example\">大きな課題が残っている</span> <span class=\"gloss\">(a major challenge remains)</span>.</p><p>Compare with <span class=\"jp\">宿題</span> <span class=\"gloss\">(しゅくだい, homework)</span>, which is specifically schoolwork assigned to take home. <span class=\"jp\">課題</span> is broader — any assigned challenge, in any context.</p>"
+  },
+  {
+    "id": 691,
+    "kanji": "子",
+    "kana": "こ",
+    "meaning": "(young) child, kid",
+    "tags": [
+      "noun",
+      "suffix"
+    ],
+    "lesson": "<p>You already know <span class=\"jp\">子供</span> <span class=\"gloss\">(こども, child)</span>. <span class=\"jp\">子</span> by itself is shorter, warmer, and more versatile. <span class=\"jp-example\">いい子</span> <span class=\"gloss\">(a good kid)</span>. <span class=\"jp-example\">あの子</span> <span class=\"gloss\">(that kid/that girl)</span>. <span class=\"jp-example\">男の子</span> / <span class=\"jp-example\">女の子</span> <span class=\"gloss\">(boy/girl)</span>. It's affectionate — calling someone <span class=\"jp\">子</span> implies smallness, youth, or endearment.</p><p>But <span class=\"jp\">子</span>'s real power is as a suffix. It attaches to words to create names for living things, concepts, or even people. <span class=\"jp-example\">子猫</span> <span class=\"gloss\">(こねこ, kitten)</span>. <span class=\"jp-example\">子犬</span> <span class=\"gloss\">(こいぬ, puppy)</span>. The <span class=\"jp\">子</span> means \"young one.\" In personal names, it's the most common ending for women's names — <span class=\"jp\">花子</span>, <span class=\"jp\">洋子</span>, <span class=\"jp\">京子</span> — though this trend peaked mid-century and is now less dominant among younger generations.</p><p>The kanji itself is one of the simplest: a picture of a baby with outstretched arms. The horizontal stroke is the arms, the vertical stroke is the body, the bottom hook is the swaddling cloth. It's been a baby for 3,000 years.</p>"
+  },
+  {
+    "id": 692,
+    "kanji": "確認",
+    "kana": "かくにん",
+    "meaning": "confirmation, verification",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p><span class=\"jp\">確</span> (certain, sure) + <span class=\"jp\">認</span> (to recognize, acknowledge). To make something certain by recognizing it — verification. This is the word of Japanese conscientiousness.</p><p>You will hear <span class=\"jp-example\">確認してください</span> <span class=\"gloss\">(please confirm/verify)</span> in every professional setting: offices, airports, hospitals, restaurants. Japanese work culture runs on double-checking. Before the train departs, the conductor does <span class=\"jp\">指差し確認</span> <span class=\"gloss\">(しさしかくにん, point-and-confirm)</span> — physically pointing at each signal and gauge while calling out its status. This system, invented by Japanese railways, has been adopted worldwide because it dramatically reduces human error.</p><p><span class=\"jp-example\">予約の確認</span> <span class=\"gloss\">(reservation confirmation)</span>. <span class=\"jp-example\">もう一度確認する</span> <span class=\"gloss\">(check one more time)</span>. <span class=\"jp-example\">確認が取れた</span> <span class=\"gloss\">(confirmation has been obtained)</span>. The word is everywhere because the habit of verifying is everywhere.</p>"
+  },
+  {
+    "id": 693,
+    "kanji": "実際",
+    "kana": "じっさい",
+    "meaning": "truth, actually, reality, in fact",
+    "tags": [
+      "noun",
+      "adverb"
+    ],
+    "lesson": "<p><span class=\"jp\">実</span> (fruit, truth, reality) + <span class=\"jp\">際</span> (occasion, boundary, actual). Reality at the boundary — what you find when you get close enough to see what's really there, past the assumptions.</p><p><span class=\"jp\">実際</span> is the pivot word that flips expectations. Whatever came before it was theory, rumor, or assumption. Whatever comes after is what's actually true. <span class=\"jp-example\">簡単そうだけど、実際は難しい</span> <span class=\"gloss\">(it looks easy, but in reality it's hard)</span>. <span class=\"jp-example\">実際に会ってみたら、いい人だった</span> <span class=\"gloss\">(when I actually met them, they were nice)</span>.</p><p>It works both as a noun (<span class=\"jp-example\">実際のところ</span>, in actuality) and as an adverb (<span class=\"jp-example\">実際に</span>, actually, in practice). The <span class=\"jp\">に</span> form is more common in conversation. You'll reach for this word whenever you need to contrast what people think with what's real — which, in any language, is surprisingly often.</p>"
+  },
+  {
+    "id": 694,
+    "kanji": "国際",
+    "kana": "こくさい",
+    "meaning": "international",
+    "tags": [
+      "noun",
+      "prefix"
+    ],
+    "lesson": "<p>In the 1980s, Japan was gripped by a buzzword: <span class=\"jp-example\">国際化</span> <span class=\"gloss\">(こくさいか, internationalization)</span>. The country was becoming an economic superpower and needed to engage with the world. Politicians said it. Businesspeople said it. Schools launched English programs in its name. Whether the project succeeded is still debated, but the word <span class=\"jp\">国際</span> embedded itself permanently in the vocabulary.</p><p><span class=\"jp\">国際</span> works like a prefix — it doesn't stand alone the way English \"international\" does. It bolts onto nouns: <span class=\"jp-example\">国際空港</span> <span class=\"gloss\">(international airport)</span>, <span class=\"jp-example\">国際電話</span> <span class=\"gloss\">(international phone call)</span>, <span class=\"jp-example\">国際関係</span> <span class=\"gloss\">(international relations)</span>. To make it a full adjective, add <span class=\"jp\">的</span>: <span class=\"jp-example\">国際的な問題</span> <span class=\"gloss\">(an international issue)</span>.</p><p>The kanji: <span class=\"jp\">国</span> (country) + <span class=\"jp\">際</span> (boundary, between). The same <span class=\"jp\">際</span> from <span class=\"jp\">実際</span> — there it means \"at the edge of reality,\" here it means the space where countries meet. Borders are where the interesting things happen.</p>"
+  },
+  {
+    "id": 695,
+    "kanji": "会議",
+    "kana": "かいぎ",
+    "meaning": "meeting, conference",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p><span class=\"jp\">会</span> (to meet) + <span class=\"jp\">議</span> (to discuss, deliberate). People meeting to discuss things. That's a meeting. The compound is formal and workplace-specific — you wouldn't use <span class=\"jp\">会議</span> for getting together with friends.</p><p><span class=\"jp-example\">会議中</span> <span class=\"gloss\">(かいぎちゅう, in a meeting)</span> is the Japanese equivalent of a closed door. It means \"do not disturb.\" <span class=\"jp-example\">会議に出る</span> <span class=\"gloss\">(attend a meeting)</span>. <span class=\"jp-example\">会議を開く</span> <span class=\"gloss\">(hold a meeting — literally \"open\" one)</span>. <span class=\"jp-example\">会議室</span> <span class=\"gloss\">(かいぎしつ, meeting room/conference room)</span>.</p><p>Japanese meetings have a reputation for being long and consensus-driven. The concept of <span class=\"jp\">根回し</span> <span class=\"gloss\">(ねまわし, behind-the-scenes groundwork)</span> means that by the time the formal <span class=\"jp\">会議</span> happens, the real decisions have often already been made through informal conversations. The meeting itself is where the agreement gets formalized and everyone nods together. Understanding this helps you understand why <span class=\"jp\">会議</span> in Japan can feel ritualistic rather than deliberative.</p>"
+  },
+  {
+    "id": 696,
+    "kanji": "提案",
+    "kana": "ていあん",
+    "meaning": "suggestion, proposal, recommendation",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p>After all the <span class=\"jp\">根回し</span> (behind-the-scenes groundwork) is done, someone still has to formally put the idea on the table. That's <span class=\"jp\">提案</span>. <span class=\"jp-example\">会議で新しいプランを提案した</span> <span class=\"gloss\">(I proposed a new plan at the meeting)</span>. <span class=\"jp-example\">いい提案がある</span> <span class=\"gloss\">(I have a good suggestion)</span>.</p><p>It sits in a middle register: more formal than <span class=\"jp\">アイデア</span> (a casual idea you toss out) but less weighty than <span class=\"jp\">提言</span> <span class=\"gloss\">(ていげん, a formal recommendation from an expert body)</span>. <span class=\"jp\">提案</span> is what you do in a meeting — you present a worked-out suggestion for others to consider.</p><p>The kanji <span class=\"jp\">案</span> has a lovely image buried in it: <span class=\"jp\">木</span> (tree) over <span class=\"jp\">安</span> (peace). Sitting peacefully under a tree — the place where ideas come to you. Newton had his apple tree; Japanese has it baked into the character for \"plan.\" The same <span class=\"jp\">案</span> appears in <span class=\"jp\">案内</span> <span class=\"gloss\">(あんない, guidance)</span> and <span class=\"jp\">答案</span> <span class=\"gloss\">(とうあん, answer sheet)</span>.</p>"
+  },
+  {
+    "id": 697,
+    "kanji": "事務所",
+    "kana": "じむしょ",
+    "meaning": "office, business office",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\">事務</span> (business affairs, clerical work) + <span class=\"jp\">所</span> (place). The place where business gets done. Not a corner office in a skyscraper — <span class=\"jp\">事務所</span> is more modest than that. A law office. A talent agency. A local government office. The word implies a working space where paperwork and administrative tasks happen.</p><p><span class=\"jp-example\">事務所に戻る</span> <span class=\"gloss\">(return to the office)</span>. <span class=\"jp-example\">弁護士事務所</span> <span class=\"gloss\">(べんごしじむしょ, law office)</span>. <span class=\"jp-example\">芸能事務所</span> <span class=\"gloss\">(げいのうじむしょ, talent agency)</span> — in the Japanese entertainment industry, <span class=\"jp\">事務所</span> is the standard word for the agency that manages celebrities.</p><p>Compare: <span class=\"jp\">オフィス</span> (from English \"office\") tends to refer to modern corporate workspaces, especially in tech and international business. <span class=\"jp\">事務所</span> is broader and more traditional — the default Japanese word for any working office.</p>"
+  },
+  {
+    "id": 698,
+    "kanji": "教授",
+    "kana": "きょうじゅ",
+    "meaning": "professor",
+    "tags": [
+      "noun",
+      "する-noun"
+    ],
+    "lesson": "<p><span class=\"jp\">教</span> (to teach) + <span class=\"jp\">授</span> (to give, bestow, confer). Teaching as a bestowal — not just passing along information but conferring knowledge with authority. The word carries a weight that the casual English \"professor\" sometimes doesn't.</p><p>In Japanese academia, <span class=\"jp\">教授</span> is a specific rank — the highest regular faculty position, above <span class=\"jp\">准教授</span> <span class=\"gloss\">(じゅんきょうじゅ, associate professor)</span> and <span class=\"jp\">助教</span> <span class=\"gloss\">(じょきょう, assistant professor)</span>. You don't call every university teacher <span class=\"jp\">教授</span> — that would be like calling every doctor a surgeon. When addressing a professor, the title comes after the name: <span class=\"jp-example\">田中教授</span>. Or simply <span class=\"jp-example\">教授</span> by itself, the way English speakers might say \"Professor.\"</p><p>As a する-verb, <span class=\"jp\">教授する</span> means \"to teach\" in a formal, somewhat archaic sense — to instruct with expertise. You're more likely to see this in writing than to hear it in conversation.</p>"
+  },
+  {
+    "id": 699,
+    "kanji": "世紀",
+    "kana": "せいき",
+    "meaning": "century",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\">世</span> (generation, world, era) + <span class=\"jp\">紀</span> (chronicle, era, record). A recorded era — a century. <span class=\"jp-example\">21世紀</span> <span class=\"gloss\">(にじゅういっせいき, the 21st century)</span>. Simple, clean, works the same way as English.</p><p>But <span class=\"jp\">世紀</span> has a dramatic second life in the phrase <span class=\"jp-example\">世紀の</span> — \"of the century,\" meaning once-in-a-lifetime, era-defining. <span class=\"jp-example\">世紀の大発見</span> <span class=\"gloss\">(discovery of the century)</span>. <span class=\"jp-example\">世紀の大事件</span> <span class=\"gloss\">(incident of the century)</span>. Japanese media loves this construction. Anything sufficiently dramatic gets the <span class=\"jp\">世紀の</span> stamp.</p><p>The kanji <span class=\"jp\">紀</span> contains the thread radical <span class=\"jp\">糸</span> — the idea of spinning out a thread of time, weaving the chronicle. <span class=\"jp\">世</span> originally depicted three sets of ten (三十), meaning a generation — roughly thirty years. Three characters that tell the story of time passing and being recorded.</p>"
+  },
+  {
+    "id": 700,
+    "kanji": "あちこち",
+    "kana": "あちこち",
+    "meaning": "all over, here and there",
+    "tags": [
+      "adverb",
+      "noun"
+    ],
+    "lesson": "<p>A mash-up of <span class=\"jp\">あっち</span> (over there) and <span class=\"jp\">こっち</span> (over here), smashed together with neither direction winning. There and here and there and here — all over the place. <span class=\"jp-example\">あちこち探した</span> <span class=\"gloss\">(I searched all over)</span>. <span class=\"jp-example\">あちこちに花が咲いている</span> <span class=\"gloss\">(flowers are blooming here and there)</span>.</p><p>The word has an aimless, scattered quality. It's not a systematic search or an organized tour — it's bouncing around from place to place without a fixed plan. <span class=\"jp-example\">旅行であちこち回った</span> <span class=\"gloss\">(I went around various places on my trip)</span>. <span class=\"jp-example\">体のあちこちが痛い</span> <span class=\"gloss\">(various parts of my body hurt)</span> — not just one spot, but scattered all over.</p><p>You might also hear <span class=\"jp\">あちらこちら</span>, the polite full form. Same meaning, just longer and more formal.</p>"
   }
 ]
