@@ -1865,6 +1865,55 @@
     ]
   },
   {
+    "id": 191,
+    "kanji": "もらう",
+    "kana": "もらう",
+    "meaning": "to receive, get",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 192,
+    "kanji": "食べる",
+    "kana": "たべる",
+    "meaning": "to eat",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 193,
+    "kanji": "兄",
+    "kana": "あに",
+    "meaning": "(my) older brother",
+    "tags": [
+      "noun",
+      "family"
+    ]
+  },
+  {
+    "id": 194,
+    "kanji": "名前",
+    "kana": "なまえ",
+    "meaning": "name",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 195,
+    "kanji": "夫",
+    "kana": "おっと",
+    "meaning": "husband (humble)",
+    "tags": [
+      "noun",
+      "family"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
