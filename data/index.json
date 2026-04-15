@@ -2056,6 +2056,53 @@
     ]
   },
   {
+    "id": 211,
+    "kanji": "昼",
+    "kana": "ひる",
+    "meaning": "noon, midday, daytime",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 212,
+    "kanji": "お母さん",
+    "kana": "おかあさん",
+    "meaning": "mother, mom",
+    "tags": [
+      "noun",
+      "family",
+      "honorific"
+    ]
+  },
+  {
+    "id": 213,
+    "kanji": "大学生",
+    "kana": "だいがくせい",
+    "meaning": "university student",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 214,
+    "kanji": "終わり",
+    "kana": "おわり",
+    "meaning": "end, finish, conclusion",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 215,
+    "kanji": "背",
+    "kana": "せ",
+    "meaning": "height, stature; back",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",

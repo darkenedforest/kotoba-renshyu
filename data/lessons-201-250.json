@@ -103,6 +103,58 @@
     "lesson": "<p>Japanese weekday names follow the same planetary system as English, through a shared origin in ancient astrology. <span class=\"jp\"><ruby>日<rt>にち</rt></ruby></span> = sun, so <span class=\"jp\"><ruby>日曜日<rt>にちようび</rt></ruby></span> = Sun-day. The full set:</p><p><span class=\"jp-example\"><ruby>月曜日<rt>げつようび</rt></ruby></span> (Mon — moon)<br><span class=\"jp-example\"><ruby>火曜日<rt>かようび</rt></ruby></span> (Tue — fire/Mars)<br><span class=\"jp-example\"><ruby>水曜日<rt>すいようび</rt></ruby></span> (Wed — water/Mercury)<br><span class=\"jp-example\"><ruby>木曜日<rt>もくようび</rt></ruby></span> (Thu — wood/Jupiter)<br><span class=\"jp-example\"><ruby>金曜日<rt>きんようび</rt></ruby></span> (Fri — metal/Venus)<br><span class=\"jp-example\"><ruby>土曜日<rt>どようび</rt></ruby></span> (Sat — earth/Saturn)<br><span class=\"jp-example\"><ruby>日曜日<rt>にちようび</rt></ruby></span> (Sun — sun)</p><p>English uses Norse gods (Tuesday = Tyr's day, Wednesday = Woden's day). Japanese uses the five Chinese elements plus sun and moon. Different mythologies, same planetary assignments underneath.</p><p>The <span class=\"jp\"><ruby>曜<rt>よう</rt></ruby></span> character specifically means \"day of the week\" in this context. <span class=\"jp-example\"><ruby>何曜日<rt>なんようび</rt></ruby></span> <span class=\"gloss\">(what day of the week?)</span>. In casual speech, the final <span class=\"jp\"><ruby>日<rt>び</rt></ruby></span> is often dropped: <span class=\"jp-example\"><ruby>日曜<rt>にちよう</rt></ruby>に<ruby>会<rt>あ</rt></ruby>おう</span> <span class=\"gloss\">(let's meet Sunday)</span>.</p>"
   },
   {
+    "id": 211,
+    "kanji": "昼",
+    "kana": "ひる",
+    "meaning": "noon, midday, daytime",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\"><ruby>昼<rt>ひる</rt></ruby></span> covers the bright middle of the day — from late morning through the afternoon, with noon as the center. <span class=\"jp-example\"><ruby>昼<rt>ひる</rt></ruby>ごはん</span> <span class=\"gloss\">(lunch — noon meal)</span>. <span class=\"jp-example\"><ruby>昼<rt>ひる</rt></ruby>まで<ruby>寝<rt>ね</rt></ruby>た</span> <span class=\"gloss\">(slept until noon)</span>. <span class=\"jp-example\"><ruby>昼<rt>ひる</rt></ruby>と<ruby>夜<rt>よる</rt></ruby></span> <span class=\"gloss\">(day and night)</span>.</p><p>The kanji <span class=\"jp\"><ruby>昼<rt>ちゅう</rt></ruby></span> has <span class=\"jp\"><ruby>尺<rt>しゃく</rt></ruby></span> (a unit of measure) and <span class=\"jp\"><ruby>旦<rt>たん</rt></ruby></span> (dawn — sun above the horizon). The sun at its measurable peak. In compounds: <span class=\"jp-example\"><ruby>昼間<rt>ひるま</rt></ruby></span> <span class=\"gloss\">(daytime — the span of daylight hours)</span>, <span class=\"jp-example\"><ruby>昼食<rt>ちゅうしょく</rt></ruby></span> <span class=\"gloss\">(lunch — formal)</span>, <span class=\"jp-example\"><ruby>昼寝<rt>ひるね</rt></ruby></span> <span class=\"gloss\">(afternoon nap)</span>.</p><p>The day splits into three: <span class=\"jp\"><ruby>朝<rt>あさ</rt></ruby></span> (morning), <span class=\"jp\"><ruby>昼<rt>ひる</rt></ruby></span> (midday), <span class=\"jp\"><ruby>夜<rt>よる</rt></ruby></span> (night). <span class=\"jp\"><ruby>昼<rt>ひる</rt></ruby></span> doesn't have sharp boundaries — it's roughly when the sun is high and you're past the morning feeling.</p>"
+  },
+  {
+    "id": 212,
+    "kanji": "お母さん",
+    "kana": "おかあさん",
+    "meaning": "mother, mom",
+    "tags": [
+      "noun",
+      "family",
+      "honorific"
+    ],
+    "lesson": "<p>The polite side of the family word pair. <span class=\"jp\">お<ruby>母<rt>かあ</rt></ruby>さん</span> is what you call your own mother to her face, and how you refer to someone else's mother in conversation. The humble form — for referring to your own mother when speaking to outsiders — is <span class=\"jp\"><ruby>母<rt>はは</rt></ruby></span>.</p><p><span class=\"jp-example\">お<ruby>母<rt>かあ</rt></ruby>さん、ただいま</span> <span class=\"gloss\">(Mom, I'm home)</span>. <span class=\"jp-example\">お<ruby>母<rt>かあ</rt></ruby>さんは<ruby>元気<rt>げんき</rt></ruby>ですか</span> <span class=\"gloss\">(is your mother well?)</span>. <span class=\"jp-example\"><ruby>母<rt>はは</rt></ruby>は<ruby>大阪<rt>おおさか</rt></ruby>にいます</span> <span class=\"gloss\">(my mother is in Osaka — speaking to someone outside the family)</span>.</p><p>The kanji <span class=\"jp\"><ruby>母<rt>ぼ</rt></ruby></span> in its oracle bone form depicted a kneeling figure with dots representing breasts — a nursing mother. The modern character has simplified, but the two dots inside remain from that original image. Compounds: <span class=\"jp-example\"><ruby>母国<rt>ぼこく</rt></ruby></span> <span class=\"gloss\">(motherland)</span>, <span class=\"jp-example\"><ruby>母語<rt>ぼご</rt></ruby></span> <span class=\"gloss\">(mother tongue)</span>, <span class=\"jp-example\"><ruby>祖母<rt>そぼ</rt></ruby></span> <span class=\"gloss\">(grandmother)</span>.</p><p>Kids sometimes shorten it to <span class=\"jp\">おかん</span> (Kansai dialect, casual) or <span class=\"jp\">ママ</span> (from English, young children). In formal documents, <span class=\"jp\"><ruby>母親<rt>ははおや</rt></ruby></span> is \"mother\" as a role.</p>"
+  },
+  {
+    "id": 213,
+    "kanji": "大学生",
+    "kana": "だいがくせい",
+    "meaning": "university student",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p>Three kanji you already know, stacked in order: <span class=\"jp\"><ruby>大<rt>だい</rt></ruby></span> (big) + <span class=\"jp\"><ruby>学<rt>がく</rt></ruby></span> (study) + <span class=\"jp\"><ruby>生<rt>せい</rt></ruby></span> (life, person). Big-study-person. A university student. The pattern is productive — swap the prefix and you change the school level: <span class=\"jp-example\"><ruby>小学生<rt>しょうがくせい</rt></ruby></span> <span class=\"gloss\">(elementary student)</span>, <span class=\"jp-example\"><ruby>中学生<rt>ちゅうがくせい</rt></ruby></span> <span class=\"gloss\">(middle school student)</span>, <span class=\"jp-example\"><ruby>高校生<rt>こうこうせい</rt></ruby></span> <span class=\"gloss\">(high school student)</span>.</p><p><span class=\"jp-example\"><ruby>大学生<rt>だいがくせい</rt></ruby>の<ruby>時<rt>とき</rt></ruby></span> <span class=\"gloss\">(when I was in college)</span>. <span class=\"jp-example\"><ruby>大学生<rt>だいがくせい</rt></ruby>になる</span> <span class=\"gloss\">(become a college student — the entrance)</span>. University carries weight in Japanese society — which university you attend is a significant social marker, and the entrance exam system shapes years of a student's life leading up to it.</p><p>The word <span class=\"jp\"><ruby>大学<rt>だいがく</rt></ruby></span> alone means \"university.\" <span class=\"jp-example\"><ruby>大学<rt>だいがく</rt></ruby>に<ruby>入<rt>はい</rt></ruby>る</span> <span class=\"gloss\">(enter university)</span>. <span class=\"jp-example\"><ruby>大学院<rt>だいがくいん</rt></ruby></span> <span class=\"gloss\">(graduate school — the院 adds another level)</span>.</p>"
+  },
+  {
+    "id": 214,
+    "kanji": "終わり",
+    "kana": "おわり",
+    "meaning": "end, finish, conclusion",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\"><ruby>終<rt>お</rt></ruby>わり</span> is the noun form of <span class=\"jp\"><ruby>終<rt>お</rt></ruby>わる</span> (to end). Where the verb describes the action of finishing, the noun points to the end itself — the final point, the conclusion. <span class=\"jp-example\"><ruby>映画<rt>えいが</rt></ruby>の<ruby>終<rt>お</rt></ruby>わり</span> <span class=\"gloss\">(the end of the movie)</span>. <span class=\"jp-example\"><ruby>夏<rt>なつ</rt></ruby>の<ruby>終<rt>お</rt></ruby>わり</span> <span class=\"gloss\">(the end of summer)</span>. <span class=\"jp-example\"><ruby>終<rt>お</rt></ruby>わり！</span> <span class=\"gloss\">(it's over! / the end!)</span>.</p><p>The kanji <span class=\"jp\"><ruby>終<rt>しゅう</rt></ruby></span> has the thread radical <span class=\"jp\"><ruby>糸<rt>いと</rt></ruby></span> and <span class=\"jp\"><ruby>冬<rt>ふゆ</rt></ruby></span> (winter). Thread + winter — the end of the spinning season, when the last threads are wound. The year's work concluding as cold arrives.</p><p><span class=\"jp-example\"><ruby>始<rt>はじ</rt></ruby>まりと<ruby>終<rt>お</rt></ruby>わり</span> <span class=\"gloss\">(beginning and end)</span>. <span class=\"jp-example\"><ruby>終<rt>お</rt></ruby>わりのない<ruby>話<rt>はなし</rt></ruby></span> <span class=\"gloss\">(a never-ending story)</span>. In compounds: <span class=\"jp-example\"><ruby>終了<rt>しゅうりょう</rt></ruby></span> <span class=\"gloss\">(completion — formal)</span>, <span class=\"jp-example\"><ruby>最終<rt>さいしゅう</rt></ruby></span> <span class=\"gloss\">(final, last — as in <ruby>最終<rt>さいしゅう</rt></ruby><ruby>電車<rt>でんしゃ</rt></ruby>, the last train)</span>.</p>"
+  },
+  {
+    "id": 215,
+    "kanji": "背",
+    "kana": "せ",
+    "meaning": "height, stature; back",
+    "tags": [
+      "noun"
+    ],
+    "lesson": "<p><span class=\"jp\"><ruby>背<rt>せ</rt></ruby></span> means two things: how tall you are, and the physical back of your body. Context separates them cleanly. <span class=\"jp-example\"><ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>い</span> <span class=\"gloss\">(tall)</span>. <span class=\"jp-example\"><ruby>背<rt>せ</rt></ruby>が<ruby>低<rt>ひく</rt></ruby>い</span> <span class=\"gloss\">(short)</span>. <span class=\"jp-example\"><ruby>背中<rt>せなか</rt></ruby></span> <span class=\"gloss\">(the back of the body — literally \"back-middle\")</span>.</p><p>For height, <span class=\"jp\"><ruby>背<rt>せ</rt></ruby></span> pairs with <span class=\"jp\"><ruby>高<rt>たか</rt></ruby>い</span>/<span class=\"jp\"><ruby>低<rt>ひく</rt></ruby>い</span>, never with <span class=\"jp\"><ruby>大<rt>おお</rt></ruby>きい</span>/<span class=\"jp\"><ruby>小<rt>ちい</rt></ruby>さい</span>. You measure height on a vertical axis (high/low), not an overall size axis (big/small). <span class=\"jp-example\"><ruby>背<rt>せ</rt></ruby>の<ruby>順<rt>じゅん</rt></ruby></span> <span class=\"gloss\">(in order of height — how kids line up at school)</span>.</p><p>The kanji <span class=\"jp\"><ruby>背<rt>はい</rt></ruby></span> puts <span class=\"jp\"><ruby>北<rt>きた</rt></ruby></span> (north — originally two people standing back-to-back) over <span class=\"jp\"><ruby>月<rt>にくづき</rt></ruby></span> (flesh/body radical). Two bodies back-to-back, with the body radical underneath — the back of a person. From the physical back of the body came the idea of standing height, since height is measured along the spine.</p>"
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
