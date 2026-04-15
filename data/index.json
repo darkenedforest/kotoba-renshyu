@@ -1963,6 +1963,53 @@
     ]
   },
   {
+    "id": 201,
+    "kanji": "閉じる",
+    "kana": "とじる",
+    "meaning": "to close (books, eyes, etc.)",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 202,
+    "kanji": "時",
+    "kana": "とき",
+    "meaning": "time, moment; when",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 203,
+    "kanji": "米",
+    "kana": "こめ",
+    "meaning": "rice (uncooked grain)",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 204,
+    "kanji": "切る",
+    "kana": "きる",
+    "meaning": "to cut",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 205,
+    "kanji": "楽しい",
+    "kana": "たのしい",
+    "meaning": "fun, enjoyable, pleasant",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
