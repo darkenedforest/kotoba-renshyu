@@ -1663,6 +1663,57 @@
     ]
   },
   {
+    "id": 171,
+    "kanji": "近く",
+    "kana": "ちかく",
+    "meaning": "near, close to; before long",
+    "tags": [
+      "noun",
+      "adverb",
+      "duplicate #222"
+    ]
+  },
+  {
+    "id": 172,
+    "kanji": "やる",
+    "kana": "やる",
+    "meaning": "to do, perform; to give (to inferiors/animals)",
+    "tags": [
+      "godan verb",
+      "他動詞",
+      "duplicate #413"
+    ]
+  },
+  {
+    "id": 173,
+    "kanji": "かなり",
+    "kana": "かなり",
+    "meaning": "fairly, rather, quite, considerably",
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": 174,
+    "kanji": "国",
+    "kana": "くに",
+    "meaning": "country",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 175,
+    "kanji": "起こる",
+    "kana": "おこる",
+    "meaning": "to occur, happen",
+    "tags": [
+      "godan verb",
+      "自動詞",
+      "起こす pair"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
