@@ -2010,6 +2010,52 @@
     ]
   },
   {
+    "id": 206,
+    "kanji": "服",
+    "kana": "ふく",
+    "meaning": "clothes",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 207,
+    "kanji": "後ろ",
+    "kana": "うしろ",
+    "meaning": "behind, back, rear",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 208,
+    "kanji": "嬉しい",
+    "kana": "うれしい",
+    "meaning": "happy, glad, pleased",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 209,
+    "kanji": "腰",
+    "kana": "こし",
+    "meaning": "waist, lower back, hips",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 210,
+    "kanji": "日曜日",
+    "kana": "にちようび",
+    "meaning": "Sunday",
+    "tags": [
+      "noun",
+      "day of week"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",

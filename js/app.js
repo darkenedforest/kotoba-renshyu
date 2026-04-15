@@ -1,4 +1,4 @@
-const APP_VERSION = '20260415g';
+const APP_VERSION = '20260415h';
 
 const App = {
   currentBatchIndex: null,
