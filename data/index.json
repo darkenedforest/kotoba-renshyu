@@ -2103,6 +2103,54 @@
     ]
   },
   {
+    "id": 216,
+    "kanji": "手伝う",
+    "kana": "てつだう",
+    "meaning": "to help, assist",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 217,
+    "kanji": "鼻",
+    "kana": "はな",
+    "meaning": "nose",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 219,
+    "kanji": "載せる",
+    "kana": "のせる",
+    "meaning": "to put on, place, load",
+    "tags": [
+      "ichidan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 220,
+    "kanji": "悲しい",
+    "kana": "かなしい",
+    "meaning": "sad",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
+    "id": 221,
+    "kanji": "しゃべる",
+    "kana": "しゃべる",
+    "meaning": "to chat, talk",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
