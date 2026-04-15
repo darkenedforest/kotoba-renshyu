@@ -1714,10 +1714,59 @@
     ]
   },
   {
+    "id": 176,
+    "kanji": "秋",
+    "kana": "あき",
+    "meaning": "autumn, fall",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 177,
+    "kanji": "送る",
+    "kana": "おくる",
+    "meaning": "to send; to escort; to spend (life/days)",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 178,
+    "kanji": "死ぬ",
+    "kana": "しぬ",
+    "meaning": "to die",
+    "tags": [
+      "godan verb",
+      "自動詞",
+      "only ぬ-ending verb"
+    ]
+  },
+  {
+    "id": 179,
+    "kanji": "気持ち",
+    "kana": "きもち",
+    "meaning": "feeling, sensation",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 180,
+    "kanji": "乗る",
+    "kana": "のる",
+    "meaning": "to ride, get on, board",
+    "tags": [
+      "godan verb",
+      "自動詞"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
-    "meaning": "near, close to; in the near future, before long",
+    "meaning": "near, close to; before long",
     "tags": [
       "noun",
       "adverb",
