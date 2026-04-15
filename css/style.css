@@ -2,6 +2,10 @@
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
+html {
+  font-size: calc(16px * var(--font-scale, 1));
+}
+
 :root {
   --font-scale: 1;
   --sky: #0ea5e9;
@@ -23,7 +27,6 @@
 
 body {
   font-family: 'Nunito','Noto Sans JP',sans-serif;
-  font-size: calc(1rem * var(--font-scale));
   background: linear-gradient(180deg, #e0f2fe 0%, #f0fdf4 40%, #fefce8 100%);
   background-attachment: fixed;
   color: var(--g800);
