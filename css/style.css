@@ -3,6 +3,7 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
 :root {
+  --font-scale: 1;
   --sky: #0ea5e9;
   --sky-dark: #0284c7;
   --sky-pale: #e0f2fe;
@@ -22,6 +23,7 @@
 
 body {
   font-family: 'Nunito','Noto Sans JP',sans-serif;
+  font-size: calc(1rem * var(--font-scale));
   background: linear-gradient(180deg, #e0f2fe 0%, #f0fdf4 40%, #fefce8 100%);
   background-attachment: fixed;
   color: var(--g800);
@@ -586,7 +588,9 @@ body {
 }
 
 .conj-chart .stem { color: var(--g800); }
-.conj-chart .ending { color: var(--sky); }
+.conj-chart .changed { color: var(--red); }
+.conj-chart .suffix { color: var(--sky); }
+.conj-chart .ending { color: var(--sky); } /* legacy fallback */
 
 .conj-chart .particle {
   font-family: 'Noto Sans JP', sans-serif;
@@ -660,6 +664,17 @@ body {
 }
 
 .setting-num:focus { outline: none; border-color: var(--sky); }
+
+.font-size-control {
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.font-size-control input[type="range"] {
+  width: 5.5rem; accent-color: var(--sky);
+}
+.font-size-label {
+  font-size: 0.78rem; font-weight: 800; color: var(--g500);
+  min-width: 2.5rem; text-align: right;
+}
 
 .toggle {
   position: relative;

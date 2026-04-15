@@ -68,6 +68,20 @@ const App = {
       Particles.setEnabled(e.target.checked);
     });
 
+    // Font size slider
+    const fontSlider = document.getElementById('font-size-slider');
+    const fontLabel = document.getElementById('font-size-label');
+    const savedScale = localStorage.getItem('kotoba-font-scale') || '100';
+    fontSlider.value = savedScale;
+    fontLabel.textContent = savedScale + '%';
+    document.documentElement.style.setProperty('--font-scale', savedScale / 100);
+    fontSlider.addEventListener('input', (e) => {
+      const val = e.target.value;
+      fontLabel.textContent = val + '%';
+      document.documentElement.style.setProperty('--font-scale', val / 100);
+      localStorage.setItem('kotoba-font-scale', val);
+    });
+
     // Auth buttons — settings, topbar, and landing page
     document.getElementById('google-sign-in-btn').addEventListener('click', () => {
       Firebase.signInWithGoogle();
