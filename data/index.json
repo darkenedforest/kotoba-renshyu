@@ -1815,6 +1815,56 @@
     ]
   },
   {
+    "id": 186,
+    "kanji": "お医者さん",
+    "kana": "おいしゃさん",
+    "meaning": "doctor (polite)",
+    "tags": [
+      "noun",
+      "honorific"
+    ]
+  },
+  {
+    "id": 187,
+    "kanji": "円",
+    "kana": "えん",
+    "meaning": "yen; circle",
+    "tags": [
+      "noun",
+      "counter",
+      "duplicate #794"
+    ]
+  },
+  {
+    "id": 188,
+    "kanji": "ここ",
+    "kana": "ここ",
+    "meaning": "here",
+    "tags": [
+      "pronoun",
+      "ko-so-a-do"
+    ]
+  },
+  {
+    "id": 189,
+    "kanji": "待つ",
+    "kana": "まつ",
+    "meaning": "to wait, wait for",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 190,
+    "kanji": "低い",
+    "kana": "ひくい",
+    "meaning": "low, short (height)",
+    "tags": [
+      "い-adjective"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
