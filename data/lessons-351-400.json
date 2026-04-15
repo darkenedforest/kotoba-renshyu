@@ -1,6 +1,17 @@
 [
   {
     "id": 351,
+    "kanji": "弟",
+    "kana": "おとうと",
+    "meaning": "younger brother",
+    "tags": [
+      "noun",
+      "humble/in-group"
+    ],
+    "lesson": "<p>The kanji <span class=\"jp\">弟</span> originally depicted a spool wound with thread, with the thread wrapping downward — the idea of sequence, of what comes after. A younger brother is the one who comes after in the birth order. The same character appears in <span class=\"jp-example\">兄弟</span> <span class=\"gloss\">(きょうだい, siblings)</span> where <span class=\"jp\">兄</span> (older brother) pairs with <span class=\"jp\">弟</span> (younger brother) to mean siblings in general.</p><p><span class=\"jp\">おとうと</span> follows the same in-group/out-group rules as all family terms. For someone else's younger brother: <span class=\"jp-example\">弟さん</span> <span class=\"gloss\">(おとうとさん)</span>. For your own: just <span class=\"jp\">弟</span>.</p><p>The on'yomi <span class=\"reading\">てい／だい</span> shows up in <span class=\"jp-example\">弟子</span> <span class=\"gloss\">(でし, disciple/apprentice — literally \"younger-brother child\")</span>. The master-disciple relationship in Japanese tradition mirrors the older-younger sibling dynamic: the disciple owes respect, obedience, and loyalty to the master, just as a younger sibling does to an elder.</p>"
+  },
+  {
+    "id": 352,
     "kanji": "手",
     "kana": "て",
     "meaning": "hand",
@@ -11,7 +22,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">手</span> in its earliest form was a drawing of five fingers on a palm — a hand, spread open. The modern character simplified but you can still see it if you squint: the horizontal strokes are the fingers, the vertical stroke is the wrist.</p><p><span class=\"jp\">手</span> is a compound machine. It pairs with nearly everything to create new words: <span class=\"jp-example\">手紙</span> <span class=\"gloss\">(てがみ, letter — \"hand-paper\")</span>, <span class=\"jp-example\">手伝う</span> <span class=\"gloss\">(てつだう, to help — \"hand-transmit\")</span>, <span class=\"jp-example\">上手</span> <span class=\"gloss\">(じょうず, skillful — \"upper hand\")</span>, <span class=\"jp-example\">下手</span> <span class=\"gloss\">(へた, unskillful — \"lower hand\")</span>, <span class=\"jp-example\">相手</span> <span class=\"gloss\">(あいて, the other party — \"mutual hand\")</span>, <span class=\"jp-example\">選手</span> <span class=\"gloss\">(せんしゅ, athlete — \"selected hand\")</span>. In all of these, <span class=\"jp\">手</span> means less \"physical hand\" and more \"the person who does something\" or \"the way something is done.\"</p><p>As a standalone body part: <span class=\"jp-example\">手を洗う</span> <span class=\"gloss\">(wash your hands)</span>, <span class=\"jp-example\">手をつなぐ</span> <span class=\"gloss\">(hold hands)</span>. But <span class=\"jp\">手</span> also means \"move\" in games (<span class=\"jp-example\">いい手</span>, a good move) and \"method\" in general (<span class=\"jp-example\">手がない</span>, there's no way/method). The hand as a metaphor for capability and action runs through the entire language.</p>"
   },
   {
-    "id": 352,
+    "id": 353,
     "kanji": "十日",
     "kana": "とおか",
     "meaning": "ten days, tenth of the month",
@@ -23,7 +34,7 @@
     "lesson": "<p><span class=\"jp\">とおか</span>. The native number <span class=\"jp\">とお</span> (ten) — the same one that caps the ひとつ…とお counting series — plus <span class=\"jp\">か</span> for day. After this, the native day-naming system gives up. Days 11 through 19 switch to Sino-Japanese (<span class=\"jp\">じゅういちにち、じゅうににち…</span>). The 20th (<span class=\"jp\">はつか</span>) stages one last comeback of the old system, then it's regular にち all the way to 31.</p><p><span class=\"jp-example\">十日間</span> <span class=\"gloss\">(とおかかん, a period of ten days)</span> is the duration form — add <span class=\"jp\">間</span> to any day counter to turn a date into a span. Without <span class=\"jp\">間</span>, it's a date. With it, it's a length of time. This applies to all of them: <span class=\"jp\">三日</span> (the 3rd) vs <span class=\"jp\">三日間</span> (three days).</p>"
   },
   {
-    "id": 353,
+    "id": 354,
     "kanji": "口",
     "kana": "くち",
     "meaning": "mouth",
@@ -35,7 +46,7 @@
     "lesson": "<p><span class=\"jp\">口</span> is one of the most visually obvious kanji: an open mouth. The character has barely changed from its oracle bone form — it was a rectangle then and it's a rectangle now. As a radical (component in other kanji), it shows up in nearly every character related to speaking, eating, or sounds: <span class=\"jp\">言</span> (word), <span class=\"jp\">食</span> (eat), <span class=\"jp\">味</span> (taste), <span class=\"jp\">呼</span> (call), <span class=\"jp\">吸</span> (inhale).</p><p>Beyond the physical mouth, <span class=\"jp\">口</span> means \"opening\" or \"entrance\" in a surprisingly wide range of contexts. <span class=\"jp-example\">入り口</span> <span class=\"gloss\">(いりぐち, entrance — \"entering mouth\")</span>. <span class=\"jp-example\">出口</span> <span class=\"gloss\">(でぐち, exit — \"exiting mouth\")</span>. <span class=\"jp-example\">改札口</span> <span class=\"gloss\">(かいさつぐち, ticket gate)</span>. <span class=\"jp-example\">窓口</span> <span class=\"gloss\">(まどぐち, service window/counter)</span>. Any opening that things pass through is a <span class=\"jp\">口</span>.</p><p>Also a counter: <span class=\"jp-example\">一口</span> <span class=\"gloss\">(ひとくち, one bite/sip)</span>. <span class=\"jp-example\">一口ちょうだい</span> <span class=\"gloss\">(let me have a bite)</span> is a classic phrase — used between friends, couples, or kids eyeing your food.</p>"
   },
   {
-    "id": 354,
+    "id": 355,
     "kanji": "夏",
     "kana": "なつ",
     "meaning": "summer",
@@ -46,7 +57,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">夏</span> in its earliest form showed a person dancing — a large figure with arms raised and feet moving, wearing some kind of headdress. The connection to summer likely came from harvest festivals and ceremonial dances performed in the hot months. The modern kanji compressed and abstracted the dancer beyond recognition, but the original was pure movement and celebration.</p><p>Japanese summer is intense. The country sits in the monsoon belt, so <span class=\"jp\">夏</span> means not just heat but humidity — the sticky, enveloping kind that makes even standing still an act of endurance. <span class=\"jp-example\">夏休み</span> <span class=\"gloss\">(なつやすみ, summer vacation)</span> is the big annual break for students, and <span class=\"jp-example\">夏祭り</span> <span class=\"gloss\">(なつまつり, summer festival)</span> with its fireworks, food stalls, and yukata is the season's defining cultural image.</p><p>Now you have all four: <span class=\"jp\">春</span> <span class=\"gloss\">(はる, spring)</span>, <span class=\"jp\">夏</span> <span class=\"gloss\">(なつ, summer)</span>, <span class=\"jp\">秋</span> <span class=\"gloss\">(あき, autumn)</span>, <span class=\"jp\">冬</span> <span class=\"gloss\">(ふゆ, winter)</span>. The traditional order matters — Japanese lists seasons starting from spring, not winter.</p>"
   },
   {
-    "id": 355,
+    "id": 356,
     "kanji": "七つ",
     "kana": "ななつ",
     "meaning": "seven (things)",
@@ -57,7 +68,7 @@
     "lesson": "<p>Native counter for seven things. <span class=\"jp\">なな</span> (seven) + <span class=\"jp\">つ</span>. Straightforward, no sound changes.</p><p>Seven has special resonance in Japanese culture, just as it does in many cultures. <span class=\"jp-example\">七夕</span> <span class=\"gloss\">(たなばた, the Star Festival on July 7th)</span> celebrates the one night per year when the stars Vega and Altair (represented as separated lovers) can meet across the Milky Way. <span class=\"jp-example\">七五三</span> <span class=\"gloss\">(しちごさん, the 7-5-3 festival)</span> celebrates children at ages 7, 5, and 3 — dressed in traditional clothes, visiting shrines. <span class=\"jp-example\">七転び八起き</span> <span class=\"gloss\">(ななころびやおき, fall seven times, get up eight)</span> is the proverb for resilience.</p>"
   },
   {
-    "id": 356,
+    "id": 357,
     "kanji": "時々",
     "kana": "ときどき",
     "meaning": "sometimes",
@@ -68,7 +79,7 @@
     "lesson": "<p><span class=\"jp\">時</span> means \"time\" or \"moment.\" Double it — <span class=\"jp\">時々</span> — and you get \"at times, at times\" → \"sometimes.\" This reduplication pattern is everywhere in Japanese: <span class=\"jp\">人々</span> <span class=\"gloss\">(ひとびと, people — person-person)</span>, <span class=\"jp\">色々</span> <span class=\"gloss\">(いろいろ, various — color-color)</span>, <span class=\"jp\">日々</span> <span class=\"gloss\">(ひび, day after day)</span>. Doubling a kanji often means \"many of\" or \"repeatedly.\"</p><p>The <span class=\"jp\">々</span> mark is called <span class=\"jp\">踊り字</span> <span class=\"gloss\">(おどりじ, \"dancing character\")</span> — it's not actually a kanji but a repetition symbol, like writing \"ditto\" instead of the same character twice. You can't use it at the start of a line, and it doesn't appear in dictionaries as its own entry.</p><p>Frequency hierarchy for Japanese: <span class=\"jp\">いつも</span> (always) > <span class=\"jp\">よく</span> (often) > <span class=\"jp highlight\">時々</span> (sometimes) > <span class=\"jp\">たまに</span> (occasionally) > <span class=\"jp\">めったに〜ない</span> (seldom) > <span class=\"jp\">全然〜ない</span> (never). <span class=\"jp\">時々</span> sits right in the middle — frequent enough to not be remarkable, infrequent enough to be worth mentioning.</p>"
   },
   {
-    "id": 357,
+    "id": 358,
     "kanji": "何",
     "kana": "なに",
     "meaning": "what",
@@ -78,7 +89,7 @@
     "lesson": "<p>You've already encountered <span class=\"jp\">何</span> read as <span class=\"jp\">なん</span> — this entry is for the <span class=\"jp\">なに</span> reading. Same character, same meaning, two pronunciations used in different contexts.</p><p>The rule: use <span class=\"jp\">なん</span> before <span class=\"jp\">で</span>, <span class=\"jp\">の</span>, and counters that start with <span class=\"jp\">た</span>/<span class=\"jp\">だ</span>/<span class=\"jp\">な</span> sounds. Use <span class=\"jp\">なに</span> before <span class=\"jp\">を</span>, <span class=\"jp\">が</span>, <span class=\"jp\">も</span>, and at the end of sentences. <span class=\"jp-example\">なにを食べる？</span> <span class=\"gloss\">(what will you eat?)</span> vs. <span class=\"jp-example\">なんで？</span> <span class=\"gloss\">(why? / with what?)</span>. <span class=\"jp-example\">なにが好き？</span> <span class=\"gloss\">(what do you like?)</span> vs. <span class=\"jp-example\">なん人？</span> <span class=\"gloss\">(how many people?)</span>.</p><p>In casual speech, the boundary blurs. Some speakers say <span class=\"jp\">なに</span> where the rule says <span class=\"jp\">なん</span>, and vice versa. But the general principle holds: <span class=\"jp\">なん</span> flows better before dental consonants (t, d, n), <span class=\"jp\">なに</span> flows better before vowels and other sounds.</p>"
   },
   {
-    "id": 358,
+    "id": 359,
     "kanji": "人",
     "kana": "ひと",
     "meaning": "person",
@@ -88,7 +99,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">人</span> is a stick figure — two strokes leaning against each other, like a person standing with legs apart. In oracle bone script, it was a side view of a person walking: a body bent forward with arms hanging. The modern form is more abstract, but the human silhouette is still there if you see the two strokes as legs supporting a body.</p><p>Read as <span class=\"jp\">ひと</span>, it's the everyday word for \"a person\" — general, informal, warm. Read as <span class=\"jp\">じん</span> or <span class=\"jp\">にん</span>, it forms compounds: <span class=\"jp-example\">日本人</span> <span class=\"gloss\">(にほんじん, Japanese person)</span>, <span class=\"jp-example\">一人</span> <span class=\"gloss\">(ひとり, one person)</span>, <span class=\"jp-example\">大人</span> <span class=\"gloss\">(おとな, adult)</span>. The Sino-Japanese readings <span class=\"jp\">じん</span> and <span class=\"jp\">にん</span> split roughly like this: <span class=\"jp\">じん</span> for types of people (<span class=\"jp\">外国人</span>, <span class=\"jp\">日本人</span>), <span class=\"jp\">にん</span> for counting people (<span class=\"jp\">三人</span>, <span class=\"jp\">何人</span>).</p><p><span class=\"note-label\">人 vs 方 vs 者:</span> All can mean \"person\" but at different registers. <span class=\"jp\">人</span> <span class=\"gloss\">(ひと)</span> is neutral. <span class=\"jp\">方</span> <span class=\"gloss\">(かた)</span> is polite — you'd use it when referring respectfully to someone. <span class=\"jp\">者</span> <span class=\"gloss\">(もの)</span> is for categories or definitions — <span class=\"jp\">若者</span> (young person), <span class=\"jp\">学者</span> (scholar). In conversation, <span class=\"jp\">人</span> covers almost everything.</p>"
   },
   {
-    "id": 359,
+    "id": 360,
     "kanji": "一人",
     "kana": "ひとり",
     "meaning": "one person",
@@ -99,7 +110,7 @@
     "lesson": "<p><span class=\"jp\">一人</span> is read <span class=\"jp\">ひとり</span>, not いちにん. And <span class=\"jp\">二人</span> is read <span class=\"jp\">ふたり</span>, not ににん. These are the only two people-counts that use native Japanese readings. From three onward, everything is regular Sino-Japanese: <span class=\"jp\">三人</span> <span class=\"gloss\">(さんにん)</span>, <span class=\"jp\">四人</span> <span class=\"gloss\">(よにん)</span>, etc.</p><p><span class=\"jp\">一人</span> carries emotional weight beyond its numerical meaning. <span class=\"jp-example\">一人で</span> <span class=\"gloss\">(ひとりで, alone/by oneself)</span> is how you say you're doing something solo — eating alone, living alone, traveling alone. <span class=\"jp-example\">一人暮らし</span> <span class=\"gloss\">(ひとりぐらし, living alone)</span> is a specific life stage in Japan, especially common for university students and young workers who've moved away from their family home for the first time. The word is so common it's practically a social category.</p>"
   },
   {
-    "id": 360,
+    "id": 361,
     "kanji": "一日",
     "kana": "ついたち",
     "meaning": "first of the month",
@@ -111,7 +122,7 @@
     "lesson": "<p>The most wildly irregular day reading. <span class=\"jp\">一日</span> is read <span class=\"jp\">ついたち</span> — five syllables with no obvious connection to the kanji <span class=\"jp\">一</span> (one) or <span class=\"jp\">日</span> (day). The reading comes from <span class=\"jp\">月立ち</span> (つきたち, \"the moon rises/stands\") — the first day of the month was when the new moon appeared. <span class=\"jp\">つきたち</span> contracted over centuries into <span class=\"jp\">ついたち</span>.</p><p><span class=\"note-label\">Watch out:</span> <span class=\"jp\">一日</span> can also be read <span class=\"jp\">いちにち</span>, meaning \"one day\" (a duration of 24 hours) or \"all day.\" <span class=\"jp-example\">一日中</span> <span class=\"gloss\">(いちにちじゅう, all day long)</span>. Context distinguishes: if it's a date, it's <span class=\"jp\">ついたち</span>. If it's a duration, it's <span class=\"jp\">いちにち</span>. <span class=\"jp-example\">四月一日</span> <span class=\"gloss\">(しがつついたち, April 1st)</span> vs. <span class=\"jp-example\">一日休む</span> <span class=\"gloss\">(いちにちやすむ, take one day off)</span>.</p>"
   },
   {
-    "id": 361,
+    "id": 362,
     "kanji": "九日",
     "kana": "ここのか",
     "meaning": "nine days, ninth of the month",
@@ -123,7 +134,7 @@
     "lesson": "<p><span class=\"jp\">ここのか</span> — five syllables for a single date. Native <span class=\"jp\">ここの</span> (nine) + <span class=\"jp\">か</span> (day). It's the mouthful of the day-counter series, and it sounds so far from <span class=\"jp\">九</span> read as <span class=\"jp\">きゅう</span> or <span class=\"jp\">く</span> that learners sometimes don't recognize it as the same number at all.</p><p>September 9th — <span class=\"jp-example\">九月九日</span> <span class=\"gloss\">(くがつここのか)</span> — is <span class=\"jp-example\">重陽の節句</span> <span class=\"gloss\">(ちょうようのせっく)</span>, the Chrysanthemum Festival. Nine was considered the most powerful yang number in Chinese numerology, so double-nine was a day of concentrated vitality. People drank chrysanthemum-infused sake and climbed to high places. The festival has faded in modern Japan compared to its Chinese counterpart, but the date sticks in cultural memory.</p>"
   },
   {
-    "id": 362,
+    "id": 363,
     "kanji": "方",
     "kana": "ほう",
     "meaning": "direction, way, side",
@@ -134,7 +145,7 @@
     "lesson": "<p><span class=\"jp\">方</span> read as <span class=\"jp\">ほう</span> is abstract direction — not north-south-east-west, but the \"side\" you're talking about. Its most important use is in comparisons: <span class=\"jp-example\">こっちの方がいい</span> <span class=\"gloss\">(this one is better — literally \"this side is good\")</span>. The <span class=\"jp\">方が</span> pattern is how Japanese makes comparative statements. There's no separate word for \"more\" — you just point at a direction and say that direction is the one with the quality.</p><p><span class=\"jp-example\">AよりBの方が〜</span> is the full comparison structure: <span class=\"jp-example\">肉より魚の方が好き</span> <span class=\"gloss\">(I like fish more than meat — \"compared to meat, the fish direction is liked\")</span>. It sounds roundabout in English but it's the natural, everyday way to compare in Japanese. Master this pattern and you can compare anything.</p><p>Other meanings: <span class=\"jp-example\">やり方</span> <span class=\"gloss\">(やりかた, way of doing)</span> — here <span class=\"jp\">方</span> is read <span class=\"jp\">かた</span> and means \"method.\" <span class=\"jp-example\">読み方</span> <span class=\"gloss\">(よみかた, way of reading)</span>, <span class=\"jp-example\">作り方</span> <span class=\"gloss\">(つくりかた, how to make)</span>. Verb stem + <span class=\"jp\">方</span> = \"the way of doing that verb.\" Enormously productive pattern.</p>"
   },
   {
-    "id": 363,
+    "id": 364,
     "kanji": "他",
     "kana": "ほか",
     "meaning": "another, other",
@@ -144,7 +155,7 @@
     "lesson": "<p><span class=\"jp\">他</span> is <span class=\"jp\">亻</span> (person radical) + <span class=\"jp\">也</span> (a phonetic component). The original meaning: another person, someone else. From there it expanded to \"other\" in general — another thing, another place, something different from what we're discussing.</p><p><span class=\"jp-example\">他に何かありますか？</span> <span class=\"gloss\">(Is there anything else?)</span> — you'll hear this at restaurants, shops, meetings. <span class=\"jp-example\">他の人</span> <span class=\"gloss\">(other people)</span>. <span class=\"jp-example\">その他</span> <span class=\"gloss\">(そのた/そのほか, besides that, et cetera)</span> — a phrase you'll see at the bottom of lists and forms.</p><p>Often written in hiragana as <span class=\"jp\">ほか</span> in casual contexts. The kanji reading can also be <span class=\"jp\">た</span> in Sino-Japanese compounds: <span class=\"jp-example\">他人</span> <span class=\"gloss\">(たにん, another person/stranger)</span>, <span class=\"jp-example\">他国</span> <span class=\"gloss\">(たこく, another country)</span>. The nuance shifts slightly: <span class=\"jp\">ほか</span> is \"other/else\" in a general sense, while <span class=\"jp\">た</span> in compounds often implies \"not-us\" — other as in separate, outside our group.</p>"
   },
   {
-    "id": 364,
+    "id": 365,
     "kanji": "僕",
     "kana": "ぼく",
     "meaning": "I, me (usually used by young males)",
@@ -155,7 +166,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">僕</span> originally meant \"servant\" — <span class=\"jp\">亻</span> (person) + <span class=\"jp\">菐</span> (a phonetic element related to bundling). A servant, someone who works for another. The leap from \"servant\" to \"I\" is an act of self-effacement: calling yourself <span class=\"jp\">僕</span> historically meant presenting yourself as humble, as the listener's servant. That humility has faded in modern usage, but it leaves <span class=\"jp\">僕</span> feeling softer and less assertive than other male first-person pronouns.</p><p><span class=\"jp\">僕</span> is the pronoun of choice for: boys and young men in casual settings, adult men who want to sound approachable rather than tough, and singers/poets regardless of gender (it's the default first person in song lyrics). Compared to <span class=\"jp\">俺</span> <span class=\"gloss\">(おれ)</span>, which is blunt and masculine, <span class=\"jp\">僕</span> is gentler — the difference between \"I\" said with a relaxed smile and \"I\" said with a chin jut.</p><p>Some women, particularly younger ones, use <span class=\"jp\">僕</span> as a deliberate style choice — it reads as slightly tomboyish or countercultural. But the default expectation is still male usage. In professional settings, most men switch to <span class=\"jp\">わたし</span>. <span class=\"jp\">僕</span> at a job interview would sound too casual, like wearing sneakers to a suit event.</p>"
   },
   {
-    "id": 365,
+    "id": 366,
     "kanji": "欲しい",
     "kana": "ほしい",
     "meaning": "to want, desire",
@@ -166,7 +177,7 @@
     "lesson": "<p><span class=\"jp\">欲しい</span> is grammatically an adjective, not a verb — even though English translates it as \"to want.\" This matters because it conjugates like an adjective: <span class=\"jp-example\">欲しくない</span> (don't want), <span class=\"jp-example\">欲しかった</span> (wanted). And because it's an adjective describing a feeling, it can only directly describe the speaker's own desires. You can say <span class=\"jp-example\">新しい車が欲しい</span> <span class=\"gloss\">(I want a new car)</span>. You cannot say <span class=\"jp wrong\">彼は新しい車が欲しい</span> — that's claiming direct knowledge of someone else's inner state.</p><p>To talk about what someone else wants, you add <span class=\"jp\">がっている</span>: <span class=\"jp-example\">彼は新しい車を欲しがっている</span> <span class=\"gloss\">(he seems to want a new car — I'm observing his desire from outside)</span>. Or you use <span class=\"jp\">〜たい</span> for verb-wanting: <span class=\"jp-example\">食べたい</span> (want to eat) works for yourself, <span class=\"jp-example\">食べたがっている</span> for others. This inside/outside distinction is one of the deepest structural features of Japanese grammar.</p><p>The kanji <span class=\"jp\">欲</span> is <span class=\"jp\">谷</span> (valley) + <span class=\"jp\">欠</span> (to lack, yawn — a person with their mouth open). A valley gaping open — an emptiness that wants to be filled. That's desire in one image.</p><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">ほし</span><span class=\"ending\">い</span></td></tr><tr><td>Negative</td><td><span class=\"stem\">ほし</span><span class=\"ending\">くない</span></td></tr><tr><td>Past</td><td><span class=\"stem\">ほし</span><span class=\"ending\">かった</span></td></tr><tr><td>Past neg</td><td><span class=\"stem\">ほし</span><span class=\"ending\">くなかった</span></td></tr><tr><td>Adverb</td><td><span class=\"stem\">ほし</span><span class=\"ending\">く</span></td></tr><tr><td>て-form</td><td><span class=\"stem\">ほし</span><span class=\"ending\">くて</span></td></tr></table>"
   },
   {
-    "id": 366,
+    "id": 367,
     "kanji": "万",
     "kana": "まん",
     "meaning": "ten thousand",
@@ -176,7 +187,7 @@
     "lesson": "<p>English counts in thousands: thousand, ten thousand, hundred thousand, million. Japanese counts in ten-thousands: <span class=\"jp\">万</span> (10,000), then <span class=\"jp\">十万</span> (100,000), <span class=\"jp\">百万</span> (1,000,000). This means your brain has to shift gears when converting numbers. 50,000 isn't \"fifty thousand\" — it's <span class=\"jp\">五万</span> (five ten-thousands). 300,000 is <span class=\"jp\">三十万</span> (thirty ten-thousands). The unit boundary is in a different place, and until this becomes automatic, you'll always pause to count zeros.</p><p>Practically, <span class=\"jp\">万</span> is the unit of Japanese daily money. A <span class=\"jp-example\">一万円札</span> <span class=\"gloss\">(いちまんえんさつ, 10,000-yen bill)</span> is the largest common denomination — roughly equivalent to a $100 bill in purchasing power and cultural role. Rent, salaries, and prices are all discussed in units of <span class=\"jp\">万</span>. <span class=\"jp-example\">家賃は八万</span> <span class=\"gloss\">(rent is 80,000 yen — eight 万)</span>.</p><p>The kanji originally depicted a scorpion — the character was borrowed purely for its sound to represent the number 10,000, and the scorpion meaning was abandoned. One of many cases where an ancient pictograph got hijacked for a completely unrelated purpose.</p>"
   },
   {
-    "id": 367,
+    "id": 368,
     "kanji": "見える",
     "kana": "みえる",
     "meaning": "to be visible, seem, look like, appear",
@@ -187,7 +198,7 @@
     "lesson": "<p><span class=\"jp\">見える</span> is what happens when seeing happens without effort — things are visible, they appear, they come into view. Nobody is actively looking. The mountain <em>is visible</em> from here: <span class=\"jp-example\">ここから山が見える</span>. Compare this to <span class=\"jp\">見る</span>, where you deliberately direct your eyes. <span class=\"jp\">見る</span> = \"I look at.\" <span class=\"jp\">見える</span> = \"it can be seen\" or \"it appears.\"</p><p>The second meaning — \"to seem, to look like\" — is equally important. <span class=\"jp-example\">若く見える</span> <span class=\"gloss\">(looks young)</span>. <span class=\"jp-example\">元気に見える</span> <span class=\"gloss\">(seems healthy)</span>. <span class=\"jp-example\">怒っているように見える</span> <span class=\"gloss\">(looks like they're angry)</span>. When you describe how something appears to an observer, <span class=\"jp\">見える</span> is the verb.</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">見える</span> takes <span class=\"jp highlight\">が</span> — the thing that's visible is the subject, not the object. <span class=\"jp-example\">富士山が見える</span> <span class=\"gloss\">(Mt. Fuji is visible)</span>. You're not doing something to it — it's presenting itself to your eyes.</p><p class=\"particle-note\"><span class=\"note-label\">Passive/Causative:</span> <span class=\"jp\">見える</span> is already intransitive and describes a state of perception. Passive and causative forms exist grammatically but are rarely used in natural speech.</p><div class=\"verb-meta\"><span class=\"group-badge\">一段 Ichidan</span><span class=\"trans-badge\">自動詞 — pair: 見る (みる)</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">みえ</span><span class=\"ending\">る</span></td><td class=\"particle\">が</td></tr><tr><td>Negative</td><td><span class=\"stem\">みえ</span><span class=\"ending\">ない</span></td><td class=\"particle\">が</td></tr><tr><td>Polite</td><td><span class=\"stem\">みえ</span><span class=\"ending\">ます</span></td><td class=\"particle\">が</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">みえ</span><span class=\"ending\">ません</span></td><td class=\"particle\">が</td></tr><tr><td>Past</td><td><span class=\"stem\">みえ</span><span class=\"ending\">た</span></td><td class=\"particle\">が</td></tr><tr><td>Polite past</td><td><span class=\"stem\">みえ</span><span class=\"ending\">ました</span></td><td class=\"particle\">が</td></tr><tr><td>て-form</td><td><span class=\"stem\">みえ</span><span class=\"ending\">て</span></td><td class=\"particle\">が</td></tr><tr><td>Volitional</td><td></td><td class=\"particle\"></td></tr><tr><td>Polite vol</td><td></td><td class=\"particle\"></td></tr><tr><td>Passive</td><td></td><td class=\"particle\"></td></tr><tr><td>Causative</td><td></td><td class=\"particle\"></td></tr><tr><td>Caus-pass</td><td></td><td class=\"particle\"></td></tr><tr><td>Potential</td><td></td><td class=\"particle\"></td></tr><tr><td>Imperative</td><td></td><td class=\"particle\"></td></tr><tr><td>Imp なさい</td><td></td><td class=\"particle\"></td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">みえ</span><span class=\"ending\">れば</span></td><td class=\"particle\">が</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">みえ</span><span class=\"ending\">たら</span></td><td class=\"particle\">が</td></tr></table>"
   },
   {
-    "id": 368,
+    "id": 369,
     "kanji": "道",
     "kana": "みち",
     "meaning": "road, street, way",
@@ -197,7 +208,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">道</span> is <span class=\"jp\">辶</span> (the road/movement radical) + <span class=\"jp\">首</span> (head/neck). A head moving along a path — someone walking a road, face forward. In the oldest Chinese forms, the head component may have represented a person leading the way, or possibly a severed head carried as a trophy on a military march. The sanitized modern meaning is just \"road\" or \"path.\"</p><p>But <span class=\"jp\">道</span> is far more than asphalt. Read as <span class=\"jp\">どう</span> in compounds, it means \"the way\" in a philosophical sense — a discipline, a path of mastery. <span class=\"jp-example\">柔道</span> <span class=\"gloss\">(じゅうどう, judo — \"the gentle way\")</span>. <span class=\"jp-example\">剣道</span> <span class=\"gloss\">(けんどう, kendo — \"the way of the sword\")</span>. <span class=\"jp-example\">茶道</span> <span class=\"gloss\">(さどう, the way of tea)</span>. <span class=\"jp-example\">書道</span> <span class=\"gloss\">(しょどう, calligraphy — \"the way of writing\")</span>. In each case, the activity isn't just a skill — it's a <span class=\"jp\">道</span>, a lifelong path of practice and self-refinement. This concept comes from Chinese Daoism (道 = Dao/Tao) and permeates Japanese culture.</p><p>As a physical noun: <span class=\"jp-example\">道を聞く</span> <span class=\"gloss\">(ask for directions)</span>. <span class=\"jp-example\">道に迷う</span> <span class=\"gloss\">(get lost — \"lose the road\")</span>.</p>"
   },
   {
-    "id": 369,
+    "id": 370,
     "kanji": "五つ",
     "kana": "いつつ",
     "meaning": "five (things)",
@@ -208,7 +219,7 @@
     "lesson": "<p>Quick disambiguation: <span class=\"jp\">いつ</span> (when?) and <span class=\"jp\">いつ</span> (five) are completely different words that happen to sound identical. Context always handles it — nobody hears <span class=\"jp-example\">いつつください</span> and wonders if you're asking about time. But if you've been puzzling over why the question word for \"when\" seems to show up in a counting word, now you know: pure coincidence.</p><p>The つ-counter series from one to ten is the Swiss army knife of Japanese counting. You don't need to know that pencils use <span class=\"jp\">本</span>, flat things use <span class=\"jp\">枚</span>, and small animals use <span class=\"jp\">匹</span>. You just say <span class=\"jp\">いつつ</span> and point. It's not elegant, but it works, and native speakers do it too when they're being casual or the specific counter doesn't come to mind fast enough.</p>"
   },
   {
-    "id": 370,
+    "id": 371,
     "kanji": "目",
     "kana": "め",
     "meaning": "eye",
@@ -221,7 +232,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">目</span> was an eye in oracle bone script — oriented vertically, with the iris visible inside the outline. Over time it rotated 90 degrees (from vertical to horizontal) and the iris lines became the horizontal strokes inside. It's still recognizably an eye, just lying on its side.</p><p>As a body part: <span class=\"jp-example\">目が大きい</span> <span class=\"gloss\">(has big eyes)</span>. <span class=\"jp-example\">目が悪い</span> <span class=\"gloss\">(has bad eyesight)</span>. <span class=\"jp-example\">目が覚める</span> <span class=\"gloss\">(to wake up — \"eyes awaken\")</span>. Japanese has dozens of <span class=\"jp\">目</span> idioms: <span class=\"jp-example\">目に見える</span> <span class=\"gloss\">(visible)</span>, <span class=\"jp-example\">目を通す</span> <span class=\"gloss\">(to skim/look through)</span>, <span class=\"jp-example\">目立つ</span> <span class=\"gloss\">(to stand out — \"catch the eye\")</span>.</p><p><span class=\"note-label\">Suffix use:</span> <span class=\"jp\">〜目</span> after a number creates ordinal counters — it means \"the Nth one.\" <span class=\"jp-example\">三つ目</span> <span class=\"gloss\">(the third one)</span>. <span class=\"jp-example\">一人目</span> <span class=\"gloss\">(the first person)</span>. <span class=\"jp-example\">二回目</span> <span class=\"gloss\">(the second time)</span>. This suffix is one of those small patterns that makes a huge difference once you notice it — it turns any counter into an ordinal.</p><p>As a radical in other kanji, <span class=\"jp\">目</span> signals sight or perception: <span class=\"jp\">見</span> (see), <span class=\"jp\">眠</span> (sleep — eyes closed), <span class=\"jp\">眼</span> (eyeball), <span class=\"jp\">瞬</span> (blink). Whenever you see <span class=\"jp\">目</span> inside a character, something related to eyes or looking is usually involved.</p>"
   },
   {
-    "id": 371,
+    "id": 372,
     "kanji": "八つ",
     "kana": "やっつ",
     "meaning": "eight (things)",
@@ -232,7 +243,7 @@
     "lesson": "<p>The つ counting system is native Japanese — older than the Chinese-derived いち, に, さん. It only goes up to ten (<span class=\"jp\">十 = とお</span>), and after that Japanese switches to the Chinese system exclusively. <span class=\"jp\">やっつ</span> is the eight in this set, and it's one of the harder ones to remember because the sound doesn't obviously connect to <span class=\"jp\">はち</span> (the Chinese-derived \"eight\" you already know).</p><p>The double っ in <span class=\"jp\">やっつ</span> comes from a sound change: the original form was closer to <span class=\"jp\">やつ</span>, but over centuries the っ crept in for emphasis, the way English speakers might punch the \"t\" in \"eight\" harder than they need to. You'll see the same doubling in <span class=\"jp\">いっつ</span> → <span class=\"jp\">一つ</span> (though that one's actually <span class=\"jp\">ひとつ</span>) and <span class=\"jp\">やっつ</span> → <span class=\"jp\">八つ</span>.</p><p><span class=\"note-label\">Mnemonic:</span> <span class=\"reading\">ya-ttsu</span> — picture someone yelling \"YATTS!\" while juggling eight objects and dropping them all. The explosive っ in the middle is the sound of things clattering.</p>"
   },
   {
-    "id": 372,
+    "id": 373,
     "kanji": "止める",
     "kana": "やめる",
     "meaning": "to stop, give up (doing something)",
@@ -243,7 +254,7 @@
     "lesson": "<p><span class=\"jp\">やめる</span> is the verb for quitting — not pausing, not slowing down, but pulling the plug entirely. <span class=\"jp-example\">仕事をやめる</span> <span class=\"gloss\">(quit your job)</span>. <span class=\"jp-example\">タバコをやめる</span> <span class=\"gloss\">(quit smoking)</span>. <span class=\"jp-example\">やめて！</span> <span class=\"gloss\">(stop it!)</span>. It's final. Once you やめる something, you're done with it.</p><p><span class=\"note-label\">Three kanji, one verb:</span> <span class=\"jp\">やめる</span> can be written <span class=\"jp\">止める</span>, <span class=\"jp\">辞める</span>, or <span class=\"jp\">罷める</span> — and the choice matters. <span class=\"jp\">止める</span> is \"stop an action\" (stop running, stop talking). <span class=\"jp\">辞める</span> is \"resign from a position\" (quit a job, leave a club). <span class=\"jp\">罷める</span> is rare and literary. In practice, hiragana <span class=\"jp\">やめる</span> works everywhere and is the safest choice when you're unsure.</p><p><span class=\"note-label\">やめる vs 止まる vs 止める(とめる):</span> This is where it gets tangled. <span class=\"jp\">やめる</span> = quit doing something (you decide). <span class=\"jp\">とめる</span> = physically stop something in motion (stop a car, stop bleeding). <span class=\"jp\">とまる</span> = something stops on its own. Three different verbs, two of which share the kanji <span class=\"jp\">止</span>. The reading tells you which one you're dealing with.</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">やめる</span> takes <span class=\"jp highlight\">を</span> — what you quit is the direct object. <span class=\"jp-example\">ゲームをやめる</span> <span class=\"gloss\">(quit playing the game)</span>. When shouting <span class=\"jp\">やめて！</span>, the を and its object are dropped because the context is obvious.</p><p class=\"particle-note\"><span class=\"note-label\">Potential</span> <span class=\"jp-example\">がやめられる</span>: <span class=\"jp highlight\">が</span> — what you can quit becomes the subject. <span class=\"jp-example\">タバコがやめられない</span> <span class=\"gloss\">(I can't quit cigarettes)</span> — a very common construction.</p><p class=\"particle-note\"><span class=\"note-label\">Passive</span> <span class=\"jp-example\">にやめられる</span>: <span class=\"jp highlight\">に</span> marks who quit on you. <span class=\"jp-example\">部下にやめられた</span> <span class=\"gloss\">(my subordinate quit on me)</span>. The passive often carries that \"and I suffered for it\" nuance.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">に…をやめさせる</span>: <span class=\"jp highlight\">に</span> marks the person you make quit, <span class=\"jp highlight\">を</span> marks what they quit. <span class=\"jp-example\">息子にゲームをやめさせる</span> <span class=\"gloss\">(make my son quit gaming)</span>.</p><div class=\"verb-meta\"><span class=\"group-badge\">一段 Ichidan</span><span class=\"trans-badge\">他動詞</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">やめ</span><span class=\"ending\">る</span></td><td class=\"particle\">を</td></tr><tr><td>Negative</td><td><span class=\"stem\">やめ</span><span class=\"ending\">ない</span></td><td class=\"particle\">を</td></tr><tr><td>Polite</td><td><span class=\"stem\">やめ</span><span class=\"ending\">ます</span></td><td class=\"particle\">を</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">やめ</span><span class=\"ending\">ません</span></td><td class=\"particle\">を</td></tr><tr><td>Past</td><td><span class=\"stem\">やめ</span><span class=\"ending\">た</span></td><td class=\"particle\">を</td></tr><tr><td>Polite past</td><td><span class=\"stem\">やめ</span><span class=\"ending\">ました</span></td><td class=\"particle\">を</td></tr><tr><td>て-form</td><td><span class=\"stem\">やめ</span><span class=\"ending\">て</span></td><td class=\"particle\">を</td></tr><tr><td>Volitional</td><td><span class=\"stem\">やめ</span><span class=\"ending\">よう</span></td><td class=\"particle\">を</td></tr><tr><td>Polite vol</td><td><span class=\"stem\">やめ</span><span class=\"ending\">ましょう</span></td><td class=\"particle\">を</td></tr><tr><td>Passive</td><td><span class=\"stem\">やめ</span><span class=\"ending\">られる</span></td><td class=\"particle\">に</td></tr><tr><td>Causative</td><td><span class=\"stem\">やめ</span><span class=\"ending\">させる</span></td><td class=\"particle\">に／を</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">やめ</span><span class=\"ending\">させられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td><span class=\"stem\">やめ</span><span class=\"ending\">られる</span></td><td class=\"particle\">が</td></tr><tr><td>Imperative</td><td><span class=\"stem\">やめ</span><span class=\"ending\">ろ</span></td><td class=\"particle\">を</td></tr><tr><td>Imp なさい</td><td><span class=\"stem\">やめ</span><span class=\"ending\">なさい</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">やめ</span><span class=\"ending\">れば</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">やめ</span><span class=\"ending\">たら</span></td><td class=\"particle\">を</td></tr></table>"
   },
   {
-    "id": 373,
+    "id": 374,
     "kanji": "四日",
     "kana": "よっか",
     "meaning": "four days, fourth of the month",
@@ -254,7 +265,7 @@
     "lesson": "<p><span class=\"jp\">よっか</span> — say it and notice how the っ makes your tongue bounce, like counting off days on a calendar with a tap-tap rhythm. Four taps. <span class=\"jp\">よっか</span>. It shares the <span class=\"jp\">よっ</span> opening with <span class=\"jp\">よっつ</span> (four things), which is your anchor: if you know one, you know the start of the other.</p><p>The first ten days of the month in Japanese are a horror show of irregular readings that just have to be memorized: <span class=\"jp\">ついたち</span>, <span class=\"jp\">ふつか</span>, <span class=\"jp\">みっか</span>, <span class=\"jp\">よっか</span>, <span class=\"jp\">いつか</span>, <span class=\"jp\">むいか</span>, <span class=\"jp\">なのか</span>, <span class=\"jp\">ようか</span>, <span class=\"jp\">ここのか</span>, <span class=\"jp\">とおか</span>. After day ten, it mercifully switches to regular counting. <span class=\"jp\">よっか</span> sits right in the middle of this gauntlet.</p><p>Add <span class=\"jp\">間</span> to switch from date to duration: <span class=\"jp-example\">四日間</span> <span class=\"gloss\">(よっかかん, a span of four days)</span>. Without <span class=\"jp\">間</span>, <span class=\"jp\">四日</span> means the fourth of the month.</p>"
   },
   {
-    "id": 374,
+    "id": 375,
     "kanji": "夜",
     "kana": "よる",
     "meaning": "night (from sunset to sunrise)",
@@ -265,7 +276,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">夜</span> has a person (<span class=\"jp\">亻</span>), a roof-like element, and at the bottom, <span class=\"jp\">夕</span> — the crescent moon, the evening radical. It's a person under a roof at moonrise. Home at night.</p><p><span class=\"note-label\">夜 vs 晩:</span> Both mean night, but they carve up the evening differently. <span class=\"jp\">晩</span> <span class=\"gloss\">(ばん)</span> is the early part — roughly dinner time through the late evening, the social hours. <span class=\"jp\">夜</span> is broader: from sunset all the way to sunrise, including the deep, quiet hours. <span class=\"jp-example\">今晩</span> <span class=\"gloss\">(こんばん, tonight — the social evening)</span> vs. <span class=\"jp-example\">夜中</span> <span class=\"gloss\">(よなか, middle of the night — the dead hours)</span>. When you say <span class=\"jp-example\">昨日の夜</span>, you might mean 8 PM or 2 AM. When you say <span class=\"jp-example\">昨日の晩</span>, you almost certainly mean the earlier part.</p><p>The word has two readings that matter: <span class=\"jp\">よる</span> as a standalone word, and <span class=\"jp\">や</span> in compounds like <span class=\"jp-example\">夜景</span> <span class=\"gloss\">(やけい, night view)</span> and <span class=\"jp-example\">夜行</span> <span class=\"gloss\">(やこう, night travel)</span>. The や reading is Chinese-derived and sounds more formal, almost poetic. <span class=\"jp\">よる</span> is what you use in conversation.</p>"
   },
   {
-    "id": 375,
+    "id": 376,
     "kanji": "来年",
     "kana": "らいねん",
     "meaning": "next year",
@@ -276,7 +287,7 @@
     "lesson": "<p><span class=\"jp\">来</span> means \"come\" — and in time words, it means the time that's <em>coming toward you</em>. <span class=\"jp-example\">来年</span> (next year), <span class=\"jp-example\">来月</span> (next month), <span class=\"jp-example\">来週</span> (next week). The pattern is perfectly regular and you already know all the pieces: <span class=\"jp\">来</span> + time unit = next [time unit]. That's it.</p><p>What makes this worth noting: Japanese conceptualizes future time as something that <em>arrives</em>, not something you <em>go toward</em>. You stand still; next year comes to you. This is the same metaphor baked into <span class=\"jp\">来る</span> (to come) — the future approaches. English does this too sometimes (\"the coming year\"), but Japanese commits to it across all its time vocabulary.</p><p>No particle needed when <span class=\"jp\">来年</span> functions as a time expression — it works like an adverb: <span class=\"jp-example\">来年日本に行く</span> <span class=\"gloss\">(I'm going to Japan next year)</span>. You <em>can</em> add <span class=\"jp\">に</span> or <span class=\"jp\">は</span> for emphasis or contrast, but it's not required.</p>"
   },
   {
-    "id": 376,
+    "id": 377,
     "kanji": "六",
     "kana": "ろく",
     "meaning": "six",
@@ -286,7 +297,7 @@
     "lesson": "<p>Six hundred in Japanese isn't <span class=\"jp\">ろくひゃく</span>. It's <span class=\"jp highlight\">ろっぴゃく</span>. That sound shift — く hardening into っぴ — is the one thing about <span class=\"jp\">六</span> that will trip you up. Everything else is straightforward: <span class=\"jp\">ろくじゅう</span> (60), <span class=\"jp\">ろくせん</span> (6,000), <span class=\"jp\">ろくまん</span> (60,000). But 600 and 6,000,000 (<span class=\"jp\">ろっぴゃくまん</span>) insist on the っぴ. Drill those two and you're done.</p><p>There's a colloquial expression worth knowing: <span class=\"jp-example\">ろくでもない</span> <span class=\"gloss\">(good-for-nothing, worthless)</span>. It comes from <span class=\"jp\">ろくな</span> (decent, proper) + negative, and you'll hear it in frustrated speech: <span class=\"jp-example\">ろくでもない男</span> <span class=\"gloss\">(a worthless guy)</span>. The <span class=\"jp\">ろく</span> here is actually a different word (碌, meaning \"smooth\" or \"proper\"), but the sound overlap means you'll remember both.</p>"
   },
   {
-    "id": 377,
+    "id": 378,
     "kanji": "悪い",
     "kana": "わるい",
     "meaning": "bad, at fault",
@@ -296,7 +307,7 @@
     "lesson": "<p><span class=\"jp\">悪い</span> does double duty that \"bad\" doesn't quite cover. Yes, it means bad in the obvious sense — <span class=\"jp-example\">天気が悪い</span> <span class=\"gloss\">(bad weather)</span>, <span class=\"jp-example\">頭が悪い</span> <span class=\"gloss\">(not smart — literally \"bad head\")</span>. But it also means \"at fault,\" and this is where the word gets socially interesting.</p><p><span class=\"jp-example\">悪い、悪い</span> — said casually, this is an apology. \"My bad, my bad.\" It's admitting fault without the weight of <span class=\"jp\">すみません</span> or <span class=\"jp\">ごめんなさい</span>. Men use it more than women. It's breezy, almost flippant — appropriate between friends, completely wrong in a formal setting. The doubling softens it further.</p><p>The kanji <span class=\"jp\">悪</span> has <span class=\"jp\">亜</span> on top (a phonetic component, not meaningful here) and <span class=\"jp\">心</span> (heart) on the bottom. A corrupted heart. The same kanji appears in <span class=\"jp-example\">悪口</span> <span class=\"gloss\">(わるくち, speaking ill of someone)</span> and <span class=\"jp-example\">悪夢</span> <span class=\"gloss\">(あくむ, nightmare)</span>. In compounds, <span class=\"jp\">悪</span> reads as <span class=\"jp\">あく</span> (Chinese-derived) and leans darker: evil, wickedness. As <span class=\"jp\">わるい</span>, it stays everyday and manageable.</p><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">わる</span><span class=\"ending\">い</span></td></tr><tr><td>Negative</td><td><span class=\"stem\">わる</span><span class=\"ending\">くない</span></td></tr><tr><td>Past</td><td><span class=\"stem\">わる</span><span class=\"ending\">かった</span></td></tr><tr><td>Past neg</td><td><span class=\"stem\">わる</span><span class=\"ending\">くなかった</span></td></tr><tr><td>Adverb</td><td><span class=\"stem\">わる</span><span class=\"ending\">く</span></td></tr><tr><td>て-form</td><td><span class=\"stem\">わる</span><span class=\"ending\">くて</span></td></tr></table>"
   },
   {
-    "id": 378,
+    "id": 379,
     "kanji": "お手洗い",
     "kana": "おてあらい",
     "meaning": "restroom, lavatory",
@@ -307,7 +318,7 @@
     "lesson": "<p>Literally: <span class=\"jp\">お</span> (polite prefix) + <span class=\"jp\">手</span> (hand) + <span class=\"jp\">洗い</span> (washing). \"The honorable hand-washing place.\" Japanese has layered its bathroom vocabulary by politeness level, and <span class=\"jp\">お手洗い</span> sits near the top — polite enough for any situation, never awkward.</p><p>The hierarchy, roughly: <span class=\"jp\">トイレ</span> <span class=\"gloss\">(from English \"toilet\" — casual, direct, most common in daily speech)</span> → <span class=\"jp\">お手洗い</span> <span class=\"gloss\">(polite euphemism — good for restaurants, offices, talking to strangers)</span> → <span class=\"jp\">化粧室</span> <span class=\"gloss\">(けしょうしつ, \"powder room\" — formal, seen on signs in department stores)</span>. Use <span class=\"jp\">トイレ</span> with friends, <span class=\"jp\">お手洗い</span> everywhere else.</p><p>The phrase <span class=\"jp-example\">お手洗いはどこですか</span> is one of the most useful complete sentences in Japanese. It will work in any building, any city, any social register.</p>"
   },
   {
-    "id": 379,
+    "id": 380,
     "kanji": "ご主人",
     "kana": "ごしゅじん",
     "meaning": "(someone else's) husband, head of household",
@@ -318,7 +329,7 @@
     "lesson": "<p><span class=\"jp\">主人</span> means \"master\" — the head of a household, the person in charge. Add the honorific <span class=\"jp\">ご</span> and it becomes the polite way to refer to <em>someone else's</em> husband. <span class=\"jp-example\">ご主人はお元気ですか</span> <span class=\"gloss\">(How is your husband?)</span>. You'd never use <span class=\"jp\">ご主人</span> about your own spouse — for that, you'd say <span class=\"jp\">主人</span> (without ご) or, more commonly these days, <span class=\"jp\">夫</span> <span class=\"gloss\">(おっと)</span>.</p><p>This word carries the full weight of traditional Japanese family structure. <span class=\"jp\">主人</span> literally means \"main person\" — the one who runs the house. Some younger Japanese women find it uncomfortable and prefer <span class=\"jp\">旦那さん</span> <span class=\"gloss\">(だんなさん)</span> for someone else's husband, or <span class=\"jp\">パートナー</span> for their own. But <span class=\"jp\">ご主人</span> remains the default in polite adult conversation.</p><p>The pair: <span class=\"jp\">ご主人</span> (someone's husband) ↔ <span class=\"jp\">奥さん</span> <span class=\"gloss\">(おくさん, someone's wife)</span>. Your own husband = <span class=\"jp\">主人</span> or <span class=\"jp\">夫</span>. Your own wife = <span class=\"jp\">家内</span> <span class=\"gloss\">(かない)</span> or <span class=\"jp\">妻</span> <span class=\"gloss\">(つま)</span>. Japanese has separate tracks for talking about your family vs. someone else's — always humbling your own and elevating theirs.</p>"
   },
   {
-    "id": 380,
+    "id": 381,
     "kanji": "本当に",
     "kana": "ほんとうに",
     "meaning": "really, truly",
@@ -328,7 +339,7 @@
     "lesson": "<p>Someone tells you they passed a difficult exam. Your response: <span class=\"jp-example\">ほんとに？</span> <span class=\"gloss\">(really?)</span>. One word, rising intonation, and it works as a complete sentence. That casual contraction — dropping the う from <span class=\"jp\">ほんとうに</span> — is so common that the full form almost sounds formal in everyday speech.</p><p>The full form <span class=\"jp\">本当に</span> carries sincerity that other intensifiers don't. <span class=\"jp-example\">とてもおいしい</span> = \"it's very tasty\" (just a fact). <span class=\"jp-example\">本当においしい</span> = \"it's <em>truly</em> tasty\" (I mean it, I'm not just being polite). When someone says <span class=\"jp-example\">本当にありがとう</span>, they're emphasizing that the gratitude is genuine. The word's power comes from <span class=\"jp\">本当</span> itself — <span class=\"jp\">本</span> (root, origin) + <span class=\"jp\">当</span> (hit the mark). Truth that strikes home.</p><p>The contraction ladder: <span class=\"jp\">ほんとうに</span> (formal/written) → <span class=\"jp\">ほんとに</span> (conversational) → <span class=\"jp\">ほんとー？</span> or <span class=\"jp\">マジ？</span> (slang). You can gauge how casual a conversation is by which level the speakers are on.</p>"
   },
   {
-    "id": 381,
+    "id": 382,
     "kanji": "自分",
     "kana": "じぶん",
     "meaning": "self, oneself",
@@ -339,7 +350,7 @@
     "lesson": "<p><span class=\"jp\">自</span> (self) + <span class=\"jp\">分</span> (part, portion). Your own portion. The part that belongs to you and no one else. <span class=\"jp\">自分</span> is how Japanese says \"oneself\" — and it's remarkably flexible because it absorbs the subject of whatever sentence it's in.</p><p><span class=\"jp-example\">自分でやる</span> <span class=\"gloss\">(I'll do it myself)</span>. <span class=\"jp-example\">自分のことは自分でやりなさい</span> <span class=\"gloss\">(do your own things yourself)</span>. <span class=\"jp-example\">彼は自分が正しいと思っている</span> <span class=\"gloss\">(he thinks he himself is right)</span>. In that last sentence, <span class=\"jp\">自分</span> refers back to <span class=\"jp\">彼</span> — it's reflexive, always pointing at whoever the sentence is about.</p><p>In some dialects and among some speakers (especially men in the military or in Kansai), <span class=\"jp\">自分</span> doubles as a first-person pronoun: <span class=\"jp-example\">自分はそう思います</span> <span class=\"gloss\">(I think so)</span>. This usage sounds blunt and disciplined — a soldier or an athlete might say it. In standard Japanese, though, <span class=\"jp\">自分</span> is reflexive, not a replacement for <span class=\"jp\">私</span>.</p>"
   },
   {
-    "id": 382,
+    "id": 383,
     "kanji": "ため",
     "kana": "ため",
     "meaning": "for, sake, purpose, in order to",
@@ -350,7 +361,7 @@
     "lesson": "<p><span class=\"jp\">ため</span> is a grammatical Swiss army knife. It has two core uses that look identical on the surface but mean very different things, and context is the only way to tell them apart.</p><p><strong>Purpose:</strong> <span class=\"jp-example\">日本に行くために日本語を勉強する</span> <span class=\"gloss\">(I study Japanese in order to go to Japan)</span>. Here <span class=\"jp\">ため</span> means \"for the purpose of.\" It points forward — here's why I'm doing this.</p><p><strong>Cause:</strong> <span class=\"jp-example\">雨のために試合が中止になった</span> <span class=\"gloss\">(the game was canceled because of the rain)</span>. Here <span class=\"jp\">ため</span> means \"because of.\" It points backward — here's what caused this.</p><p>The shortcut: if a verb in dictionary form comes before <span class=\"jp\">ために</span>, it's purpose. If a noun + <span class=\"jp\">の</span> or a past-tense verb comes before <span class=\"jp\">ために</span>, it's cause. <span class=\"jp-example\">勝つために練習する</span> <span class=\"gloss\">(practice to win — purpose)</span>. <span class=\"jp-example\">負けたために泣いた</span> <span class=\"gloss\">(cried because of losing — cause)</span>.</p><p>A third, gentler use: <span class=\"jp-example\">家族のために働く</span> <span class=\"gloss\">(work for the sake of the family)</span>. \"For the sake of\" — who benefits. This is the most emotionally loaded version. When someone says <span class=\"jp\">あなたのために</span>, they mean \"everything I did was for you.\"</p>"
   },
   {
-    "id": 383,
+    "id": 384,
     "kanji": "見つかる",
     "kana": "みつかる",
     "meaning": "to be found, be caught",
@@ -361,7 +372,7 @@
     "lesson": "<p>You already know <span class=\"jp\">見つける</span> — to find (something). <span class=\"jp\">見つかる</span> is its intransitive partner: to <em>be</em> found. The thing surfaces on its own, or gets discovered without you specifying who did the finding. <span class=\"jp-example\">鍵が見つかった</span> <span class=\"gloss\">(the keys were found / the keys turned up)</span>. <span class=\"jp-example\">仕事が見つからない</span> <span class=\"gloss\">(I can't find a job — literally, a job won't be found)</span>.</p><p>This intransitive framing is deeply Japanese. Rather than \"I found my keys\" (<span class=\"jp\">鍵を見つけた</span> — which is grammatically fine), natural Japanese gravitates toward <span class=\"jp\">鍵が見つかった</span> — \"the keys got found.\" The focus shifts from the finder to the thing found. It's less about your agency and more about the result.</p><p>The negative <span class=\"jp\">見つからない</span> is one of the most useful forms: <span class=\"jp-example\">答えが見つからない</span> <span class=\"gloss\">(I can't find the answer)</span>. <span class=\"jp-example\">どこにも見つからない</span> <span class=\"gloss\">(it's nowhere to be found)</span>. It expresses frustration elegantly — the thing refuses to surface.</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">見つかる</span> takes <span class=\"jp highlight\">が</span> — the thing that gets found is the subject, not a direct object. <span class=\"jp-example\">財布が見つかった</span> <span class=\"gloss\">(the wallet was found)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Passive:</span> Already intransitive, so passive is rare and unnatural — use the plain form instead.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">を／に見つからせる</span>: making something get found. Unusual but possible — <span class=\"jp highlight\">を</span> leans coercive, <span class=\"jp highlight\">に</span> permissive.</p><div class=\"verb-meta\"><span class=\"group-badge\">五段 Godan</span><span class=\"trans-badge\">自動詞 — pair: 見つける (みつける)</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">みつか</span><span class=\"ending\">る</span></td><td class=\"particle\">が</td></tr><tr><td>Negative</td><td><span class=\"stem\">みつか</span><span class=\"ending\">らない</span></td><td class=\"particle\">が</td></tr><tr><td>Polite</td><td><span class=\"stem\">みつか</span><span class=\"ending\">ります</span></td><td class=\"particle\">が</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">みつか</span><span class=\"ending\">りません</span></td><td class=\"particle\">が</td></tr><tr><td>Past</td><td><span class=\"stem\">みつか</span><span class=\"ending\">った</span></td><td class=\"particle\">が</td></tr><tr><td>Polite past</td><td><span class=\"stem\">みつか</span><span class=\"ending\">りました</span></td><td class=\"particle\">が</td></tr><tr><td>て-form</td><td><span class=\"stem\">みつか</span><span class=\"ending\">って</span></td><td class=\"particle\">が</td></tr><tr><td>Volitional</td><td><span class=\"stem\">みつか</span><span class=\"ending\">ろう</span></td><td class=\"particle\">が</td></tr><tr><td>Polite vol</td><td><span class=\"stem\">みつか</span><span class=\"ending\">りましょう</span></td><td class=\"particle\">が</td></tr><tr><td>Passive</td><td></td><td class=\"particle\"></td></tr><tr><td>Causative</td><td><span class=\"stem\">みつか</span><span class=\"ending\">らせる</span></td><td class=\"particle\">を／に</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">みつか</span><span class=\"ending\">らせられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td><span class=\"stem\">みつか</span><span class=\"ending\">れる</span></td><td class=\"particle\">が</td></tr><tr><td>Imperative</td><td><span class=\"stem\">みつか</span><span class=\"ending\">れ</span></td><td class=\"particle\">が</td></tr><tr><td>Imp なさい</td><td><span class=\"stem\">みつか</span><span class=\"ending\">りなさい</span></td><td class=\"particle\">が</td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">みつか</span><span class=\"ending\">れば</span></td><td class=\"particle\">が</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">みつか</span><span class=\"ending\">ったら</span></td><td class=\"particle\">が</td></tr></table>"
   },
   {
-    "id": 384,
+    "id": 385,
     "kanji": "休む",
     "kana": "やすむ",
     "meaning": "to rest, take a break, take a day off, be absent",
@@ -372,7 +383,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">休</span> is a person (<span class=\"jp\">亻</span>) leaning against a tree (<span class=\"jp\">木</span>). A person resting under a tree. It's one of the most elegant kanji etymologies — simple, visual, and completely intuitive. You'll never forget this one.</p><p>But <span class=\"jp\">休む</span> covers more territory than \"rest.\" It also means to be absent — from school, from work, from an event. <span class=\"jp-example\">学校を休む</span> <span class=\"gloss\">(skip/miss school)</span>. <span class=\"jp-example\">今日は仕事を休みます</span> <span class=\"gloss\">(I'm taking today off work)</span>. This is the word you'd use to call in sick. There's no separate verb for \"being absent\" — resting and not showing up are the same concept.</p><p>The noun form <span class=\"jp\">休み</span> <span class=\"gloss\">(やすみ)</span> means \"break, day off, vacation\" and is extremely common: <span class=\"jp-example\">夏休み</span> <span class=\"gloss\">(summer vacation)</span>, <span class=\"jp-example\">昼休み</span> <span class=\"gloss\">(lunch break)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">休む</span> is grammatically intransitive but takes <span class=\"jp highlight\">を</span> to mark the thing you're absent from: <span class=\"jp-example\">学校を休む</span>, <span class=\"jp-example\">仕事を休む</span>. This を doesn't mark a direct object — it marks what you're detaching from, similar to how <span class=\"jp\">出る</span> takes を for the place you leave.</p><p class=\"particle-note\"><span class=\"note-label\">Passive</span> <span class=\"jp-example\">に休まれる</span>: <span class=\"jp highlight\">に</span> marks who rested/was absent. <span class=\"jp-example\">部下に休まれて困った</span> <span class=\"gloss\">(my subordinate was absent and it caused me problems)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">を／に休ませる</span>: making or letting someone rest. <span class=\"jp-example\">子供を休ませる</span> <span class=\"gloss\">(make the child rest / let the child stay home)</span>.</p><div class=\"verb-meta\"><span class=\"group-badge\">五段 Godan</span><span class=\"trans-badge\">自動詞</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">やす</span><span class=\"ending\">む</span></td><td class=\"particle\">を</td></tr><tr><td>Negative</td><td><span class=\"stem\">やす</span><span class=\"ending\">まない</span></td><td class=\"particle\">を</td></tr><tr><td>Polite</td><td><span class=\"stem\">やす</span><span class=\"ending\">みます</span></td><td class=\"particle\">を</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">やす</span><span class=\"ending\">みません</span></td><td class=\"particle\">を</td></tr><tr><td>Past</td><td><span class=\"stem\">やす</span><span class=\"ending\">んだ</span></td><td class=\"particle\">を</td></tr><tr><td>Polite past</td><td><span class=\"stem\">やす</span><span class=\"ending\">みました</span></td><td class=\"particle\">を</td></tr><tr><td>て-form</td><td><span class=\"stem\">やす</span><span class=\"ending\">んで</span></td><td class=\"particle\">を</td></tr><tr><td>Volitional</td><td><span class=\"stem\">やす</span><span class=\"ending\">もう</span></td><td class=\"particle\">を</td></tr><tr><td>Polite vol</td><td><span class=\"stem\">やす</span><span class=\"ending\">みましょう</span></td><td class=\"particle\">を</td></tr><tr><td>Passive</td><td><span class=\"stem\">やす</span><span class=\"ending\">まれる</span></td><td class=\"particle\">に</td></tr><tr><td>Causative</td><td><span class=\"stem\">やす</span><span class=\"ending\">ませる</span></td><td class=\"particle\">を／に</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">やす</span><span class=\"ending\">ませられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td><span class=\"stem\">やす</span><span class=\"ending\">める</span></td><td class=\"particle\">を</td></tr><tr><td>Imperative</td><td><span class=\"stem\">やす</span><span class=\"ending\">め</span></td><td class=\"particle\">を</td></tr><tr><td>Imp なさい</td><td><span class=\"stem\">やす</span><span class=\"ending\">みなさい</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">やす</span><span class=\"ending\">めば</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">やす</span><span class=\"ending\">んだら</span></td><td class=\"particle\">を</td></tr></table>"
   },
   {
-    "id": 385,
+    "id": 386,
     "kanji": "ゆっくり",
     "kana": "ゆっくり",
     "meaning": "slowly, leisurely",
@@ -382,7 +393,7 @@
     "lesson": "<p>Say <span class=\"jp\">ゆっくり</span> out loud. The word <em>sounds</em> slow. The soft <span class=\"jp\">ゆ</span> opening, the brief pause at っ, the gentle roll of <span class=\"jp\">くり</span>. It's one of those Japanese onomatopoeic adverbs where the sound matches the meaning perfectly — a built-in mnemonic.</p><p>It works as an adverb (<span class=\"jp-example\">ゆっくり歩く</span> <span class=\"gloss\">walk slowly</span>) and as a standalone encouragement: <span class=\"jp-example\">ゆっくりしてください</span> <span class=\"gloss\">(take your time / make yourself at home)</span>. That second usage is important — it's what a host says to a guest, what a friend says when you're rushing. It's not just about speed. It's about releasing pressure.</p><p><span class=\"jp-example\">ゆっくり話してください</span> is the phrase every language learner needs: \"please speak slowly.\" Keep this in your back pocket.</p>"
   },
   {
-    "id": 386,
+    "id": 387,
     "kanji": "六つ",
     "kana": "むっつ",
     "meaning": "six (things)",
@@ -393,7 +404,7 @@
     "lesson": "<p><span class=\"jp\">むっつ</span> is the native Japanese \"six\" in the つ counting system. Like <span class=\"jp\">やっつ</span> (eight), it has a doubled っ that wasn't in the original form — old Japanese said <span class=\"jp\">むつ</span>, and the gemination crept in over time.</p><p>There's a secondary meaning hiding in this word. <span class=\"jp\">むっつり</span> — derived from the same root — means \"sullen, tight-lipped, silently brooding.\" And <span class=\"jp\">むっつりスケベ</span> is a colorful compound meaning \"secretly perverted\" — someone who looks serious on the outside but thinks dirty thoughts. This has nothing to do with counting six things, but once you know it, you'll never mix up <span class=\"jp\">むっつ</span> with any other number.</p><p>The つ counter covers general objects and only goes to ten. After that, you need specific counters (<span class=\"jp\">枚</span> for flat things, <span class=\"jp\">本</span> for long things, <span class=\"jp\">匹</span> for small animals). But when you don't know the right counter or can't remember it, the つ system is your safety net — it works for almost anything.</p>"
   },
   {
-    "id": 387,
+    "id": 388,
     "kanji": "花",
     "kana": "はな",
     "meaning": "flower",
@@ -403,7 +414,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">花</span> is the grass radical (<span class=\"jp\">艹</span>) on top — marking it as a plant — with <span class=\"jp\">化</span> (change, transform) below, serving as the phonetic component. But the phonetic hint is accidentally meaningful: a flower is a plant in its moment of transformation, the brief spectacular change between bud and seed.</p><p><span class=\"jp\">はな</span> sounds identical to <span class=\"jp\">鼻</span> (nose) — same pitch pattern and everything. Context always makes it clear, but it's worth knowing they're different words that happen to share a sound. Some linguists actually think they might share an ancient root: the nose as the protruding part of the face, the flower as the protruding part of the plant. Unproven, but memorable.</p><p><span class=\"jp\">花見</span> <span class=\"gloss\">(はなみ)</span> — flower viewing — is one of Japan's most important cultural events. In spring, when the cherry blossoms (<span class=\"jp\">桜</span>, <span class=\"jp\">さくら</span>) bloom, people gather in parks with food and drinks to sit under the trees. The word <span class=\"jp\">花</span> in <span class=\"jp\">花見</span> almost always means cherry blossoms specifically, even though <span class=\"jp\">花</span> covers all flowers. Cherry blossoms have claimed the word.</p>"
   },
   {
-    "id": 388,
+    "id": 389,
     "kanji": "動く",
     "kana": "うごく",
     "meaning": "to move (no direct object)",
@@ -414,7 +425,7 @@
     "lesson": "<p><span class=\"jp-example\">動くな！</span> <span class=\"gloss\">(don't move!)</span> — if you've watched a single Japanese cop drama, you've heard this line. It's the most dramatic form of <span class=\"jp\">動く</span>, and it tells you exactly what the verb means: something in motion, or the potential for motion. <span class=\"jp-example\">車が動かない</span> <span class=\"gloss\">(the car won't start/move)</span>. <span class=\"jp-example\">時計が動いている</span> <span class=\"gloss\">(the clock is running)</span>. Its transitive partner <span class=\"jp\">動かす</span> <span class=\"gloss\">(うごかす)</span> adds an agent: you make it move.</p><p>The kanji <span class=\"jp\">動</span> is <span class=\"jp\">重</span> (heavy) + <span class=\"jp\">力</span> (power) — force applied to mass. That physical sense persists in compounds: <span class=\"jp-example\">動物</span> <span class=\"gloss\">(どうぶつ, animal — \"moving thing,\" because what separates animals from plants is movement)</span>. <span class=\"jp-example\">自動</span> <span class=\"gloss\">(じどう, automatic — \"self-moving\")</span>. <span class=\"jp-example\">感動</span> <span class=\"gloss\">(かんどう, being moved emotionally — your feelings in motion)</span>. That last one is beautiful: emotion as internal movement.</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">動く</span> takes <span class=\"jp highlight\">が</span> — the thing moving is the subject. <span class=\"jp-example\">電車が動いている</span> <span class=\"gloss\">(the train is running)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Passive</span> <span class=\"jp-example\">に動かれる</span>: indirect passive — someone's movement affects you. <span class=\"jp-example\">隣の人に動かれて集中できなかった</span> <span class=\"gloss\">(the person next to me kept moving and I couldn't concentrate)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">を／に動かせる</span>: making or letting something move. <span class=\"jp highlight\">を</span> leans coercive. <span class=\"jp-example\">子供を動かせない</span> <span class=\"gloss\">(I can't get the kid to move)</span>.</p><div class=\"verb-meta\"><span class=\"group-badge\">五段 Godan</span><span class=\"trans-badge\">自動詞 — pair: 動かす (うごかす)</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">うご</span><span class=\"ending\">く</span></td><td class=\"particle\">が</td></tr><tr><td>Negative</td><td><span class=\"stem\">うご</span><span class=\"ending\">かない</span></td><td class=\"particle\">が</td></tr><tr><td>Polite</td><td><span class=\"stem\">うご</span><span class=\"ending\">きます</span></td><td class=\"particle\">が</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">うご</span><span class=\"ending\">きません</span></td><td class=\"particle\">が</td></tr><tr><td>Past</td><td><span class=\"stem\">うご</span><span class=\"ending\">いた</span></td><td class=\"particle\">が</td></tr><tr><td>Polite past</td><td><span class=\"stem\">うご</span><span class=\"ending\">きました</span></td><td class=\"particle\">が</td></tr><tr><td>て-form</td><td><span class=\"stem\">うご</span><span class=\"ending\">いて</span></td><td class=\"particle\">が</td></tr><tr><td>Volitional</td><td><span class=\"stem\">うご</span><span class=\"ending\">こう</span></td><td class=\"particle\">が</td></tr><tr><td>Polite vol</td><td><span class=\"stem\">うご</span><span class=\"ending\">きましょう</span></td><td class=\"particle\">が</td></tr><tr><td>Passive</td><td><span class=\"stem\">うご</span><span class=\"ending\">かれる</span></td><td class=\"particle\">に</td></tr><tr><td>Causative</td><td><span class=\"stem\">うご</span><span class=\"ending\">かせる</span></td><td class=\"particle\">を／に</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">うご</span><span class=\"ending\">かせられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td><span class=\"stem\">うご</span><span class=\"ending\">ける</span></td><td class=\"particle\">が</td></tr><tr><td>Imperative</td><td><span class=\"stem\">うご</span><span class=\"ending\">け</span></td><td class=\"particle\">が</td></tr><tr><td>Imp なさい</td><td><span class=\"stem\">うご</span><span class=\"ending\">きなさい</span></td><td class=\"particle\">が</td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">うご</span><span class=\"ending\">けば</span></td><td class=\"particle\">が</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">うご</span><span class=\"ending\">いたら</span></td><td class=\"particle\">が</td></tr></table>"
   },
   {
-    "id": 389,
+    "id": 390,
     "kanji": "線",
     "kana": "せん",
     "meaning": "line",
@@ -424,7 +435,7 @@
     "lesson": "<p>If you ride trains in Japan, you already know this word. <span class=\"jp-example\">山手線</span> <span class=\"gloss\">(やまのてせん, the Yamanote Line)</span>. <span class=\"jp-example\">新幹線</span> <span class=\"gloss\">(しんかんせん, bullet train — literally \"new trunk line\")</span>. Every rail line in Japan ends in <span class=\"jp\">〜線</span>. At a station, announcements constantly say <span class=\"jp-example\">〜線は</span> followed by delay information. Even if you've never formally studied the word, it's been in your ears.</p><p>The kanji <span class=\"jp\">線</span> has the thread radical (<span class=\"jp\">糸</span>) — a strand pulled taut. Threads and lines are the same concept: something thin that extends from one point to another. The compound <span class=\"jp-example\">視線</span> <span class=\"gloss\">(しせん)</span> is my favorite: \"gaze-line,\" your line of sight drawn from your eyes to whatever you're looking at. Japanese sees looking as casting a line outward, almost like fishing.</p>"
   },
   {
-    "id": 390,
+    "id": 391,
     "kanji": "七日",
     "kana": "なのか",
     "meaning": "seven days, seventh of the month",
@@ -435,7 +446,7 @@
     "lesson": "<p><span class=\"jp\">なのか</span> comes from <span class=\"jp\">なな</span> (seven) smoothed into <span class=\"jp\">なの</span> and then fused with <span class=\"jp\">か</span> (day). The irregular day-counting system strikes again — you can't predict <span class=\"jp\">なのか</span> from the regular number <span class=\"jp\">しち</span> or <span class=\"jp\">なな</span>. You just have to know it.</p><p>A memory trick: pair the first ten days by sound similarity. <span class=\"jp\">三日</span> (<span class=\"jp\">みっか</span>) and <span class=\"jp\">三つ</span> (<span class=\"jp\">みっつ</span>) share <span class=\"jp\">みっ</span>. <span class=\"jp\">七日</span> (<span class=\"jp\">なのか</span>) and <span class=\"jp\">七つ</span> (<span class=\"jp\">ななつ</span>) share <span class=\"jp\">なの/なな</span>. The day-counter always echoes the つ-counter, just with <span class=\"jp\">か</span> replacing <span class=\"jp\">つ</span> and some sound smoothing. Once you see the pattern, the ten day-counters go from impossible to merely annoying.</p><p><span class=\"jp-example\">七月七日</span> <span class=\"gloss\">(しちがつなのか, July 7th)</span> is <span class=\"jp\">七夕</span> <span class=\"gloss\">(たなばた)</span> — the star festival, when the mythical lovers Orihime and Hikoboshi cross the Milky Way to meet once a year.</p>"
   },
   {
-    "id": 391,
+    "id": 392,
     "kanji": "以外",
     "kana": "いがい",
     "meaning": "except (for), other than",
@@ -446,7 +457,7 @@
     "lesson": "<p>When a Japanese menu says <span class=\"jp-example\">お飲み物以外の持ち込みはご遠慮ください</span> <span class=\"gloss\">(please refrain from bringing in anything other than drinks)</span>, the <span class=\"jp\">以外</span> is doing all the work: everything <em>outside</em> of what's specified is excluded. It snaps directly onto a noun — no particle between them. <span class=\"jp\">水以外</span> (other than water). <span class=\"jp\">彼以外</span> (other than him). <span class=\"jp-example\">これ以外に何がある？</span> <span class=\"gloss\">(what else is there?)</span>.</p><p><span class=\"jp\">以外</span> belongs to a family of four words sharing the <span class=\"jp\">以</span> prefix, and they're worth learning as a set: <span class=\"jp\">以外</span> (outside — exception), <span class=\"jp\">以上</span> (above — \"or more\"), <span class=\"jp\">以下</span> (below — \"or less\"), <span class=\"jp\">以内</span> (inside — \"within\"). They all work the same way: noun + 以X, no particle. <span class=\"jp-example\">三十分以内</span> <span class=\"gloss\">(within 30 minutes)</span>. <span class=\"jp-example\">百人以上</span> <span class=\"gloss\">(100 or more people)</span>. Master one and you've got the grammar for all four.</p>"
   },
   {
-    "id": 392,
+    "id": 393,
     "kanji": "男",
     "kana": "おとこ",
     "meaning": "man, male",
@@ -456,7 +467,7 @@
     "lesson": "<p><span class=\"jp\">男</span> is <span class=\"jp\">田</span> (rice field) + <span class=\"jp\">力</span> (strength). The one who works the field with physical power. It's a kanji from a world where farming was the default occupation and muscle defined the male role. The etymology is honest about its assumptions.</p><p><span class=\"jp\">おとこ</span> is the plain, direct word for \"man\" — not rude, not elevated, just factual. <span class=\"jp-example\">あの男の人</span> <span class=\"gloss\">(that man)</span>. <span class=\"jp-example\">男の子</span> <span class=\"gloss\">(boy — literally \"male child\")</span>. Adding <span class=\"jp\">の人</span> softens it slightly; <span class=\"jp\">男</span> alone can sound blunt or dramatic depending on context. <span class=\"jp-example\">男らしい</span> <span class=\"gloss\">(manly, masculine)</span> uses the suffix <span class=\"jp\">らしい</span> to mean \"like a man\" — a culturally loaded word that's used less casually than it once was.</p><p>For formal contexts, <span class=\"jp\">男性</span> <span class=\"gloss\">(だんせい)</span> is the polite equivalent — think \"male\" vs. \"man\" in English. On forms, surveys, and signs, it's always <span class=\"jp\">男性</span>.</p>"
   },
   {
-    "id": 393,
+    "id": 394,
     "kanji": "彼",
     "kana": "かれ",
     "meaning": "he, one's boyfriend",
@@ -466,7 +477,7 @@
     "lesson": "<p><span class=\"jp\">彼</span> technically means \"he\" — the third-person masculine pronoun. But in practice, Japanese rarely uses third-person pronouns the way English does. You refer to people by name, title, or role: <span class=\"jp\">田中さん</span>, <span class=\"jp\">先生</span>, <span class=\"jp\">あの人</span>. Saying <span class=\"jp\">彼は</span> about someone present would feel odd — almost like pointing at them.</p><p>Where <span class=\"jp\">彼</span> really thrives is as \"boyfriend.\" <span class=\"jp-example\">彼がいる</span> doesn't usually mean \"he exists.\" It means \"I have a boyfriend.\" <span class=\"jp-example\">彼と別れた</span> <span class=\"gloss\">(I broke up with my boyfriend)</span>. This romantic meaning has become so dominant in casual conversation that the pronoun usage sometimes feels like the secondary definition. The pair: <span class=\"jp\">彼</span> (boyfriend) ↔ <span class=\"jp\">彼女</span> (girlfriend).</p><p>The kanji <span class=\"jp\">彼</span> has the step radical (<span class=\"jp\">彳</span>, suggesting movement or a path) and <span class=\"jp\">皮</span> (skin, surface) as the phonetic element. \"The person over there, walking away\" — distant, removed, third-person by design.</p>"
   },
   {
-    "id": 394,
+    "id": 395,
     "kanji": "女",
     "kana": "おんな",
     "meaning": "woman",
@@ -476,7 +487,7 @@
     "lesson": "<p>In oracle bone script, <span class=\"jp\">女</span> depicted a person kneeling with arms crossed — the posture of deference in ancient Chinese court ritual. Over time, the kneeling figure simplified into the character you see now: three strokes crossing each other. It's one of the most ancient and recognizable kanji, used as a radical in dozens of other characters: <span class=\"jp\">好</span> (good — woman + child), <span class=\"jp\">姉</span> (older sister), <span class=\"jp\">妻</span> (wife), <span class=\"jp\">嫌</span> (dislike), <span class=\"jp\">安</span> (cheap/peaceful — a woman under a roof).</p><p>Like <span class=\"jp\">男</span>, <span class=\"jp\">おんな</span> is the plain, factual word. <span class=\"jp-example\">女の人</span> <span class=\"gloss\">(a woman — softened with の人)</span>. <span class=\"jp-example\">女の子</span> <span class=\"gloss\">(girl)</span>. The formal equivalent is <span class=\"jp\">女性</span> <span class=\"gloss\">(じょせい)</span>, used on forms and in polite speech. <span class=\"jp\">おんな</span> by itself, without <span class=\"jp\">の人</span>, can sound raw — <span class=\"jp-example\">あの女</span> <span class=\"gloss\">(that woman)</span> has a dismissive edge, the way \"that woman\" can in English.</p>"
   },
   {
-    "id": 395,
+    "id": 396,
     "kanji": "妻",
     "kana": "つま",
     "meaning": "my (one's own) wife",
@@ -487,7 +498,7 @@
     "lesson": "<p><span class=\"jp\">つま</span> is how you refer to your own wife when speaking to others — it's the humble term, part of Japanese's system of lowering your own family while elevating everyone else's. You say <span class=\"jp\">妻</span> about your wife; you say <span class=\"jp\">奥さん</span> <span class=\"gloss\">(おくさん)</span> about someone else's.</p><p>The kanji <span class=\"jp\">妻</span> is <span class=\"jp\">女</span> (woman) with a hand reaching down into her hair — the historical explanation is that the hand represents a hairpin being inserted, a reference to a wedding ceremony where the bride's hair was dressed. Marriage literally pinned into the character.</p><p>There's a culinary homophone: <span class=\"jp\">つま</span> also means the garnish served alongside sashimi — the shredded daikon and perilla leaves. The connection isn't random: <span class=\"jp\">つま</span> originally meant \"companion, the one beside you,\" and the garnish sits right beside the fish. The wife is the companion of the husband; the daikon is the companion of the fish. Same word, same spatial metaphor, wildly different contexts.</p>"
   },
   {
-    "id": 396,
+    "id": 397,
     "kanji": "百",
     "kana": "ひゃく",
     "meaning": "hundred",
@@ -497,7 +508,7 @@
     "lesson": "<p><span class=\"jp\">百</span> is visually just <span class=\"jp\">一</span> (one) on top of <span class=\"jp\">白</span> (white). One plus white = a hundred? The real story: the bottom part was originally a different character that meant \"many\" and happened to look like <span class=\"jp\">白</span>. Over centuries, the visual similarity won and people just started writing it as <span class=\"jp\">白</span>. The \"one over white\" composition is an accident of calligraphic history, not a meaningful combination.</p><p><span class=\"note-label\">Sound changes:</span> <span class=\"jp\">ひゃく</span> plays nicely with most multipliers, but watch for three and six: <span class=\"jp-example\">三百</span> = <span class=\"jp\">さんびゃく</span> (not さんひゃく), <span class=\"jp-example\">六百</span> = <span class=\"jp\">ろっぴゃく</span> (not ろくひゃく), <span class=\"jp-example\">八百</span> = <span class=\"jp\">はっぴゃく</span> (not はちひゃく). The pattern: certain numbers force the ひ to harden into び or ぴ. These are just euphonic changes — the mouth finds them easier to say.</p><p><span class=\"jp-example\">百</span> also appears in the fun compound <span class=\"jp-example\">百点</span> <span class=\"gloss\">(ひゃくてん, 100 points — a perfect score)</span> and the department store chain name <span class=\"jp-example\">百貨店</span> <span class=\"gloss\">(ひゃっかてん, \"hundred-goods store\")</span>.</p>"
   },
   {
-    "id": 397,
+    "id": 398,
     "kanji": "辺",
     "kana": "へん",
     "meaning": "area, vicinity",
@@ -508,7 +519,7 @@
     "lesson": "<p><span class=\"jp\">へん</span> is vague on purpose. It means \"around here,\" \"in this area,\" \"roughly this neighborhood\" — without committing to a specific spot. <span class=\"jp-example\">この辺</span> <span class=\"gloss\">(around here)</span>. <span class=\"jp-example\">駅の辺</span> <span class=\"gloss\">(near the station)</span>. <span class=\"jp-example\">あの辺に住んでいる</span> <span class=\"gloss\">(I live somewhere around there)</span>. It's the word for when you're gesturing vaguely rather than pointing precisely.</p><p><span class=\"note-label\">この辺 vs この近く:</span> Both mean \"near here,\" but <span class=\"jp\">この辺</span> is fuzzier — a general zone. <span class=\"jp\">この近く</span> implies actual proximity. If someone asks where a restaurant is, <span class=\"jp\">この辺にあります</span> means \"it's somewhere around here, I think.\" <span class=\"jp\">この近くにあります</span> means \"it's close by.\"</p><p>The kanji <span class=\"jp\">辺</span> has the movement radical (<span class=\"jp\">辶</span>, the swooping bottom stroke) plus a phonetic element. Movement through a general area — walking around without a fixed destination. That wandering quality is built into the character.</p>"
   },
   {
-    "id": 398,
+    "id": 399,
     "kanji": "店",
     "kana": "みせ",
     "meaning": "shop, store",
@@ -518,7 +529,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">店</span> is a roof/shelter (<span class=\"jp\">广</span>) over <span class=\"jp\">占</span> (to occupy a space). A space occupied under a roof — a shop. The radical <span class=\"jp\">广</span> shows up in other buildings: <span class=\"jp\">庭</span> (garden), <span class=\"jp\">座</span> (seat), <span class=\"jp\">度</span> (degree). Anything with <span class=\"jp\">广</span> tends to involve a structure or a defined space.</p><p><span class=\"jp\">みせ</span> is the native Japanese reading, used as a standalone word: <span class=\"jp-example\">あの店</span> <span class=\"gloss\">(that shop)</span>. The Chinese-derived reading <span class=\"jp\">てん</span> appears in compounds: <span class=\"jp-example\">書店</span> <span class=\"gloss\">(しょてん, bookstore)</span>, <span class=\"jp-example\">売店</span> <span class=\"gloss\">(ばいてん, kiosk)</span>, <span class=\"jp-example\">店員</span> <span class=\"gloss\">(てんいん, store clerk)</span>. When you see <span class=\"jp\">〜店</span> at the end of a business name, read it as <span class=\"jp\">てん</span>.</p><p>In casual speech, <span class=\"jp\">お店</span> (with the polite お) is more common than bare <span class=\"jp\">店</span>. It just sounds warmer: <span class=\"jp-example\">いいお店知ってる？</span> <span class=\"gloss\">(know any good places?)</span>.</p>"
   },
   {
-    "id": 399,
+    "id": 400,
     "kanji": "閉まる",
     "kana": "しまる",
     "meaning": "to close, be shut, be closed",
@@ -527,15 +538,5 @@
       "自動詞"
     ],
     "lesson": "<p><span class=\"jp\">閉まる</span> is the intransitive \"close\" — the door closes by itself, the store closes for the night, the window slams shut in the wind. No one is specified as doing the closing. Its transitive partner <span class=\"jp\">閉める</span> <span class=\"gloss\">(しめる)</span> means you actively close something: <span class=\"jp-example\">ドアを閉める</span> <span class=\"gloss\">(close the door)</span>.</p><p>The kanji <span class=\"jp\">閉</span> is the gate radical (<span class=\"jp\">門</span>) with <span class=\"jp\">才</span> inside — a bolt or bar inserted across the gate. A gate being barred shut. You can almost see the physical action in the character.</p><p><span class=\"note-label\">閉まる vs 閉じる:</span> Both mean \"close\" but they close different things. <span class=\"jp\">閉まる</span> is for doors, windows, stores — things with hinges, shutters, or business hours. <span class=\"jp\">閉じる</span> <span class=\"gloss\">(とじる)</span> is for books, eyes, mouths — things that fold together. <span class=\"jp-example\">目を閉じる</span> (close your eyes), not <span class=\"jp\">目を閉める</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">閉まる</span> takes <span class=\"jp highlight\">が</span> — the thing closing is the subject. <span class=\"jp-example\">ドアが閉まった</span> <span class=\"gloss\">(the door closed)</span>. <span class=\"jp-example\">店が閉まっている</span> <span class=\"gloss\">(the store is closed)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Passive:</span> As an intransitive verb, passive is rare. Use the plain form.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">を／に閉まらせる</span>: uncommon — usually you'd just use the transitive <span class=\"jp\">閉める</span> instead.</p><div class=\"verb-meta\"><span class=\"group-badge\">五段 Godan</span><span class=\"trans-badge\">自動詞 — pair: 閉める (しめる)</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">しま</span><span class=\"ending\">る</span></td><td class=\"particle\">が</td></tr><tr><td>Negative</td><td><span class=\"stem\">しま</span><span class=\"ending\">らない</span></td><td class=\"particle\">が</td></tr><tr><td>Polite</td><td><span class=\"stem\">しま</span><span class=\"ending\">ります</span></td><td class=\"particle\">が</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">しま</span><span class=\"ending\">りません</span></td><td class=\"particle\">が</td></tr><tr><td>Past</td><td><span class=\"stem\">しま</span><span class=\"ending\">った</span></td><td class=\"particle\">が</td></tr><tr><td>Polite past</td><td><span class=\"stem\">しま</span><span class=\"ending\">りました</span></td><td class=\"particle\">が</td></tr><tr><td>て-form</td><td><span class=\"stem\">しま</span><span class=\"ending\">って</span></td><td class=\"particle\">が</td></tr><tr><td>Volitional</td><td></td><td class=\"particle\"></td></tr><tr><td>Polite vol</td><td></td><td class=\"particle\"></td></tr><tr><td>Passive</td><td></td><td class=\"particle\"></td></tr><tr><td>Causative</td><td><span class=\"stem\">しま</span><span class=\"ending\">らせる</span></td><td class=\"particle\">を／に</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">しま</span><span class=\"ending\">らせられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td><span class=\"stem\">しま</span><span class=\"ending\">れる</span></td><td class=\"particle\">が</td></tr><tr><td>Imperative</td><td><span class=\"stem\">しま</span><span class=\"ending\">れ</span></td><td class=\"particle\">が</td></tr><tr><td>Imp なさい</td><td><span class=\"stem\">しま</span><span class=\"ending\">りなさい</span></td><td class=\"particle\">が</td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">しま</span><span class=\"ending\">れば</span></td><td class=\"particle\">が</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">しま</span><span class=\"ending\">ったら</span></td><td class=\"particle\">が</td></tr></table>"
-  },
-  {
-    "id": 400,
-    "kanji": "問題",
-    "kana": "もんだい",
-    "meaning": "problem, question, issue",
-    "tags": [
-      "noun"
-    ],
-    "lesson": "<p><span class=\"jp-example\">問題ない</span> — two words, total reassurance. \"No problem.\" You'll hear it as a response to apologies, worries, and questions about whether something went wrong. Its slightly cockier variant <span class=\"jp\">問題なし</span> sounds like snapping a case shut: done, settled, nothing to discuss.</p><p>But <span class=\"jp\">問題</span> itself isn't always about problems. It covers \"question\" (on a test: <span class=\"jp-example\">問題を解く</span> <span class=\"gloss\">solve a question</span>), \"issue\" (in society: <span class=\"jp-example\">社会問題</span>), and \"matter\" (<span class=\"jp-example\">問題は時間がないことだ</span> <span class=\"gloss\">the matter is that there's no time</span>). The word is less alarming than English \"problem\" — it's closer to \"the thing on the table that needs attention.\" A teacher handing out an exam says <span class=\"jp-example\">問題</span> without implying anything has gone wrong.</p><p>The kanji combination is poetic: <span class=\"jp\">問</span> shows a mouth (<span class=\"jp\">口</span>) at a gate (<span class=\"jp\">門</span>) — someone calling out a question. <span class=\"jp\">題</span> means topic. A question raised as a topic — that's a <span class=\"jp\">問題</span>.</p>"
   }
 ]

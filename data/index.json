@@ -1663,7 +1663,7 @@
     ]
   },
   {
-    "id": 221,
+    "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
     "meaning": "near, close to; in the near future, before long",
@@ -1674,7 +1674,7 @@
     ]
   },
   {
-    "id": 222,
+    "id": 223,
     "kanji": "甘い",
     "kana": "あまい",
     "meaning": "sweet",
@@ -1683,7 +1683,7 @@
     ]
   },
   {
-    "id": 223,
+    "id": 224,
     "kanji": "テーブル",
     "kana": "てーぶる",
     "meaning": "table",
@@ -1693,7 +1693,7 @@
     ]
   },
   {
-    "id": 224,
+    "id": 225,
     "kanji": "食べ物",
     "kana": "たべもの",
     "meaning": "food",
@@ -1703,7 +1703,7 @@
     ]
   },
   {
-    "id": 225,
+    "id": 226,
     "kanji": "始まる",
     "kana": "はじまる",
     "meaning": "to begin, start (no direct object)",
@@ -1713,7 +1713,7 @@
     ]
   },
   {
-    "id": 226,
+    "id": 227,
     "kanji": "ゲーム",
     "kana": "げーむ",
     "meaning": "game (loan word)",
@@ -1723,7 +1723,7 @@
     ]
   },
   {
-    "id": 227,
+    "id": 228,
     "kanji": "十",
     "kana": "じゅう",
     "meaning": "ten",
@@ -1733,7 +1733,7 @@
     ]
   },
   {
-    "id": 228,
+    "id": 229,
     "kanji": "天気",
     "kana": "てんき",
     "meaning": "weather",
@@ -1742,7 +1742,7 @@
     ]
   },
   {
-    "id": 229,
+    "id": 230,
     "kanji": "暑い",
     "kana": "あつい",
     "meaning": "hot (of weather)",
@@ -1752,7 +1752,7 @@
     ]
   },
   {
-    "id": 230,
+    "id": 231,
     "kanji": "太い",
     "kana": "ふとい",
     "meaning": "thick, fat, bulky",
@@ -1761,7 +1761,7 @@
     ]
   },
   {
-    "id": 231,
+    "id": 232,
     "kanji": "晩",
     "kana": "ばん",
     "meaning": "evening, night",
@@ -1771,7 +1771,7 @@
     ]
   },
   {
-    "id": 232,
+    "id": 233,
     "kanji": "土曜日",
     "kana": "どようび",
     "meaning": "Saturday",
@@ -1781,7 +1781,7 @@
     ]
   },
   {
-    "id": 233,
+    "id": 234,
     "kanji": "痛い",
     "kana": "いたい",
     "meaning": "painful, hurts, sore",
@@ -1790,7 +1790,7 @@
     ]
   },
   {
-    "id": 234,
+    "id": 235,
     "kanji": "お父さん",
     "kana": "おとうさん",
     "meaning": "father, dad (colloquial)",
@@ -1801,7 +1801,7 @@
     ]
   },
   {
-    "id": 235,
+    "id": 236,
     "kanji": "多分",
     "kana": "たぶん",
     "meaning": "probably, perhaps, maybe",
@@ -1810,7 +1810,7 @@
     ]
   },
   {
-    "id": 236,
+    "id": 237,
     "kanji": "時計",
     "kana": "とけい",
     "meaning": "clock, watch",
@@ -1819,7 +1819,7 @@
     ]
   },
   {
-    "id": 237,
+    "id": 238,
     "kanji": "泊まる",
     "kana": "とまる",
     "meaning": "to stay overnight",
@@ -1829,7 +1829,7 @@
     ]
   },
   {
-    "id": 238,
+    "id": 239,
     "kanji": "どうして",
     "kana": "どうして",
     "meaning": "why, how come",
@@ -1839,7 +1839,7 @@
     ]
   },
   {
-    "id": 239,
+    "id": 240,
     "kanji": "掛ける",
     "kana": "かける",
     "meaning": "to hang, put on (direct object, eg glasses)",
@@ -1849,7 +1849,7 @@
     ]
   },
   {
-    "id": 240,
+    "id": 241,
     "kanji": "曲がる",
     "kana": "まがる",
     "meaning": "to turn, bend, curve (no direct object)",
@@ -1859,7 +1859,7 @@
     ]
   },
   {
-    "id": 241,
+    "id": 242,
     "kanji": "お腹",
     "kana": "おなか",
     "meaning": "stomach, belly",
@@ -1870,7 +1870,7 @@
     ]
   },
   {
-    "id": 242,
+    "id": 243,
     "kanji": "ミーティング",
     "kana": "みーてぃんぐ",
     "meaning": "meeting",
@@ -1880,7 +1880,7 @@
     ]
   },
   {
-    "id": 243,
+    "id": 244,
     "kanji": "嫌い",
     "kana": "きらい",
     "meaning": "hate, dislike",
@@ -1889,7 +1889,7 @@
     ]
   },
   {
-    "id": 244,
+    "id": 245,
     "kanji": "金曜日",
     "kana": "きんようび",
     "meaning": "Friday",
@@ -1899,7 +1899,7 @@
     ]
   },
   {
-    "id": 245,
+    "id": 246,
     "kanji": "要る",
     "kana": "いる",
     "meaning": "to need, require",
@@ -1909,7 +1909,7 @@
     ]
   },
   {
-    "id": 246,
+    "id": 247,
     "kanji": "無い",
     "kana": "ない",
     "meaning": "not there (inanimate things)",
@@ -1919,7 +1919,7 @@
     ]
   },
   {
-    "id": 247,
+    "id": 248,
     "kanji": "黄色い",
     "kana": "きいろい",
     "meaning": "yellow",
@@ -1929,7 +1929,7 @@
     ]
   },
   {
-    "id": 248,
+    "id": 249,
     "kanji": "風邪",
     "kana": "かぜ",
     "meaning": "cold (illness)",
@@ -1938,7 +1938,7 @@
     ]
   },
   {
-    "id": 249,
+    "id": 250,
     "kanji": "優しい",
     "kana": "やさしい",
     "meaning": "kind, gentle",
@@ -1948,7 +1948,7 @@
     ]
   },
   {
-    "id": 250,
+    "id": 251,
     "kanji": "晴れる",
     "kana": "はれる",
     "meaning": "to become sunny, clear up, be sunny",
@@ -1958,7 +1958,7 @@
     ]
   },
   {
-    "id": 251,
+    "id": 252,
     "kanji": "汚い",
     "kana": "きたない",
     "meaning": "dirty",
@@ -1967,7 +1967,7 @@
     ]
   },
   {
-    "id": 252,
+    "id": 253,
     "kanji": "茶色",
     "kana": "ちゃいろ",
     "meaning": "brown",
@@ -1977,7 +1977,7 @@
     ]
   },
   {
-    "id": 253,
+    "id": 254,
     "kanji": "空く",
     "kana": "すく",
     "meaning": "to become empty, become less crowded (no direct object)",
@@ -1987,7 +1987,7 @@
     ]
   },
   {
-    "id": 254,
+    "id": 255,
     "kanji": "上る",
     "kana": "のぼる",
     "meaning": "to go up, ascend, rise (no direct object)",
@@ -1997,7 +1997,7 @@
     ]
   },
   {
-    "id": 255,
+    "id": 256,
     "kanji": "ご飯",
     "kana": "ごはん",
     "meaning": "(cooked) rice, meal",
@@ -2007,7 +2007,7 @@
     ]
   },
   {
-    "id": 256,
+    "id": 257,
     "kanji": "日",
     "kana": "にち",
     "meaning": "counter for days",
@@ -2017,7 +2017,7 @@
     ]
   },
   {
-    "id": 257,
+    "id": 258,
     "kanji": "髪の毛",
     "kana": "かみのけ",
     "meaning": "hair, each strand of hair",
@@ -2027,7 +2027,7 @@
     ]
   },
   {
-    "id": 258,
+    "id": 259,
     "kanji": "つける",
     "kana": "つける",
     "meaning": "to turn on, switch on (direct object)",
@@ -2037,7 +2037,7 @@
     ]
   },
   {
-    "id": 259,
+    "id": 260,
     "kanji": "月曜日",
     "kana": "げつようび",
     "meaning": "Monday",
@@ -2047,7 +2047,7 @@
     ]
   },
   {
-    "id": 260,
+    "id": 261,
     "kanji": "入る",
     "kana": "はいる",
     "meaning": "to enter, go inside (no direct object)",
@@ -2057,7 +2057,7 @@
     ]
   },
   {
-    "id": 261,
+    "id": 262,
     "kanji": "カタカナ",
     "kana": "かたかな",
     "meaning": "katakana",
@@ -2067,7 +2067,7 @@
     ]
   },
   {
-    "id": 262,
+    "id": 263,
     "kanji": "今週",
     "kana": "こんしゅう",
     "meaning": "this week",
@@ -2077,7 +2077,7 @@
     ]
   },
   {
-    "id": 263,
+    "id": 264,
     "kanji": "開く",
     "kana": "ひらく",
     "meaning": "to open (abstractly opens and spreads itself, e.g., flower, events, doors)",
@@ -2087,7 +2087,7 @@
     ]
   },
   {
-    "id": 264,
+    "id": 265,
     "kanji": "水",
     "kana": "みず",
     "meaning": "water",
@@ -2096,7 +2096,7 @@
     ]
   },
   {
-    "id": 265,
+    "id": 266,
     "kanji": "あれ",
     "kana": "あれ",
     "meaning": "that (over there)",
@@ -2106,7 +2106,7 @@
     ]
   },
   {
-    "id": 266,
+    "id": 267,
     "kanji": "二",
     "kana": "に",
     "meaning": "two",
@@ -2116,7 +2116,7 @@
     ]
   },
   {
-    "id": 267,
+    "id": 268,
     "kanji": "締める",
     "kana": "しめる",
     "meaning": "to tighten, fasten, tie (direct object)",
@@ -2126,7 +2126,7 @@
     ]
   },
   {
-    "id": 268,
+    "id": 269,
     "kanji": "まずい",
     "kana": "まずい",
     "meaning": "unpleasant, bad tasting",
@@ -2135,7 +2135,7 @@
     ]
   },
   {
-    "id": 269,
+    "id": 270,
     "kanji": "平仮名",
     "kana": "ひらがな",
     "meaning": "hiragana",
@@ -2145,7 +2145,7 @@
     ]
   },
   {
-    "id": 270,
+    "id": 271,
     "kanji": "曇る",
     "kana": "くもる",
     "meaning": "to become cloudy",
@@ -2155,7 +2155,7 @@
     ]
   },
   {
-    "id": 271,
+    "id": 272,
     "kanji": "触る",
     "kana": "さわる",
     "meaning": "to touch, feel",
@@ -2165,7 +2165,7 @@
     ]
   },
   {
-    "id": 272,
+    "id": 273,
     "kanji": "駄目",
     "kana": "だめ",
     "meaning": "no good, useless, not allowed",
@@ -2175,7 +2175,7 @@
     ]
   },
   {
-    "id": 273,
+    "id": 274,
     "kanji": "飲み物",
     "kana": "のみもの",
     "meaning": "beverage, drink",
@@ -2185,7 +2185,7 @@
     ]
   },
   {
-    "id": 274,
+    "id": 275,
     "kanji": "木曜日",
     "kana": "もくようび",
     "meaning": "Thursday",
@@ -2195,7 +2195,7 @@
     ]
   },
   {
-    "id": 275,
+    "id": 276,
     "kanji": "曜日",
     "kana": "ようび",
     "meaning": "day of the week",
@@ -2205,7 +2205,7 @@
     ]
   },
   {
-    "id": 276,
+    "id": 277,
     "kanji": "そば",
     "kana": "そば",
     "meaning": "beside, nearby, near, side, vicinity",
@@ -2215,7 +2215,7 @@
     ]
   },
   {
-    "id": 277,
+    "id": 278,
     "kanji": "こっち",
     "kana": "こっち",
     "meaning": "here, this way (casual)",
@@ -2226,7 +2226,7 @@
     ]
   },
   {
-    "id": 278,
+    "id": 279,
     "kanji": "火曜日",
     "kana": "かようび",
     "meaning": "Tuesday",
@@ -2236,7 +2236,7 @@
     ]
   },
   {
-    "id": 279,
+    "id": 280,
     "kanji": "渇く",
     "kana": "かわく",
     "meaning": "to become thirsty, be thirsty, dry up",
@@ -2246,7 +2246,7 @@
     ]
   },
   {
-    "id": 280,
+    "id": 281,
     "kanji": "三",
     "kana": "さん",
     "meaning": "three",
@@ -2256,7 +2256,7 @@
     ]
   },
   {
-    "id": 281,
+    "id": 282,
     "kanji": "水曜日",
     "kana": "すいようび",
     "meaning": "Wednesday",
@@ -2266,7 +2266,7 @@
     ]
   },
   {
-    "id": 282,
+    "id": 283,
     "kanji": "二つ",
     "kana": "ふたつ",
     "meaning": "two (things)",
@@ -2276,7 +2276,7 @@
     ]
   },
   {
-    "id": 283,
+    "id": 284,
     "kanji": "今晩",
     "kana": "こんばん",
     "meaning": "this evening, tonight",
@@ -2286,7 +2286,7 @@
     ]
   },
   {
-    "id": 284,
+    "id": 285,
     "kanji": "千",
     "kana": "せん",
     "meaning": "thousand",
@@ -2296,7 +2296,7 @@
     ]
   },
   {
-    "id": 285,
+    "id": 286,
     "kanji": "六日",
     "kana": "むいか",
     "meaning": "six days, sixth of the month",
@@ -2306,7 +2306,7 @@
     ]
   },
   {
-    "id": 286,
+    "id": 287,
     "kanji": "お姉さん",
     "kana": "おねえさん",
     "meaning": "older sister",
@@ -2317,7 +2317,7 @@
     ]
   },
   {
-    "id": 287,
+    "id": 288,
     "kanji": "直る",
     "kana": "なおる",
     "meaning": "to be/get fixed, get repaired",
@@ -2327,7 +2327,7 @@
     ]
   },
   {
-    "id": 288,
+    "id": 289,
     "kanji": "ちょっと",
     "kana": "ちょっと",
     "meaning": "a bit, a little",
@@ -2337,7 +2337,7 @@
     ]
   },
   {
-    "id": 289,
+    "id": 290,
     "kanji": "四",
     "kana": "よん",
     "meaning": "four (Japanese origin)",
@@ -2347,7 +2347,7 @@
     ]
   },
   {
-    "id": 290,
+    "id": 291,
     "kanji": "これから",
     "kana": "これから",
     "meaning": "from now on, after this",
@@ -2357,7 +2357,7 @@
     ]
   },
   {
-    "id": 291,
+    "id": 292,
     "kanji": "考える",
     "kana": "かんがえる",
     "meaning": "to think (about), consider, ponder",
@@ -2367,7 +2367,7 @@
     ]
   },
   {
-    "id": 292,
+    "id": 293,
     "kanji": "戻る",
     "kana": "もどる",
     "meaning": "to return to (point of departure/origin)",
@@ -2377,7 +2377,7 @@
     ]
   },
   {
-    "id": 293,
+    "id": 294,
     "kanji": "変える",
     "kana": "かえる",
     "meaning": "to change (something), alter",
@@ -2387,7 +2387,7 @@
     ]
   },
   {
-    "id": 294,
+    "id": 295,
     "kanji": "朝",
     "kana": "あさ",
     "meaning": "morning",
@@ -2397,7 +2397,7 @@
     ]
   },
   {
-    "id": 295,
+    "id": 296,
     "kanji": "歯",
     "kana": "は",
     "meaning": "tooth",
@@ -2407,7 +2407,7 @@
     ]
   },
   {
-    "id": 296,
+    "id": 297,
     "kanji": "頑張る",
     "kana": "がんばる",
     "meaning": "to do one's best, work hard, persist",
@@ -2417,7 +2417,7 @@
     ]
   },
   {
-    "id": 297,
+    "id": 298,
     "kanji": "携帯電話",
     "kana": "けいたいでんわ",
     "meaning": "cellular phone, mobile phone",
@@ -2427,7 +2427,7 @@
     ]
   },
   {
-    "id": 298,
+    "id": 299,
     "kanji": "雨",
     "kana": "あめ",
     "meaning": "rain",
@@ -2436,7 +2436,7 @@
     ]
   },
   {
-    "id": 299,
+    "id": 300,
     "kanji": "金",
     "kana": "かね",
     "meaning": "money (colloquial)",
@@ -2446,7 +2446,7 @@
     ]
   },
   {
-    "id": 300,
+    "id": 301,
     "kanji": "易しい",
     "kana": "やさしい",
     "meaning": "easy, simple",
@@ -2456,7 +2456,7 @@
     ]
   },
   {
-    "id": 301,
+    "id": 302,
     "kanji": "お兄さん",
     "kana": "おにいさん",
     "meaning": "older brother",
@@ -2467,7 +2467,7 @@
     ]
   },
   {
-    "id": 302,
+    "id": 303,
     "kanji": "大きい",
     "kana": "おおきい",
     "meaning": "big",
@@ -2477,7 +2477,7 @@
     ]
   },
   {
-    "id": 303,
+    "id": 304,
     "kanji": "小さい",
     "kana": "ちいさい",
     "meaning": "small",
@@ -2487,7 +2487,7 @@
     ]
   },
   {
-    "id": 304,
+    "id": 305,
     "kanji": "辛い",
     "kana": "からい",
     "meaning": "spicy, hot, salty, harsh/strict",
@@ -2497,7 +2497,7 @@
     ]
   },
   {
-    "id": 305,
+    "id": 306,
     "kanji": "八",
     "kana": "はち",
     "meaning": "eight",
@@ -2507,7 +2507,7 @@
     ]
   },
   {
-    "id": 306,
+    "id": 307,
     "kanji": "あそこ",
     "kana": "あそこ",
     "meaning": "over there",
@@ -2517,7 +2517,7 @@
     ]
   },
   {
-    "id": 307,
+    "id": 308,
     "kanji": "来る",
     "kana": "くる",
     "meaning": "to come",
@@ -2527,7 +2527,7 @@
     ]
   },
   {
-    "id": 308,
+    "id": 309,
     "kanji": "前",
     "kana": "まえ",
     "meaning": "in front of, before",
@@ -2537,7 +2537,7 @@
     ]
   },
   {
-    "id": 309,
+    "id": 310,
     "kanji": "五日",
     "kana": "いつか",
     "meaning": "five days, fifth of the month",
@@ -2547,7 +2547,7 @@
     ]
   },
   {
-    "id": 310,
+    "id": 311,
     "kanji": "いっぱい",
     "kana": "いっぱい",
     "meaning": "full, a lot, as much as possible",
@@ -2558,7 +2558,7 @@
     ]
   },
   {
-    "id": 311,
+    "id": 312,
     "kanji": "九",
     "kana": "きゅう",
     "meaning": "nine",
@@ -2568,7 +2568,7 @@
     ]
   },
   {
-    "id": 312,
+    "id": 313,
     "kanji": "酸っぱい",
     "kana": "すっぱい",
     "meaning": "sour",
@@ -2578,7 +2578,7 @@
     ]
   },
   {
-    "id": 313,
+    "id": 314,
     "kanji": "違う",
     "kana": "ちがう",
     "meaning": "to differ, be wrong",
@@ -2588,7 +2588,7 @@
     ]
   },
   {
-    "id": 314,
+    "id": 315,
     "kanji": "細い",
     "kana": "ほそい",
     "meaning": "thin, fine, slender",
@@ -2597,7 +2597,7 @@
     ]
   },
   {
-    "id": 315,
+    "id": 316,
     "kanji": "三つ",
     "kana": "みっつ",
     "meaning": "three (things)",
@@ -2607,7 +2607,7 @@
     ]
   },
   {
-    "id": 316,
+    "id": 317,
     "kanji": "八日",
     "kana": "ようか",
     "meaning": "eight days, eighth of the month",
@@ -2617,7 +2617,7 @@
     ]
   },
   {
-    "id": 317,
+    "id": 318,
     "kanji": "高校生",
     "kana": "こうこうせい",
     "meaning": "high school student",
@@ -2627,7 +2627,7 @@
     ]
   },
   {
-    "id": 318,
+    "id": 319,
     "kanji": "上手",
     "kana": "じょうず",
     "meaning": "skilled, skillful, good at",
@@ -2636,7 +2636,7 @@
     ]
   },
   {
-    "id": 319,
+    "id": 320,
     "kanji": "強い",
     "kana": "つよい",
     "meaning": "strong, potent, powerful",
@@ -2645,7 +2645,7 @@
     ]
   },
   {
-    "id": 321,
+    "id": 322,
     "kanji": "二十日",
     "kana": "はつか",
     "meaning": "20 days, 20th of the month",
@@ -2656,7 +2656,7 @@
     ]
   },
   {
-    "id": 322,
+    "id": 323,
     "kanji": "左",
     "kana": "ひだり",
     "meaning": "left",
@@ -2665,7 +2665,7 @@
     ]
   },
   {
-    "id": 323,
+    "id": 324,
     "kanji": "二日",
     "kana": "ふつか",
     "meaning": "two days, second of the month",
@@ -2676,7 +2676,7 @@
     ]
   },
   {
-    "id": 324,
+    "id": 325,
     "kanji": "四つ",
     "kana": "よっつ",
     "meaning": "four (things)",
@@ -2686,7 +2686,7 @@
     ]
   },
   {
-    "id": 325,
+    "id": 326,
     "kanji": "暖かい",
     "kana": "あたたかい",
     "meaning": "warm",
@@ -2695,7 +2695,7 @@
     ]
   },
   {
-    "id": 326,
+    "id": 327,
     "kanji": "ある",
     "kana": "ある",
     "meaning": "to exist, be, there is (inanimate)",
@@ -2706,7 +2706,7 @@
     ]
   },
   {
-    "id": 327,
+    "id": 328,
     "kanji": "いい",
     "kana": "いい",
     "meaning": "good, fine, okay",
@@ -2716,7 +2716,7 @@
     ]
   },
   {
-    "id": 328,
+    "id": 329,
     "kanji": "上",
     "kana": "うえ",
     "meaning": "up, above",
@@ -2726,7 +2726,7 @@
     ]
   },
   {
-    "id": 329,
+    "id": 330,
     "kanji": "駅",
     "kana": "えき",
     "meaning": "train station",
@@ -2735,7 +2735,7 @@
     ]
   },
   {
-    "id": 330,
+    "id": 331,
     "kanji": "美味しい",
     "kana": "おいしい",
     "meaning": "tasty, delicious",
@@ -2744,7 +2744,7 @@
     ]
   },
   {
-    "id": 331,
+    "id": 332,
     "kanji": "昨日",
     "kana": "きのう",
     "meaning": "yesterday",
@@ -2755,7 +2755,7 @@
     ]
   },
   {
-    "id": 332,
+    "id": 333,
     "kanji": "綺麗",
     "kana": "きれい",
     "meaning": "pretty, lovely, clean",
@@ -2764,7 +2764,7 @@
     ]
   },
   {
-    "id": 333,
+    "id": 334,
     "kanji": "五",
     "kana": "ご",
     "meaning": "five",
@@ -2773,7 +2773,7 @@
     ]
   },
   {
-    "id": 334,
+    "id": 335,
     "kanji": "九つ",
     "kana": "ここのつ",
     "meaning": "nine (things)",
@@ -2783,7 +2783,7 @@
     ]
   },
   {
-    "id": 335,
+    "id": 336,
     "kanji": "お願い",
     "kana": "おねがい",
     "meaning": "request, favor, wish",
@@ -2793,7 +2793,7 @@
     ]
   },
   {
-    "id": 336,
+    "id": 337,
     "kanji": "答える",
     "kana": "こたえる",
     "meaning": "to answer, reply, respond",
@@ -2803,7 +2803,7 @@
     ]
   },
   {
-    "id": 337,
+    "id": 338,
     "kanji": "先",
     "kana": "さき",
     "meaning": "tip, ahead, first, beyond",
@@ -2813,7 +2813,7 @@
     ]
   },
   {
-    "id": 338,
+    "id": 339,
     "kanji": "寒い",
     "kana": "さむい",
     "meaning": "cold (weather and feeling cold)",
@@ -2822,7 +2822,7 @@
     ]
   },
   {
-    "id": 339,
+    "id": 340,
     "kanji": "四",
     "kana": "し",
     "meaning": "four (Chinese origin)",
@@ -2831,7 +2831,7 @@
     ]
   },
   {
-    "id": 340,
+    "id": 341,
     "kanji": "三日",
     "kana": "みっか",
     "meaning": "three days, third of the month",
@@ -2842,7 +2842,7 @@
     ]
   },
   {
-    "id": 341,
+    "id": 342,
     "kanji": "下",
     "kana": "した",
     "meaning": "under, below",
@@ -2852,7 +2852,7 @@
     ]
   },
   {
-    "id": 342,
+    "id": 343,
     "kanji": "大丈夫",
     "kana": "だいじょうぶ",
     "meaning": "all right, OK",
@@ -2862,7 +2862,7 @@
     ]
   },
   {
-    "id": 343,
+    "id": 344,
     "kanji": "大人",
     "kana": "おとな",
     "meaning": "adult",
@@ -2872,7 +2872,7 @@
     ]
   },
   {
-    "id": 344,
+    "id": 345,
     "kanji": "出す",
     "kana": "だす",
     "meaning": "to take out, submit, send",
@@ -2882,7 +2882,7 @@
     ]
   },
   {
-    "id": 345,
+    "id": 346,
     "kanji": "父",
     "kana": "ちち",
     "meaning": "my (one's own) father",
@@ -2892,7 +2892,7 @@
     ]
   },
   {
-    "id": 346,
+    "id": 347,
     "kanji": "母",
     "kana": "はは",
     "meaning": "my (one's own) mother",
@@ -2902,7 +2902,7 @@
     ]
   },
   {
-    "id": 347,
+    "id": 348,
     "kanji": "月",
     "kana": "つき",
     "meaning": "moon",
@@ -2911,7 +2911,7 @@
     ]
   },
   {
-    "id": 348,
+    "id": 349,
     "kanji": "妹",
     "kana": "いもうと",
     "meaning": "younger sister",
@@ -2921,7 +2921,7 @@
     ]
   },
   {
-    "id": 349,
+    "id": 350,
     "kanji": "冷たい",
     "kana": "つめたい",
     "meaning": "cold (to touch)",
@@ -2930,7 +2930,7 @@
     ]
   },
   {
-    "id": 350,
+    "id": 351,
     "kanji": "弟",
     "kana": "おとうと",
     "meaning": "younger brother",
@@ -2940,7 +2940,7 @@
     ]
   },
   {
-    "id": 351,
+    "id": 352,
     "kanji": "手",
     "kana": "て",
     "meaning": "hand",
@@ -2950,7 +2950,7 @@
     ]
   },
   {
-    "id": 352,
+    "id": 353,
     "kanji": "十日",
     "kana": "とおか",
     "meaning": "ten days, tenth of the month",
@@ -2961,7 +2961,7 @@
     ]
   },
   {
-    "id": 353,
+    "id": 354,
     "kanji": "口",
     "kana": "くち",
     "meaning": "mouth",
@@ -2972,7 +2972,7 @@
     ]
   },
   {
-    "id": 354,
+    "id": 355,
     "kanji": "夏",
     "kana": "なつ",
     "meaning": "summer",
@@ -2982,7 +2982,7 @@
     ]
   },
   {
-    "id": 355,
+    "id": 356,
     "kanji": "七つ",
     "kana": "ななつ",
     "meaning": "seven (things)",
@@ -2992,7 +2992,7 @@
     ]
   },
   {
-    "id": 356,
+    "id": 357,
     "kanji": "時々",
     "kana": "ときどき",
     "meaning": "sometimes",
@@ -3002,7 +3002,7 @@
     ]
   },
   {
-    "id": 357,
+    "id": 358,
     "kanji": "何",
     "kana": "なに",
     "meaning": "what",
@@ -3011,7 +3011,7 @@
     ]
   },
   {
-    "id": 358,
+    "id": 359,
     "kanji": "人",
     "kana": "ひと",
     "meaning": "person",
@@ -3020,7 +3020,7 @@
     ]
   },
   {
-    "id": 359,
+    "id": 360,
     "kanji": "一人",
     "kana": "ひとり",
     "meaning": "one person",
@@ -3030,7 +3030,7 @@
     ]
   },
   {
-    "id": 360,
+    "id": 361,
     "kanji": "一日",
     "kana": "ついたち",
     "meaning": "first of the month",
@@ -3041,7 +3041,7 @@
     ]
   },
   {
-    "id": 361,
+    "id": 362,
     "kanji": "九日",
     "kana": "ここのか",
     "meaning": "nine days, ninth of the month",
@@ -3052,7 +3052,7 @@
     ]
   },
   {
-    "id": 362,
+    "id": 363,
     "kanji": "方",
     "kana": "ほう",
     "meaning": "direction, way, side",
@@ -3062,7 +3062,7 @@
     ]
   },
   {
-    "id": 363,
+    "id": 364,
     "kanji": "他",
     "kana": "ほか",
     "meaning": "another, other",
@@ -3071,7 +3071,7 @@
     ]
   },
   {
-    "id": 364,
+    "id": 365,
     "kanji": "僕",
     "kana": "ぼく",
     "meaning": "I, me (usually used by young males)",
@@ -3081,7 +3081,7 @@
     ]
   },
   {
-    "id": 365,
+    "id": 366,
     "kanji": "欲しい",
     "kana": "ほしい",
     "meaning": "to want, desire",
@@ -3091,7 +3091,7 @@
     ]
   },
   {
-    "id": 366,
+    "id": 367,
     "kanji": "万",
     "kana": "まん",
     "meaning": "ten thousand",
@@ -3100,7 +3100,7 @@
     ]
   },
   {
-    "id": 367,
+    "id": 368,
     "kanji": "見える",
     "kana": "みえる",
     "meaning": "to be visible, seem, look like, appear",
@@ -3110,7 +3110,7 @@
     ]
   },
   {
-    "id": 368,
+    "id": 369,
     "kanji": "道",
     "kana": "みち",
     "meaning": "road, street, way",
@@ -3119,7 +3119,7 @@
     ]
   },
   {
-    "id": 369,
+    "id": 370,
     "kanji": "五つ",
     "kana": "いつつ",
     "meaning": "five (things)",
@@ -3129,7 +3129,7 @@
     ]
   },
   {
-    "id": 370,
+    "id": 371,
     "kanji": "目",
     "kana": "め",
     "meaning": "eye",
@@ -3141,7 +3141,7 @@
     ]
   },
   {
-    "id": 371,
+    "id": 372,
     "kanji": "八つ",
     "kana": "やっつ",
     "meaning": "eight (things)",
@@ -3151,7 +3151,7 @@
     ]
   },
   {
-    "id": 372,
+    "id": 373,
     "kanji": "止める",
     "kana": "やめる",
     "meaning": "to stop, give up (doing something)",
@@ -3161,7 +3161,7 @@
     ]
   },
   {
-    "id": 373,
+    "id": 374,
     "kanji": "四日",
     "kana": "よっか",
     "meaning": "four days, fourth of the month",
@@ -3171,7 +3171,7 @@
     ]
   },
   {
-    "id": 374,
+    "id": 375,
     "kanji": "夜",
     "kana": "よる",
     "meaning": "night (from sunset to sunrise)",
@@ -3181,7 +3181,7 @@
     ]
   },
   {
-    "id": 375,
+    "id": 376,
     "kanji": "来年",
     "kana": "らいねん",
     "meaning": "next year",
@@ -3191,7 +3191,7 @@
     ]
   },
   {
-    "id": 376,
+    "id": 377,
     "kanji": "六",
     "kana": "ろく",
     "meaning": "six",
@@ -3200,7 +3200,7 @@
     ]
   },
   {
-    "id": 377,
+    "id": 378,
     "kanji": "悪い",
     "kana": "わるい",
     "meaning": "bad, at fault",
@@ -3209,7 +3209,7 @@
     ]
   },
   {
-    "id": 378,
+    "id": 379,
     "kanji": "お手洗い",
     "kana": "おてあらい",
     "meaning": "restroom, lavatory",
@@ -3219,7 +3219,7 @@
     ]
   },
   {
-    "id": 379,
+    "id": 380,
     "kanji": "ご主人",
     "kana": "ごしゅじん",
     "meaning": "(someone else's) husband, head of household",
@@ -3229,7 +3229,7 @@
     ]
   },
   {
-    "id": 380,
+    "id": 381,
     "kanji": "本当に",
     "kana": "ほんとうに",
     "meaning": "really, truly",
@@ -3238,7 +3238,7 @@
     ]
   },
   {
-    "id": 381,
+    "id": 382,
     "kanji": "自分",
     "kana": "じぶん",
     "meaning": "self, oneself",
@@ -3248,7 +3248,7 @@
     ]
   },
   {
-    "id": 382,
+    "id": 383,
     "kanji": "ため",
     "kana": "ため",
     "meaning": "for, sake, purpose, in order to",
@@ -3258,7 +3258,7 @@
     ]
   },
   {
-    "id": 383,
+    "id": 384,
     "kanji": "見つかる",
     "kana": "みつかる",
     "meaning": "to be found, be caught",
@@ -3268,7 +3268,7 @@
     ]
   },
   {
-    "id": 384,
+    "id": 385,
     "kanji": "休む",
     "kana": "やすむ",
     "meaning": "to rest, take a break, take a day off, be absent",
@@ -3278,7 +3278,7 @@
     ]
   },
   {
-    "id": 385,
+    "id": 386,
     "kanji": "ゆっくり",
     "kana": "ゆっくり",
     "meaning": "slowly, leisurely",
@@ -3287,7 +3287,7 @@
     ]
   },
   {
-    "id": 386,
+    "id": 387,
     "kanji": "六つ",
     "kana": "むっつ",
     "meaning": "six (things)",
@@ -3297,7 +3297,7 @@
     ]
   },
   {
-    "id": 387,
+    "id": 388,
     "kanji": "花",
     "kana": "はな",
     "meaning": "flower",
@@ -3306,7 +3306,7 @@
     ]
   },
   {
-    "id": 388,
+    "id": 389,
     "kanji": "動く",
     "kana": "うごく",
     "meaning": "to move (no direct object)",
@@ -3316,7 +3316,7 @@
     ]
   },
   {
-    "id": 389,
+    "id": 390,
     "kanji": "線",
     "kana": "せん",
     "meaning": "line",
@@ -3325,7 +3325,7 @@
     ]
   },
   {
-    "id": 390,
+    "id": 391,
     "kanji": "七日",
     "kana": "なのか",
     "meaning": "seven days, seventh of the month",
@@ -3335,7 +3335,7 @@
     ]
   },
   {
-    "id": 391,
+    "id": 392,
     "kanji": "以外",
     "kana": "いがい",
     "meaning": "except (for), other than",
@@ -3345,7 +3345,7 @@
     ]
   },
   {
-    "id": 392,
+    "id": 393,
     "kanji": "男",
     "kana": "おとこ",
     "meaning": "man, male",
@@ -3354,7 +3354,7 @@
     ]
   },
   {
-    "id": 393,
+    "id": 394,
     "kanji": "彼",
     "kana": "かれ",
     "meaning": "he, one's boyfriend",
@@ -3363,7 +3363,7 @@
     ]
   },
   {
-    "id": 394,
+    "id": 395,
     "kanji": "女",
     "kana": "おんな",
     "meaning": "woman",
@@ -3372,7 +3372,7 @@
     ]
   },
   {
-    "id": 395,
+    "id": 396,
     "kanji": "妻",
     "kana": "つま",
     "meaning": "my (one's own) wife",
@@ -3382,7 +3382,7 @@
     ]
   },
   {
-    "id": 396,
+    "id": 397,
     "kanji": "百",
     "kana": "ひゃく",
     "meaning": "hundred",
@@ -3391,7 +3391,7 @@
     ]
   },
   {
-    "id": 397,
+    "id": 398,
     "kanji": "辺",
     "kana": "へん",
     "meaning": "area, vicinity",
@@ -3401,7 +3401,7 @@
     ]
   },
   {
-    "id": 398,
+    "id": 399,
     "kanji": "店",
     "kana": "みせ",
     "meaning": "shop, store",
@@ -3410,7 +3410,7 @@
     ]
   },
   {
-    "id": 399,
+    "id": 400,
     "kanji": "閉まる",
     "kana": "しまる",
     "meaning": "to close, be shut, be closed",
@@ -3420,7 +3420,7 @@
     ]
   },
   {
-    "id": 400,
+    "id": 401,
     "kanji": "問題",
     "kana": "もんだい",
     "meaning": "problem, question, issue",
@@ -3429,7 +3429,7 @@
     ]
   },
   {
-    "id": 401,
+    "id": 402,
     "kanji": "必要",
     "kana": "ひつよう",
     "meaning": "necessary, needed, essential",
@@ -3439,7 +3439,7 @@
     ]
   },
   {
-    "id": 402,
+    "id": 403,
     "kanji": "もつ",
     "kana": "もつ",
     "meaning": "to last long, be durable",
@@ -3449,7 +3449,7 @@
     ]
   },
   {
-    "id": 403,
+    "id": 404,
     "kanji": "開く",
     "kana": "あく",
     "meaning": "to open (no direct object)",
@@ -3459,7 +3459,7 @@
     ]
   },
   {
-    "id": 404,
+    "id": 405,
     "kanji": "昨年",
     "kana": "さくねん",
     "meaning": "last year (formal)",
@@ -3469,7 +3469,7 @@
     ]
   },
   {
-    "id": 405,
+    "id": 406,
     "kanji": "治る",
     "kana": "なおる",
     "meaning": "to get healed, be cured, get well",
@@ -3479,7 +3479,7 @@
     ]
   },
   {
-    "id": 406,
+    "id": 407,
     "kanji": "ドル",
     "kana": "どる",
     "meaning": "dollar",
@@ -3489,7 +3489,7 @@
     ]
   },
   {
-    "id": 407,
+    "id": 408,
     "kanji": "システム",
     "kana": "しすてむ",
     "meaning": "system",
@@ -3499,7 +3499,7 @@
     ]
   },
   {
-    "id": 408,
+    "id": 409,
     "kanji": "以上",
     "kana": "いじょう",
     "meaning": "more than or equal to, that's all",
@@ -3509,7 +3509,7 @@
     ]
   },
   {
-    "id": 409,
+    "id": 410,
     "kanji": "最近",
     "kana": "さいきん",
     "meaning": "recently, lately",
@@ -3519,7 +3519,7 @@
     ]
   },
   {
-    "id": 410,
+    "id": 411,
     "kanji": "世界",
     "kana": "せかい",
     "meaning": "world",
@@ -3528,7 +3528,7 @@
     ]
   },
   {
-    "id": 411,
+    "id": 412,
     "kanji": "コンピューター",
     "kana": "こんぴゅーたー",
     "meaning": "computer",
@@ -3538,7 +3538,7 @@
     ]
   },
   {
-    "id": 412,
+    "id": 413,
     "kanji": "やる",
     "kana": "やる",
     "meaning": "to do, perform, give (to inferiors)",
@@ -3548,7 +3548,7 @@
     ]
   },
   {
-    "id": 413,
+    "id": 414,
     "kanji": "意味",
     "kana": "いみ",
     "meaning": "meaning, significance, sense",
@@ -3558,7 +3558,7 @@
     ]
   },
   {
-    "id": 414,
+    "id": 415,
     "kanji": "増える",
     "kana": "ふえる",
     "meaning": "to increase, grow",
@@ -3568,7 +3568,7 @@
     ]
   },
   {
-    "id": 415,
+    "id": 416,
     "kanji": "選ぶ",
     "kana": "えらぶ",
     "meaning": "to choose, select",
@@ -3578,7 +3578,7 @@
     ]
   },
   {
-    "id": 416,
+    "id": 417,
     "kanji": "生活",
     "kana": "せいかつ",
     "meaning": "life, lifestyle, living",
@@ -3588,7 +3588,7 @@
     ]
   },
   {
-    "id": 417,
+    "id": 418,
     "kanji": "進める",
     "kana": "すすめる",
     "meaning": "to move (something) forward, advance (something)",
@@ -3598,7 +3598,7 @@
     ]
   },
   {
-    "id": 418,
+    "id": 419,
     "kanji": "続ける",
     "kana": "つづける",
     "meaning": "to continue (something)",
@@ -3608,7 +3608,7 @@
     ]
   },
   {
-    "id": 419,
+    "id": 420,
     "kanji": "ほとんど",
     "kana": "ほとんど",
     "meaning": "hardly (negative); almost, mostly (positive)",
@@ -3617,7 +3617,7 @@
     ]
   },
   {
-    "id": 420,
+    "id": 421,
     "kanji": "会社",
     "kana": "かいしゃ",
     "meaning": "company, corporation",
@@ -3626,7 +3626,7 @@
     ]
   },
   {
-    "id": 421,
+    "id": 422,
     "kanji": "家",
     "kana": "いえ",
     "meaning": "house, dwelling",
@@ -3636,7 +3636,7 @@
     ]
   },
   {
-    "id": 422,
+    "id": 423,
     "kanji": "多く",
     "kana": "おおく",
     "meaning": "many, much, a lot, a large amount",
@@ -3647,7 +3647,7 @@
     ]
   },
   {
-    "id": 423,
+    "id": 424,
     "kanji": "話",
     "kana": "はなし",
     "meaning": "conversation, story, talk",
@@ -3656,7 +3656,7 @@
     ]
   },
   {
-    "id": 424,
+    "id": 425,
     "kanji": "上がる",
     "kana": "あがる",
     "meaning": "to go up, rise, increase",
@@ -3666,7 +3666,7 @@
     ]
   },
   {
-    "id": 425,
+    "id": 426,
     "kanji": "もう",
     "kana": "もう",
     "meaning": "now, soon; already (past), anymore (neg); another, again",
@@ -3676,7 +3676,7 @@
     ]
   },
   {
-    "id": 426,
+    "id": 427,
     "kanji": "集める",
     "kana": "あつめる",
     "meaning": "to gather, collect",
@@ -3686,7 +3686,7 @@
     ]
   },
   {
-    "id": 427,
+    "id": 428,
     "kanji": "声",
     "kana": "こえ",
     "meaning": "voice, sound (made by living beings)",
@@ -3695,7 +3695,7 @@
     ]
   },
   {
-    "id": 428,
+    "id": 429,
     "kanji": "初めて",
     "kana": "はじめて",
     "meaning": "for the first time",
@@ -3704,7 +3704,7 @@
     ]
   },
   {
-    "id": 429,
+    "id": 430,
     "kanji": "変わる",
     "kana": "かわる",
     "meaning": "to change, turn into",
@@ -3714,7 +3714,7 @@
     ]
   },
   {
-    "id": 430,
+    "id": 431,
     "kanji": "まず",
     "kana": "まず",
     "meaning": "first (of all), to begin with, for now",
@@ -3723,7 +3723,7 @@
     ]
   },
   {
-    "id": 431,
+    "id": 432,
     "kanji": "社会",
     "kana": "しゃかい",
     "meaning": "society",
@@ -3732,7 +3732,7 @@
     ]
   },
   {
-    "id": 432,
+    "id": 433,
     "kanji": "プログラム",
     "kana": "ぷろぐらむ",
     "meaning": "program booklet",
@@ -3742,7 +3742,7 @@
     ]
   },
   {
-    "id": 433,
+    "id": 434,
     "kanji": "力",
     "kana": "ちから",
     "meaning": "strength, power",
@@ -3751,7 +3751,7 @@
     ]
   },
   {
-    "id": 434,
+    "id": 435,
     "kanji": "今回",
     "kana": "こんかい",
     "meaning": "this time",
@@ -3761,7 +3761,7 @@
     ]
   },
   {
-    "id": 435,
+    "id": 436,
     "kanji": "予定",
     "kana": "よてい",
     "meaning": "schedule, plan",
@@ -3771,7 +3771,7 @@
     ]
   },
   {
-    "id": 436,
+    "id": 437,
     "kanji": "まま",
     "kana": "まま",
     "meaning": "as is, still (in the current state)",
@@ -3781,7 +3781,7 @@
     ]
   },
   {
-    "id": 437,
+    "id": 438,
     "kanji": "テレビ",
     "kana": "てれび",
     "meaning": "television",
@@ -3791,7 +3791,7 @@
     ]
   },
   {
-    "id": 438,
+    "id": 439,
     "kanji": "減る",
     "kana": "へる",
     "meaning": "to decrease, diminish, reduce",
@@ -3801,7 +3801,7 @@
     ]
   },
   {
-    "id": 439,
+    "id": 440,
     "kanji": "消える",
     "kana": "きえる",
     "meaning": "to disappear, vanish, go out",
@@ -3811,7 +3811,7 @@
     ]
   },
   {
-    "id": 440,
+    "id": 441,
     "kanji": "家族",
     "kana": "かぞく",
     "meaning": "family, household",
@@ -3820,7 +3820,7 @@
     ]
   },
   {
-    "id": 441,
+    "id": 442,
     "kanji": "比べる",
     "kana": "くらべる",
     "meaning": "to compare, contrast",
@@ -3830,7 +3830,7 @@
     ]
   },
   {
-    "id": 442,
+    "id": 443,
     "kanji": "生まれる",
     "kana": "うまれる",
     "meaning": "to be born, come into existence",
@@ -3840,7 +3840,7 @@
     ]
   },
   {
-    "id": 443,
+    "id": 444,
     "kanji": "ただ",
     "kana": "ただ",
     "meaning": "free of charge",
@@ -3850,7 +3850,7 @@
     ]
   },
   {
-    "id": 444,
+    "id": 445,
     "kanji": "これら",
     "kana": "これら",
     "meaning": "these",
@@ -3859,7 +3859,7 @@
     ]
   },
   {
-    "id": 445,
+    "id": 446,
     "kanji": "調べる",
     "kana": "しらべる",
     "meaning": "to investigate, examine, check, look into",
@@ -3869,7 +3869,7 @@
     ]
   },
   {
-    "id": 446,
+    "id": 447,
     "kanji": "事故",
     "kana": "じこ",
     "meaning": "accident, incident, mishap, trouble",
@@ -3878,7 +3878,7 @@
     ]
   },
   {
-    "id": 447,
+    "id": 448,
     "kanji": "電話",
     "kana": "でんわ",
     "meaning": "telephone, phone call",
@@ -3888,7 +3888,7 @@
     ]
   },
   {
-    "id": 448,
+    "id": 449,
     "kanji": "外国",
     "kana": "がいこく",
     "meaning": "foreign country",
@@ -3897,7 +3897,7 @@
     ]
   },
   {
-    "id": 449,
+    "id": 450,
     "kanji": "銀行",
     "kana": "ぎんこう",
     "meaning": "bank",
@@ -3906,7 +3906,7 @@
     ]
   },
   {
-    "id": 450,
+    "id": 451,
     "kanji": "十分",
     "kana": "じゅうぶん",
     "meaning": "enough, sufficient, fully, plenty",
@@ -3916,7 +3916,7 @@
     ]
   },
   {
-    "id": 451,
+    "id": 452,
     "kanji": "あまり",
     "kana": "あまり",
     "meaning": "not much, not really, not particularly, not so",
@@ -3925,7 +3925,7 @@
     ]
   },
   {
-    "id": 452,
+    "id": 453,
     "kanji": "写真",
     "kana": "しゃしん",
     "meaning": "photograph, photo, picture",
@@ -3934,7 +3934,7 @@
     ]
   },
   {
-    "id": 453,
+    "id": 454,
     "kanji": "繰り返す",
     "kana": "くりかえす",
     "meaning": "to repeat",
@@ -3944,7 +3944,7 @@
     ]
   },
   {
-    "id": 454,
+    "id": 455,
     "kanji": "種類",
     "kana": "しゅるい",
     "meaning": "type, kind, category",
@@ -3953,7 +3953,7 @@
     ]
   },
   {
-    "id": 455,
+    "id": 456,
     "kanji": "意見",
     "kana": "いけん",
     "meaning": "opinion, view",
@@ -3963,7 +3963,7 @@
     ]
   },
   {
-    "id": 456,
+    "id": 457,
     "kanji": "新聞",
     "kana": "しんぶん",
     "meaning": "newspaper",
@@ -3972,7 +3972,7 @@
     ]
   },
   {
-    "id": 457,
+    "id": 458,
     "kanji": "文章",
     "kana": "ぶんしょう",
     "meaning": "sentence(s), writing (in general), any written text",
@@ -3981,7 +3981,7 @@
     ]
   },
   {
-    "id": 458,
+    "id": 459,
     "kanji": "目立つ",
     "kana": "めだつ",
     "meaning": "to stand out, be conspicuous",
@@ -3991,7 +3991,7 @@
     ]
   },
   {
-    "id": 459,
+    "id": 460,
     "kanji": "相手",
     "kana": "あいて",
     "meaning": "the other party, ally, opponent",
@@ -4000,7 +4000,7 @@
     ]
   },
   {
-    "id": 460,
+    "id": 461,
     "kanji": "病院",
     "kana": "びょういん",
     "meaning": "hospital",
@@ -4009,7 +4009,7 @@
     ]
   },
   {
-    "id": 461,
+    "id": 462,
     "kanji": "厚い",
     "kana": "あつい",
     "meaning": "thick, bulky, deep",
@@ -4018,7 +4018,7 @@
     ]
   },
   {
-    "id": 462,
+    "id": 463,
     "kanji": "忙しい",
     "kana": "いそがしい",
     "meaning": "busy, occupied",
@@ -4027,7 +4027,7 @@
     ]
   },
   {
-    "id": 463,
+    "id": 464,
     "kanji": "薄い",
     "kana": "うすい",
     "meaning": "thin, weak, light, pale",
@@ -4036,7 +4036,7 @@
     ]
   },
   {
-    "id": 464,
+    "id": 465,
     "kanji": "川",
     "kana": "かわ",
     "meaning": "river, stream",
@@ -4045,7 +4045,7 @@
     ]
   },
   {
-    "id": 465,
+    "id": 466,
     "kanji": "暗い",
     "kana": "くらい",
     "meaning": "dark, gloomy, depressing",
@@ -4054,7 +4054,7 @@
     ]
   },
   {
-    "id": 466,
+    "id": 467,
     "kanji": "クラス",
     "kana": "くらす",
     "meaning": "class (in school)",
@@ -4064,7 +4064,7 @@
     ]
   },
   {
-    "id": 467,
+    "id": 468,
     "kanji": "黒い",
     "kana": "くろい",
     "meaning": "black, dark",
@@ -4073,7 +4073,7 @@
     ]
   },
   {
-    "id": 468,
+    "id": 469,
     "kanji": "バス",
     "kana": "ばす",
     "meaning": "bus",
@@ -4083,7 +4083,7 @@
     ]
   },
   {
-    "id": 469,
+    "id": 470,
     "kanji": "青い",
     "kana": "あおい",
     "meaning": "blue, green",
@@ -4092,7 +4092,7 @@
     ]
   },
   {
-    "id": 471,
+    "id": 472,
     "kanji": "薬",
     "kana": "くすり",
     "meaning": "medicine, drug",
@@ -4101,7 +4101,7 @@
     ]
   },
   {
-    "id": 472,
+    "id": 473,
     "kanji": "砂糖",
     "kana": "さとう",
     "meaning": "sugar",
@@ -4110,7 +4110,7 @@
     ]
   },
   {
-    "id": 473,
+    "id": 474,
     "kanji": "休み",
     "kana": "やすみ",
     "meaning": "rest, break, holiday, vacation",
@@ -4119,7 +4119,7 @@
     ]
   },
   {
-    "id": 474,
+    "id": 475,
     "kanji": "郵便局",
     "kana": "ゆうびんきょく",
     "meaning": "post office",
@@ -4128,7 +4128,7 @@
     ]
   },
   {
-    "id": 475,
+    "id": 476,
     "kanji": "住所",
     "kana": "じゅうしょ",
     "meaning": "address",
@@ -4137,7 +4137,7 @@
     ]
   },
   {
-    "id": 476,
+    "id": 477,
     "kanji": "こちら",
     "kana": "こちら",
     "meaning": "here, this way (polite)",
@@ -4147,7 +4147,7 @@
     ]
   },
   {
-    "id": 477,
+    "id": 478,
     "kanji": "財布",
     "kana": "さいふ",
     "meaning": "purse, wallet",
@@ -4156,7 +4156,7 @@
     ]
   },
   {
-    "id": 478,
+    "id": 479,
     "kanji": "パスポート",
     "kana": "ぱすぽーと",
     "meaning": "passport",
@@ -4166,7 +4166,7 @@
     ]
   },
   {
-    "id": 479,
+    "id": 480,
     "kanji": "椅子",
     "kana": "いす",
     "meaning": "chair",
@@ -4175,7 +4175,7 @@
     ]
   },
   {
-    "id": 480,
+    "id": 481,
     "kanji": "可愛い",
     "kana": "かわいい",
     "meaning": "cute, sweet",
@@ -4184,7 +4184,7 @@
     ]
   },
   {
-    "id": 481,
+    "id": 482,
     "kanji": "お祖父さん",
     "kana": "おじいさん",
     "meaning": "grandfather, elderly man",
@@ -4194,7 +4194,7 @@
     ]
   },
   {
-    "id": 482,
+    "id": 483,
     "kanji": "切手",
     "kana": "きって",
     "meaning": "postage stamp",
@@ -4203,7 +4203,7 @@
     ]
   },
   {
-    "id": 483,
+    "id": 484,
     "kanji": "涼しい",
     "kana": "すずしい",
     "meaning": "cool, refreshing (of weather or air)",
@@ -4212,7 +4212,7 @@
     ]
   },
   {
-    "id": 484,
+    "id": 485,
     "kanji": "いくつ",
     "kana": "いくつ",
     "meaning": "how many, how old",
@@ -4221,7 +4221,7 @@
     ]
   },
   {
-    "id": 485,
+    "id": 486,
     "kanji": "メニュー",
     "kana": "めにゅー",
     "meaning": "menu",
@@ -4231,7 +4231,7 @@
     ]
   },
   {
-    "id": 486,
+    "id": 487,
     "kanji": "電気",
     "kana": "でんき",
     "meaning": "electricity, electric light",
@@ -4240,7 +4240,7 @@
     ]
   },
   {
-    "id": 487,
+    "id": 488,
     "kanji": "勝つ",
     "kana": "かつ",
     "meaning": "to win",
@@ -4250,7 +4250,7 @@
     ]
   },
   {
-    "id": 488,
+    "id": 489,
     "kanji": "負ける",
     "kana": "まける",
     "meaning": "to lose (in a match/competition), be defeated",
@@ -4260,7 +4260,7 @@
     ]
   },
   {
-    "id": 489,
+    "id": 490,
     "kanji": "建てる",
     "kana": "たてる",
     "meaning": "to build, erect",
@@ -4270,7 +4270,7 @@
     ]
   },
   {
-    "id": 490,
+    "id": 491,
     "kanji": "日記",
     "kana": "にっき",
     "meaning": "diary",
@@ -4279,7 +4279,7 @@
     ]
   },
   {
-    "id": 491,
+    "id": 492,
     "kanji": "売り切れ",
     "kana": "うりきれ",
     "meaning": "sold out, sellout",
@@ -4288,7 +4288,7 @@
     ]
   },
   {
-    "id": 492,
+    "id": 493,
     "kanji": "お巡りさん",
     "kana": "おまわりさん",
     "meaning": "police officer (casual)",
@@ -4298,7 +4298,7 @@
     ]
   },
   {
-    "id": 493,
+    "id": 494,
     "kanji": "目覚まし時計",
     "kana": "めざましどけい",
     "meaning": "alarm clock",
@@ -4308,7 +4308,7 @@
     ]
   },
   {
-    "id": 494,
+    "id": 495,
     "kanji": "レシート",
     "kana": "れしーと",
     "meaning": "receipt (loan word)",
@@ -4318,7 +4318,7 @@
     ]
   },
   {
-    "id": 495,
+    "id": 496,
     "kanji": "ティッシュ",
     "kana": "てぃっしゅ",
     "meaning": "tissue, Kleenex",
@@ -4328,7 +4328,7 @@
     ]
   },
   {
-    "id": 496,
+    "id": 497,
     "kanji": "歯ブラシ",
     "kana": "はぶらし",
     "meaning": "toothbrush",
@@ -4337,7 +4337,7 @@
     ]
   },
   {
-    "id": 497,
+    "id": 498,
     "kanji": "下りる",
     "kana": "おりる",
     "meaning": "to go down, descend, get off (bus, train, etc), land",
@@ -4347,7 +4347,7 @@
     ]
   },
   {
-    "id": 498,
+    "id": 499,
     "kanji": "洗う",
     "kana": "あらう",
     "meaning": "to wash",
@@ -4357,7 +4357,7 @@
     ]
   },
   {
-    "id": 499,
+    "id": 500,
     "kanji": "パート",
     "kana": "ぱーと",
     "meaning": "part-time",
@@ -4367,7 +4367,7 @@
     ]
   },
   {
-    "id": 500,
+    "id": 501,
     "kanji": "氏名",
     "kana": "しめい",
     "meaning": "full name",
@@ -4377,7 +4377,7 @@
     ]
   },
   {
-    "id": 501,
+    "id": 502,
     "kanji": "今夜",
     "kana": "こんや",
     "meaning": "tonight, this evening",
@@ -4387,7 +4387,7 @@
     ]
   },
   {
-    "id": 502,
+    "id": 503,
     "kanji": "夜中",
     "kana": "よなか",
     "meaning": "midnight",
@@ -4397,7 +4397,7 @@
     ]
   },
   {
-    "id": 503,
+    "id": 504,
     "kanji": "来週",
     "kana": "らいしゅう",
     "meaning": "next week",
@@ -4407,7 +4407,7 @@
     ]
   },
   {
-    "id": 504,
+    "id": 505,
     "kanji": "誰か",
     "kana": "だれか",
     "meaning": "someone",
@@ -4416,7 +4416,7 @@
     ]
   },
   {
-    "id": 505,
+    "id": 506,
     "kanji": "何",
     "kana": "なん",
     "meaning": "what",
@@ -4425,7 +4425,7 @@
     ]
   },
   {
-    "id": 506,
+    "id": 507,
     "kanji": "今朝",
     "kana": "けさ",
     "meaning": "this morning",
@@ -4436,7 +4436,7 @@
     ]
   },
   {
-    "id": 507,
+    "id": 508,
     "kanji": "寿司",
     "kana": "すし",
     "meaning": "sushi",
@@ -4445,7 +4445,7 @@
     ]
   },
   {
-    "id": 508,
+    "id": 509,
     "kanji": "履く",
     "kana": "はく",
     "meaning": "to wear (below the waist), put on (below the waist)",
@@ -4455,7 +4455,7 @@
     ]
   },
   {
-    "id": 509,
+    "id": 510,
     "kanji": "おじさん",
     "kana": "おじさん",
     "meaning": "uncle",
@@ -4465,7 +4465,7 @@
     ]
   },
   {
-    "id": 510,
+    "id": 511,
     "kanji": "おばさん",
     "kana": "おばさん",
     "meaning": "aunt",
@@ -4475,7 +4475,7 @@
     ]
   },
   {
-    "id": 511,
+    "id": 512,
     "kanji": "お祖母さん",
     "kana": "おばあさん",
     "meaning": "grandmother, elderly woman",
@@ -4485,7 +4485,7 @@
     ]
   },
   {
-    "id": 512,
+    "id": 513,
     "kanji": "いとこ",
     "kana": "いとこ",
     "meaning": "cousin",
@@ -4495,7 +4495,7 @@
     ]
   },
   {
-    "id": 513,
+    "id": 514,
     "kanji": "辞書",
     "kana": "じしょ",
     "meaning": "dictionary",
@@ -4504,7 +4504,7 @@
     ]
   },
   {
-    "id": 514,
+    "id": 515,
     "kanji": "朝ご飯",
     "kana": "あさごはん",
     "meaning": "breakfast",
@@ -4513,7 +4513,7 @@
     ]
   },
   {
-    "id": 515,
+    "id": 516,
     "kanji": "白",
     "kana": "しろ",
     "meaning": "white color",
@@ -4522,7 +4522,7 @@
     ]
   },
   {
-    "id": 516,
+    "id": 517,
     "kanji": "どっち",
     "kana": "どっち",
     "meaning": "which, which one (2 things, casual)",
@@ -4532,7 +4532,7 @@
     ]
   },
   {
-    "id": 517,
+    "id": 518,
     "kanji": "そっち",
     "kana": "そっち",
     "meaning": "there (casual)",
@@ -4542,7 +4542,7 @@
     ]
   },
   {
-    "id": 518,
+    "id": 519,
     "kanji": "明日",
     "kana": "あした",
     "meaning": "tomorrow",
@@ -4553,7 +4553,7 @@
     ]
   },
   {
-    "id": 519,
+    "id": 520,
     "kanji": "明後日",
     "kana": "あさって",
     "meaning": "day after tomorrow",
@@ -4564,7 +4564,7 @@
     ]
   },
   {
-    "id": 520,
+    "id": 521,
     "kanji": "一昨日",
     "kana": "おととい",
     "meaning": "the day before yesterday",
@@ -4575,7 +4575,7 @@
     ]
   },
   {
-    "id": 571,
+    "id": 572,
     "kanji": "動かす",
     "kana": "うごかす",
     "meaning": "to move (something)",
@@ -4585,7 +4585,7 @@
     ]
   },
   {
-    "id": 572,
+    "id": 573,
     "kanji": "壊れる",
     "kana": "こわれる",
     "meaning": "to break (down), be broken, fall apart",
@@ -4595,7 +4595,7 @@
     ]
   },
   {
-    "id": 573,
+    "id": 574,
     "kanji": "復習",
     "kana": "ふくしゅう",
     "meaning": "review",
@@ -4605,7 +4605,7 @@
     ]
   },
   {
-    "id": 574,
+    "id": 575,
     "kanji": "眉",
     "kana": "まゆ",
     "meaning": "eyebrow",
@@ -4614,7 +4614,7 @@
     ]
   },
   {
-    "id": 575,
+    "id": 576,
     "kanji": "客",
     "kana": "きゃく",
     "meaning": "customer, guest, visitor",
@@ -4623,7 +4623,7 @@
     ]
   },
   {
-    "id": 576,
+    "id": 577,
     "kanji": "机",
     "kana": "つくえ",
     "meaning": "desk",
@@ -4632,7 +4632,7 @@
     ]
   },
   {
-    "id": 577,
+    "id": 578,
     "kanji": "風呂",
     "kana": "ふろ",
     "meaning": "bath",
@@ -4641,7 +4641,7 @@
     ]
   },
   {
-    "id": 578,
+    "id": 579,
     "kanji": "湯",
     "kana": "ゆ",
     "meaning": "hot water",
@@ -4650,7 +4650,7 @@
     ]
   },
   {
-    "id": 579,
+    "id": 580,
     "kanji": "ぬるい",
     "kana": "ぬるい",
     "meaning": "lukewarm, tepid",
@@ -4659,7 +4659,7 @@
     ]
   },
   {
-    "id": 580,
+    "id": 581,
     "kanji": "風邪薬",
     "kana": "かぜぐすり",
     "meaning": "cold medicine",
@@ -4669,7 +4669,7 @@
     ]
   },
   {
-    "id": 581,
+    "id": 582,
     "kanji": "靴下",
     "kana": "くつした",
     "meaning": "socks",
@@ -4679,7 +4679,7 @@
     ]
   },
   {
-    "id": 582,
+    "id": 583,
     "kanji": "たばこ",
     "kana": "たばこ",
     "meaning": "tobacco, cigarette",
@@ -4689,7 +4689,7 @@
     ]
   },
   {
-    "id": 583,
+    "id": 584,
     "kanji": "アイスコーヒー",
     "kana": "あいすこーひー",
     "meaning": "iced coffee",
@@ -4699,7 +4699,7 @@
     ]
   },
   {
-    "id": 584,
+    "id": 585,
     "kanji": "天ぷら",
     "kana": "てんぷら",
     "meaning": "Japanese deep-fried food",
@@ -4708,7 +4708,7 @@
     ]
   },
   {
-    "id": 585,
+    "id": 586,
     "kanji": "肉",
     "kana": "にく",
     "meaning": "meat, flesh",
@@ -4717,7 +4717,7 @@
     ]
   },
   {
-    "id": 586,
+    "id": 587,
     "kanji": "昨夜",
     "kana": "ゆうべ",
     "meaning": "last night, last evening",
@@ -4728,7 +4728,7 @@
     ]
   },
   {
-    "id": 587,
+    "id": 588,
     "kanji": "流行る",
     "kana": "はやる",
     "meaning": "to be in fashion, be popular",
@@ -4738,7 +4738,7 @@
     ]
   },
   {
-    "id": 588,
+    "id": 589,
     "kanji": "連れてくる",
     "kana": "つれてくる",
     "meaning": "to bring (a person)",
@@ -4749,7 +4749,7 @@
     ]
   },
   {
-    "id": 589,
+    "id": 590,
     "kanji": "方",
     "kana": "かた",
     "meaning": "person (polite)",
@@ -4759,7 +4759,7 @@
     ]
   },
   {
-    "id": 590,
+    "id": 591,
     "kanji": "零",
     "kana": "れい",
     "meaning": "zero",
@@ -4769,7 +4769,7 @@
     ]
   },
   {
-    "id": 591,
+    "id": 592,
     "kanji": "雲",
     "kana": "くも",
     "meaning": "cloud",
@@ -4778,7 +4778,7 @@
     ]
   },
   {
-    "id": 592,
+    "id": 593,
     "kanji": "空",
     "kana": "そら",
     "meaning": "sky",
@@ -4788,7 +4788,7 @@
     ]
   },
   {
-    "id": 593,
+    "id": 594,
     "kanji": "人気",
     "kana": "にんき",
     "meaning": "popular, popularity",
@@ -4798,7 +4798,7 @@
     ]
   },
   {
-    "id": 594,
+    "id": 595,
     "kanji": "兄さん",
     "kana": "にいさん",
     "meaning": "(one's own) older brother (polite)",
@@ -4808,7 +4808,7 @@
     ]
   },
   {
-    "id": 595,
+    "id": 596,
     "kanji": "姉さん",
     "kana": "ねえさん",
     "meaning": "(one's own) older sister (polite)",
@@ -4818,7 +4818,7 @@
     ]
   },
   {
-    "id": 596,
+    "id": 597,
     "kanji": "平成",
     "kana": "へいせい",
     "meaning": "Heisei era (1989-2019)",
@@ -4828,7 +4828,7 @@
     ]
   },
   {
-    "id": 597,
+    "id": 598,
     "kanji": "毎月",
     "kana": "まいつき",
     "meaning": "every month",
@@ -4839,7 +4839,7 @@
     ]
   },
   {
-    "id": 598,
+    "id": 599,
     "kanji": "半日",
     "kana": "はんにち",
     "meaning": "half a day",
@@ -4848,7 +4848,7 @@
     ]
   },
   {
-    "id": 599,
+    "id": 600,
     "kanji": "半月",
     "kana": "はんつき",
     "meaning": "half a month",
@@ -4857,7 +4857,7 @@
     ]
   },
   {
-    "id": 600,
+    "id": 601,
     "kanji": "なるほど",
     "kana": "なるほど",
     "meaning": "now I see, now I understand",
@@ -4867,7 +4867,7 @@
     ]
   },
   {
-    "id": 601,
+    "id": 602,
     "kanji": "つまり",
     "kana": "つまり",
     "meaning": "in short; in other words",
@@ -4877,7 +4877,7 @@
     ]
   },
   {
-    "id": 602,
+    "id": 603,
     "kanji": "そのまま",
     "kana": "そのまま",
     "meaning": "as it is, just like that",
@@ -4886,7 +4886,7 @@
     ]
   },
   {
-    "id": 603,
+    "id": 604,
     "kanji": "はっきり",
     "kana": "はっきり",
     "meaning": "clearly",
@@ -4896,7 +4896,7 @@
     ]
   },
   {
-    "id": 604,
+    "id": 605,
     "kanji": "大変",
     "kana": "たいへん",
     "meaning": "very; serious, terrible, difficult",
@@ -4907,7 +4907,7 @@
     ]
   },
   {
-    "id": 605,
+    "id": 606,
     "kanji": "簡単",
     "kana": "かんたん",
     "meaning": "easy, simple",
@@ -4917,7 +4917,7 @@
     ]
   },
   {
-    "id": 606,
+    "id": 607,
     "kanji": "似ている",
     "kana": "にている",
     "meaning": "to look like, resemble",
@@ -4928,7 +4928,7 @@
     ]
   },
   {
-    "id": 607,
+    "id": 608,
     "kanji": "驚く",
     "kana": "おどろく",
     "meaning": "to be surprised, be startled",
@@ -4938,7 +4938,7 @@
     ]
   },
   {
-    "id": 608,
+    "id": 609,
     "kanji": "嫌",
     "kana": "いや",
     "meaning": "dislike, don't like",
@@ -4948,7 +4948,7 @@
     ]
   },
   {
-    "id": 609,
+    "id": 610,
     "kanji": "喧嘩",
     "kana": "けんか",
     "meaning": "fight, argument",
@@ -4958,7 +4958,7 @@
     ]
   },
   {
-    "id": 610,
+    "id": 611,
     "kanji": "遅れる",
     "kana": "おくれる",
     "meaning": "to be late",
@@ -4968,7 +4968,7 @@
     ]
   },
   {
-    "id": 611,
+    "id": 612,
     "kanji": "にんじん",
     "kana": "にんじん",
     "meaning": "carrot",
@@ -4977,7 +4977,7 @@
     ]
   },
   {
-    "id": 612,
+    "id": 613,
     "kanji": "ジャガイモ",
     "kana": "じゃがいも",
     "meaning": "potato",
@@ -4986,7 +4986,7 @@
     ]
   },
   {
-    "id": 613,
+    "id": 614,
     "kanji": "ナス",
     "kana": "なす",
     "meaning": "eggplant",
@@ -4995,7 +4995,7 @@
     ]
   },
   {
-    "id": 614,
+    "id": 615,
     "kanji": "やかん",
     "kana": "やかん",
     "meaning": "kettle",
@@ -5004,7 +5004,7 @@
     ]
   },
   {
-    "id": 615,
+    "id": 616,
     "kanji": "話し合う",
     "kana": "はなしあう",
     "meaning": "to discuss, talk together",
@@ -5014,7 +5014,7 @@
     ]
   },
   {
-    "id": 616,
+    "id": 617,
     "kanji": "残す",
     "kana": "のこす",
     "meaning": "to leave behind, save, not finish",
@@ -5024,7 +5024,7 @@
     ]
   },
   {
-    "id": 617,
+    "id": 618,
     "kanji": "ごちそうする",
     "kana": "ごちそうする",
     "meaning": "to treat, host (someone to a meal)",
@@ -5035,7 +5035,7 @@
     ]
   },
   {
-    "id": 618,
+    "id": 619,
     "kanji": "合う",
     "kana": "あう",
     "meaning": "to fit, match",
@@ -5045,7 +5045,7 @@
     ]
   },
   {
-    "id": 619,
+    "id": 620,
     "kanji": "当たる",
     "kana": "あたる",
     "meaning": "to hit, strike, win, be correct, succeed",
@@ -5055,7 +5055,7 @@
     ]
   },
   {
-    "id": 620,
+    "id": 621,
     "kanji": "集まる",
     "kana": "あつまる",
     "meaning": "to gather, be collected",
@@ -5065,7 +5065,7 @@
     ]
   },
   {
-    "id": 621,
+    "id": 622,
     "kanji": "場所",
     "kana": "ばしょ",
     "meaning": "place, space, location",
@@ -5074,7 +5074,7 @@
     ]
   },
   {
-    "id": 622,
+    "id": 623,
     "kanji": "海",
     "kana": "うみ",
     "meaning": "sea, ocean",
@@ -5083,7 +5083,7 @@
     ]
   },
   {
-    "id": 623,
+    "id": 624,
     "kanji": "少年",
     "kana": "しょうねん",
     "meaning": "(young) boy (between 7 and 18 years old)",
@@ -5093,7 +5093,7 @@
     ]
   },
   {
-    "id": 624,
+    "id": 625,
     "kanji": "孫",
     "kana": "まご",
     "meaning": "grandchild",
@@ -5102,7 +5102,7 @@
     ]
   },
   {
-    "id": 625,
+    "id": 626,
     "kanji": "生徒",
     "kana": "せいと",
     "meaning": "student (K-12), pupil",
@@ -5111,7 +5111,7 @@
     ]
   },
   {
-    "id": 626,
+    "id": 627,
     "kanji": "高校",
     "kana": "こうこう",
     "meaning": "high school (for short)",
@@ -5121,7 +5121,7 @@
     ]
   },
   {
-    "id": 627,
+    "id": 628,
     "kanji": "年上",
     "kana": "としうえ",
     "meaning": "older, senior",
@@ -5131,7 +5131,7 @@
     ]
   },
   {
-    "id": 628,
+    "id": 629,
     "kanji": "卒業",
     "kana": "そつぎょう",
     "meaning": "graduation",
@@ -5141,7 +5141,7 @@
     ]
   },
   {
-    "id": 629,
+    "id": 630,
     "kanji": "運動",
     "kana": "うんどう",
     "meaning": "exercise, movement",
@@ -5151,7 +5151,7 @@
     ]
   },
   {
-    "id": 630,
+    "id": 631,
     "kanji": "選手",
     "kana": "せんしゅ",
     "meaning": "athlete, (sports) player",
@@ -5160,7 +5160,7 @@
     ]
   },
   {
-    "id": 631,
+    "id": 632,
     "kanji": "映画",
     "kana": "えいが",
     "meaning": "movie",
@@ -5169,7 +5169,7 @@
     ]
   },
   {
-    "id": 632,
+    "id": 633,
     "kanji": "英語",
     "kana": "えいご",
     "meaning": "English",
@@ -5178,7 +5178,7 @@
     ]
   },
   {
-    "id": 633,
+    "id": 634,
     "kanji": "手紙",
     "kana": "てがみ",
     "meaning": "letter",
@@ -5187,7 +5187,7 @@
     ]
   },
   {
-    "id": 634,
+    "id": 635,
     "kanji": "動物",
     "kana": "どうぶつ",
     "meaning": "animal",
@@ -5196,7 +5196,7 @@
     ]
   },
   {
-    "id": 635,
+    "id": 636,
     "kanji": "音",
     "kana": "おと",
     "meaning": "sound, noise",
@@ -5205,7 +5205,7 @@
     ]
   },
   {
-    "id": 636,
+    "id": 637,
     "kanji": "海外",
     "kana": "かいがい",
     "meaning": "overseas, abroad",
@@ -5214,7 +5214,7 @@
     ]
   },
   {
-    "id": 637,
+    "id": 638,
     "kanji": "外国人",
     "kana": "がいこくじん",
     "meaning": "foreigner",
@@ -5223,7 +5223,7 @@
     ]
   },
   {
-    "id": 638,
+    "id": 639,
     "kanji": "帰国",
     "kana": "きこく",
     "meaning": "return to one's country",
@@ -5233,7 +5233,7 @@
     ]
   },
   {
-    "id": 639,
+    "id": 640,
     "kanji": "彼ら",
     "kana": "かれら",
     "meaning": "they (group of males or mixed gender)",
@@ -5242,7 +5242,7 @@
     ]
   },
   {
-    "id": 640,
+    "id": 641,
     "kanji": "機械",
     "kana": "きかい",
     "meaning": "machine",
@@ -5251,7 +5251,7 @@
     ]
   },
   {
-    "id": 641,
+    "id": 642,
     "kanji": "基本",
     "kana": "きほん",
     "meaning": "basics, foundation, fundamentals, principles",
@@ -5260,7 +5260,7 @@
     ]
   },
   {
-    "id": 642,
+    "id": 643,
     "kanji": "今度",
     "kana": "こんど",
     "meaning": "this time, next time",
@@ -5270,7 +5270,7 @@
     ]
   },
   {
-    "id": 643,
+    "id": 644,
     "kanji": "最後",
     "kana": "さいご",
     "meaning": "last, final, end",
@@ -5279,7 +5279,7 @@
     ]
   },
   {
-    "id": 644,
+    "id": 645,
     "kanji": "最初",
     "kana": "さいしょ",
     "meaning": "first, the beginning, outset",
@@ -5288,7 +5288,7 @@
     ]
   },
   {
-    "id": 645,
+    "id": 646,
     "kanji": "準備",
     "kana": "じゅんび",
     "meaning": "preparation, arrangement",
@@ -5298,7 +5298,7 @@
     ]
   },
   {
-    "id": 646,
+    "id": 647,
     "kanji": "進む",
     "kana": "すすむ",
     "meaning": "to move forward, advance",
@@ -5308,7 +5308,7 @@
     ]
   },
   {
-    "id": 647,
+    "id": 648,
     "kanji": "直接",
     "kana": "ちょくせつ",
     "meaning": "directly",
@@ -5318,7 +5318,7 @@
     ]
   },
   {
-    "id": 648,
+    "id": 649,
     "kanji": "特に",
     "kana": "とくに",
     "meaning": "especially, particularly",
@@ -5327,7 +5327,7 @@
     ]
   },
   {
-    "id": 649,
+    "id": 650,
     "kanji": "届く",
     "kana": "とどく",
     "meaning": "to be received, be delivered, reach, arrive",
@@ -5337,7 +5337,7 @@
     ]
   },
   {
-    "id": 650,
+    "id": 651,
     "kanji": "なぜ",
     "kana": "なぜ",
     "meaning": "why (most polite)",
@@ -5347,7 +5347,7 @@
     ]
   },
   {
-    "id": 651,
+    "id": 652,
     "kanji": "並ぶ",
     "kana": "ならぶ",
     "meaning": "to line up, be arranged (parallel)",
@@ -5357,7 +5357,7 @@
     ]
   },
   {
-    "id": 652,
+    "id": 653,
     "kanji": "運ぶ",
     "kana": "はこぶ",
     "meaning": "to carry, transport",
@@ -5367,7 +5367,7 @@
     ]
   },
   {
-    "id": 653,
+    "id": 654,
     "kanji": "直す",
     "kana": "なおす",
     "meaning": "to repair, fix",
@@ -5377,7 +5377,7 @@
     ]
   },
   {
-    "id": 654,
+    "id": 655,
     "kanji": "反対",
     "kana": "はんたい",
     "meaning": "opposition, objection, against",
@@ -5388,7 +5388,7 @@
     ]
   },
   {
-    "id": 655,
+    "id": 656,
     "kanji": "場合",
     "kana": "ばあい",
     "meaning": "situation, case",
@@ -5397,7 +5397,7 @@
     ]
   },
   {
-    "id": 656,
+    "id": 657,
     "kanji": "詳しい",
     "kana": "くわしい",
     "meaning": "detailed, knowledgeable, well-informed",
@@ -5406,7 +5406,7 @@
     ]
   },
   {
-    "id": 657,
+    "id": 658,
     "kanji": "いたずら",
     "kana": "いたずら",
     "meaning": "mischief, prank",
@@ -5416,7 +5416,7 @@
     ]
   },
   {
-    "id": 658,
+    "id": 659,
     "kanji": "お祝い",
     "kana": "おいわい",
     "meaning": "celebration",
@@ -5426,7 +5426,7 @@
     ]
   },
   {
-    "id": 659,
+    "id": 660,
     "kanji": "くし",
     "kana": "くし",
     "meaning": "comb",
@@ -5435,7 +5435,7 @@
     ]
   },
   {
-    "id": 660,
+    "id": 661,
     "kanji": "こぼれる",
     "kana": "こぼれる",
     "meaning": "to spill, overflow",
@@ -5445,7 +5445,7 @@
     ]
   },
   {
-    "id": 661,
+    "id": 662,
     "kanji": "伝える",
     "kana": "つたえる",
     "meaning": "to convey, transmit, communicate",
@@ -5455,7 +5455,7 @@
     ]
   },
   {
-    "id": 662,
+    "id": 663,
     "kanji": "膝",
     "kana": "ひざ",
     "meaning": "knee",
@@ -5465,7 +5465,7 @@
     ]
   },
   {
-    "id": 663,
+    "id": 664,
     "kanji": "肘",
     "kana": "ひじ",
     "meaning": "elbow",
@@ -5474,7 +5474,7 @@
     ]
   },
   {
-    "id": 664,
+    "id": 665,
     "kanji": "枕",
     "kana": "まくら",
     "meaning": "pillow",
@@ -5483,7 +5483,7 @@
     ]
   },
   {
-    "id": 665,
+    "id": 666,
     "kanji": "建物",
     "kana": "たてもの",
     "meaning": "building, structure",
@@ -5492,7 +5492,7 @@
     ]
   },
   {
-    "id": 666,
+    "id": 667,
     "kanji": "道路",
     "kana": "どうろ",
     "meaning": "road",
@@ -5501,7 +5501,7 @@
     ]
   },
   {
-    "id": 667,
+    "id": 668,
     "kanji": "四つ角",
     "kana": "よつかど",
     "meaning": "intersection, crossroad",
@@ -5510,7 +5510,7 @@
     ]
   },
   {
-    "id": 668,
+    "id": 669,
     "kanji": "曲がり角",
     "kana": "まがりかど",
     "meaning": "turning point, corner",
@@ -5519,7 +5519,7 @@
     ]
   },
   {
-    "id": 669,
+    "id": 670,
     "kanji": "警察",
     "kana": "けいさつ",
     "meaning": "police",
@@ -5528,7 +5528,7 @@
     ]
   },
   {
-    "id": 670,
+    "id": 671,
     "kanji": "空気",
     "kana": "くうき",
     "meaning": "air, atmosphere",
@@ -5537,7 +5537,7 @@
     ]
   },
   {
-    "id": 671,
+    "id": 672,
     "kanji": "スポーツ",
     "kana": "すぽーつ",
     "meaning": "sport",
@@ -5547,7 +5547,7 @@
     ]
   },
   {
-    "id": 672,
+    "id": 673,
     "kanji": "チャンス",
     "kana": "ちゃんす",
     "meaning": "chance, opportunity",
@@ -5557,7 +5557,7 @@
     ]
   },
   {
-    "id": 673,
+    "id": 674,
     "kanji": "クリーニング",
     "kana": "くりーにんぐ",
     "meaning": "dry cleaning",
@@ -5567,7 +5567,7 @@
     ]
   },
   {
-    "id": 674,
+    "id": 675,
     "kanji": "サービス",
     "kana": "さーびす",
     "meaning": "service",
@@ -5577,7 +5577,7 @@
     ]
   },
   {
-    "id": 675,
+    "id": 676,
     "kanji": "グループ",
     "kana": "ぐるーぷ",
     "meaning": "group",
@@ -5587,7 +5587,7 @@
     ]
   },
   {
-    "id": 676,
+    "id": 677,
     "kanji": "自宅",
     "kana": "じたく",
     "meaning": "my (one's) house / home",
@@ -5596,7 +5596,7 @@
     ]
   },
   {
-    "id": 677,
+    "id": 678,
     "kanji": "家庭",
     "kana": "かてい",
     "meaning": "family, home, household (formal)",
@@ -5605,7 +5605,7 @@
     ]
   },
   {
-    "id": 678,
+    "id": 679,
     "kanji": "期間",
     "kana": "きかん",
     "meaning": "(time) period, term, duration",
@@ -5614,7 +5614,7 @@
     ]
   },
   {
-    "id": 679,
+    "id": 680,
     "kanji": "年度",
     "kana": "ねんど",
     "meaning": "fiscal year, academic year",
@@ -5623,7 +5623,7 @@
     ]
   },
   {
-    "id": 680,
+    "id": 681,
     "kanji": "経験",
     "kana": "けいけん",
     "meaning": "experience, knowledge or skill gained",
@@ -5633,7 +5633,7 @@
     ]
   },
   {
-    "id": 681,
+    "id": 682,
     "kanji": "安全",
     "kana": "あんぜん",
     "meaning": "safety, security, safe",
@@ -5643,7 +5643,7 @@
     ]
   },
   {
-    "id": 682,
+    "id": 683,
     "kanji": "危険",
     "kana": "きけん",
     "meaning": "danger, dangerous",
@@ -5653,7 +5653,7 @@
     ]
   },
   {
-    "id": 683,
+    "id": 684,
     "kanji": "注意",
     "kana": "ちゅうい",
     "meaning": "attention, warning, caution, care",
@@ -5663,7 +5663,7 @@
     ]
   },
   {
-    "id": 684,
+    "id": 685,
     "kanji": "成功",
     "kana": "せいこう",
     "meaning": "success, achievement",
@@ -5673,7 +5673,7 @@
     ]
   },
   {
-    "id": 685,
+    "id": 686,
     "kanji": "努力",
     "kana": "どりょく",
     "meaning": "endeavor, effort, hard work",
@@ -5683,7 +5683,7 @@
     ]
   },
   {
-    "id": 686,
+    "id": 687,
     "kanji": "説明",
     "kana": "せつめい",
     "meaning": "explanation, description",
@@ -5693,7 +5693,7 @@
     ]
   },
   {
-    "id": 687,
+    "id": 688,
     "kanji": "地震",
     "kana": "じしん",
     "meaning": "earthquake",
@@ -5702,7 +5702,7 @@
     ]
   },
   {
-    "id": 688,
+    "id": 689,
     "kanji": "手術",
     "kana": "しゅじゅつ",
     "meaning": "surgery, surgical operation",
@@ -5712,7 +5712,7 @@
     ]
   },
   {
-    "id": 689,
+    "id": 690,
     "kanji": "火傷",
     "kana": "やけど",
     "meaning": "burn (injury)",
@@ -5721,7 +5721,7 @@
     ]
   },
   {
-    "id": 690,
+    "id": 691,
     "kanji": "課題",
     "kana": "かだい",
     "meaning": "task, assignment",
@@ -5730,7 +5730,7 @@
     ]
   },
   {
-    "id": 691,
+    "id": 692,
     "kanji": "子",
     "kana": "こ",
     "meaning": "(young) child, kid",
@@ -5740,7 +5740,7 @@
     ]
   },
   {
-    "id": 692,
+    "id": 693,
     "kanji": "確認",
     "kana": "かくにん",
     "meaning": "confirmation, verification",
@@ -5750,7 +5750,7 @@
     ]
   },
   {
-    "id": 693,
+    "id": 694,
     "kanji": "実際",
     "kana": "じっさい",
     "meaning": "truth, actually, reality, in fact",
@@ -5760,7 +5760,7 @@
     ]
   },
   {
-    "id": 694,
+    "id": 695,
     "kanji": "国際",
     "kana": "こくさい",
     "meaning": "international",
@@ -5770,7 +5770,7 @@
     ]
   },
   {
-    "id": 695,
+    "id": 696,
     "kanji": "会議",
     "kana": "かいぎ",
     "meaning": "meeting, conference",
@@ -5780,7 +5780,7 @@
     ]
   },
   {
-    "id": 696,
+    "id": 697,
     "kanji": "提案",
     "kana": "ていあん",
     "meaning": "suggestion, proposal, recommendation",
@@ -5790,7 +5790,7 @@
     ]
   },
   {
-    "id": 697,
+    "id": 698,
     "kanji": "事務所",
     "kana": "じむしょ",
     "meaning": "office, business office",
@@ -5799,7 +5799,7 @@
     ]
   },
   {
-    "id": 698,
+    "id": 699,
     "kanji": "教授",
     "kana": "きょうじゅ",
     "meaning": "professor",
@@ -5809,7 +5809,7 @@
     ]
   },
   {
-    "id": 699,
+    "id": 700,
     "kanji": "世紀",
     "kana": "せいき",
     "meaning": "century",
@@ -5818,7 +5818,7 @@
     ]
   },
   {
-    "id": 700,
+    "id": 701,
     "kanji": "あちこち",
     "kana": "あちこち",
     "meaning": "all over, here and there",
@@ -5828,7 +5828,7 @@
     ]
   },
   {
-    "id": 701,
+    "id": 702,
     "kanji": "そちら",
     "kana": "そちら",
     "meaning": "there, that way, that (polite)",
@@ -5838,7 +5838,7 @@
     ]
   },
   {
-    "id": 702,
+    "id": 703,
     "kanji": "あちら",
     "kana": "あちら",
     "meaning": "over there (polite)",
@@ -5848,7 +5848,7 @@
     ]
   },
   {
-    "id": 703,
+    "id": 704,
     "kanji": "もし",
     "kana": "もし",
     "meaning": "if, in case of",
@@ -5858,7 +5858,7 @@
     ]
   },
   {
-    "id": 704,
+    "id": 705,
     "kanji": "うるさい",
     "kana": "うるさい",
     "meaning": "loud, noisy, annoying",
@@ -5867,7 +5867,7 @@
     ]
   },
   {
-    "id": 705,
+    "id": 706,
     "kanji": "固い",
     "kana": "かたい",
     "meaning": "stiff, hard, strict, firm, tight",
@@ -5876,7 +5876,7 @@
     ]
   },
   {
-    "id": 706,
+    "id": 707,
     "kanji": "深い",
     "kana": "ふかい",
     "meaning": "deep, profound, intense",
@@ -5885,7 +5885,7 @@
     ]
   },
   {
-    "id": 707,
+    "id": 708,
     "kanji": "面白い",
     "kana": "おもしろい",
     "meaning": "interesting, funny",
@@ -5894,7 +5894,7 @@
     ]
   },
   {
-    "id": 784,
+    "id": 785,
     "kanji": "見方",
     "kana": "みかた",
     "meaning": "(point of) view, perspective",
@@ -5903,7 +5903,7 @@
     ]
   },
   {
-    "id": 785,
+    "id": 786,
     "kanji": "鳥",
     "kana": "とり",
     "meaning": "bird",
@@ -5912,7 +5912,7 @@
     ]
   },
   {
-    "id": 786,
+    "id": 787,
     "kanji": "犬",
     "kana": "いぬ",
     "meaning": "dog",
@@ -5921,7 +5921,7 @@
     ]
   },
   {
-    "id": 787,
+    "id": 788,
     "kanji": "返事",
     "kana": "へんじ",
     "meaning": "answer, reply, response",
@@ -5931,7 +5931,7 @@
     ]
   },
   {
-    "id": 788,
+    "id": 789,
     "kanji": "また",
     "kana": "また",
     "meaning": "again, also",
@@ -5941,7 +5941,7 @@
     ]
   },
   {
-    "id": 789,
+    "id": 790,
     "kanji": "年間",
     "kana": "ねんかん",
     "meaning": "period of 1 year, per year, annual",
@@ -5951,7 +5951,7 @@
     ]
   },
   {
-    "id": 790,
+    "id": 791,
     "kanji": "青",
     "kana": "あお",
     "meaning": "blue, green (e.g. traffic light), unripe",
@@ -5961,7 +5961,7 @@
     ]
   },
   {
-    "id": 791,
+    "id": 792,
     "kanji": "赤",
     "kana": "あか",
     "meaning": "red (color)",
@@ -5971,7 +5971,7 @@
     ]
   },
   {
-    "id": 792,
+    "id": 793,
     "kanji": "信号",
     "kana": "しんごう",
     "meaning": "traffic light, signal",
@@ -5980,7 +5980,7 @@
     ]
   },
   {
-    "id": 793,
+    "id": 794,
     "kanji": "円",
     "kana": "えん",
     "meaning": "Japanese yen, circle",
@@ -5990,7 +5990,7 @@
     ]
   },
   {
-    "id": 794,
+    "id": 795,
     "kanji": "非常に",
     "kana": "ひじょうに",
     "meaning": "very, extremely, considerably",
@@ -6000,7 +6000,7 @@
     ]
   },
   {
-    "id": 795,
+    "id": 796,
     "kanji": "複雑",
     "kana": "ふくざつ",
     "meaning": "complicated, intricate, complex",
@@ -6010,7 +6010,7 @@
     ]
   },
   {
-    "id": 796,
+    "id": 797,
     "kanji": "平和",
     "kana": "へいわ",
     "meaning": "peace, harmony",
@@ -6020,7 +6020,7 @@
     ]
   },
   {
-    "id": 797,
+    "id": 798,
     "kanji": "回る",
     "kana": "まわる",
     "meaning": "to turn around, go around, rotate, revolve",
@@ -6030,7 +6030,7 @@
     ]
   },
   {
-    "id": 798,
+    "id": 799,
     "kanji": "若者",
     "kana": "わかもの",
     "meaning": "young person, youth",
@@ -6039,7 +6039,7 @@
     ]
   },
   {
-    "id": 799,
+    "id": 800,
     "kanji": "雪",
     "kana": "ゆき",
     "meaning": "snow, snowfall",
@@ -6048,7 +6048,7 @@
     ]
   },
   {
-    "id": 800,
+    "id": 801,
     "kanji": "うまい",
     "kana": "うまい",
     "meaning": "tasty, delicious (often used by males)",
@@ -6058,7 +6058,7 @@
     ]
   },
   {
-    "id": 801,
+    "id": 802,
     "kanji": "思い出す",
     "kana": "おもいだす",
     "meaning": "to remember, recollect, recall",
@@ -6069,7 +6069,7 @@
     ]
   },
   {
-    "id": 802,
+    "id": 803,
     "kanji": "聞こえる",
     "kana": "きこえる",
     "meaning": "to hear, be heard",
@@ -6079,7 +6079,7 @@
     ]
   },
   {
-    "id": 803,
+    "id": 804,
     "kanji": "借りる",
     "kana": "かりる",
     "meaning": "to borrow, rent",
@@ -6089,7 +6089,7 @@
     ]
   },
   {
-    "id": 804,
+    "id": 805,
     "kanji": "返す",
     "kana": "かえす",
     "meaning": "to return (something), repay",
@@ -6099,7 +6099,7 @@
     ]
   },
   {
-    "id": 805,
+    "id": 806,
     "kanji": "受け取る",
     "kana": "うけとる",
     "meaning": "to receive, get (physical object)",
@@ -6110,7 +6110,7 @@
     ]
   },
   {
-    "id": 806,
+    "id": 807,
     "kanji": "捨てる",
     "kana": "すてる",
     "meaning": "to discard, abandon",
@@ -6120,7 +6120,7 @@
     ]
   },
   {
-    "id": 807,
+    "id": 808,
     "kanji": "一緒",
     "kana": "いっしょ",
     "meaning": "together, same",
@@ -6130,7 +6130,7 @@
     ]
   },
   {
-    "id": 808,
+    "id": 809,
     "kanji": "遊び",
     "kana": "あそび",
     "meaning": "play, game, amusement, recreation",
@@ -6139,7 +6139,7 @@
     ]
   },
   {
-    "id": 809,
+    "id": 810,
     "kanji": "移す",
     "kana": "うつす",
     "meaning": "to move, transfer",
@@ -6149,7 +6149,7 @@
     ]
   },
   {
-    "id": 810,
+    "id": 811,
     "kanji": "大きさ",
     "kana": "おおきさ",
     "meaning": "size, dimension, volume",
@@ -6158,7 +6158,7 @@
     ]
   },
   {
-    "id": 811,
+    "id": 812,
     "kanji": "考え",
     "kana": "かんがえ",
     "meaning": "thought, idea, plan, way of thinking",
@@ -6167,7 +6167,7 @@
     ]
   },
   {
-    "id": 812,
+    "id": 813,
     "kanji": "空港",
     "kana": "くうこう",
     "meaning": "airport",
@@ -6176,7 +6176,7 @@
     ]
   },
   {
-    "id": 813,
+    "id": 814,
     "kanji": "出発",
     "kana": "しゅっぱつ",
     "meaning": "departure, starting off",
@@ -6186,7 +6186,7 @@
     ]
   },
   {
-    "id": 814,
+    "id": 815,
     "kanji": "地図",
     "kana": "ちず",
     "meaning": "map",
@@ -6195,7 +6195,7 @@
     ]
   },
   {
-    "id": 815,
+    "id": 816,
     "kanji": "運転",
     "kana": "うんてん",
     "meaning": "drive, driving",
@@ -6205,7 +6205,7 @@
     ]
   },
   {
-    "id": 816,
+    "id": 817,
     "kanji": "降りる",
     "kana": "おりる",
     "meaning": "to get off bus/train, go down, descend, land",
@@ -6215,7 +6215,7 @@
     ]
   },
   {
-    "id": 817,
+    "id": 818,
     "kanji": "ガス",
     "kana": "がす",
     "meaning": "gas",
@@ -6225,7 +6225,7 @@
     ]
   },
   {
-    "id": 818,
+    "id": 819,
     "kanji": "必ず",
     "kana": "かならず",
     "meaning": "without fail, always",
@@ -6234,7 +6234,7 @@
     ]
   },
   {
-    "id": 819,
+    "id": 820,
     "kanji": "カメラ",
     "kana": "かめら",
     "meaning": "camera",
@@ -6244,7 +6244,7 @@
     ]
   },
   {
-    "id": 820,
+    "id": 821,
     "kanji": "通う",
     "kana": "かよう",
     "meaning": "to commute, go regularly, frequent a place",
@@ -6254,7 +6254,7 @@
     ]
   },
   {
-    "id": 821,
+    "id": 822,
     "kanji": "急に",
     "kana": "きゅうに",
     "meaning": "suddenly, unexpectedly, abruptly",
@@ -6263,7 +6263,7 @@
     ]
   },
   {
-    "id": 822,
+    "id": 823,
     "kanji": "サラリーマン",
     "kana": "さらりーまん",
     "meaning": "salaried office worker",
@@ -6273,7 +6273,7 @@
     ]
   },
   {
-    "id": 823,
+    "id": 824,
     "kanji": "給料",
     "kana": "きゅうりょう",
     "meaning": "salary, pay, wage",
@@ -6282,7 +6282,7 @@
     ]
   },
   {
-    "id": 824,
+    "id": 825,
     "kanji": "曲",
     "kana": "きょく",
     "meaning": "piece of music, tune, song, melody",
@@ -6292,7 +6292,7 @@
     ]
   },
   {
-    "id": 825,
+    "id": 826,
     "kanji": "切れる",
     "kana": "きれる",
     "meaning": "to be cut, break, run out, cut well",
@@ -6302,7 +6302,7 @@
     ]
   },
   {
-    "id": 826,
+    "id": 827,
     "kanji": "正しい",
     "kana": "ただしい",
     "meaning": "correct, righteous",
@@ -6311,7 +6311,7 @@
     ]
   },
   {
-    "id": 827,
+    "id": 828,
     "kanji": "苦しい",
     "kana": "くるしい",
     "meaning": "painful, agonizing, difficult",
@@ -6320,7 +6320,7 @@
     ]
   },
   {
-    "id": 828,
+    "id": 829,
     "kanji": "細かい",
     "kana": "こまかい",
     "meaning": "small, detailed, precise, fine",
@@ -6329,7 +6329,7 @@
     ]
   },
   {
-    "id": 829,
+    "id": 830,
     "kanji": "静か",
     "kana": "しずか",
     "meaning": "quiet",
@@ -6338,7 +6338,7 @@
     ]
   },
   {
-    "id": 830,
+    "id": 831,
     "kanji": "健康",
     "kana": "けんこう",
     "meaning": "healthy, health, well-being",
@@ -6348,7 +6348,7 @@
     ]
   },
   {
-    "id": 831,
+    "id": 832,
     "kanji": "ゴルフ",
     "kana": "ごるふ",
     "meaning": "golf",
@@ -6358,7 +6358,7 @@
     ]
   },
   {
-    "id": 832,
+    "id": 833,
     "kanji": "コース",
     "kana": "こーす",
     "meaning": "course, route",
@@ -6368,7 +6368,7 @@
     ]
   },
   {
-    "id": 833,
+    "id": 834,
     "kanji": "頼む",
     "kana": "たのむ",
     "meaning": "to request, ask, beg, order (food/drink), entrust",

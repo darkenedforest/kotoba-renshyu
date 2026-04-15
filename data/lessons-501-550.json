@@ -1,6 +1,17 @@
 [
   {
     "id": 501,
+    "kanji": "氏名",
+    "kana": "しめい",
+    "meaning": "full name",
+    "tags": [
+      "noun",
+      "formal"
+    ],
+    "lesson": "<p><span class=\"jp\">氏</span> (family name/clan) + <span class=\"jp\">名</span> (given name) = full name. But you'll almost never hear this word in conversation. <span class=\"jp\">氏名</span> lives on forms, documents, official applications, and bureaucratic instructions. It's the \"full legal name\" version of asking who you are.</p><p>If you fill out any paperwork in Japan — at a hotel, a bank, a government office, a doctor — you'll see <span class=\"jp\">氏名</span> printed next to a blank line. That's where your full name goes. Sometimes the form separates it into <span class=\"jp\">氏</span> (family name) and <span class=\"jp\">名</span> (given name) on separate lines. In Japan, family name comes first — always.</p><p>In casual life, you'd use <span class=\"jp\">名前</span> <span class=\"gloss\">(なまえ)</span> for \"name.\" <span class=\"jp\">氏名</span> is strictly for forms and official contexts. Knowing this word is less about conversation and more about literacy — recognizing it when you see it on paper.</p>"
+  },
+  {
+    "id": 502,
     "kanji": "今夜",
     "kana": "こんや",
     "meaning": "tonight, this evening",
@@ -11,7 +22,7 @@
     "lesson": "<p><span class=\"jp\">今</span> (now/this) + <span class=\"jp\">夜</span> (night) = tonight. The <span class=\"jp\">今</span> compound machine keeps working: <span class=\"jp\">今日</span> (today), <span class=\"jp\">今週</span> (this week), <span class=\"jp\">今月</span> (this month), <span class=\"jp\">今年</span> (this year), and now <span class=\"jp\">今夜</span> (tonight). Same pattern every time.</p><p>The reading <span class=\"jp\">こんや</span> uses Chinese-derived <span class=\"jp\">こん</span> for <span class=\"jp\">今</span> (like <span class=\"jp\">今週</span>, <span class=\"jp\">今月</span>) and <span class=\"jp\">や</span> for <span class=\"jp\">夜</span>. Compare with <span class=\"jp\">今晩</span> <span class=\"gloss\">(こんばん, this evening)</span> — which you already know from <span class=\"jp\">こんばんは</span> (good evening). The two are nearly interchangeable, but <span class=\"jp\">今夜</span> leans slightly more toward late night while <span class=\"jp\">今晩</span> covers the broader evening.</p><p><span class=\"jp-example\">今夜は何をする？</span> <span class=\"gloss\">(what are you doing tonight?)</span> — a simple, high-frequency question.</p>"
   },
   {
-    "id": 502,
+    "id": 503,
     "kanji": "夜中",
     "kana": "よなか",
     "meaning": "midnight",
@@ -22,7 +33,7 @@
     "lesson": "<p><span class=\"jp\">夜</span> (night) + <span class=\"jp\">中</span> (middle) = the middle of the night. Not midnight on the dot (that's <span class=\"jp\">零時</span> or <span class=\"jp\">十二時</span>), but the general dead-of-night zone — roughly midnight to 3 or 4 AM, when the world is asleep. <span class=\"jp-example\">夜中に目が覚めた</span> <span class=\"gloss\">(I woke up in the middle of the night)</span>.</p><p><span class=\"jp\">夜中</span> carries a mood. It implies darkness, quiet, a time when you're not supposed to be awake. <span class=\"jp-example\">夜中にうるさい</span> <span class=\"gloss\">(loud in the middle of the night)</span> is a complaint. <span class=\"jp-example\">夜中まで勉強した</span> <span class=\"gloss\">(studied until the middle of the night)</span> implies exhausting effort. Things that happen <span class=\"jp\">夜中に</span> are either desperate, illicit, or the mark of serious dedication.</p><p>The <span class=\"jp\">中</span> here works the same way as in <span class=\"jp-example\">昼間</span> <span class=\"gloss\">(ひるま, daytime — the middle of the day-period)</span>. It pins you to the core of a time span, not its edges.</p>"
   },
   {
-    "id": 503,
+    "id": 504,
     "kanji": "来週",
     "kana": "らいしゅう",
     "meaning": "next week",
@@ -33,7 +44,7 @@
     "lesson": "<p><span class=\"jp\">来</span> (come/next) + <span class=\"jp\">週</span> (week) = the coming week. The <span class=\"jp\">来</span> prefix is the future counterpart to <span class=\"jp\">先</span> (last) and <span class=\"jp\">今</span> (this): <span class=\"jp\">先週</span> → <span class=\"jp\">今週</span> → <span class=\"jp\">来週</span>. Last week, this week, next week.</p><p>The same <span class=\"jp\">来</span> pattern scales up: <span class=\"jp-example\">来月</span> <span class=\"gloss\">(らいげつ, next month)</span>, <span class=\"jp-example\">来年</span> <span class=\"gloss\">(らいねん, next year)</span>. And going backward, <span class=\"jp\">先</span> handles the past: <span class=\"jp\">先週</span>, <span class=\"jp\">先月</span>. This three-part time system is completely regular — one of the few things in Japanese you can just slot in mechanically.</p><p><span class=\"jp-example\">来週の月曜日</span> <span class=\"gloss\">(next Monday)</span>. <span class=\"jp-example\">来週までに</span> <span class=\"gloss\">(by next week)</span>. <span class=\"jp-example\">来週はどう？</span> <span class=\"gloss\">(how about next week?)</span>. No particles needed after <span class=\"jp\">来週</span> when it's a time reference — it works as a bare time noun, just like <span class=\"jp\">今日</span> or <span class=\"jp\">明日</span>.</p>"
   },
   {
-    "id": 504,
+    "id": 505,
     "kanji": "誰か",
     "kana": "だれか",
     "meaning": "someone",
@@ -43,7 +54,7 @@
     "lesson": "<p>You already know the rule from <span class=\"jp\">いつ</span>: question word + <span class=\"jp\">か</span> = indefinite. <span class=\"jp\">いつか</span> = someday. <span class=\"jp\">どこか</span> = somewhere. And now: <span class=\"jp\">誰か</span> = someone. The <span class=\"jp\">か</span> particle strips the question-ness away and replaces it with vagueness — you're no longer asking \"who?\" but referring to an unspecified person.</p><p><span class=\"jp-example\">誰かいる？</span> <span class=\"gloss\">(is someone there?)</span>. <span class=\"jp-example\">誰かに聞いて</span> <span class=\"gloss\">(ask someone)</span>. <span class=\"jp-example\">誰か来た</span> <span class=\"gloss\">(someone came)</span>. Notice that particles like <span class=\"jp\">が</span> are often dropped after <span class=\"jp\">誰か</span> in casual speech — <span class=\"jp\">誰かが来た</span> and <span class=\"jp\">誰か来た</span> both work, but the second is more natural in conversation.</p><p>Keep building your question-word transformation table: <span class=\"jp\">誰か</span> (someone), <span class=\"jp\">誰も</span> + negative (no one), <span class=\"jp\">誰でも</span> (anyone). Same pattern as every other question word. Once you have it for one, you have it for all of them.</p>"
   },
   {
-    "id": 505,
+    "id": 506,
     "kanji": "何",
     "kana": "なん",
     "meaning": "what",
@@ -53,7 +64,7 @@
     "lesson": "<p>You already know <span class=\"jp\">何</span> read as <span class=\"jp\">なに</span> — \"what.\" This entry is for the other reading: <span class=\"jp\">なん</span>. Same kanji, same meaning, but used in different phonetic contexts. The rule is roughly: use <span class=\"jp\">なん</span> before <span class=\"jp\">で</span>, <span class=\"jp\">の</span>, and <span class=\"jp\">だ/です</span>, and before counters. Use <span class=\"jp\">なに</span> everywhere else.</p><p><span class=\"jp-example\">何ですか</span> <span class=\"gloss\">(なんですか, what is it?)</span> — <span class=\"jp\">なん</span> because <span class=\"jp\">です</span> follows. <span class=\"jp-example\">何で</span> <span class=\"gloss\">(なんで, why? / by what means?)</span> — <span class=\"jp\">なん</span> because <span class=\"jp\">で</span> follows. <span class=\"jp-example\">何人</span> <span class=\"gloss\">(なんにん, how many people?)</span> — <span class=\"jp\">なん</span> before a counter. But: <span class=\"jp-example\">何を食べる？</span> <span class=\"gloss\">(なにをたべる, what will you eat?)</span> — <span class=\"jp\">なに</span> because <span class=\"jp\">を</span> follows.</p><p>The distinction is phonetic convenience — <span class=\"jp\">なに</span> before <span class=\"jp\">で</span> would create a clumsy <span class=\"jp\">なにで</span>, while <span class=\"jp\">なんで</span> flows better. Your ear will pick this up quickly; it's one of those things that sounds wrong before you can explain why.</p>"
   },
   {
-    "id": 506,
+    "id": 507,
     "kanji": "今朝",
     "kana": "けさ",
     "meaning": "this morning",
@@ -65,7 +76,7 @@
     "lesson": "<p><span class=\"jp\">今朝</span> is one of those words where the reading has nothing to do with the individual kanji readings. <span class=\"jp\">今</span> is normally <span class=\"jp\">いま</span> or <span class=\"jp\">こん</span>. <span class=\"jp\">朝</span> is normally <span class=\"jp\">あさ</span> or <span class=\"jp\">ちょう</span>. But together? <span class=\"jp\">けさ</span>. No trace of either reading. This is a <span class=\"jp\">熟字訓</span> <span class=\"gloss\">(jukujikun)</span> — a compound where the meaning is right (now + morning = this morning) but the reading is a separate native Japanese word plastered on top of the kanji. <span class=\"jp\">けさ</span> is an ancient Japanese word for \"this morning\" that predates the kanji assignment.</p><p>You've already seen this phenomenon: <span class=\"jp\">今日</span> <span class=\"gloss\">(きょう)</span>, <span class=\"jp\">今年</span> <span class=\"gloss\">(ことし)</span>, <span class=\"jp\">昨日</span> <span class=\"gloss\">(きのう)</span>, <span class=\"jp\">明日</span> <span class=\"gloss\">(あした)</span>. Time words are especially prone to irregular readings because the Japanese time vocabulary is old — older than the kanji system they borrowed from Chinese. The native words refused to be replaced.</p><p><span class=\"jp-example\">今朝は寒かった</span> <span class=\"gloss\">(it was cold this morning)</span>. No particles needed — bare time noun, like all the others.</p>"
   },
   {
-    "id": 507,
+    "id": 508,
     "kanji": "寿司",
     "kana": "すし",
     "meaning": "sushi",
@@ -75,7 +86,7 @@
     "lesson": "<p>The kanji <span class=\"jp\">寿司</span> are <span class=\"jp\">当て字</span> <span class=\"gloss\">(ateji)</span> — characters chosen for their sounds, not their meanings. <span class=\"jp\">寿</span> means \"longevity\" and <span class=\"jp\">司</span> means \"to manage/govern.\" Neither has anything to do with vinegared rice. They were picked because they sound like <span class=\"jp\">すし</span> and happen to look auspicious. You'll also see sushi written as <span class=\"jp\">鮨</span> (fish + delicious) or <span class=\"jp\">鮓</span>, which are older and more etymologically honest. But <span class=\"jp\">寿司</span> won the popularity contest because those \"longevity\" associations made it perfect for celebrations.</p><p>The word <span class=\"jp\">すし</span> originally referred to the preservation method — fish pressed into fermented rice, left for months. The quick, fresh sushi you know (<span class=\"jp\">握り寿司</span>, <span class=\"gloss\">にぎりずし, hand-pressed sushi</span>) is a relatively recent Tokyo invention from the early 1800s. Street food that went upscale.</p><p><span class=\"jp-example\">寿司を食べに行こう</span> <span class=\"gloss\">(let's go eat sushi)</span>. Note the construction: 〜に行く (go in order to do something). This is the sentence that starts many good evenings.</p>"
   },
   {
-    "id": 508,
+    "id": 509,
     "kanji": "履く",
     "kana": "はく",
     "meaning": "to wear (below the waist), put on (below the waist)",
@@ -86,7 +97,7 @@
     "lesson": "<p>Japanese splits \"to wear\" into different verbs based on what body part the clothing goes on. <span class=\"jp\">着る</span> <span class=\"gloss\">(きる)</span> is for upper body — shirts, jackets, dresses. <span class=\"jp\">被る</span> <span class=\"gloss\">(かぶる)</span> is for the head — hats, helmets. And <span class=\"jp\">履く</span> is for everything below the waist: pants, skirts, shoes, socks. <span class=\"jp-example\">ズボンを履く</span> <span class=\"gloss\">(put on pants)</span>. <span class=\"jp-example\">靴を履く</span> <span class=\"gloss\">(put on shoes)</span>. <span class=\"jp-example\">靴下を履く</span> <span class=\"gloss\">(put on socks)</span>.</p><p>The dividing line is roughly the waist. If it goes on your legs or feet, <span class=\"jp\">履く</span>. This verb doesn't exist in English — we just \"put on\" everything regardless — so it takes conscious practice. The mental model: <span class=\"jp\">履く</span> involves stepping <em>into</em> something or sliding it <em>up</em> your legs.</p><p>The kanji <span class=\"jp\">履</span> contains <span class=\"jp\">尸</span> (body) and <span class=\"jp\">復</span> (repeat/return), suggesting repeated steps — feet in motion, feet in footwear. It's the same kanji in <span class=\"jp-example\">履歴書</span> <span class=\"gloss\">(りれきしょ, resume — literally a \"record of footsteps\")</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Particles:</span> <span class=\"jp\">履く</span> takes <span class=\"jp highlight\">を</span> — the garment or footwear is your direct object. <span class=\"jp-example\">靴を履く</span>, <span class=\"jp-example\">ジーンズを履く</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Potential</span> <span class=\"jp-example\">が履ける</span>: <span class=\"jp highlight\">が</span> — what you can wear becomes the subject. <span class=\"jp-example\">このサイズの靴が履ける</span> <span class=\"gloss\">(I can wear shoes this size)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Passive</span> <span class=\"jp-example\">に履かれる</span>: rare — clothing isn't usually the agent. But: <span class=\"jp-example\">スリッパを履かれてしまった</span> <span class=\"gloss\">(someone wore my slippers — and now I'm annoyed)</span>.</p><p class=\"particle-note\"><span class=\"note-label\">Causative</span> <span class=\"jp-example\">に…を履かせる</span>: <span class=\"jp highlight\">に</span> marks who you dress, <span class=\"jp highlight\">を</span> marks what. <span class=\"jp-example\">子供に靴を履かせる</span> <span class=\"gloss\">(put shoes on the kid)</span>.</p><div class=\"verb-meta\"><span class=\"group-badge\">五段 Godan</span><span class=\"trans-badge\">他動詞</span></div><table class=\"conj-chart\"><tr><td>Dictionary</td><td><span class=\"stem\">は</span><span class=\"ending\">く</span></td><td class=\"particle\">を</td></tr><tr><td>Negative</td><td><span class=\"stem\">は</span><span class=\"ending\">かない</span></td><td class=\"particle\">を</td></tr><tr><td>Polite</td><td><span class=\"stem\">は</span><span class=\"ending\">きます</span></td><td class=\"particle\">を</td></tr><tr><td>Polite neg</td><td><span class=\"stem\">は</span><span class=\"ending\">きません</span></td><td class=\"particle\">を</td></tr><tr><td>Past</td><td><span class=\"stem\">は</span><span class=\"ending\">いた</span></td><td class=\"particle\">を</td></tr><tr><td>Polite past</td><td><span class=\"stem\">は</span><span class=\"ending\">きました</span></td><td class=\"particle\">を</td></tr><tr><td>て-form</td><td><span class=\"stem\">は</span><span class=\"ending\">いて</span></td><td class=\"particle\">を</td></tr><tr><td>Volitional</td><td><span class=\"stem\">は</span><span class=\"ending\">こう</span></td><td class=\"particle\">を</td></tr><tr><td>Polite vol</td><td><span class=\"stem\">は</span><span class=\"ending\">きましょう</span></td><td class=\"particle\">を</td></tr><tr><td>Passive</td><td></td><td class=\"particle\"></td></tr><tr><td>Causative</td><td><span class=\"stem\">は</span><span class=\"ending\">かせる</span></td><td class=\"particle\">に／を</td></tr><tr><td>Caus-pass</td><td><span class=\"stem\">は</span><span class=\"ending\">かせられる</span></td><td class=\"particle\">に</td></tr><tr><td>Potential</td><td><span class=\"stem\">は</span><span class=\"ending\">ける</span></td><td class=\"particle\">が</td></tr><tr><td>Imperative</td><td><span class=\"stem\">は</span><span class=\"ending\">け</span></td><td class=\"particle\">を</td></tr><tr><td>Imp なさい</td><td><span class=\"stem\">は</span><span class=\"ending\">きなさい</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～ば</td><td><span class=\"stem\">は</span><span class=\"ending\">けば</span></td><td class=\"particle\">を</td></tr><tr><td>Cond ～たら</td><td><span class=\"stem\">は</span><span class=\"ending\">いたら</span></td><td class=\"particle\">を</td></tr></table>"
   },
   {
-    "id": 509,
+    "id": 510,
     "kanji": "おじさん",
     "kana": "おじさん",
     "meaning": "uncle",
@@ -97,7 +108,7 @@
     "lesson": "<p><span class=\"jp\">おじさん</span> means uncle — or more broadly, any middle-aged man. Just as English might use \"mister\" loosely, Japanese uses <span class=\"jp\">おじさん</span> for any man who looks roughly 40-60. The kanji, when written, depends on the relationship: <span class=\"jp\">伯父さん</span> for your parent's <em>older</em> brother, <span class=\"jp\">叔父さん</span> for your parent's <em>younger</em> brother. In speech, both are just <span class=\"jp\">おじさん</span>.</p><p><span class=\"note-label\">The length trap again:</span> <span class=\"jp\">おじさん</span> (uncle, short <span class=\"jp\">じ</span>) vs. <span class=\"jp\">おじいさん</span> (grandfather, long <span class=\"jp\">じい</span>). One extra mora is the difference between middle-aged and elderly. This is the same pair from the <span class=\"jp\">おじいさん</span> lesson, now seen from the other side. Get the vowel length wrong and you're accidentally calling someone ancient — or weirdly young.</p><p>When talking about your <em>own</em> uncle to someone outside your family, the humble form is <span class=\"jp\">おじ</span> — drop the <span class=\"jp\">さん</span>. Same in-group/out-group rule as all Japanese family terms.</p>"
   },
   {
-    "id": 510,
+    "id": 511,
     "kanji": "おばさん",
     "kana": "おばさん",
     "meaning": "aunt",
@@ -108,7 +119,7 @@
     "lesson": "<p>The female counterpart to <span class=\"jp\">おじさん</span>. <span class=\"jp\">おばさん</span> means aunt or any middle-aged woman. The kanji split: <span class=\"jp\">伯母さん</span> for your parent's older sister, <span class=\"jp\">叔母さん</span> for your parent's younger sister. Spoken, both are <span class=\"jp\">おばさん</span>.</p><p>And the same vowel-length minefield applies: <span class=\"jp\">おばさん</span> (aunt/middle-aged woman, short <span class=\"jp\">ば</span>) vs. <span class=\"jp\">おばあさん</span> (grandmother/elderly woman, long <span class=\"jp\">ばあ</span>). Getting this wrong is socially risky in exactly the same way as the <span class=\"jp\">おじ/おじい</span> pair. Japanese people are acutely aware of this distinction, and calling a woman <span class=\"jp\">おばあさん</span> when she considers herself <span class=\"jp\">おばさん</span> will not go over well.</p><p>In contemporary Japanese, some women have started to reclaim or joke about the <span class=\"jp\">おばさん</span> label — <span class=\"jp\">おばさん力</span> <span class=\"gloss\">(おばさんりょく, \"auntie power\")</span> refers to the boldness and social fearlessness that stereotypically comes with middle age. The word is getting a cultural upgrade.</p>"
   },
   {
-    "id": 511,
+    "id": 512,
     "kanji": "お祖母さん",
     "kana": "おばあさん",
     "meaning": "grandmother, elderly woman",
@@ -119,7 +130,7 @@
     "lesson": "<p>The grandmother counterpart to <span class=\"jp\">おじいさん</span>. <span class=\"jp\">おばあさん</span> is someone else's grandmother, or the word you use addressing your own grandmother directly. When referring to your own grandmother in conversation with outsiders, use the humble <span class=\"jp\">祖母</span> <span class=\"gloss\">(そぼ)</span>.</p><p>The word also applies to any elderly woman — <span class=\"jp\">おばあさん</span> at the neighborhood shop, <span class=\"jp\">おばあさん</span> in a fairy tale. Japanese folklore is full of <span class=\"jp\">おじいさん</span> and <span class=\"jp\">おばあさん</span> pairs — <span class=\"jp-example\">昔々、おじいさんとおばあさんがいました</span> <span class=\"gloss\">(once upon a time, there lived an old man and an old woman)</span> is the standard opening for traditional stories, the Japanese equivalent of \"once upon a time.\"</p><p>The four-level system is now complete: <span class=\"jp\">おばさん</span> (aunt/middle-aged) → <span class=\"jp\">おばあさん</span> (grandmother/elderly). <span class=\"jp\">おじさん</span> (uncle/middle-aged) → <span class=\"jp\">おじいさん</span> (grandfather/elderly). Short vowel = younger generation. Long vowel = older generation. Four words, one vowel-length rule.</p>"
   },
   {
-    "id": 512,
+    "id": 513,
     "kanji": "いとこ",
     "kana": "いとこ",
     "meaning": "cousin",
@@ -130,7 +141,7 @@
     "lesson": "<p><span class=\"jp\">いとこ</span> is one of those words that can be written with an absurd number of kanji combinations — <span class=\"jp\">従兄弟</span>, <span class=\"jp\">従姉妹</span>, <span class=\"jp\">従兄</span>, <span class=\"jp\">従妹</span>, and more, depending on whether the cousin is male or female, older or younger. In practice, almost everyone just writes it in hiragana: <span class=\"jp\">いとこ</span>. The kanji options exist but they're a headache nobody wants.</p><p>Japanese cousin terminology reflects a culture that cares about relative age. Technically, an older male cousin is <span class=\"jp\">従兄</span> <span class=\"gloss\">(じゅうけい)</span>, a younger female cousin is <span class=\"jp\">従妹</span> <span class=\"gloss\">(じゅうまい)</span>, and so on. But spoken Japanese just uses <span class=\"jp\">いとこ</span> for everyone, regardless of gender or age — the simplification happened naturally because the formal terms were too unwieldy for conversation.</p><p>The <span class=\"jp\">従</span> in the kanji means \"follow/accompany\" — a cousin follows alongside your direct family line without being part of it. Etymologically neat, practically ignored.</p>"
   },
   {
-    "id": 513,
+    "id": 514,
     "kanji": "辞書",
     "kana": "じしょ",
     "meaning": "dictionary",
@@ -140,7 +151,7 @@
     "lesson": "<p><span class=\"jp\">辞</span> (word/expression) + <span class=\"jp\">書</span> (book/writing) = word-book. A dictionary. The kanji <span class=\"jp\">辞</span> is specifically about language and vocabulary — you'll see it in <span class=\"jp-example\">辞典</span> <span class=\"gloss\">(じてん, dictionary — slightly more formal)</span> and <span class=\"jp-example\">辞める</span> <span class=\"gloss\">(やめる, to resign — originally \"to decline with words\")</span>.</p><p><span class=\"note-label\">辞書 vs 辞典 vs 字典:</span> All mean \"dictionary\" but with different scopes. <span class=\"jp\">辞書</span> is the general everyday word. <span class=\"jp\">辞典</span> sounds more formal, more comprehensive — an encyclopedia-style reference. <span class=\"jp\">字典</span> <span class=\"gloss\">(じてん, same pronunciation)</span> is specifically a kanji dictionary. In daily speech, <span class=\"jp\">辞書</span> covers everything. <span class=\"jp-example\">辞書で調べる</span> <span class=\"gloss\">(look it up in the dictionary)</span> — the sentence every language learner lives by.</p><p>Electronic dictionaries (<span class=\"jp\">電子辞書</span>) were once ubiquitous in Japan — dedicated handheld devices that every student carried. Smartphones have largely replaced them, but you'll still see the term and occasionally the devices in schools.</p>"
   },
   {
-    "id": 514,
+    "id": 515,
     "kanji": "朝ご飯",
     "kana": "あさごはん",
     "meaning": "breakfast",
@@ -150,7 +161,7 @@
     "lesson": "<p><span class=\"jp\">朝</span> (morning) + <span class=\"jp\">ご飯</span> (cooked rice / meal) = morning meal. Breakfast. The pattern is dead simple and produces all three meals: <span class=\"jp\">朝ご飯</span> (breakfast), <span class=\"jp-example\">昼ご飯</span> <span class=\"gloss\">(ひるごはん, lunch)</span>, <span class=\"jp-example\">晩ご飯</span> <span class=\"gloss\">(ばんごはん, dinner)</span>. Morning rice, noon rice, evening rice. Three words for the price of one pattern.</p><p>The <span class=\"jp\">ご</span> in <span class=\"jp\">ご飯</span> is an honorific prefix — even rice gets polite treatment. Dropping it (<span class=\"jp\">朝飯</span>, <span class=\"reading\">あさめし</span>) sounds rougher, more masculine, more casual. Same meal, different social register.</p><p>A traditional Japanese <span class=\"jp\">朝ご飯</span> looks nothing like a Western breakfast: rice, miso soup, grilled fish, pickled vegetables, a raw egg, natto (fermented soybeans). No pancakes, no cereal. Knowing <span class=\"jp\">朝ご飯</span> without knowing what it typically contains is missing half the picture.</p>"
   },
   {
-    "id": 515,
+    "id": 516,
     "kanji": "白",
     "kana": "しろ",
     "meaning": "white color",
@@ -160,7 +171,7 @@
     "lesson": "<p>You already know <span class=\"jp\">白い</span> <span class=\"gloss\">(しろい, the adjective \"white\")</span>. This entry is <span class=\"jp\">白</span> the noun — the color white as a thing. <span class=\"jp-example\">白が好き</span> <span class=\"gloss\">(I like white)</span>. <span class=\"jp-example\">白にする</span> <span class=\"gloss\">(I'll go with white)</span>. When you're choosing a color — for a car, a phone case, a t-shirt — you name the noun form.</p><p>Japanese color words have this adjective/noun split for the traditional colors: <span class=\"jp\">白い</span>/<span class=\"jp\">白</span>, <span class=\"jp\">黒い</span>/<span class=\"jp\">黒</span>, <span class=\"jp\">赤い</span>/<span class=\"jp\">赤</span>, <span class=\"jp\">青い</span>/<span class=\"jp\">青</span>. The adjective describes something (<span class=\"jp\">白い猫</span>, a white cat). The noun names the color itself (<span class=\"jp\">白</span>, white).</p><p>In Japanese culture, <span class=\"jp\">白</span> is the color of purity, death, and new beginnings simultaneously. Wedding kimonos are white. Funeral offerings use white. Blank paper is a white beginning. The color carries a weight that the English \"white\" doesn't quite match — it's closer to \"blank\" or \"clean slate\" than to any single symbolism.</p>"
   },
   {
-    "id": 516,
+    "id": 517,
     "kanji": "どっち",
     "kana": "どっち",
     "meaning": "which, which one (2 things, casual)",
@@ -171,7 +182,7 @@
     "lesson": "<p><span class=\"jp\">どっち</span> is the casual contraction of <span class=\"jp\">どちら</span> — \"which one\" when choosing between two things. <span class=\"jp-example\">どっちがいい？</span> <span class=\"gloss\">(which one do you want?)</span>. <span class=\"jp-example\">どっちでもいい</span> <span class=\"gloss\">(either is fine)</span>. The <span class=\"jp\">っ</span> gives it a snappy, informal punch that <span class=\"jp\">どちら</span> doesn't have.</p><p>The full set: <span class=\"jp\">こっち</span> (this way/mine), <span class=\"jp\">そっち</span> (that way/yours), <span class=\"jp\">あっち</span> (over there), <span class=\"jp\">どっち</span> (which way?). These are the ko-so-a-do directional pronouns in casual form. Use them with friends, family, anyone you're comfortable with. Switch to <span class=\"jp\">こちら/そちら/あちら/どちら</span> for politeness.</p><p><span class=\"jp\">どっち</span> only works for two options. For three or more, you need <span class=\"jp\">どれ</span>. This two-vs-many distinction doesn't exist in casual English (\"which one\" works for any number), but Japanese insists on it. Two choices: <span class=\"jp\">どっち</span>. Three or more: <span class=\"jp\">どれ</span>.</p>"
   },
   {
-    "id": 517,
+    "id": 518,
     "kanji": "そっち",
     "kana": "そっち",
     "meaning": "there (casual)",
@@ -182,7 +193,7 @@
     "lesson": "<p>The casual version of <span class=\"jp\">そちら</span> — \"that way\" or \"your side.\" Where <span class=\"jp\">こっち</span> is my zone, <span class=\"jp\">そっち</span> is your zone. <span class=\"jp-example\">そっちはどう？</span> <span class=\"gloss\">(how is it over there? / how about on your end?)</span>. <span class=\"jp-example\">そっちに行く</span> <span class=\"gloss\">(I'll go to where you are)</span>.</p><p>On the phone, <span class=\"jp\">そっち</span> is especially useful. When you can't see the other person, space becomes abstract — <span class=\"jp\">そっち</span> means \"your situation, your side of things.\" <span class=\"jp-example\">そっちの天気はどう？</span> <span class=\"gloss\">(how's the weather there?)</span>. <span class=\"jp-example\">そっちは忙しい？</span> <span class=\"gloss\">(are you busy on your end?)</span>.</p><p>Remember the register split: <span class=\"jp\">そっち</span> for casual, <span class=\"jp\">そちら</span> for polite. Using <span class=\"jp\">そっち</span> with your boss would be like saying \"your end\" instead of \"if I may ask about your situation\" — technically the same meaning, but the casualness stands out.</p>"
   },
   {
-    "id": 518,
+    "id": 519,
     "kanji": "明日",
     "kana": "あした",
     "meaning": "tomorrow",
@@ -194,7 +205,7 @@
     "lesson": "<p><span class=\"jp\">明</span> (bright) + <span class=\"jp\">日</span> (day) = bright day, tomorrow. The kanji make poetic sense — tomorrow is the day that dawns bright and new. But the reading <span class=\"jp\">あした</span> has nothing to do with either <span class=\"jp\">明</span> (normally めい/あかるい) or <span class=\"jp\">日</span> (normally にち/ひ). It's another <span class=\"jp\">熟字訓</span> — a native Japanese time word that got kanji assigned for meaning, not sound.</p><p><span class=\"jp\">明日</span> actually has three readings: <span class=\"jp\">あした</span> (casual, most common), <span class=\"jp\">あす</span> (slightly more formal, used in news and writing), and <span class=\"jp\">みょうにち</span> (formal/official, used in announcements). Same kanji, three registers. In daily life, <span class=\"jp\">あした</span> is what you use.</p><p><span class=\"jp-example\">明日何する？</span> <span class=\"gloss\">(what are you doing tomorrow?)</span>. <span class=\"jp-example\">また明日</span> <span class=\"gloss\">(see you tomorrow)</span> — one of the most common partings in Japanese. Two words, no verb needed.</p>"
   },
   {
-    "id": 519,
+    "id": 520,
     "kanji": "明後日",
     "kana": "あさって",
     "meaning": "day after tomorrow",
@@ -206,7 +217,7 @@
     "lesson": "<p><span class=\"jp\">明後日</span>: <span class=\"jp\">明</span> (bright/next) + <span class=\"jp\">後</span> (after) + <span class=\"jp\">日</span> (day). The day after the next day. And the reading <span class=\"jp\">あさって</span> is, once again, a native word that ignores the individual kanji sounds.</p><p>English doesn't have a single common word for this concept — \"the day after tomorrow\" is a four-word phrase. Japanese gives it one word, <span class=\"jp\">あさって</span>, spoken in four syllables. The fact that it exists as a single word tells you something about how Japanese organizes time: the near future gets named precisely. <span class=\"jp\">明日</span> (tomorrow), <span class=\"jp\">明後日</span> (day after tomorrow), and even <span class=\"jp-example\">明々後日</span> <span class=\"gloss\">(しあさって, three days from now)</span>. Each gets its own word. Beyond that, you switch to counting: <span class=\"jp\">四日後</span> (four days later).</p><p><span class=\"jp-example\">明後日は休みだ</span> <span class=\"gloss\">(the day after tomorrow is a day off)</span>. A handy word for planning anything — no awkward arithmetic required.</p>"
   },
   {
-    "id": 520,
+    "id": 521,
     "kanji": "一昨日",
     "kana": "おととい",
     "meaning": "the day before yesterday",
