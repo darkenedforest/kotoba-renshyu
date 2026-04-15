@@ -1914,6 +1914,55 @@
     ]
   },
   {
+    "id": 196,
+    "kanji": "一",
+    "kana": "いち",
+    "meaning": "one",
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": 197,
+    "kanji": "結婚",
+    "kana": "けっこん",
+    "meaning": "marriage",
+    "tags": [
+      "noun",
+      "する-noun"
+    ]
+  },
+  {
+    "id": 198,
+    "kanji": "親",
+    "kana": "おや",
+    "meaning": "parent",
+    "tags": [
+      "noun",
+      "family"
+    ]
+  },
+  {
+    "id": 199,
+    "kanji": "話す",
+    "kana": "はなす",
+    "meaning": "to speak, talk, tell",
+    "tags": [
+      "godan verb",
+      "他動詞"
+    ]
+  },
+  {
+    "id": 200,
+    "kanji": "少し",
+    "kana": "すこし",
+    "meaning": "a little, a bit",
+    "tags": [
+      "adverb",
+      "noun"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
