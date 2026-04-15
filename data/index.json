@@ -1763,6 +1763,58 @@
     ]
   },
   {
+    "id": 181,
+    "kanji": "いる",
+    "kana": "いる",
+    "meaning": "to be, exist (animate)",
+    "tags": [
+      "ichidan verb",
+      "自動詞"
+    ]
+  },
+  {
+    "id": 182,
+    "kanji": "木",
+    "kana": "き",
+    "meaning": "tree, wood",
+    "tags": [
+      "noun"
+    ]
+  },
+  {
+    "id": 183,
+    "kanji": "開ける",
+    "kana": "あける",
+    "meaning": "to open, unlock",
+    "tags": [
+      "ichidan verb",
+      "他動詞",
+      "開く pair"
+    ]
+  },
+  {
+    "id": 184,
+    "kanji": "閉める",
+    "kana": "しめる",
+    "meaning": "to close, shut",
+    "tags": [
+      "ichidan verb",
+      "他動詞",
+      "閉まる pair"
+    ]
+  },
+  {
+    "id": 185,
+    "kanji": "続く",
+    "kana": "つづく",
+    "meaning": "to continue, go on, follow",
+    "tags": [
+      "godan verb",
+      "自動詞",
+      "続ける pair"
+    ]
+  },
+  {
     "id": 222,
     "kanji": "近く",
     "kana": "ちかく",
