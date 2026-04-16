@@ -458,8 +458,9 @@ const Firebase = {
         totalHearts += (quote.hearts || 0);
       }
 
-      // New hearts = current total minus what was seen last time
-      return Math.max(0, totalHearts - lastSeenTotal);
+      const newCount = Math.max(0, totalHearts - lastSeenTotal);
+      console.log('[hearts] getNewHeartCount: totalHearts=', totalHearts, 'lastSeenTotal=', lastSeenTotal, 'newCount=', newCount, 'userDocExists=', userDoc.exists, 'userDocData=', userDoc.exists ? userDoc.data() : null);
+      return newCount;
     } catch (e) {
       console.error('getNewHeartCount failed:', e);
       return 0;
@@ -468,7 +469,10 @@ const Firebase = {
 
   async markHeartsSeen() {
     const user = this.getUser();
-    if (!user || !this.db) return;
+    if (!user || !this.db) {
+      console.warn('[hearts] markHeartsSeen: no user or db', { user: !!user, db: !!this.db });
+      return;
+    }
 
     try {
       // Get current total hearts and store it
@@ -476,9 +480,15 @@ const Firebase = {
       let totalHearts = 0;
       for (const q of myQuotes) totalHearts += (q.hearts || 0);
 
+      console.log('[hearts] markHeartsSeen: writing lastSeenHeartsTotal=', totalHearts, 'for uid=', user.uid, 'quoteCount=', myQuotes.length);
+
       await this.db.collection('users').doc(user.uid).set({
         lastSeenHeartsTotal: totalHearts
       }, { merge: true });
+
+      // Verify the write
+      const check = await this.db.collection('users').doc(user.uid).get();
+      console.log('[hearts] markHeartsSeen: write verified, lastSeenHeartsTotal=', check.data() ? check.data().lastSeenHeartsTotal : 'no data');
     } catch (e) {
       console.error('markHeartsSeen failed:', e);
     }
