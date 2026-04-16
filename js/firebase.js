@@ -154,7 +154,7 @@ const Firebase = {
         skippedIds: progress.skippedIds,
         batchSize: progress.batchSize,
         lastSync: firebase.firestore.FieldValue.serverTimestamp()
-      });
+      }, { merge: true });
     } catch (e) {
       console.error('Firestore sync failed:', e);
     }
